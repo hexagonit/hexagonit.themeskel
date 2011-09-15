@@ -1,4 +1,6 @@
 ${namespace_package}/${package}/docs/_build/*
+${namespace_package}/${package}/theme_resources/less/plone/*.css
+${namespace_package}/${package}/theme_resources/less/theme/*.css
 *.egg-info
 *.pyc
 *.pyo
