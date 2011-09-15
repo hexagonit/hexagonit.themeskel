@@ -43,6 +43,6 @@ setup(name='hexagonit.themeskel',
       entry_points="""
       # -*- Entry points: -*-
       [paste.paster_create_template]
-      plone_theme = hexagonit.themeskel:PloneAppThemingTemplate
+      less_theme = hexagonit.themeskel:PloneAppThemingTemplate
       """,
       )

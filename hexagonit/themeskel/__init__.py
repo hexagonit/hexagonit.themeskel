@@ -12,9 +12,11 @@ import shutil
 
 class PloneAppThemingTemplate(Plone):
 
-    _template_dir = 'templates/plone_theme'
+    _template_dir = 'templates/less_theme'
     help = "This package creates a plone.app.theming theme."
-    summary = 'Template for creating a plone.app.theming skeleton.'
+    summary = 'A theme for plone.app.theming using LESS.'
+    category = "Plone Theme Development"
+
     required_templates = []
     vars = copy.deepcopy(Plone.vars)
     get_var(vars, 'add_profile').default = True
