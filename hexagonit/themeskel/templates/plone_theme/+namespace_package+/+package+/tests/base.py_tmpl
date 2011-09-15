@@ -1,0 +1,55 @@
+"""Base module for unittesting"""
+
+import unittest2 as unittest
+
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
+from plone.app.testing import PloneSandboxLayer
+from plone.testing import z2
+
+
+class ${namespace_package.title()}${package.title()}Layer(PloneSandboxLayer):
+
+    defaultBases = (PLONE_FIXTURE,)
+
+    def setUpZope(self, app, configurationContext):
+        """Set up Zope."""
+        # Load ZCML
+        import ${namespace_package}.${package}
+        self.loadZCML(package=${namespace_package}.${package})
+#if str($zope2product) == 'True' and $namespace_package != 'Products'
+        z2.installProduct(app, '${namespace_package}.${package}')
+#end if
+
+    def setUpPloneSite(self, portal):
+        """Set up Plone."""
+#if str($add_profile) == 'True'
+        # Install into Plone site using portal_setup
+        self.applyProfile(portal, '${namespace_package}.${package}:default')
+#end if
+
+    def tearDownZope(self, app):
+        """Tear down Zope."""
+#if str($zope2product) == 'True' and $namespace_package != 'Products'
+        z2.uninstallProduct(app, '${namespace_package}.${package}')
+#end if
+
+
+FIXTURE = ${namespace_package.title()}${package.title()}Layer()
+INTEGRATION_TESTING = IntegrationTesting(
+    bases=(FIXTURE,), name="${namespace_package.title()}${package.title()}Layer:Integration")
+FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(FIXTURE,), name="${namespace_package.title()}${package.title()}Layer:Functional")
+
+
+class IntegrationTestCase(unittest.TestCase):
+    """Base class for integration tests."""
+
+    layer = INTEGRATION_TESTING
+
+
+class FunctionalTestCase(unittest.TestCase):
+    """Base class for functional tests."""
+
+    layer = FUNCTIONAL_TESTING

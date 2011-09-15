@@ -1,0 +1,18 @@
+${namespace_package}.${package}
+${(len($namespace_package) + 1 + len($package)) * '='}
+
+
+Contents:
+
+.. toctree::
+    :maxdepth: 2
+    HISTORY.rst
+    LICENSE.rst
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

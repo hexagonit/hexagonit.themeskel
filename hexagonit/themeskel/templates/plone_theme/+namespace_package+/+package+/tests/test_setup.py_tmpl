@@ -1,0 +1,27 @@
+from ${namespace_package}.${package}.tests.base import IntegrationTestCase
+from Products.CMFCore.utils import getToolByName
+
+
+class TestCase(IntegrationTestCase):
+    """TestCase for Plone setup."""
+
+    def setUp(self):
+        self.portal = self.layer['portal']
+        self.installer = getToolByName(self.portal, 'portal_quickinstaller')
+
+#if str($add_profile) == 'True'
+    def test_is_${namespace_package}_${package}_installed(self):
+        self.failUnless(self.installer.isProductInstalled('${namespace_package}.${package}'))
+
+    ## Uninstalling
+    def test_uninstall(self):
+        self.installer.uninstallProducts(['${namespace_package}.${package}'])
+        self.failIf(self.installer.isProductInstalled('${namespace_package}.${package}'))
+#if str($add_browserlayer) == 'True'
+
+    def test_browserlayer(self):
+        from ${namespace_package}.${package}.browser.interfaces import I${namespace_package.title()}${package.title()}Layer
+        from plone.browserlayer import utils
+        self.failUnless(I${namespace_package.title()}${package.title()}Layer in utils.registered_layers())
+#end if
+#end if

@@ -1,0 +1,5 @@
+from zope.interface import Interface
+
+
+class I${namespace_package.title()}${package.title()}Layer(Interface):
+    """Marker interface for browserlayer."""

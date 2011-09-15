@@ -1,0 +1,7 @@
+Changelog
+=========
+
+${version} (XXXX-XX-XX)
+${(len($version) + 1 + len('(XXXX-XX-XX)')) * '-'}
+
+- Initial release
