@@ -21,6 +21,8 @@ class PloneAppThemingTemplate(Plone):
     vars = copy.deepcopy(Plone.vars)
     get_var(vars, 'add_profile').default = True
     get_var(vars, 'url').default = ''
+    get_var(vars, 'zope2product').default = False
+
     vars.insert(6, BooleanVar(
         'add_browserlayer',
         title='Register Browserlayer',
