@@ -1,3 +1,4 @@
 [theme]
 title = ${namespace_package}.${package} theme
 description = Generated with hexagonit.themeskel
+doctype = <!doctype html>
