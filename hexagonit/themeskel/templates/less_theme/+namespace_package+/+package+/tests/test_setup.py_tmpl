@@ -25,3 +25,26 @@ class TestCase(IntegrationTestCase):
         self.failUnless(I${namespace_package.title()}${package.title()}Layer in utils.registered_layers())
 #end if
 #end if
+
+    def test_css_registry_configured(self):
+        css_resources = set(
+            getToolByName(self.portal, 'portal_css').getResourceIds())
+
+        self.failUnless(
+            '++theme++${namespace_package}.${package}/css/style.css' in css_resources)
+
+    def test_js_registry_configured(self):
+        js_resources = set(
+            getToolByName(self.portal, 'portal_javascripts').getResourceIds())
+
+        self.failUnless(
+            '++theme++${namespace_package}.${package}/javascript/libs/modernizr-2.0.6.min.js'
+            in js_resources)
+
+    def test_doctype_configured(self):
+        from plone.app.theming.interfaces import IThemeSettings
+        from plone.registry.interfaces import IRegistry
+        from zope.component import getUtility
+
+        settings = getUtility(IRegistry).forInterface(IThemeSettings)
+        self.assertEqual(settings.doctype, '<!doctype html>')
