@@ -8,54 +8,55 @@
 
     <rules css:if-content="#visual-portal-wrapper">
 
-		<!-- Drop Plone's meta tags that define the content type and IE rendering mode.
-		     We set those explicitly in our theme. This allows us to copy the
-		     rest of the <meta> tags in one go. -->
-		<drop css:content="meta[http-equiv]" />
-		<replace content="/html/head/title" theme="/html/head/title"/>
+        <!-- Drop Plone's meta tags that define the content type and IE rendering mode.
+             We set those explicitly in our theme. This allows us to copy the
+             rest of the <meta> tags in one go. -->
+        <drop css:content="meta[http-equiv]" />
+        <before content="/html/head/meta" css:theme="#css" />
+        <replace content="/html/head/title" theme="/html/head/title"/>
 
 
-		<!-- Copy the <base> tag -->
-		<replace content="/html/head/base" theme="/html/head/base" />
+        <!-- Copy the <base> tag -->
+        <replace content="/html/head/base" theme="/html/head/base" />
 
-		<replace content="/html/head/title" theme="/html/head/title" />
+        <replace content="/html/head/title" theme="/html/head/title" />
 
-		<!-- Copy style and link tags in the order they appear in the content -->
-		<after
-		    content="/html/head/style | /html/head/link"
-		    css:theme="#css"
-		    />
-		<!-- Drop the css target from the theme -->
-		<drop css:theme="#css" />
+        <!-- Copy style and link tags in the order they appear in the content -->
+        <after
+            content="/html/head/style | /html/head/link"
+            css:theme="#css"
+            />
+        <!-- Drop the css target from the theme -->
+        <drop css:theme="#css" />
 
-		<!-- Copy script tags in the order they appear in the content but place
-		     them at the bottom of the theme. -->
-		<after
-		    content="/html/head/script"
-		    css:theme="#javascript_at_bottom"
-		    />
-		<!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
-		     it and we can save a few bytes there. -->
-		<drop css:content="script" attributes="type"/>
+        <!-- Copy script tags in the order they appear in the content but place
+             them at the bottom of the theme. -->
+        <after
+            content="/html/head/script"
+            css:theme="#javascript_at_bottom"
+            />
+        <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
+             it and we can save a few bytes there. -->
+        <drop css:content="script" attributes="type"/>
 
-		<!-- Drop the javascript target from the theme -->
-		<drop css:theme="#javascript_at_bottom"/>
+        <!-- Drop the javascript target from the theme -->
+        <drop css:theme="#javascript_at_bottom"/>
 
-		<!-- Copy over the id/class attributes on the body tag.
-			 This is important for per-section styling -->
-		<merge attributes="class" css:content="body" css:theme="body" />
-		<copy attributes="id dir" css:content="body" css:theme="body" />
+        <!-- Copy over the id/class attributes on the body tag.
+             This is important for per-section styling -->
+        <merge attributes="class" css:content="body" css:theme="body" />
+        <copy attributes="id dir" css:content="body" css:theme="body" />
 
-		<!-- Copy the header -->
-		<copy css:content="#portal-top" theme="//header" />
+        <!-- Copy the header -->
+        <copy css:content="#portal-top" theme="//header" />
 
-		<!-- Copy the body of the page -->
-		<copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" />
+        <!-- Copy the body of the page -->
+        <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" />
 
-		<!-- Copy the footer -->
-		<copy css:content="#portal-footer" theme="//footer/div/div" />
-		<after css:content="#portal-colophon" theme="//footer/div/div" />
-		<after css:content="#portal-siteactions" theme="//footer/div/div" />
+        <!-- Copy the footer -->
+        <copy css:content="#portal-footer" theme="//footer/div/div" />
+        <after css:content="#portal-colophon" theme="//footer/div/div" />
+        <after css:content="#portal-siteactions" theme="//footer/div/div" />
 
     </rules>
 

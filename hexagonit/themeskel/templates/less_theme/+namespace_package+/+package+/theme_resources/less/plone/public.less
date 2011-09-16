@@ -53,7 +53,7 @@ input {
 }
 
 q {
-    quotes: "â€œ" "â€" "â€˜" "â€™";
+    quotes: "“" "”" "‘" "’";
 }
 
 * ul,ol { list-style:none; }
@@ -995,7 +995,7 @@ dl.error dd {
     font-weight: normal;
 }
 #portal-personaltools dt.actionMenuHeader a:after {
-    content: " â–¼";
+    content: " ▼";
 }
 #portal-personaltools dd {
     right: 0;
@@ -1074,6 +1074,7 @@ dl.actionMenu {
 dl.actionMenu a,
 dl.actionMenu div {
     display: block !important;
+    text-decoration:none;
     white-space: nowrap;
 }
 dl.actionMenu dt {
