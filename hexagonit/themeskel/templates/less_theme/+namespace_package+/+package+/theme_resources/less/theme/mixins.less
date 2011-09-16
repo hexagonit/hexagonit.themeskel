@@ -5,3 +5,21 @@
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 }
+
+.rounded-corners-bottom(@radius: 5px) {
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	-moz-border-radius-bottomright: @radius;
+}
+
+.rounded-corners-top(@radius: 5px) {
+	border-top-right-radius: @radius;
+	border-top-left-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-top-left-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-topright: @radius;
+}

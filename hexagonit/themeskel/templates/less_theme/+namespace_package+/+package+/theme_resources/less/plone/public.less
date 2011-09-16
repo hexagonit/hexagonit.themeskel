@@ -59,6 +59,10 @@ q {
 * ul,ol { list-style:none; }
 * li { display: inline; }
 
+ul, ol { margin: 0; padding: 0; }
+dd { margin: 0; }
+
+
 /* @end */
 
 /* @group Navigation/search */
@@ -85,6 +89,7 @@ q {
     background: @menu-background;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     margin: 0 0 1em 0;
+    padding:0;
 }
 #portal-globalnav li {
 }
@@ -93,33 +98,31 @@ q {
     padding: @menu-item-padding;
     background: @menu-item-background;
     min-width: @menu-item-min-width;
+    text-decoration:none;
 }
 
 #portal-globalnav .selected a,
 #portal-globalnav a:hover {
     background: @menu-item-selected-background;
     color: @menu-item-selected-font-color;
+    text-decoration:none;
 }
 #portal-globalnav .selected a:hover {
     background: @menu-item-selected-hover-background;
     color: @menu-item-selected-hover-font-color;
+    text-decoration:none;
 }
 
 #portal-personaltools {
     float: right;
-    background: #e3e3e3;
+    background: @personaltools-background;
     position: relative;
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
     font-size: 80%;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
+	.rounded-corners-bottom(0.5em);
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -128,20 +131,15 @@ q {
 
 #portal-languageselector {
     float: right;
-    background: #e3e3e3;
+    background: @languageselector-background;
     position: relative;
     top: 0;
     right: 1px;
     z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
     padding: 0.25em 0.5em;
     font-size: 80%;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
     max-width: 50%;
+    .rounded-corners-bottom(0.5em);
 }
 
 #portal-searchbox {
@@ -203,17 +201,17 @@ input.searchField {
 
 #LSResult fieldset {
     padding: 1em 0 0;
-    border: 0.1em solid #ccc;
+    border: @LiveSearch-border;
 }
 
 #livesearchLegend {
-    background-color:#ccc;
+    background:@LiveSearchLegend-background;
     padding:0.3em;
 }
 
 #LSResult .LSDescr {
     font-size: 85%;
-    color: #666;
+    color: @LiveSearchDescription-color;
 }
 
 .LSRow,
@@ -225,7 +223,7 @@ input.searchField {
 }
 
 .LSHighlight {
-    background: #ddd;
+    background: @LiveSearchHighlight-background;
 }
 
 /* @end */
@@ -261,7 +259,7 @@ input.searchField {
     margin-right: 0.5em;
 }
 #portal-siteactions li a:hover {
-    color: #75ad0a
+    color: @SiteActions-color;
 }
 
 /* @end */
@@ -273,11 +271,11 @@ a.link-parent {
 
 a.link-anchor {
     border: none !important;
-    color: Black !important;
+    color: @ListingsLink-color !important;
     cursor: default !important;
 }
 #content a.link-overlay {
-    border-bottom: 1px dotted #205c90 !important;
+    border-bottom: @ListingsLink-border !important;
 }
 
 dl dt .documentByLine {
@@ -297,13 +295,13 @@ dl.portlet {
     font-size: 80%;
 }
 dl.portletError {
-    background-color: #FFA500;
+    background: @Portlet-error-background;
 }
 
 dl.portlet dt,
 div.portletAssignments div.portletHeader {
     padding: 0.42em 1em;
-    background: #ddd;
+    background: @Portlet-header-background;
     line-height: normal;
 }
 dl.portlet dt.hiddenStructure {
@@ -325,7 +323,7 @@ div.portletAssignments .managedPortletActions a {
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-    color: black;
+    color: @Portlet-link-color;
     display: block;
     border: none;
 }
@@ -344,10 +342,8 @@ a.managePortletsFallback {
     padding: 0.25em 0.5em;
     font-size: 80%;
     margin: 0 auto 1em;
-    background: #ddd;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
+    background: @Portlet-managePortlets-background;
+    .rounded-corners(0.5em);
 }
 a.managePortletsFallback {
     display:inline-block; /* in order for our vertical margins to work on inline element */
@@ -365,6 +361,90 @@ a.managePortletsFallback {
 #visual-portal-wrapper dl.portletCalendar dd {
     padding: 0;
 }
+
+.managedPortlet {
+    margin: 0.8em 0;
+}
+.blockedPortlet .portletHeader {
+    background: @Portlet-blockedPortlet-background !important;
+    border: @Portlet-blockedPortlet-border;
+    margin: -1px;
+}
+.blockedPortlet .portletHeader a {
+    color: @Portlet-blockedPortlet-color;
+}
+.blockedPortlet .portletBlockedMessage {
+    color: white;
+    display: inline;
+}
+.portletCalendar {
+    margin: 1px 0 1em;
+    width: 100%;
+}
+.portletCalendar dt {
+    background: @Portlet-Calendar-background;
+    border-bottom: medium none;
+    font-weight: bold;
+    line-height: 1.6em;
+    text-align: center;
+}
+.portletCalendar dd {
+    margin: 0;
+    padding: 0;
+}
+.portletCalendar dt a#calendar-previous {
+    float: left;
+    margin: 0 -0.5em;
+    padding: 0 1em;
+}
+.portletCalendar dt a#calendar-next {
+    float: right;
+    margin: 0 -0.5em;
+    padding: 0 1em;
+}
+.portletCalendar a, .portletCalendar a:focus, .portletCalendar a, .portletCalendar a:hover {
+    text-decoration: none;
+}
+.ploneCalendar {
+    border-spacing: 0;
+    width: 100%;
+}
+.ploneCalendar a {
+    border-bottom: medium none !important;
+    text-decoration: none;
+}
+.ploneCalendar td {
+    background-color: transparent;
+    padding: 2px;
+    text-align: center;
+    width: 14%;
+}
+.ploneCalendar .weekdays th {
+    background: @Portlet-Calendar-weekdays-background;
+    font-weight: normal;
+    padding: 2px;
+    text-align: center;
+}
+.ploneCalendar .event {
+    background: @Portlet-Calendar-event-background;
+    font-weight: bold;
+}
+.ploneCalendar .todayevent {
+    background: @Portlet-Calendar-todayEvent-background;
+    border: @Portlet-Calendar-todayEvent-border;
+    font-weight: bold;
+}
+.ploneCalendar .todaynoevent {
+    border: @Portlet-Calendar-todayNoEvent-border;
+}
+.portletItemDetails {
+    display: block;
+    font-size: 85%;
+    line-height: 1.5em;
+    margin-left: 1em;
+    padding-top: 0.5em;
+}
+
 
 #dashboard-portlets1,
 #dashboard-portlets2,
@@ -480,9 +560,7 @@ dl.portlet a:hover {
     color: black;
     padding: 0.25em 0.5em;
     background: #ddd;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
+    .rounded-corners(0.5em);
 }
 #category a.link-category:hover {
     background: #205c90;
@@ -824,8 +902,8 @@ dl.error dd {
     border: 0.3em solid #ddd;
 }
 #edit-bar {
-    background-color: #75ad0a;
-    border: 0.25em solid #75ad0a;
+    background:@EditBar-background;
+    border: @EditBar-border;
     font-size: 80%;
     min-height: 2em;
     margin-bottom: 1em;
@@ -833,7 +911,7 @@ dl.error dd {
 }
 #content-views {
     float: left;
-    background-color: #75ad0a;
+    background: @EditBar-background;
 }
 /* fix shift on content views list under ie6 */
 /* .ie6 is set on <html> by Modernizr library */
@@ -841,7 +919,7 @@ dl.error dd {
     margin: -2px -3px 0px -3px;
 }
 #content-views a {
-    color: White;
+    color: @EditBar-color;
 }
 
 /* Shared CSS between the two tab types */
@@ -850,12 +928,7 @@ dl.error dd {
     display: block;
     border-style: solid solid none solid;
     margin-left: 0;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    -moz-border-radius-topleft: 0.5em;
-    -moz-border-radius-topright: 0.5em;
+    .rounded-corners-top(0.5em);
 }
 #content li.formTab {
     display: inline;
@@ -889,12 +962,7 @@ dl.error dd {
 #content-views li a:hover,
 #content li.formTab a.selected,
 #content li.formTab a:hover {
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    -moz-border-radius-topleft: 0.5em;
-    -moz-border-radius-topright: 0.5em;
+    .rounded-corners-top(0.5em);
 }
 #content li.formTab a.notify {
     background-color: red;
@@ -952,13 +1020,14 @@ dl.error dd {
 
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: #75ad0a;
-    color: White;
+    background: @EditBar-background;
+    color: @EditBar-color;
+    text-decoration:none;
     z-index: 5;
 }
 #contentActionMenus dl.actionMenu.activated dd {
-    border-bottom: 0.5em solid #75ad0a;
-        right: -3px;
+    border-bottom: @EditBar-dropdown-border;
+    right: -3px;
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
@@ -980,17 +1049,15 @@ dl.error dd {
 
 #contentActionMenus {
     float: right;
-    background: #75ad0a;
+    background: @EditBar-background;
     margin: 0;
     position: relative;
     top: -0.23em;
     right:-0.24em;
     padding: 0.1em 0.24em 0 0;
-    border-radius: 0.5em;
+    .rounded-corners(0.5em);
     border-top-left-radius: 0;
-    -webkit-border-radius: 0.5em;
     -webkit-border-top-left-radius: 0;
-    -moz-border-radius: 0.5em;
     -moz-border-radius-topleft: 0;
 }
 
@@ -1025,12 +1092,7 @@ dl.actionMenu.activated dd {
     position: absolute;
     width: auto;
     min-width: 100%;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
+    .rounded-corners-bottom(0.5em);
 }
 dl.actionMenu.activated dt a,
 dl.actionMenu.activated dd a,
@@ -1237,9 +1299,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .commentBody {
     padding: 1em;
     margin: 0.5em 0;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
+    .rounded-corners(0.5em);
     box-shadow: 0 0 1em 0 #888;
     -moz-box-shadow: 0 0 0.5em 0 #888;
     -webkit-box-shadow: 0 0 0.5em #888;
@@ -1989,12 +2049,7 @@ div.overlay .formControls a {
 #content-history .historyByLine {
     background: #ddd;
     padding: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    -moz-border-radius-topleft: 0.5em;
-    -moz-border-radius-topright: 0.5em;
+    .rounded-corners-top(0.5em);
 }
 
 #content-history div.historyLinks {

@@ -1,22 +1,21 @@
-/* Variables that set the base properties for the theme */
+// Variables that set the base properties for the theme
 
-/* Body styling */
+// Body styling
 
-/*@body-width: 100%;*/
-@body-width: 960px;
+@body-width: 1000px;
 @body-margin: 0 auto;
 @body-background: White;
 @body-font: 100% Arial, FreeSans, sans-serif;
 @body-font-color: Black;
 
-/* Heading styling */
+// Heading styling
 
 @heading-font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
 @heading-font-weight: bold;
 @heading-font-color: Black;
 @heading-line-height: 1.5em;
 
-/* Subheading - h2, h3, h4, h5, h6*/
+// Subheading - h2, h3, h4, h5, h6
 @subheading-font-color: #444;
 
 @h1-font-size: 2em;
@@ -30,25 +29,70 @@
 
 @dt-font-weight: bold;
 
-@input-font-family: "Lucida Grande", Arial, FreeSans
+@input-font-family: "Lucida Grande", Arial, FreeSans;
 
 
-/* HEADER STYLING */
+// HEADER STYLING
 
-@portal-logo-margin: 1.375em 0;
+@portal-logo-margin: 0;
 
-/* Menu */
-@menu-font-size: 80%
+// Menu
+@menu-font-size: 80%;
 @menu-background: #ddd;
-@menu-item-padding: 0.5em 1em 2em 1em;
+@menu-item-padding: 1em;
 @menu-item-background: #ddd;
-@menu-item-min-width: 6em;
+@menu-item-min-width: auto;
 @menu-item-selected-background: #205c90;
 @menu-item-selected-font-color: White;
 
-@menu-item-selected-hover-font-color: #205c90;
+@menu-item-selected-hover-background: #205c90;
+@menu-item-selected-hover-font-color: White;
 
-/* Workflow State - member.less */
+// Personal Tools
+@personaltools-background: #e3e3e3;
+
+// Language Selector
+@languageselector-background: #e3e3e3;
+
+// Live Search
+@LiveSearch-border: 0.1em solid #ccc;
+@LiveSearchLegend-background: #ccc;
+@LiveSearchDescription-color: #666;
+@LiveSearchHighlight-background: #ddd;
+
+// Site Actions
+@SiteActions-color: #75ad0a;
+
+
+// BODY STYLING
+
+// Listings
+@ListingsLink-color: Black;
+@ListingsLink-border: 1px dotted #205c90;
+
+// Portlets
+@Portlet-header-background: #A5D2F1;
+@Portlet-error-background: #FFA500;
+@Portlet-link-color: black;
+@Portlet-managePortlets-background: #ddd;
+@Portlet-blockedPortlet-background: none repeat scroll 0 0 transparent;
+@Portlet-blockedPortlet-border: 1px dashed #DDDDDD;
+@Portlet-blockedPortlet-color: #666666;
+@Portlet-Calendar-background: #EEEEEE;
+@Portlet-Calendar-weekdays-background: #EEEEEE;
+@Portlet-Calendar-event-background: #EEEEEE;
+@Portlet-Calendar-todayEvent-background: #EEEEEE;
+@Portlet-Calendar-todayEvent-border: 2px solid #205C90;
+@Portlet-Calendar-todayNoEvent-border: 2px solid #205C90;
+
+// Edit bar
+@EditBar-background: #DDD;
+@EditBar-border: 0.25em solid #DDD;
+@EditBar-color: #666;
+@EditBar-dropdown-border: 0.5em solid #DDD;
+
+
+// Workflow State - member.less
 
 @workflow-state-private: Red;
 @workflow-state-private-color: White;
