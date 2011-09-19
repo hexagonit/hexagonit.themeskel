@@ -1,5 +1,5 @@
-from helsinginkirkot.theme.tests.base import FUNCTIONAL_TESTING
-from leo.testing.browser import Browser
+from ${namespace_package}.${package}.tests.base import FUNCTIONAL_TESTING
+from hexagonit.testing.browser import Browser
 from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.app.testing import TEST_USER_ID

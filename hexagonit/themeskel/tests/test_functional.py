@@ -1,7 +1,7 @@
+from hexagonit.testing.browser import Browser
 from hexagonit.themeskel.tests.base import FUNCTIONAL_TESTING
-from leo.testing.browser import Browser
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 from plone.testing import layered
 from zope.testing import renormalizing
 

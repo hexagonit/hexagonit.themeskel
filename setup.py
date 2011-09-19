@@ -35,10 +35,11 @@ setup(name='hexagonit.themeskel',
           'Cheetah<=2.2.1',
           'Paste',
           'PasteScript',
+          'ZopeSkel',
+          'hexagonit.testing',
           'plone.testing',
           'setuptools',
           'unittest2',
-          'ZopeSkel',
       ],
       entry_points="""
       # -*- Entry points: -*-
