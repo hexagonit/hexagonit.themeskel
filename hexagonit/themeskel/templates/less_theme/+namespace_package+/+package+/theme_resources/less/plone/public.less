@@ -94,6 +94,11 @@ dd { margin: 0; }
 #portal-globalnav li {
 }
 #portal-globalnav li a {
+    border-top: @menu-item-border-top;
+    border-bottom: @menu-item-border-bottom;
+    border-left: @menu-item-border-left;
+    border-right: @menu-item-border-right;
+    color: @menu-item-color;
     display: inline-block;
     padding: @menu-item-padding;
     background: @menu-item-background;
@@ -121,6 +126,7 @@ dd { margin: 0; }
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
+    margin: @personaltools-margin;
     font-size: 80%;
 	.rounded-corners-bottom(0.5em);
 }
@@ -300,6 +306,7 @@ dl.portletError {
 
 dl.portlet dt,
 div.portletAssignments div.portletHeader {
+    color: @Portlet-header-color;
     padding: 0.42em 1em;
     background: @Portlet-header-background;
     line-height: normal;
@@ -323,7 +330,7 @@ div.portletAssignments .managedPortletActions a {
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-    color: @Portlet-link-color;
+    color: @Portlet-header-color;
     display: block;
     border: none;
 }
@@ -528,21 +535,21 @@ dl.portlet {
 
 #content a:link,
 dl.portlet a:link {
-    color: #205c90;
-    border-bottom: 0.1em solid #ccc;
+    color: @content-link-color;
+    border-bottom: @content-link-boerder-bottom;
 }
 
 #content a:visited,
 dl.portlet a:visited {
-    color: #427597;
-    border-bottom: 0.1em solid #ccc;
+    color: @content-link-visited-color;
+    border-bottom: @content-link-visited-border-bottom;
 }
 #content a:hover,
 dl.portlet a:hover {
-    color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+    color: @content-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 }
 #content a:target {
-    background-color: #ffb;
+    background: @content-link-target-background;
 }
 #content span.link-external a {
     background: transparent url(link_icon.png) 0px 1px no-repeat;
