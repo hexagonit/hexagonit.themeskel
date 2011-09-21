@@ -21,3 +21,7 @@ Changelog
 - Update print styling and reenable mobile.css from plone [vsomogyi]
 
 - Rules: copy meta tags, fixed arrow, removed hot pink marker [vsomogyi]
+
+- Use hexagonit.testing instead of leo.testing. [dokai]
+
+- Inline javascript is moved to the bottom of the page. [vsomogyi]
