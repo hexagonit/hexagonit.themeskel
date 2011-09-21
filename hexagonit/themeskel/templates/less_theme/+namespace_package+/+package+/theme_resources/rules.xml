@@ -29,15 +29,27 @@
         <!-- Drop the css target from the theme -->
         <drop css:theme="#css" />
 
-        <!-- Copy script tags in the order they appear in the content but place
-             them at the bottom of the theme. -->
-        <after
-            content="/html/head/script"
-            css:theme="#javascript_at_bottom"
-            />
         <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
              it and we can save a few bytes there. -->
         <drop css:content="script" attributes="type"/>
+
+        <!-- Copy script tags in the order they appear in the content but place
+             them at the bottom of the theme. -->
+        <before
+            css:content="head > script"
+            css:theme="#javascript_at_bottom"
+            />
+
+        <!-- Copy inline javascripts from within the body -->
+        <replace
+            css:content="body script"
+            css:theme="#javascript_inline"
+            method="raw"
+            />
+
+        <!-- Drop the scripts within the body because we have copied them to the
+             end of the page -->
+        <drop css:content="#visual-portal-wrapper script"/>
 
         <!-- Drop the javascript target from the theme -->
         <drop css:theme="#javascript_at_bottom"/>
