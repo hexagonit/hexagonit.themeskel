@@ -23,3 +23,38 @@
     -moz-border-radius-topleft: @radius;
     -moz-border-radius-topright: @radius;
 }
+
+.background-gradient(@fallback, @from, @to) {
+
+    // for non-css3 browsers
+    background-color: @fallback; 
+
+    // Safari 4+, Chrome 1-9
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@from), to(@to));
+
+    // Safari 5.1+, Mobile Safari, Chrome 10+
+    background-image: -webkit-linear-gradient(top, @from, @to); 
+
+    // Firefox 3.6+
+    background-image: -moz-linear-gradient(top, @from, @to);
+
+    // IE
+    filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='"@from~"', endColorstr='"@to~"')";
+
+    // IE 10+
+    background-image: -ms-linear-gradient(top, @from, @to);
+
+    // Opera 11.10+
+    background-image: -o-linear-gradient(top, @from, @to);
+}
+
+.text-shadow(@horizontal: 1px, @vertical: 1px, @blur: 1px, @color: #000) {
+    text-shadow: @horizontal @vertical @blur @color;
+    filter: ~"dropshadow(color="@color~", offx="@horizontal~", offy="@vertical~")";
+}
+
+.box-shadow(@horizontal: 1px, @vertical: 1px, @blur: 1px, @spread: 1px, @color: #000) {
+    -webkit-box-shadow: @horizontal @vertical @blur @spread @color;
+    -moz-box-shadow: @horizontal @vertical @blur @spread @color;
+    box-shadow: @horizontal @vertical @blur @spread @color;
+}

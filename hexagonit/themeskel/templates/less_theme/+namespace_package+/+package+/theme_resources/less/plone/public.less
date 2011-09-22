@@ -606,9 +606,9 @@ dl.portlet li {
 }
 
 #content pre {
-    background-color: #222;
+    background: @content-pre-background;
     color: White;
-    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: @content-pre-font-family;
     padding: 1em;
     overflow-x: auto;
     font-size: 90%;
@@ -620,24 +620,24 @@ dl.portlet li {
 }
 
 #content code {
-    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: @content-code-font-family;
 }
 
 #content div.documentByLine {
     font-size: 85%;
     display: block;
-    color: #666;
+    color: @content-documentByLine-color;
 }
 
 #content .discreet,
 #sidebar .discreet {
-    color: #666;
+    color: @content-discreet-color;
     font-size: 85%;
     font-weight: normal;
 }
 
 #content .visualHighlight {
-    background-color: #ffb;
+    background: @content-visualHighlight;
 }
 
 #content .pullquote {
@@ -647,12 +647,12 @@ dl.portlet li {
     float: right;
     width: 35%;
     clear: right;
-    color: #444;
+    color: @content-pullquote;
     font-size: 1.6em;
     letter-spacing: -0.08em !important;
 }
 #content .callout {
-    background: #eee;
+    background: @content-callout-background;
     padding: 1em;
     border-left: 1em solid #ccc;
     clear: both;
@@ -667,9 +667,9 @@ dl.portlet li {
 
 #content .documentDescription,
 #content #description {
-    color: #666;
+    color: @content-documentDescription-color;
     margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font: @content-documentDescription-font;
 }
 
 #content img.tileImage,
