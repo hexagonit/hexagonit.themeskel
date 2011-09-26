@@ -25,3 +25,5 @@ Changelog
 - Use hexagonit.testing instead of leo.testing. [dokai]
 
 - Inline javascript is moved to the bottom of the page. [vsomogyi]
+
+- Fixed footer markup. [vsomogyi]

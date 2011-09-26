@@ -85,7 +85,7 @@ dd { margin: 0; }
 
 #portal-globalnav {
     clear: both;
-    font-size: @menu-font-size;
+    font: @menu-font;
     background: @menu-background;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     margin: 0 0 1em 0;
@@ -187,12 +187,12 @@ input.searchField {
 
 .collapsible .collapser.collapsed {
     padding-right: 14px;
-    background: url('arrowRight.png') center right no-repeat;
+    background: url('../images/arrowRight.png') center right no-repeat;
 }
 
 .collapsible .collapser.expanded {
     padding-right: 14px;
-    background: url('arrowDown.png') center right no-repeat;
+    background: url('../images/arrowDown.png') center right no-repeat;
 }
 /* @end */
 
@@ -503,8 +503,8 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 80%;
-    margin: 1em 0.25em 2em 0.25em;
+    font-size: @content-font-size;
+    margin: @content-margin;
 }
 
 /* Special case of #content - TinyMCE */
@@ -552,7 +552,7 @@ dl.portlet a:hover {
     background: @content-link-target-background;
 }
 #content span.link-external a {
-    background: transparent url(link_icon.png) 0px 1px no-repeat;
+    background: transparent url('../images/link_icon.png') 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 
@@ -911,7 +911,7 @@ dl.error dd {
 #edit-bar {
     background:@EditBar-background;
     border: @EditBar-border;
-    font-size: 80%;
+    font-size: @EditBar-font-size;
     min-height: 2em;
     margin-bottom: 1em;
     padding-top: 0.05em;
@@ -976,7 +976,7 @@ dl.error dd {
     color: White;
 }
 #content li.formTab a.required span {
-    background-image: url(required.png);
+    background-image: url('../images/required.png');
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 1em;
@@ -1027,7 +1027,7 @@ dl.error dd {
 
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background: @EditBar-background;
+    background-color: @EditBar-background;
     color: @EditBar-color;
     text-decoration:none;
     z-index: 5;
@@ -1043,6 +1043,8 @@ dl.error dd {
 }
 #contentActionMenus dl.actionMenu {
     line-height: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #folderHeader, #contextHeader {
@@ -1244,7 +1246,7 @@ dl.collapsible dd.collapsibleContent > dl {
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
     padding: 0 0.5em 0 2em;
-    background: White url(treeExpanded.png) no-repeat 0.5em 50%;
+    background: White url('../images/treeExpanded.png') no-repeat 0.5em 50%;
     cursor: pointer;
 }
 
@@ -1261,7 +1263,7 @@ dl.collapsedBlockCollapsible dt.collapsibleHeader {
     padding: 0 0.5em 0 2em;
     line-height: 1.2em;
     cursor: pointer;
-    background: White url(treeCollapsed.png) no-repeat 0.5em 50%;
+    background: White url('../images/treeCollapsed.png') no-repeat 0.5em 50%;
 }
 dl.collapsedInlineCollapsible dd.collapsibleContent,
 dl.collapsedBlockCollapsible dd.collapsibleContent {
@@ -1650,7 +1652,7 @@ input#title {
 }
 
 .fieldRequired {
-    background: url(required.png) center left no-repeat;
+    background: url('../images/required.png') center left no-repeat;
     padding: 0 0 0 1em;
     color: White;
 }
@@ -1849,7 +1851,7 @@ dl.toc dd ol {
     margin: 0em;
     padding: 0px 6px 0px 9px;
     text-align: center;
-    background-image: url('polaroid-single.png');
+    background-image: url('../images/polaroid-single.png');
     background-repeat: no-repeat;
 }
 .photoAlbumEntry img {
@@ -1872,7 +1874,7 @@ dl.toc dd ol {
     margin: 16px auto 0px;
 }
 .photoAlbumFolder {
-    background-image: url('polaroid-multi.png');
+    background-image: url('../images/polaroid-multi.png');
     background-repeat: no-repeat;
 }
 .photoAlbumEntryTitle {
@@ -1950,7 +1952,7 @@ div.overlay-iframe {
 /* default close button positioned on upper-left corner */
 div.overlaybg div.close,
 div.overlay div.close {
-    background-image: url(pb_close.png);
+    background-image: url('../images/pb_close.png');
     position: absolute;
     left: -14px;
     top: -14px;
@@ -2118,36 +2120,36 @@ div.overlay .formControls a {
 */
 
 .icons-on .contenttype-document {
-    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 4px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-event {
-    background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -212px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-folder {
-    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -644px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-link {
-    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1076px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-news-item {
-    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1292px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-plone-site {
-    background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1508px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-collection {
-    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1724px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-topic {
-    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1724px url('../images/contenttypes-sprite.png');
 }
 
 /* These should only appear in the add menu */
 .icons-on #plone-contentmenu-factories .contenttype-file {
-    background: no-repeat transparent 0px -428px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -428px url('../images/contenttypes-sprite.png');
 }
 .icons-on #plone-contentmenu-factories .contenttype-image {
-    background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -860px url('../images/contenttypes-sprite.png');
 }
 
 .icons-on .contenttype-document,
