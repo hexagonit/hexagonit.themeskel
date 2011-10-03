@@ -54,6 +54,15 @@ where the source is, so if you don't want it to end up in the same folder, just
 create a new folder and set it to be the output location for rest of the files.
 These files are not used anywhere, so you can freely delete them.
 
+After each update to the files, Less.app will recompile the edited file, but
+it won't recompile all files. In order to update the style.css which Plone is
+using, Compile All button must be clicked after editing any file.
+
+Note: Less.app will report some variable undefined errors, but that is normal,
+as it can't find the variables that are defined in other files. In the end, all
+variables and code are included in style.less, and it is crucial that this file
+successfully compile.
+
 Structure of less folder
 ------------------------
 
@@ -62,26 +71,27 @@ additional css. We have disabled all the css that we don't need in
 profiles/default/cssregistry.xml
 
 The plone folder holds all the styles that are needed by Plone to function, so 
-this folder should not be touched. 
+the content of this folder should not be modified. 
 The basic idea is to take the Plone's default css files and "lessify" them. 
 For fast development, we need a quick way to change the default colors to 
 reflect the design we are implementing, so we have modified the files so they 
 use variables that are set in one location. This is something that we have seen
-before in form of base_properties.props, but this time we are doing it with
-less variables.
+before in form of base_properties.props, but this time we are doing it right
+with less variables.
 
-All the theme specific styles goes into theme folder. This folder includes the 
+All the theme specific styles go into theme folder. This folder includes the 
 base.less and mixins.less that holds all the variables and mixins that are used
-by the styles in the plone folder.
+by the styles in the plone folder. Modify the values to meet your theme's needs.
 
-The theme specific styling should go to template.less. If you would like to have
-multiple files for your theme, just create a new .less file and include it to
-init.less. All the less files are imported to the init.less files in their 
-folders, which then get imported to style.less. This way we can concentrate only
-on our theme and there is no need to modify core Plone styles. If you do want to
-change some styling that is not in base.less, but somewhere in the plone folder
-or in style.less, just redefine it in your themplate.less. This way upgrade of 
-the core styles can be done easily without loosing theme specific styling.
+The theme specific styling that cannot be set in base.less, should go to 
+template.less. If you would like to have multiple files for your theme, just 
+create a new .less file and include it to init.less. All the less files are 
+imported to the init.less files in their folders, which then get imported to 
+style.less. This way we can concentrate only on our theme and there is no need 
+to modify core Plone styles. If you do want to change some styling that is not 
+in base.less, but somewhere in the plone folder or in style.less, just redefine 
+it in your themplate.less. This way upgrade of the core styles can be done 
+easily without loosing theme specific styling.
 
 HTML5Boilerplate suggests to have all plugins in plugins.js and all user scripts
 in script.js. We have decided to go against it, and we are using Plone's 
@@ -112,18 +122,57 @@ modify this to suite your needs. Boilerplate encourages us to have the styles
 and javascript inclusions in specific place, so please don't modify the rules 
 that make this happen.
 
+Within public.less, there are relative paths to some images, and Diazo will
+append the set prefix on them, even though we actually don't want that. One
+of the solutions would be to split the CSS files into two groups, the one that
+need prefix applied, and ones that don't. Html 5 Boilerplate suggests to have
+all the styles in one file, so we decided not to modify the structure, but to
+include the missing images in our theme.
+
 
 Exceptions
 ----------
 
 Modernizer.js should be the only JS in the header, so it’s hard to have a rule 
 that will put it there, so we have put only this js in the index.html and it is 
-not served from plone’s js registry. In case if the site is loaded without the 
+not served from Plone’s js registry. In case if the site is loaded without the 
 Diazo theme, the modernizer.js will be provided by Plone.
 
 Mobile.css is not modified, and we are using Plone’s default files 
 because they need to have the media attribute set, and in less there is no way 
 to do the same thing as the media attribute does.
+
+
+Best practices (Do's and Don'ts)
+================================
+
+Don't mix grid css classes with others
+--------------------------------------
+In order not to overwrite grid properties by accident, we encourage you to have
+the theme specific CSS classes in a separate element. For example instead of 
+this:
+  <div class="cell width-full position-0 myclass">
+You should have this:
+  <div class="cell width-full position-0">
+    <div class="myclass">
+
+Centering a fixed width body
+----------------------------
+
+
+Having multiple looks for the portlets
+--------------------------------------
+
+
+Fix for IE7 hasLayout bug
+-------------------------
+Internet Explorer has a nice habit of not applying layout to some elements and 
+that manifests in an overall messed up look of the site. Usually adding some
+css properties that are default values in browsers resolve this bug, so first 
+try setting them in global level, and if that messes up the look in other
+browsers, only then apply it with the .ie7 parent class.
+Read more about this bug and possible fixes on:
+http://haslayout.net/haslayout
 
 
 Useful reads
