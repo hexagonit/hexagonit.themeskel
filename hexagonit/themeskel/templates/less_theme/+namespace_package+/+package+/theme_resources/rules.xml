@@ -66,9 +66,9 @@
         <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" />
 
         <!-- Copy the footer -->
-        <copy css:content="#portal-footer" theme="//footer/div/div" />
-        <after css:content="#portal-colophon" theme="//footer/div/div" />
-        <after css:content="#portal-siteactions" theme="//footer/div/div" />
+        <copy css:content="#portal-footer" css:theme="footer" />
+        <after css:content="#portal-colophon" css:theme="footer" />
+        <after css:content="#portal-siteactions" css:theme="footer" />
 
     </rules>
 

@@ -63,6 +63,10 @@ as it can't find the variables that are defined in other files. In the end, all
 variables and code are included in style.less, and it is crucial that this file
 successfully compile.
 
+Important: If less files are changed in the themeskel itself, compile them, so
+in css/style.css we always have the newest code.
+
+
 Structure of less folder
 ------------------------
 
@@ -156,8 +160,23 @@ You should have this:
   <div class="cell width-full position-0">
     <div class="myclass">
 
+
 Centering a fixed width body
 ----------------------------
+To be more precise, the title should be Centering a fixed width container. The
+main idea is to set a fixed width to the container that holds all the elements,
+and center it. This way we can have a different background for the body and for
+the container.
+In base.less set the body-width to 100% and body-margin to 0. This will ensure
+having the body background in full width. Next in template.less set the styling
+for the container:
+
+    #container {
+        margin:0 auto;
+        width:960px;
+    }
+
+Also if different backgrounds are needed, then add a background property here.
 
 
 Having multiple looks for the portlets
@@ -173,6 +192,54 @@ try setting them in global level, and if that messes up the look in other
 browsers, only then apply it with the .ie7 parent class.
 Read more about this bug and possible fixes on:
 http://haslayout.net/haslayout
+
+
+IE TinyMCE body background color bug
+------------------------------------
+If you are using the background-gradient mixin for the body tag, then IE will
+apply the same gradient to the body tags within the iframes. To work around this
+bug, set a new background gradient for it that will go from white to white:
+
+    .mceContentBody {
+        .background-gradient(#fff, #fff, #fff);
+    }
+
+
+How to hide elements
+--------------------
+Hide from both screenreaders and browsers: apply "hidden" css class.
+Hide only visually, but have it available for screenreaders: .visuallyhidden
+Hide visually and from screenreaders, but maintain layout: .invisible
+
+
+Contain floats
+--------------
+Instead of having an additional element after the floats and applying clear:both
+in your css, just apply the clearfix css class to your element that contains the
+floats.
+Note: clearfix class is defined in style.less.
+
+
+Responsive Design
+-----------------
+
+
+Using custom fonts
+------------------
+@Font-Face is used for applying custom fonts. The preferred way is to have the
+font files on your server and use that, and the other way would be to use
+Google Font API or FontSquirrel. Both are free and have big font collection that
+are licensed for web.
+With google, only a stylesheet is added to the page, which points to their 
+server and they will provide all the font files that are needed. 
+With FontSquirrel you download everything and serve it from your server.
+In case if we do not find the proper font, and we have a web license for that 
+font, FontSquirrel @Type-face Generator can be used to generate all the formats 
+needed by browsers, and it will provide some basic html and css codes as well.
+Important: The font used must be licensed for web usage.
+
+The font-face is defined in base.less, and the font files should go into
+themere_resources/fonts folder.
 
 
 Useful reads
