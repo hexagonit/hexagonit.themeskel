@@ -163,7 +163,7 @@ You should have this:
 
 Centering a fixed width body
 ----------------------------
-To be more precise, the title should be Centering a fixed width container. The
+To be more precise, the title should be "Centering a fixed width container". The
 main idea is to set a fixed width to the container that holds all the elements,
 and center it. This way we can have a different background for the body and for
 the container.
@@ -198,7 +198,8 @@ IE TinyMCE body background color bug
 ------------------------------------
 If you are using the background-gradient mixin for the body tag, then IE will
 apply the same gradient to the body tags within the iframes. To work around this
-bug, set a new background gradient for it that will go from white to white:
+bug, set a new background gradient only for TinyMCE body that will go from white
+to white:
 
     .mceContentBody {
         .background-gradient(#fff, #fff, #fff);
@@ -215,8 +216,8 @@ Hide visually and from screenreaders, but maintain layout: .invisible
 Contain floats
 --------------
 Instead of having an additional element after the floats and applying clear:both
-in your css, just apply the clearfix css class to your element that contains the
-floats.
+in your css, just apply the clearfix css class to your html element that 
+contains the floated elements.
 Note: clearfix class is defined in style.less.
 
 
@@ -233,7 +234,7 @@ are licensed for web.
 With google, only a stylesheet is added to the page, which points to their 
 server and they will provide all the font files that are needed. 
 With FontSquirrel you download everything and serve it from your server.
-In case if we do not find the proper font, and we have a web license for that 
+In case if you do not find the proper font, and have a web license for that 
 font, FontSquirrel @Type-face Generator can be used to generate all the formats 
 needed by browsers, and it will provide some basic html and css codes as well.
 Important: The font used must be licensed for web usage.
