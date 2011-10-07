@@ -200,10 +200,10 @@ input.searchField {
 
 .collapsible .collapser {
     padding-right: 14px;
-    .collapsed {
+    &.collapsed {
         background: url('../images/arrowRight.png') center right no-repeat;
     }
-    .expanded {
+    &.expanded {
         background: url('../images/arrowDown.png') center right no-repeat;
     }
 }
@@ -287,9 +287,7 @@ input.searchField {
 /* @group Listings */
 
 a {
-    .link-parent {
-    }
-    .link-anchor {
+    &.link-anchor {
         border: none !important;
         color: @ListingsLink-color !important;
         cursor: default !important;
@@ -315,7 +313,7 @@ dl dt {
 /* @group Portlets */
 
 dl {
-    .portlet {
+    &.portlet {
         margin: 0 0 1em;
         font-size: 80%;
         
@@ -324,9 +322,46 @@ dl {
             padding: 0.42em 1em;
             background: @Portlet-header-background;
             line-height: normal;
+            a {
+                &:link,
+                &:visited,
+                &:hover {
+                   color: @Portlet-header-color;
+                   display: block;
+                   border: none;
+                }
+            }
+        }
+        a {
+            &:link {
+                color: @content-link-color;
+                border-bottom: @content-link-boerder-bottom;
+            }
+            &:visited {
+                color: @content-link-visited-color;
+                border-bottom: @content-link-visited-border-bottom;
+            }
+            &:hover {
+                color: @content-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+            }
+        }
+        dd {
+            &.portletItem,
+            &.portletFooter {
+                padding: 1em;
+            }
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 2em;
+        }
+        li {
+            margin-bottom: 0.25em;
+            line-height: 1.5em;
+            display: list-item;
         }
     }
-    .portletError {
+    &.portletError {
         background: @Portlet-error-background;
     }
 }
@@ -350,47 +385,6 @@ div.portletAssignments {
             border: none;
         }
     }
-}
-
-dl.portlet {
-    a {
-        &:link {
-            color: @content-link-color;
-            border-bottom: @content-link-boerder-bottom;
-        }
-        &:visited {
-            color: @content-link-visited-color;
-            border-bottom: @content-link-visited-border-bottom;
-        }
-        &:hover {
-            color: @content-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
-        }
-    }
-    dt a {
-        &:link,
-        &:visited,
-        &:hover {
-            color: @Portlet-header-color;
-            display: block;
-            border: none;
-        }
-    }
-    dd {
-        .portletItem,
-        .portletFooter {
-            padding: 1em;
-        }
-    }
-    ol {
-        list-style-type: decimal;
-        margin-left: 2em;
-    }
-    li {
-        margin-bottom: 0.25em;
-        line-height: 1.5em;
-        display: list-item;
-    }
-    
 }
 
 dl.portletError dd {
@@ -534,7 +528,7 @@ a.managePortletsFallback {
 /* @group Navigation portlet */
 
 dl.portlet ul {
-    .navTree {
+    &.navTree {
         li a {
             border: none;
             display: block;
@@ -547,12 +541,12 @@ dl.portlet ul {
             margin-right: -1em;
         }
     }
-    .navTreeLevel0 > .navTreeItem {
+    &.navTreeLevel0 > .navTreeItem {
         padding: 0.25em 1em;
         border-bottom: 0.1em dotted #ddd;
         line-height: 2em;
     }
-    .navTreeLevel1 .navTreeItem {
+    &.navTreeLevel1 .navTreeItem {
         padding-left: 0.5em;
         line-height: 2em;
     }
@@ -576,7 +570,7 @@ dl.portletNavigationTree dd.portletItem {
     h1 {
         margin-top: 0.5em;
         
-        .documentFirstHeading {
+        &.documentFirstHeading {
             margin-top: 0;
         }
     }
@@ -638,7 +632,7 @@ dl.portletNavigationTree dd.portletItem {
         margin-bottom: 1em;
         line-height: 1.25em;
 
-        .python {
+        &.python {
             background-color: White;
         }
     }
@@ -800,25 +794,25 @@ body#content {
 /* @group Data tables */
 
 table {
-    .listing,
-    .plain {
+    &.listing,
+    &.plain {
         border-spacing: 0;
         border-collapse: collapse;
     }
-    .invisible td,
-    .invisible th,
-    .plain td,
-    .plain th,
-    .listing td,
-    .listing th {
+    &.invisible td,
+    &.invisible th,
+    &.plain td,
+    &.plain th,
+    &.listing td,
+    &.listing th {
         padding: 0.5em 1em;
         vertical-align: top;
     }
-    .plain th,
-    .plain td {
+    &.plain th,
+    &.plain td {
         border: 1px solid #ddd;
     }
-    .listing {
+    &.listing {
         border-left: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
         
@@ -849,7 +843,7 @@ table {
             tr {
                 text-align:left;
                 
-                .odd {
+                &.odd {
                     background: #eee;
                     
                     td {
@@ -865,7 +859,7 @@ table {
         td {
             border-right: 1px solid #ddd;
             
-            .draggable {
+            &.draggable {
                 text-shadow: White 1px 1px 1px;
                 background: #ddd !important;
                 border-bottom: 1px solid white;
@@ -879,7 +873,7 @@ table {
         }
         
     }
-    .vertical {
+    &.vertical {
         th {
             text-align: right;
         }
@@ -888,7 +882,7 @@ table {
             padding: 0.5em;
         }
     }
-    .grid {
+    &.grid {
         td, th {
             border: 1px solid #e7e7e7;
             padding: 0.5em;
@@ -934,7 +928,7 @@ div.listingBar {
 /* @group Status messages */
 
 dl {
-    .portalMessage {
+    &.portalMessage {
         margin: 1em 0;
         font-size: 80%;
         border: 1px solid #996;
@@ -960,7 +954,7 @@ dl {
             line-height: 1.25em;
         }
     }
-    .warning {
+    &.warning {
         border-color: #d80;
         
         dt {
@@ -970,7 +964,7 @@ dl {
             background-color: #fd7;
         }
     }
-    .error {
+    &.error {
         border-color: #d00;
         
         dt {
@@ -1069,7 +1063,7 @@ dl {
     fieldset.formPanel {
         border: none;
         
-        .hidden {
+        &.hidden {
             display: none;
         }
     }
@@ -1123,7 +1117,7 @@ dl {
     dt {
         font-weight: normal;
         
-        .actionMenuHeader a:after {
+        &.actionMenuHeader a:after {
             content: " ▼";
         }
     }
@@ -1157,13 +1151,11 @@ dl {
         margin-bottom: 0;
 
         a,
-        .activated dd {
+        &.activated dd {
             background-color: @EditBar-background;
             color: @EditBar-color;
             text-decoration:none;
             z-index: 5;
-        }
-        .activated dd {
             border-bottom: @EditBar-dropdown-border;
             right: -3px;
             
@@ -1214,13 +1206,13 @@ dl.actionMenu {
     dt {
         font-weight: normal;
     }
-    .deactivated dt {
+    &.deactivated dt {
         margin: 0 0.25em;
     }
-    .deactivated dd {
+    &.deactivated dd {
         display: none;
     }
-    .activated {
+    &.activated {
         dd {
             position: absolute;
             width: auto;
@@ -1249,7 +1241,7 @@ span.arrowDownAlternative {
 }
 
 #content ul {
-    .configlets {
+    &.configlets {
         margin: 1em 0;
         list-style-image: none;
         list-style: none;
@@ -1277,7 +1269,7 @@ span.arrowDownAlternative {
             }
         }
     }
-    .configletDetails {
+    &.configletDetails {
         margin: 0em 1em 1em 4em;
         list-style-image: none;
         list-style: none;
@@ -1292,7 +1284,7 @@ span.arrowDownAlternative {
             label {
                 font-weight: bold;
             }
-            .configletDescription {
+            &.configletDescription {
                 display: block;
                 color: #76797c;
                 margin: 0;
@@ -1324,7 +1316,7 @@ table.controlpanel-listing {
     td {
         vertical-align:top;
         
-        .checker{
+        &.checker{
             text-align:center;
         }
     }
@@ -1789,7 +1781,7 @@ dl.enableFormTabbing dd {
     input[type="text"][name$=".title"] {
         width: 100%;
     }
-    .error input[type="text"][name$=".title"] {
+    &.error input[type="text"][name$=".title"] {
         width: 99%;
     }
 }
@@ -2017,6 +2009,7 @@ dl.toc {
 
 
 /* @group Album view classes */
+
 .photoAlbumEntry {
     float: left;
     position:relative;
@@ -2131,7 +2124,7 @@ div.overlay {
         margin-right:1em;
         font-weight: bold;
         
-        .lastFormTab {
+        &.lastFormTab {
             margin-right:0em;
         }
     }
@@ -2195,10 +2188,10 @@ div.overlaybg div.close {
 
 #content-history {
     div {
-        .historyRecord {
+        &.historyRecord {
             margin-bottom: 1em;
         }
-        .historyTools {
+        &.historyTools {
             ul {
                 float: right;
                 margin: 0.5em 1em;
@@ -2216,12 +2209,12 @@ div.overlaybg div.close {
                 display: inline;
             }
         }
-        .historyLinks {
+        &.historyLinks {
             float: right;
             clear: right;
             margin: 0.5em 1em 0 0;
         }
-        .historyComment {
+        &.historyComment {
             padding: 0.5em 1em;
             border: 1px solid #ddd;
             
@@ -2349,10 +2342,10 @@ div.overlaybg div.close {
         line-height: 1em;
         font-weight: normal;
         
-        .checked {
+        &.checked {
             background-color: #EEEEEE;
         }
-        .hover {
+        &.hover {
             background-color: #777777;
             color: #FFFFFF;
         }
