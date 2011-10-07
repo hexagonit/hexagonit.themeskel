@@ -15,6 +15,7 @@
    ========================================================================== */
 
 @import "theme/base.less";
+@import "theme/mixins.less";
 
 
 /* =============================================================================
@@ -206,11 +207,14 @@ td { vertical-align: top; }
 
 /* ==|== primary styles =====================================================
    Author: HexagonIT
+   Mobile first approach. Styles that are applied to screens that are less 
+   then 480px wide.
    ========================================================================== */
 
+@import "mobile/init.less";
 
-@import "plone/init.less";
-@import "theme/init.less";
+    /*@import "plone/init.less";
+    @import "theme/init.less";*/
 
 
 
