@@ -33,3 +33,5 @@ Mobile first branch (2011-10-06)
 - Inline javascript is moved to the bottom of the page. [vsomogyi]
 
 - Fixed footer markup. [vsomogyi]
+
+- New approach: mobile first. Restructured the less part. [vsomogyi]
