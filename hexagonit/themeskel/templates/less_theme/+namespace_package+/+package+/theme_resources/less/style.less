@@ -211,12 +211,9 @@ td { vertical-align: top; }
    then 480px wide.
    ========================================================================== */
 
-@import "mobile/init.less";
-@import "plone/columns.less";
 
-    /*@import "plone/init.less";
-    @import "theme/init.less";*/
-
+    @import "theme/init.less";
+    @import "mobile/init.less";
 
 
 /* ==|== non-semantic helper classes ========================================
@@ -252,16 +249,9 @@ td { vertical-align: top; }
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
 
-}
-
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
-
-}
-
+    @import "tablet/init.less";
+    @import "desktop/init.less";
 
 
 /* ==|== print styles =======================================================
