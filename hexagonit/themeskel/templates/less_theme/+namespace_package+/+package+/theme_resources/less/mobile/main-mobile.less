@@ -1,0 +1,82 @@
+// CSS that is applied only for sceen that is less then 480px wide.
+
+@media only screen and (max-width: 480px) {
+    
+    body, #container {
+        width:100%;
+    }
+    
+    #portal-column-one, 
+    #portal-column-two,
+    #portal-column-content { 
+        clear: both; 
+        width: 97.75%; 
+        margin-left: -98.875%; 
+    }
+
+    #portal-searchbox {
+        float: none !important;
+        margin: 1em 0;
+        text-align: center;
+        
+        input {
+            font-size: 100% !important;
+        }
+    }
+    
+    #portal-logo {
+        margin-bottom: 1em;
+    }
+    
+    #portal-globalnav {
+        font-size: 120%;
+    }
+    
+    #content-views a {
+        font-size: 130%;
+        line-height: 2em !important;
+        padding: 0.5em;
+    }
+    
+    #content li.formTab a {
+        font-size: 140%;
+        line-height: 2em !important;
+        padding: 0.25em;
+    }
+    
+    #edit-bar {
+        min-height: 50px;
+    }
+
+    #contentActionMenus a {
+        width: 100%;
+        line-height: 2em !important;
+        font-size: 130%;
+    }
+
+    input, textarea {
+        font-size: 140% !important;
+    }
+    
+    div.managePortletsLink,
+    a.managePortletsFallback {
+        font-size: 130%;
+    }
+    
+    div.overlay {
+        font-size: 120%;
+    }
+    
+    .pb-ajax > div {
+        width: 87%;
+    }
+    
+    div.overlay-iframe,
+    div.overlay-ajax {
+        width: 80%;
+    }
+    
+    #fieldset-openid-login label, #login-form label {
+        text-align:center;
+    }
+}
