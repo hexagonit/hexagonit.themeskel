@@ -227,7 +227,7 @@ input.searchField {
 #LSResult {
     position: absolute;
     right: 0;
-    background: White;
+    background: @LiveSearch-background;
     margin: -1.5em 0 0 -7em;
     
     fieldset {
@@ -241,7 +241,7 @@ input.searchField {
 }
 
 #livesearchLegend {
-    background:@LiveSearchLegend-background;
+    background-color:@LiveSearchLegend-background;
     padding:0.3em;
 }
 
@@ -263,7 +263,7 @@ input.searchField {
 /* @group Path indicator (breadcrumbs) */
 
 #portal-breadcrumbs {
-    font-size: 80%;
+    font-size: @Breadcrumbs-font-size;
     margin-bottom: 1em;
     margin-left: 0.25em;
     
@@ -279,7 +279,7 @@ input.searchField {
 /* @group Site actions */
 
 #portal-siteactions {
-    font-size: 85%;
+    font-size: @SiteActions-font-size;
     padding-bottom: 2em;
     text-align: center;
     clear: left;
@@ -301,13 +301,13 @@ input.searchField {
 a {
     &.link-anchor {
         border: none !important;
-        color: @ListingsLink-color !important;
+        color: @ListingsLinkAnchor-color !important;
         cursor: default !important;
     }
 }
 
 #content a.link-overlay {
-    border-bottom: @ListingsLink-border !important;
+    border-bottom: @ListingsLinkOverlay-border !important;
 }
 
 dl dt {
@@ -327,7 +327,7 @@ dl dt {
 dl {
     &.portlet {
         margin: 0 0 1em;
-        font-size: 80%;
+        font-size: @Portlet-font-size;
         
         dt {
             color: @Portlet-header-color;
@@ -374,7 +374,7 @@ dl {
         }
     }
     &.portletError {
-        background: @Portlet-error-background;
+        background-color: @Portlet-error-background;
     }
 }
 
@@ -383,11 +383,11 @@ div.portletAssignments {
         color: @Portlet-header-color;
         padding: 0.42em 1em;
         background: @Portlet-header-background;
-        line-height: normal;
+        line-height: @Portlet-header-line-height;
     }
     
-    font-size: 0.8em;
-    line-height: 2em;
+    font-size: @PortletAssignments-font-size;
+    line-height: @PortletAssignments-line-height;
     
     .managedPortletActions {
         float: right;
@@ -407,7 +407,7 @@ div.managePortletsLink,
 a.managePortletsFallback {
     text-align: center;
     padding: 0.25em 0.5em;
-    font-size: 80%;
+    font-size: @Portlet-managePortlets-font-size;
     margin: 0 auto 1em;
     background: @Portlet-managePortlets-background;
     .rounded-corners(0.5em);
@@ -446,7 +446,7 @@ a.managePortletsFallback {
         }
     }
     .portletBlockedMessage {
-        color: white;
+        color: @Portlet-blockedPortlet-color;
         display: inline;
     }
 }
@@ -458,8 +458,8 @@ a.managePortletsFallback {
     dt {
         background: @Portlet-Calendar-background;
         border-bottom: medium none;
-        font-weight: bold;
-        line-height: 1.6em;
+        font-weight: @Portlet-Calendar-font-weight;
+        line-height: @Portlet-Calendar-line-height;
         text-align: center;
         
         a {
@@ -501,18 +501,18 @@ a.managePortletsFallback {
     }
     .weekdays th {
         background: @Portlet-Calendar-weekdays-background;
-        font-weight: normal;
+        font-weight: @Portlet-Calendar-weekdays-font-weight;
         padding: 2px;
         text-align: center;
     }
     .event {
         background: @Portlet-Calendar-event-background;
-        font-weight: bold;
+        font-weight: @Portlet-Calendar-event-font-weight;
     }
     .todayevent {
         background: @Portlet-Calendar-todayEvent-background;
         border: @Portlet-Calendar-todayEvent-border;
-        font-weight: bold;
+        font-weight: @Portlet-Calendar-todayEvent-font-weight;
     }
     .todaynoevent {
         border: @Portlet-Calendar-todayNoEvent-border;
@@ -521,8 +521,8 @@ a.managePortletsFallback {
 
 .portletItemDetails {
     display: block;
-    font-size: 85%;
-    line-height: 1.5em;
+    font-size: @Portlet-ItemDetails-font-size;
+    line-height: @Portlet-ItemDetails-line-height;
     margin-left: 1em;
     padding-top: 0.5em;
 }
@@ -547,20 +547,20 @@ dl.portlet ul {
             zoom: 1;
         }
         .navTreeCurrentItem {
-            background-color: #ddd;
-            border-left: 1em solid #ddd;
+            background-color: @Portlet-Navigation-background;
+            border-left: @Portlet-Navigation-border-left;
             margin-left: -1em;
             margin-right: -1em;
         }
     }
     &.navTreeLevel0 > .navTreeItem {
-        padding: 0.25em 1em;
-        border-bottom: 0.1em dotted #ddd;
-        line-height: 2em;
+        padding: @Portlet-Navigation-Level0-padding;
+        border-bottom: @Portlet-Navigation-Level0-border-bottom;
+        line-height: @Portlet-Navigation-Level0-line-height;
     }
     &.navTreeLevel1 .navTreeItem {
-        padding-left: 0.5em;
-        line-height: 2em;
+        padding-left: @Portlet-Navigation-Level1-padding-left;
+        line-height: @Portlet-Navigation-Level1-line-height;
     }
     
 }
@@ -614,7 +614,7 @@ dl.portletNavigationTree dd.portletItem {
             color: @content-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
         }
         &:target {
-            background: @content-link-target-background;
+            background-color: @content-link-target-background;
         }
     }
     span.link-external a {
@@ -631,48 +631,48 @@ dl.portletNavigationTree dd.portletItem {
     }
     li {
         margin-bottom: 0.25em;
-        line-height: 1.5em;
+        line-height: @Content-li-line-height;
         display: list-item;
     }
     pre {
-        background: @content-pre-background;
-        color: White;
+        background-color: @content-pre-background;
+        color: @content-pre-color;
         font-family: @content-pre-font-family;
         padding: 1em;
         overflow-x: auto;
-        font-size: 90%;
+        font-size: @content-pre-font-size;
         margin-bottom: 1em;
-        line-height: 1.25em;
+        line-height: @content-pre-line-height;
 
         &.python {
-            background-color: White;
+            background-color: @content-pre-python-background;
         }
     }
     code {
         font-family: @content-code-font-family;
     }
     div.documentByLine {
-        font-size: 85%;
+        font-size: @content-documentByLine-font-size;
         display: block;
         color: @content-documentByLine-color;
     }
     .discreet {
         color: @content-discreet-color;
-        font-size: 85%;
-        font-weight: normal;
+        font-size: @content-discreet-font-size;
+        font-weight: @content-discreet-font-weight;
     }
     .visualHighlight {
-        background: @content-visualHighlight;
+        background-color: @content-visualHighlight-background;
     }
     .pullquote {
         margin: 0 1em 0.5em 0.5em;
-        font-weight: bold;
-        line-height: 1.25em;
+        font-weight: @content-pullquote-font-weight;
+        line-height: @content-pullquote-line-height;
         float: right;
         width: 35%;
         clear: right;
-        color: @content-pullquote;
-        font-size: 1.6em;
+        color: @content-pullquote-color;
+        font-size: @content-pullquote-font-size;
         letter-spacing: -0.08em !important;
     }
     .callout {
@@ -706,10 +706,10 @@ dl.portletNavigationTree dd.portletItem {
         p.discreet {
             margin: 0;
             padding: 0.5em;
-            background-color: #666;
-            background-color: rgba(40,40,40,0.7);
-            color: White;
-            font-weight: bold;
+            background-color: @content-newsItemContainer-p-discreet-background;
+            background-color: @content-newsItemContainer-p-discreet-background-rgba;
+            color:@content-newsItemContainer-p-discreet-color;
+            font-weight: @content-newsItemContainer-p-discreet-font-weight;
             position: relative;
             width: 190px;
             top: -3em;
@@ -718,21 +718,21 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 #category {
-    font-size: 75%;
+    font-size: @category-font-size;
     margin-bottom: 1em;
-    color: #666;
+    color: @category-color;
     text-align: right;
     
     a.link-category {
-        color: black;
+        color: @category-link-color;
         padding: 0.25em 0.5em;
-        background: #ddd;
+        background: @category-link-background;
         .rounded-corners(0.5em);
         
         &:hover {
-            background: #205c90;
-            color: White;
-            border-color: #205c90;
+            background: @category-link-hover-background;
+            color: @category-link-hover-color;
+            border-color: @category-link-hover-border-color;
         }
     }
     .separator {
@@ -741,16 +741,16 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 span.selectedTag {
-    color: black;
+    color: @SelectedTag-color;
     padding: 0.25em 0.5em;
-    background: #ddd;
+    background: @SelectedTag-background;
     .rounded-corners(0.5em);
 }
 
 #sidebar .discreet {
     color: @content-discreet-color;
-    font-size: 85%;
-    font-weight: normal;
+    font-size: @content-discreet-font-size;
+    font-weight: @content-discreet-font-weight;
 }
 
 .eventDetails {
@@ -775,29 +775,29 @@ body#content {
 }
 
 .label {
-    font-weight: bold;
+    font-weight: @Label-font-weight: bold;
     display: inline;
     padding-right: 0.5em;
 }
 
 .optionsToggle {
-    border: 0.1em solid #8cacbb;
+    border: @OptionsToggle-border;
     color: Black;
-    background-color: #dee7ec;
-    font-weight: normal;
-    font-size: 90%;
+    background-color: @OptionsToggle-background;
+    font-weight: @OptionsToggle-font-weight;
+    font-size: @OptionsToggle-font-size;
 }
 
 /* for greying out inherited roles */
 .noInheritedRoles {
-    color: #a0a0a0;
+    color: @InheritedRoles-color;
 }
 
 /* for highlighting current items, like the language or today in the calendar */
 .currentItem {
     border-collapse: collapse;
-    border: 0.2em solid #ffa500;
-    padding: 0.1em;
+    border: @CurrentItem-border;
+    padding: @CurrentItem-padding;
 }
 
 /* @end */
@@ -999,48 +999,48 @@ div.listingBar {
 dl {
     &.portalMessage {
         margin: 1em 0;
-        font-size: 80%;
-        border: 1px solid #996;
-        background-color: #ffffe3;
+        font-size: @StatusMessage-portalMessage-font-size;
+        border: @StatusMessage-portalMessage-border;
+        background-color: @StatusMessage-portalMessage-background;
         clear:both;
         
         a {
-            color: black;
-            border-bottom: 1px solid #888;
+            color: @StatusMessage-portalMessage-link-color;
+            border-bottom: @StatusMessage-portalMessage-link-border-bottom;
         }
         dt {
-            background-color: #996;
-            font-weight: bold;
+            background-color: @StatusMessage-portalMessage-dt-background;
+            font-weight: @StatusMessage-portalMessage-dt-font-weight;
             float: left;
             margin: 0 0.5em 0 0;
             padding: 0.5em 0.75em;
-            color: White;
-            line-height: 1.25em;
+            color: @StatusMessage-portalMessage-dt-color;
+            line-height: @StatusMessage-portalMessage-dt-line-height;
         }
         dd {
             padding: 0.5em 0.5em;
             margin: 0;
-            line-height: 1.25em;
+            line-height: @StatusMessage-portalMessage-dt-line-height;
         }
     }
     &.warning {
-        border-color: #d80;
+        border-color: @StatusMessage-warning-border-color;
         
         dt {
-            background-color: #d80;
+            background-color: @StatusMessage-warning-dt-background;
         }
         dd {
-            background-color: #fd7;
+            background-color: @StatusMessage-warning-dd-background;
         }
     }
     &.error {
-        border-color: #d00;
+        border-color: @StatusMessage-error-border-color;
         
         dt {
-            background-color: #d00;
+            background-color: @StatusMessage-error-dt-background;
         }
         dd {
-            background-color: #fdc;
+            background-color: @StatusMessage-error-dd-background;
         }
     }
 }
@@ -1048,11 +1048,11 @@ dl {
 /* Additional specificity for when status is shown inside #content */
 
 #content dl.portalMessage {
-    font-size: 100%;
+    font-size: @content-portalMessage-font-size;
     
     a {
-        color: black;
-        border-bottom: 1px solid #888;
+        color: @content-portalMessage-link-color;
+        border-bottom: @content-portalMessage-link-border-bottom;
     }
     dt {
         margin: 0 0.5em 0 0;
@@ -1071,7 +1071,7 @@ dl {
 /* @group Tabs */
 
 #edit-bar {
-    background:@EditBar-background;
+    background-color:@EditBar-background;
     border: @EditBar-border;
     font-size: @EditBar-font-size;
     min-height: 2em;
@@ -1086,8 +1086,8 @@ dl {
 
 #content {
     ul.formTabs {
-        background-color: #ddd;
-        border: 0.3em solid #ddd;
+        background-color: @FormTab-background;
+        border: @FormTab-border;
         display: block;
         border-style: solid solid none solid;
         margin-left: 0;
@@ -1100,28 +1100,28 @@ dl {
         a {
             /* this isn't supported by all browsers, so we keep it in a separate rule */
             display: inline-block;
-            line-height: 2em;
-            padding: 0 0.75em;
+            line-height: @FormTab-link-line-height;
+            padding: @FormTab-link-padding;
             text-decoration: none;
             border: none;
             margin: 0 ;
             
-            .selected {
-                font-weight: bold;
-                background: White;
-                color: Black;
+            &.selected {
+                font-weight: @FormTab-link-selected-font-weight;
+                background: @FormTab-link-selected-background;
+                color: @FormTab-link-selected-color;
                 .rounded-corners-top(0.5em);
             }
             &:hover {
-                background: White;
-                color: Black;
+                background: @FormTab-link-hover-background;
+                color: @FormTab-link-hover-color;
                 .rounded-corners-top(0.5em);
             }
-            .notify {
-                background-color: red;
-                color: White;
+            &.notify {
+                background-color: @FormTab-link-notify-background;
+                color: @FormTab-link-notify-color;
             }
-            .required span {
+            &.required span {
                 background-image: url('../images/required.png');
                 background-position: center right;
                 background-repeat: no-repeat;
@@ -1143,27 +1143,27 @@ dl {
 
 #content-views {
     float: left;
-    background: @EditBar-background;
+    background-color: @EditBar-background;
     
     a {
         /* this isn't supported by all browsers, so we keep it in a separate rule */
         display: inline-block;
         color: @EditBar-color;
-        line-height: 2em;
+        line-height: @EditBar-line-height;
         padding: 0 0.75em;
         text-decoration: none;
         border: none;
         margin: 0 ;
     }
     li.selected a {
-        font-weight: bold;
-        background: White;
-        color: Black;
+        font-weight: @EditBar-selected-font-weight;
+        background: @EditBar-selected-background;
+        color: @EditBar-selected-color;
         .rounded-corners-top(0.5em);
     }
     li a:hover {
-        background: White;
-        color: Black;
+        background: @EditBar-hover-background;
+        color: @EditBar-hover-color;
         .rounded-corners-top(0.5em);
     }
 }
@@ -1193,16 +1193,16 @@ dl {
     dd {
         right: 0;
         padding-top: 0.5em;
-        background: #e3e3e3;
+        background: @Personaltools-background;
         padding-bottom: 0.5em;
         
         a {
-            line-height: 2em;
+            line-height: @Personaltools-line-height;
             padding: 0 0.75em;
             
             &:hover {
-                background: #205c90;
-                color: White;
+                background: @Personaltools-hover-background;
+                color: @Personaltools-hover-color;
             }
         }
     }
@@ -1215,7 +1215,7 @@ dl {
 
 #contentActionMenus {
     dl.actionMenu {
-        line-height: 2em;
+        line-height: @ContentActionMenus-line-height;
         margin-top: 0;
         margin-bottom: 0;
 
@@ -1229,8 +1229,8 @@ dl {
             right: -3px;
             
             a:hover, .actionMenuSelected {
-                background-color: White !important;
-                color: #666;
+                background-color: @ContentActionMenus-selected-background !important;
+                color: @ContentActionMenus-selected-color;
             }
         }
     }
@@ -1426,17 +1426,17 @@ table.controlpanel-listing {
 /* @group Collapsible */
 
 dl.collapsible {
-    border: 0.1em solid #8cacbb;
+    border: @Collapsible-border;
     margin: 1em 0;
     padding: 0;
     
     dt.collapsibleHeader {
         display: block;
         float: left;
-        background: White;
-        line-height: 1.2em;
+        background: @Collapsible-header-background;
+        line-height: @Collapsible-header-line-height;
         vertical-align: middle;
-        font-size: 90%;
+        font-size: @Collapsible-header-font-size;
         position: relative;
         top: -0.6em;
         width: auto;
@@ -1511,10 +1511,10 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
 
 .comment {
     margin-top: 1.5em;
-    font-size: 80%;
+    font-size: @Comments-font-size;
     
     h1, h2, h3, h4, h5, h6 {
-        font-weight: normal;
+        font-weight: @Comments-headings-font-weight;
     }
     .documentByLine {
         margin-left: 1em;
@@ -1525,16 +1525,14 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
 }
 
 .commentTime {
-    color: #666;
+    color: @Comments-time-color;
 }
 
 .commentBody {
     padding: 1em;
     margin: 0.5em 0;
     .rounded-corners(0.5em);
-    box-shadow: 0 0 1em 0 #888;
-    -moz-box-shadow: 0 0 0.5em 0 #888;
-    -webkit-box-shadow: 0 0 0.5em #888;
+    .box-shadow(0 0 1em 0 #888);
 }
 
 /* @end */
@@ -1548,7 +1546,7 @@ fieldset#search-field {
 }
 
 input.searchPage {
-    font-size:200% !important;
+    font-size: @SearchResults-input-searchPage-font-size !important;
 }
 
 #rss-subscription {
@@ -1561,8 +1559,8 @@ input.searchPage {
     z-index: 1;
     float: left;
     width: 100%;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;    
+    border-top: @SearchResults-border-top;
+    border-bottom: @SearchResults-border-bottom;
     padding: 1em 0;
     
     dl.actionMenu {
@@ -1596,25 +1594,25 @@ input.searchPage {
         margin: 0;
     }
     legend {
-        background: transparent;
-        font-size: 1.1em;
+        background: @SearchResults-filter-legend-background;
+        font-size: @SearchResults-filter-legend-font-size;
         padding: 0.5em 0.9em;
-        font-weight: bold;
+        font-weight: @SearchResults-filter-legend-font-weight: bold;
     }
 } 
 
 #search-filter {
-    background: #ddd;
+    background: @SearchResults-filter-background;
     margin: 0;
     padding: 0;
     
     .field {
-        background: #eee;
+        background: @SearchResults-filter-field-background;
         padding: 1em 1.5em;
         margin: 0;
         
         label {
-            font-weight: normal;
+            font-weight: @SearchResults-filter-field-label-font-weight;
         }
     }
     .formControls {
@@ -1655,12 +1653,12 @@ form.searchPage h1.documentFirstHeading {
 
 /* for highlighting of search terms */
 .highlightedSearchTerm {
-    background-color: #ffa;
+    background-color: @HighlightedTerm-background;
 }
 
 dl.searchResults .highlightedSearchTerm {
-    background-color: transparent;
-    font-weight: bold;
+    background-color: @SearchResults-highlightedTerm-background;
+    font-weight: @SearchResults-highlightedTerm-font-weight;
 }
 
 /* @end */
@@ -1687,15 +1685,15 @@ can both be on an image and a wrapper element e.g. a dl tag*/
 img.image-left,
 img.image-right,
 .captioned img {
-    border: 1px solid #ddd;
+    border: @ImageAligned-border;
 }
 
 dd.image-caption {
     text-align: left;
     padding: 0 0 0 3px; /*image padding+border with*/
     margin: 0;
-    color: #666;
-    font-size: 85%;
+    color: @ImageAligned-caption-color;
+    font-size: @ImageAligned-caption-font-size;
 }
 
 /* @end */
@@ -1714,8 +1712,8 @@ dd.image-caption {
 }
 
 #dashboard {
-    font-size: 125%;
-    line-height: 1em;
+    font-size: @Dashboard-font-size;
+    line-height: @Dashboard-line-height;
     
     dd {
         margin: 0;
@@ -1753,7 +1751,7 @@ dd.image-caption {
 
 fieldset,
 .editionComment {
-    line-height:1.5em;
+    line-height:@Forms-editionComment-line-height;
     margin:1em 0;
     padding:0 1em 1em;
     width:auto;
@@ -1762,22 +1760,22 @@ fieldset,
 /* Emulates the styling from the h1 tag */
 #content .field input[type="text"][name$=".title"],
 #archetypes-fieldname-title input {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
-    line-height: 125%;
-    color: Black;
+    font-family: @Forms-field-input-font-family;
+    line-height: @Forms-field-input-line-height;
+    color: @Forms-field-input-color;
     letter-spacing: -0.05em;
     margin: inherit -0.05em;
-    font-size: 2em; /* 26px equiv */
-    font-weight: bold;
+    font-size: @Forms-field-input-font-size;
+    font-weight: @Forms-field-input-font-weight;
 }
 
 /* Emulates styling from the description's view */
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
-    font-family: Arial,FreeSans,sans-serif;
-    color:#666666;
-    font-size:1.25em;
-    font-weight: bold;
+    font-family: @Forms-field-textarea-font-family;
+    color: @Forms-field-textarea-color;
+    font-size:@Forms-field-textarea-font-size;
+    font-weight: @Forms-field-textarea-font-weight;
 }
 
 div.formControls {
@@ -1787,33 +1785,33 @@ div.formControls {
 input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background-color: #ffffe0;
+    background-color: @Forms-input-focus-background;
 }
 
 #content {
     textarea {
-        font: 100% Monaco, "Courier New", Courier, monospace;
+        font: @Content-textarea-font;
         width: 100%;
     }
     select {
         vertical-align: top;
     }
     fieldset {
-        border: 0.1em solid #329fd7;
+        border: @Content-fieldset-border;
         border-style: solid none none none;
     }
     legend {
         padding: 0.5em;
-        font-size: 85%;
+        font-size: @Content-legend-font-size;
     }
     optgroup {
-        font-style: normal;
-        font-weight: bold;
-        color: #999;
+        font-style: @Content-optgroup-font-style;
+        font-weight: @Content-optgroup-font-weight;
+        color: @Content-optgroup-color;
         padding-left: 0.25em;
     }
     option {
-        color: black;
+        color: @Content-option-color;
     }
     optgroup > option {
         padding: 0 0.25em 0 1em;
@@ -1821,7 +1819,7 @@ textarea:focus {
 }
 
 label {
-    font-weight:bold;
+    font-weight:@Label-font-weight;
 }
 
 dl.enableFormTabbing dd {
@@ -1829,7 +1827,7 @@ dl.enableFormTabbing dd {
     padding-top: 2em;
 }
 .searchSection {
-    color: #76797c;
+    color: @SearchSection-color;
     margin-top: 0.25em;
     
     label:hover {
@@ -1863,14 +1861,14 @@ input#title {
     width: 99%;
     
     .fieldRequired {
-        color: #d00;
+        color: @Error-input-required-color;
     }
 }
 
 .fieldRequired {
     background: url('../images/required.png') center left no-repeat;
     padding: 0 0 0 1em;
-    color: White;
+    color: @Field-required-color;
 }
 
 .fieldUploadFile {
@@ -1885,19 +1883,19 @@ input#title {
 }
 
 .formHelp {
-    color: #555;
+    color: @FormHelp-color;
     margin: 0 0 0.2em 0;
 }
 
 div.field.error {
-    background-color: #fdc;
+    background-color: @Field-error-background;
     border:  1px solid red;
     padding: 0.5em;
     margin:  1em 0;
 }
 
 div.error.warning {
-    background-color: transparent;
+    background-color: @Error-warning-background;
     border: none;
     margin-top: 0;
     padding: 0;
@@ -1908,7 +1906,7 @@ div.error.warning {
 }
 
 input.inputLabelActive {
-    color: #76797c;
+    color: @Input-label-active-color;
 }
 
 textarea#form\.description {
@@ -1919,26 +1917,26 @@ textarea#form\.description {
 table.listing tbody tr.odd {
     .selected td,
     .dragging td {
-        background-color: #ffa;
+        background-color: @Table-odd-selected-background;
     }
     .error td {
-        background-color: #fdc;
+        background-color: @Table-odd-error-background;
     }
 }
 
 tr {
     .dragging,
     .selected {
-        background-color: #ffa;
+        background-color: @Table-row-selected-background;
     }
     .error {
-        background-color: #fdc;
+        background-color:  @Table-row-error-background;
     }
 }
 
 .multi-widget-field {
     padding-left: 0.5em;
-    border-left: 1.5em solid #DDD;
+    border-left: @MultiWidgetField-border-left;
 }
 
 .multi-widget-checkbox {
@@ -1957,12 +1955,12 @@ tr {
     }
 
     #fieldset-openid-login input, #login-form input {
-        font-size: 150%;
+        font-size: @Login-input-font-size;
     }
 
     body.template-register #content input,
     body.template-new-user #content input {
-        font-size: 150%;
+        font-size: @Login-input-font-size;
         width: inherit;
 
     }
@@ -2029,15 +2027,15 @@ dl.toc {
 /* @group Footer */
 
 #portal-footer {
-    font-size: 75%;
-    background: #ddd;
+    font-size: @Footer-font-size;
+    background: @Footer-background;
     padding: 1em;
     margin: 1em 0;
     line-height: 2em;
 }
 
 #portal-colophon {
-    font-size: 70%;
+    font-size: @Colophon-font-size;
     text-align: center;
     margin-bottom: 1em;
     
@@ -2045,7 +2043,7 @@ dl.toc {
         padding:0 0.75em;
     }
     a {
-        color: #444;
+        color: @Colophon-link-color;
     }
 }
 
@@ -2057,8 +2055,8 @@ dl.toc {
 #portal-sitemap {
     list-style: none;
     margin-left: 0;
-    font-size: 130%;
-    font-weight: bold;
+    font-size: @Sitemap-font-size;
+    font-weight: @Sitemap-font-weight;
     
     li {
         list-style: none;
@@ -2069,15 +2067,15 @@ dl.toc {
         display: block;
     }
     > li {
-        border-bottom:0.1em dotted #ddd;
+        border-bottom: @Sitemap-li-border-bottom;
         line-height:1.8em;
         padding:0.25em 1em;
         margin-bottom: 0;
     }
     .navTreeLevel2,
     .navTreeLevel2 ul {
-        font-size: 85%;
-        font-weight: normal;
+        font-size: @Sitemap-navTreeLevel2-font-size;
+        font-weight: @Sitemap-navTreeLevel2-font-weight;
         margin-bottom: 0;
         padding: 0.25em 0;
     }
@@ -2092,8 +2090,8 @@ dl.toc {
     float: left;
     position:relative;
     overflow: hidden;
-    height: 185px;
-    width: 143px;
+    height: @PhotoAlbum-entry-height;
+    width: @PhotoAlbum-entry-weight;
     margin: 0em;
     padding: 0px 6px 0px 9px;
     text-align: center;
@@ -2101,24 +2099,24 @@ dl.toc {
     background-repeat: no-repeat;
     
     img {
-        border: 1px solid #ccc;
+        border: @PhotoAlbum-img-border;
         display: block;
         margin: 0 auto;
     }
     a {
         display: block;
         text-decoration: none;
-        font-size: 90%;
-        height: 169px;
-        width: 130px;
-        margin: 16px auto 0px;
+        font-size: @PhotoAlbum-link-font-size;
+        height: @PhotoAlbum-link-height;
+        width: @PhotoAlbum-link-width;
+        margin: @PhotoAlbum-link-margin;
     }
 }
 
 .photoAlbumEntryWrapper {
     /*display: block;*/
-    height: 130px;
-    width: 128px;
+    height: @PhotoAlbum-entryWrapper-height;
+    width: @PhotoAlbum-entryWrapper-width;
     margin-bottom: 7px;
 }
 
@@ -2128,10 +2126,10 @@ dl.toc {
 }
 
 .photoAlbumEntryTitle {
-    color: #76797c;
+    color: @PhotoAlbum-entryTitle-color;
     display: block;
-    width: 128px;
-    height: 3.6em;
+    width: @PhotoAlbum-entryTitle-width;
+    height: @PhotoAlbum-entryTitle-height;
 }
 
 /* @end */
@@ -2156,7 +2154,7 @@ div.overlay {
     display: none;
     /* some padding to layout nested elements nicely  */
     margin: 1em;
-    font-size: 80%;
+    font-size: @Overlay-font-size;
     
     div.close {
         background-image: url('../images/pb_close.png');
@@ -2192,10 +2190,10 @@ div.overlay {
     }
     a {
         &:hover {
-            color: #75ad0a;
+            color: @Overlay-link-hover-color;
         }
         .selected {
-            color: #000000;
+            color: @Overlay-link-selected-color;
         }
     }
     .formTab {
@@ -2251,12 +2249,10 @@ div.overlaybg div.close {
 }
 
 .pb-ajax, .pb-image, .overlay iframe {
-    background-color: #fff;
-    border: 1px solid #999;
+    background-color: @Overlay-background;
+    border: @Overlay-border;
     white-space: normal;
-    box-shadow: 0 0 3em 0.5em #666;
-    -moz-box-shadow: 0 0 3em 0.5em #666;
-    -webkit-box-shadow: 0 0 3em #666;
+    .box-shadow(0 0 3em 0.5em #666);
 }
 
 /* @end */
@@ -2294,7 +2290,7 @@ div.overlaybg div.close {
         }
         &.historyComment {
             padding: 0.5em 1em;
-            border: 1px solid #ddd;
+            border: @ContentHistory-comment-border;
             
             p {
                 margin: 0;
@@ -2303,18 +2299,18 @@ div.overlaybg div.close {
         }
     }
     .historyByLine {
-        background: #ddd;
+        background: @ContentHistory-byLine-background;
         padding: 0.5em;
         .rounded-corners-top(0.5em);
     }
     a.historyComparePrevious {
-        border-top: 1px dotted #ccc;
+        border-top: @ContentHistory-compare-border-top;
         display: block;
         margin-top: 3em;
         text-align: center;
         
         span {
-            background-color: white;
+            background-color: @ContentHistory-compare-span-background;
             position: relative;
             top: -0.75em;
             padding: 0 0.5em;
@@ -2409,23 +2405,23 @@ div.overlaybg div.close {
 
 .optionsBox {
     overflow-y: auto;
-    border: solid 1px #999999;
-    background: #FFFFFF;
+    border: @OptionsBox-border;
+    background: @OptionsBox-background;
     height: 14em;
     width: 100%;
     
     LABEL {
         padding: 2px 0 0 0;
         display: block;
-        line-height: 1em;
-        font-weight: normal;
+        line-height: @OptionsBox-label-line-height;
+        font-weight: @OptionsBox-label-font-weight;
         
         &.checked {
-            background-color: #EEEEEE;
+            background-color: @OptionsBox-label-checked-background;
         }
         &.hover {
-            background-color: #777777;
-            color: #FFFFFF;
+            background-color: @OptionsBox-label-hover-background;
+            color: @OptionsBox-label-hover-color;
         }
     }
     input{

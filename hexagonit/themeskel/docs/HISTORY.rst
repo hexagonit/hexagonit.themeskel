@@ -35,3 +35,5 @@ Mobile first branch (2011-10-06)
 - Fixed footer markup. [vsomogyi]
 
 - New approach: mobile first. Restructured the less part. [vsomogyi]
+
+- Lessification of main.less: variable extraction. [vsomogyi]
