@@ -15,12 +15,15 @@ Package content
   * tests
   * theme_resources
     * css - holds the generated css that is actually used by plone
+    * images - holds all the images used by the theme
     * javascript - holds all the javascripts used by the theme
     * less - holds all the less files that will produce the css
-        * plone - plone default styles that is converted to less
         * theme - theme specific less files
-        * style.less - HTML5Boilerplate css file that includes the plone and 
-        theme specific less files
+        * desktop - styles that are only applied to desktops
+        * mobile - styles that are only applied to mobiles
+        * tablet - styles that are only applied to tablets
+        * style.less - HTML5Boilerplate css file that includes all the other 
+        less files in the appropriate places.
     * index.html - main template used by plone.app.theming
     * rules.xml - rules file used by plone.app.theming
 
@@ -74,28 +77,37 @@ The less folder holds all the css needed by Plone, so there is no need for
 additional css. We have disabled all the css that we don't need in
 profiles/default/cssregistry.xml
 
-The plone folder holds all the styles that are needed by Plone to function, so 
-the content of this folder should not be modified. 
+The theme is built with responsive design principle in mind and mobile first 
+approach, so the less folder is structured in this fashion.
+
+We have three major devices that we are theming for: mobile, tablet and desktop.
+All of them have a separate folder that holds all the styles that are applied
+only for the specific device. The styles that are in common to all are located 
+in the theme folder. 
+
 The basic idea is to take the Plone's default css files and "lessify" them. 
-For fast development, we need a quick way to change the default colors to 
-reflect the design we are implementing, so we have modified the files so they 
-use variables that are set in one location. This is something that we have seen
-before in form of base_properties.props, but this time we are doing it right
-with less variables.
+The result of this can be found in theme/main.less. 
+For fast development, we need a quick way to change the default colors and 
+stylings to reflect the design we are implementing, so we have modified the 
+files so they use variables that are set in one location. This is something that 
+we have seen before in form of base_properties.props, but this time we are doing 
+it right with less variables.
 
-All the theme specific styles go into theme folder. This folder includes the 
-base.less and mixins.less that holds all the variables and mixins that are used
-by the styles in the plone folder. Modify the values to meet your theme's needs.
+All the common styles go into theme folder. This folder includes the base.less 
+and mixins.less that holds all the variables and mixins that are used in the
+other styles. Modify the values to meet your theme's needs.
 
-The theme specific styling that cannot be set in base.less, should go to 
-template.less. If you would like to have multiple files for your theme, just 
-create a new .less file and include it to init.less. All the less files are 
-imported to the init.less files in their folders, which then get imported to 
-style.less. This way we can concentrate only on our theme and there is no need 
-to modify core Plone styles. If you do want to change some styling that is not 
-in base.less, but somewhere in the plone folder or in style.less, just redefine 
-it in your themplate.less. This way upgrade of the core styles can be done 
-easily without loosing theme specific styling.
+The theme specific styling that cannot be set in base.less or cannot be found
+in theme/main.less, should go to theme/custom.less. If you would like to have 
+multiple files for your theme, just create a new .less file and include it to 
+init.less. All the less files are imported to the init.less files in their 
+folders, which then get imported to style.less.
+
+The mobile first approach means that we first style for mobile devices and only
+after it for other devices. This does not mean that we cannot have styles that
+are only applied to mobile devices. For this, we have the mobile folder that
+holds mobile/main-moible.less. The same goes for desktop/main-desktop.less and
+tablet/main-tablet.less.
 
 HTML5Boilerplate suggests to have all plugins in plugins.js and all user scripts
 in script.js. We have decided to go against it, and we are using Plone's 
@@ -103,7 +115,7 @@ default javascript registry. The final result is the same, as Plone does merge
 and minimize all the registered javascripts.
 
 
-Note: Lessification of plone/public.less is not finished yet, so there still
+Note: Lessification of theme/main.less is not finished yet, so there still
 might be some styles that are not converted to variables and included in 
 base.less.
 
@@ -221,10 +233,6 @@ contains the floated elements.
 Note: clearfix class is defined in style.less.
 
 
-Responsive Design
------------------
-
-
 Using custom fonts
 ------------------
 @Font-Face is used for applying custom fonts. The preferred way is to have the
@@ -252,5 +260,6 @@ https://github.com/NathanStrutz/LESS-CSS-Shapes-Library
 Lessins - collection of useful mixins
 http://code.google.com/p/lessins/
 
-
+Awesome tutorials to master responsive web design
+http://www.catswhocode.com/blog/awesome-tutorials-to-master-responsive-web-design
 
