@@ -1,4 +1,5 @@
 // Variables that set the base properties for the theme
+// =====================================================
 
 // Use custom font
 //@font-face {
@@ -11,12 +12,72 @@
 //    font-weight: normal;
 //    font-style: normal;
 //}
+
+// Font family
 @font-family: Arial, FreeSans, sans-serif;
 @heading-font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
 @input-font-family: "Lucida Grande", Arial, FreeSans;
 @content-pre-font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 @content-code-font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 @content-documentDescription-font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+@Content-textarea-font-family: Monaco, "Courier New", Courier, monospace;
+@Forms-field-input-font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+@Forms-field-textarea-font-family: Arial,FreeSans,sans-serif;
+
+// Font sizes
+@body-font: 100% @font-family;
+@menu-font: 80% @font-family;
+
+@h1-font-size: 2em;
+@h2-font-size: 1.75em;
+@h3-font-size: 1.25em;
+@h4-font-size: 1.25em;
+@h5-font-size: 1em;
+@h6-font-size: 0.8em;
+
+@Personaltools-font-size: 80%;
+@Languageselector-font-size: 80%;
+@LiveSearchDescription-font-size: 85%;
+@Portal-searchbox-font-size: 80%;
+@SiteActions-font-size: 85%;
+@Breadcrumbs-font-size: 80%;
+@Portlet-font-size: 80%;
+@Portlet-managePortlets-font-size: 80%;
+@Portlet-ItemDetails-font-size: 85%;
+@PortletAssignments-font-size: 0.8em;
+@content-font-size: 80%;
+@content-pre-font-size: 90%;
+@content-documentByLine-font-size: 85%;
+@content-documentDescription-font: bold 1.25em @content-documentDescription-font-family;
+@content-discreet-font-size: 85%;
+@content-pullquote-font-size: 1.6em;
+@content-portalMessage-font-size: 100%;
+@Content-textarea-font: 100% @Content-textarea-font-family;
+@category-font-size: 75%;
+@OptionsToggle-font-size: 90%;
+@StatusMessage-portalMessage-font-size: 80%;
+@EditBar-font-size: 80%;
+@ArrowDownAlternative-font-size: 80%;
+@Collapsible-header-font-size: 90%;
+@Comments-font-size: 80%;
+@SearchResults-input-searchPage-font-size: 200%;
+@SearchResults-filter-legend-font-size: 1.1em;
+@ImageAligned-caption-font-size: 85%;
+@Dashboard-font-size: 125%;
+@Forms-field-input-font-size: 2em;
+@Forms-field-textarea-font-size: 1.25em;
+@Content-legend-font-size: 85%;
+@Login-input-font-size: 150%;
+@Footer-font-size: 75%;
+@Colophon-font-size: 70%;
+@Sitemap-font-size: 130%;
+@Sitemap-navTreeLevel2-font-size: 85%;
+@PhotoAlbum-link-font-size: 90%;
+@Overlay-font-size: 80%;
+
+// Accessibility
+@Accessibility-largeText: 125%;
+@Accessibility-smallText: 85%;
 
 
 // Body styling
@@ -24,7 +85,6 @@
 @body-width: 100%;
 @body-margin: 0;
 @body-background: White;
-@body-font: 100% @font-family;
 @body-font-color: Black;
 
 // Heading styling
@@ -36,13 +96,6 @@
 // Subheading - h2, h3, h4, h5, h6
 @subheading-font-color: #444;
 
-@h1-font-size: 2em;
-@h2-font-size: 1.75em;
-@h3-font-size: 1.25em;
-@h4-font-size: 1.25em;
-@h5-font-size: 1em;
-@h6-font-size: 0.8em;
-
 @link-color: #205c90;
 
 @dt-font-weight: bold;
@@ -53,7 +106,6 @@
 @portal-logo-margin: 0;
 
 // Menu
-@menu-font: 80% @font-family;
 @menu-background: #ddd;
 @menu-item-background: #ddd;
 @menu-item-border-top: none;
@@ -69,11 +121,12 @@
 @menu-item-selected-hover-font-color: White;
 
 // Personal Tools
-@personaltools-background: #e3e3e3;
-@personaltools-margin: 0;
+@Personaltools-background: #e3e3e3;
+@Personaltools-margin: 0;
+
 
 // Language Selector
-@languageselector-background: #e3e3e3;
+@Languageselector-background: #e3e3e3;
 
 // Live Search
 @LiveSearch-background: White;
@@ -81,13 +134,10 @@
 @LiveSearchLegend-background: #ccc;
 @LiveSearchDescription-color: #666;
 @LiveSearchHighlight-background: #ddd;
+@Portal-searchbox-label-font-weight: normal;
 
 // Site Actions
 @SiteActions-color: #75ad0a;
-@SiteActions-font-size: 85%;
-
-// Breadcrumbs
-@Breadcrumbs-font-size: 80%;
 
 
 // BODY STYLING
@@ -97,13 +147,18 @@
 @ListingsLinkOverlay-border: 1px dotted #205c90;
 
 // Portlets
-@Portlet-font-size: 80%;
 @Portlet-header-background: #ddd;
 @Portlet-header-color: White;
 @Portlet-header-line-height: normal;
+@Portlet-link-color: @content-link-color;
+@Portlet-link-border-bottom: @content-link-boerder-bottom;
+@Portlet-link-visited-color: @content-link-visited-color;
+@Portlet-link-visited-border-bottom: @content-link-visited-border-bottom;
+@Portlet-link-hover-color: @content-link-hover-color;
+@Portlet-li-line-height: 1.5em;
 @Portlet-error-background: #FFA500;
+@Portlet-prefs-link-line-height: 2em;
 @Portlet-managePortlets-background: #ddd;
-@Portlet-managePortlets-font-size: 80%;
 @Portlet-blockedPortlet-background: none repeat scroll 0 0 transparent;
 @Portlet-blockedPortlet-border: 1px dashed #DDDDDD;
 @Portlet-blockedPortlet-color: #666666;
@@ -118,7 +173,6 @@
 @Portlet-Calendar-todayNoEvent-border: 2px solid #205C90;
 @Portlet-Calendar-line-height: 1.6em;
 @Portlet-Calendar-font-weight: bold;
-@Portlet-ItemDetails-font-size: 85%;
 @Portlet-ItemDetails-line-height: 1.5em;
 @Portlet-Navigation-background: #ddd;
 @Portlet-Navigation-border-left: 1em solid #ddd;
@@ -127,11 +181,10 @@
 @Portlet-Navigation-Level0-line-height: 2em;
 @Portlet-Navigation-Level1-padding-left: 0.5em;
 @Portlet-Navigation-Level1-line-height: 2em;
-@PortletAssignments-font-size: 0.8em;
 @PortletAssignments-line-height: 2em;
 
 // Content
-@content-font-size: 80%;
+@content-line-height: 1.5em;
 @content-margin: 1em 0.25em 2em 0.25em;
 @content-link-color: #205c90;
 @content-link-boerder-bottom: 0.1em solid #ccc;
@@ -141,32 +194,26 @@
 @content-link-target-background: #ffb;
 @content-pre-background: #222;
 @content-pre-color: White;
-@content-pre-font-size: 90%;
 @content-pre-line-height: 1.25em;
 @content-pre-python-background: White;
 @Content-li-line-height: 1.5em;
+@content-dt-font-weight: bold;
 @content-documentByLine-color: #666;
-@content-documentByLine-font-size: 85%;
 @content-discreet-color: #666;
-@content-discreet-font-size: 85%;
 @content-discreet-font-weight: normal;
 @content-visualHighlight-background: #ffb;
 @content-pullquote-color: #444;
-@content-pullquote-font-size: 1.6em;
 @content-pullquote-font-weight: bold;
 @content-pullquote-line-height: 1.25em;
 @content-callout-background: #eee;
 @content-documentDescription-color: #666;
-@content-documentDescription-font: bold 1.25em @content-documentDescription-font-family;
 @content-newsItemContainer-p-discreet-background: #666;
 @content-newsItemContainer-p-discreet-background-rgba: rgba(40,40,40,0.7);
 @content-newsItemContainer-p-discreet-color: White;
 @content-newsItemContainer-p-discreet-font-weight: bold;
-@content-portalMessage-font-size: 100%;
 @content-portalMessage-link-color: black;
 @content-portalMessage-link-border-bottom: 1px solid #888;
 
-@category-font-size: 75%;
 @category-color: #666;
 @category-link-color: black;
 @category-link-background: #ddd;
@@ -182,13 +229,11 @@
 @OptionsToggle-border: 0.1em solid #8cacbb;
 @OptionsToggle-background: #dee7ec;
 @OptionsToggle-font-weight: normal;
-@OptionsToggle-font-size: 90%;
 
 @InheritedRoles-color: #a0a0a0;
 
 @CurrentItem-border: 0.2em solid #ffa500;
 @CurrentItem-padding: 0.1em;
-
 
 // Workflow State
 @workflow-state-private: Red;
@@ -202,13 +247,11 @@
 @workflow-state-expired: Red;
 @workflow-syndicated: #008000;
 
-
 // Data tables
 
 // TODO
 
 // Status messages
-@StatusMessage-portalMessage-font-size: 80%;
 @StatusMessage-portalMessage-border: 1px solid #996;
 @StatusMessage-portalMessage-background: #ffffe3;
 @StatusMessage-portalMessage-link-color: black;
@@ -226,7 +269,6 @@
 
 // Edit bar
 @EditBar-background: #DDD;
-@EditBar-font-size: 80%;
 @EditBar-line-height: 2em;
 @EditBar-border: 0.25em solid #DDD;
 @EditBar-color: #666;
@@ -258,6 +300,7 @@
 @ContentActionMenus-selected-background: White;
 @ContentActionMenus-selected-color: #666;
 
+
 // Control panel
 
 // TODO
@@ -267,19 +310,15 @@
 @Collapsible-border: 0.1em solid #8cacbb;
 @Collapsible-header-background: White;
 @Collapsible-header-line-height: 1.2em;
-@Collapsible-header-font-size: 90%;
 
 // Comments
-@Comments-font-size: 80%;
 @Comments-headings-font-weight: normal;
 @Comments-time-color: #666;
 
 // Search Results
-@SearchResults-input-searchPage-font-size: 200%
 @SearchResults-border-top: 1px solid #DDD;
 @SearchResults-border-bottom: 1px solid #DDD;
 @SearchResults-filter-legend-background: transparent;
-@SearchResults-filter-legend-font-size: 1.1em;
 @SearchResults-filter-legend-font-weight: bold;
 @SearchResults-filter-background: #ddd;
 @SearchResults-filter-field-background: #eee;
@@ -292,28 +331,19 @@
 // Image alignment
 @ImageAligned-border: 1px solid #ddd;
 @ImageAligned-caption-color: #666;
-@ImageAligned-caption-font-size: 85%;
 
 // Dashboard
-@Dashboard-font-size: 125%;
 @Dashboard-line-height: 1em;
 
 // Forms
 @Forms-editionComment-line-height: 1.5em;
-@Forms-field-input-font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
 @Forms-field-input-line-height: 125%;
 @Forms-field-input-color: Black;
-@Forms-field-input-font-size: 2em;
 @Forms-field-input-font-weight: bold;
-@Forms-field-textarea-font-family: Arial,FreeSans,sans-serif;
 @Forms-field-textarea-color: #666666;
-@Forms-field-textarea-font-size: 1.25em;
 @Forms-field-textarea-font-weight: bold;
 @Forms-input-focus-background: #ffffe0;
-
-@Content-textarea-font: 100% Monaco, "Courier New", Courier, monospace;
 @Content-fieldset-border: 0.1em solid #329fd7;
-@Content-legend-font-size: 85%;
 @Content-optgroup-font-style: normal;
 @Content-optgroup-font-weight: bold;
 @Content-optgroup-color: #999;
@@ -336,26 +366,21 @@
 
 @MultiWidgetField-border-left: 1.5em solid #DDD;
 
-@Login-input-font-size: 150%;
-
 // Footer
-@Footer-font-size: 75%;
+@Footer-line-height: 2em;
 @Footer-background: #ddd;
-@Colophon-font-size: 70%;
 @Colophon-link-color: #444;
 
 // Sitemap
-@Sitemap-font-size: 130%;
 @Sitemap-font-weight: bold;
 @Sitemap-li-border-bottom: 0.1em dotted #ddd;
-@Sitemap-navTreeLevel2-font-size: 85%;
+@Sitemap-li-line-height: 1.8em;
 @Sitemap-navTreeLevel2-font-weight: normal;
 
 // Album view
 @PhotoAlbum-entry-height: 185px;
 @PhotoAlbum-entry-weight: 143px;
 @PhotoAlbum-img-border: 1px solid #ccc;
-@PhotoAlbum-link-font-size: 90%;
 @PhotoAlbum-link-height: 169px;
 @PhotoAlbum-link-width: 130px;
 @PhotoAlbum-link-margin: 16px auto 0px;
@@ -366,11 +391,11 @@
 @PhotoAlbum-entryTitle-height: 3.6em;
 
 // Overlay
-@Overlay-font-size: 80%;
 @Overlay-link-hover-color: #75ad0a;
 @Overlay-link-selected-color: #000000;
 @Overlay-background: #fff;
 @Overlay-border: 1px solid #999;
+@Overlay-formTab-font-weight: bold;
 
 // Content History
 @ContentHistory-comment-border: 1px solid #ddd;
@@ -386,6 +411,3 @@
 @OptionsBox-label-checked-background: #EEEEEE;
 @OptionsBox-label-hover-background: #777777;
 @OptionsBox-label-hover-color: #FFFFFF;
-
-
-
