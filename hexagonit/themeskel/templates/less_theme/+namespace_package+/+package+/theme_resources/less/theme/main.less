@@ -151,14 +151,14 @@ dd { margin: 0; }
 
 #portal-personaltools {
     float: right;
-    background: @personaltools-background;
+    background: @Personaltools-background;
     position: relative;
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
-    margin: @personaltools-margin;
-    font-size: 80%;
+    margin: @Personaltools-margin;
+    font-size: @Personaltools-font-size;
     .rounded-corners-bottom(0.5em);
     
     #anon-personalbar a {
@@ -169,13 +169,13 @@ dd { margin: 0; }
 
 #portal-languageselector {
     float: right;
-    background: @languageselector-background;
+    background: @Languageselector-background;
     position: relative;
     top: 0;
     right: 1px;
     z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
     padding: 0.25em 0.5em;
-    font-size: 80%;
+    font-size: @Languageselector-font-size;
     max-width: 50%;
     .rounded-corners-bottom(0.5em);
 }
@@ -185,13 +185,13 @@ dd { margin: 0; }
     text-align: left;
     clear: right;
     margin: 1.2em 0;
-    font-size: 80%;
+    font-size: @Portal-searchbox-font-size;
     
     form {
         white-space: nowrap;
     }
     label {
-        font-weight: normal;
+        font-weight: @Portal-searchbox-label-font-weight;
     }
 }
 
@@ -235,7 +235,7 @@ input.searchField {
         border: @LiveSearch-border;
     }
     .LSDescr {
-        font-size: 85%;
+        font-size: @LiveSearchDescription-font-size;
         color: @LiveSearchDescription-color;
     }
 }
@@ -333,7 +333,7 @@ dl {
             color: @Portlet-header-color;
             padding: 0.42em 1em;
             background: @Portlet-header-background;
-            line-height: normal;
+            line-height: @Portlet-header-line-height;
             a {
                 &:link,
                 &:visited,
@@ -346,15 +346,15 @@ dl {
         }
         a {
             &:link {
-                color: @content-link-color;
-                border-bottom: @content-link-boerder-bottom;
+                color: @Portlet-link-color;
+                border-bottom: @Portlet-link-border-bottom;
             }
             &:visited {
-                color: @content-link-visited-color;
-                border-bottom: @content-link-visited-border-bottom;
+                color: @Portlet-link-visited-color;
+                border-bottom: @Portlet-link-visited-border-bottom;
             }
             &:hover {
-                color: @content-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+                color: @Portlet-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
             }
         }
         dd {
@@ -369,7 +369,7 @@ dl {
         }
         li {
             margin-bottom: 0.25em;
-            line-height: 1.5em;
+            line-height: @Portlet-li-line-height;
             display: list-item;
         }
     }
@@ -424,7 +424,7 @@ a.managePortletsFallback {
 
 #portlet-prefs a {
     border: none;
-    line-height: 2em;
+    line-height: @Portlet-prefs-link-line-height;
 }
 
 #visual-portal-wrapper dl.portletCalendar dd {
@@ -574,7 +574,7 @@ dl.portletNavigationTree dd.portletItem {
 /* @group Content Area */
 
 #content {
-    line-height: 1.5em;
+    line-height: @content-line-height;
     clear: both;
     font-size: @content-font-size;
     margin: @content-margin;
@@ -594,7 +594,7 @@ dl.portletNavigationTree dd.portletItem {
         margin-bottom: 1em;
     }
     dt {
-        font-weight: bold;
+        font-weight: @content-dt-font-weight;
         margin-bottom: 0;
         margin-right: 0;
     }
@@ -775,7 +775,7 @@ body#content {
 }
 
 .label {
-    font-weight: @Label-font-weight: bold;
+    font-weight: @Label-font-weight;
     display: inline;
     padding-right: 0.5em;
 }
@@ -1297,7 +1297,7 @@ dl.actionMenu {
 }
 
 span.arrowDownAlternative {
-    font-size: 80%;
+    font-size: @ArrowDownAlternative-font-size;
 }
 
 /* @end */
@@ -1467,7 +1467,7 @@ dl.collapsedBlockCollapsible {
         position: relative;
         margin: 0 0 0 1em;
         padding: 0 0.5em 0 2em;
-        line-height: 1.2em;
+        line-height: @Collapsible-header-line-height;
         cursor: pointer;
         background: White url('../images/treeCollapsed.png') no-repeat 0.5em 50%;
     }
@@ -1490,7 +1490,7 @@ dl.collapsedInlineCollapsible {
         position: relative;
         margin: 0 0 0 1em;
         padding: 0 0.5em 0 2em;
-        line-height: 1.2em;
+        line-height: @Collapsible-header-line-height;
         cursor: pointer;
         background: White url('../images/treeCollapsed.png') no-repeat 0.5em 50%;
         display: inline;
@@ -2031,7 +2031,7 @@ dl.toc {
     background: @Footer-background;
     padding: 1em;
     margin: 1em 0;
-    line-height: 2em;
+    line-height: @Footer-line-height;
 }
 
 #portal-colophon {
@@ -2068,7 +2068,7 @@ dl.toc {
     }
     > li {
         border-bottom: @Sitemap-li-border-bottom;
-        line-height:1.8em;
+        line-height: @Sitemap-li-line-height;
         padding:0.25em 1em;
         margin-bottom: 0;
     }
@@ -2137,8 +2137,8 @@ dl.toc {
 
 /* @group Accessibility elements, applied by JS */
 
-body.largeText { font-size: 125%; }
-body.smallText { font-size: 85%; }
+body.largeText { font-size: @Accessibility-largeText; }
+body.smallText { font-size: @Accessibility-smallText; }
 
 /* @end */
 
@@ -2198,7 +2198,7 @@ div.overlay {
     }
     .formTab {
         margin-right:1em;
-        font-weight: bold;
+        font-weight: @Overlay-formTab-font-weight;
         
         &.lastFormTab {
             margin-right:0em;
