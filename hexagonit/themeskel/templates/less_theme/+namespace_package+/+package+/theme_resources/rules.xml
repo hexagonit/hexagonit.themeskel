@@ -60,7 +60,10 @@
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- Copy the header -->
-        <copy css:content="#portal-top" theme="//header" />
+        <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-globalnav" />
+        <before css:content="#portal-searchbox" css:theme="#mobile-globalnav" />
+        <before css:content="#portal-logo" css:theme="#mobile-globalnav" />
+        <after css:content="#portal-globalnav" css:theme="#mobile-globalnav" />
 
         <!-- Copy the body of the page -->
         <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" />

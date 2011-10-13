@@ -78,6 +78,31 @@
     }
     
     #fieldset-openid-login label, #login-form label {
-        text-align:center;
+        text-align: center;
+    }
+    
+    .visible {
+        display: block!important;
+        visibility: visible!important;
+    }
+    
+    // Show menu button, and hide the actual menu
+    #mobile-globalnav {
+        display: block!important;
+        visibility: visible;
+        
+        font-size: 120%;
+        padding: 1em;
+        background: #DDD;
+        cursor: pointer;
+    }
+    
+    #portal-globalnav {
+        display: none;
+        visibility: hidden;
+        
+        li, li a {
+            display:block;
+        }
     }
 }
