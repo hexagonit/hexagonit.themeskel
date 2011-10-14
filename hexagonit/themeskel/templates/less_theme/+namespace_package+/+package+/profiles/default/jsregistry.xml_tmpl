@@ -21,7 +21,7 @@
         enabled="True"
         expression=""
         inline="False"
-        id="++theme++test.theme/javascript/script.js"
+        id="++theme++${namespace_package}.${package}/javascript/script.js"
     />
 
 </object>
