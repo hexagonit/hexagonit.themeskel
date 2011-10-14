@@ -12,9 +12,11 @@
              We set those explicitly in our theme. This allows us to copy the
              rest of the <meta> tags in one go. -->
         <drop css:content="meta[http-equiv]" />
+        <!-- Drop the viewport meta tag from Plone -->
+        <drop css:content="meta[name=viewport]"/>
+
         <before content="/html/head/meta" css:theme="#css" />
         <replace content="/html/head/title" theme="/html/head/title"/>
-
 
         <!-- Copy the <base> tag -->
         <replace content="/html/head/base" theme="/html/head/base" />
