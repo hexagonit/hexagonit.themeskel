@@ -2779,8 +2779,17 @@ div.overlaybg div.close {
    These override the primary ('mobile first') styles
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Style adjustments for viewports 480px - 768px go here */
+  #portal-column-two {
+    float: none!important;
+    clear: both;
+    width: 97.75%;
+    margin-left: -98.875%;
+  }
+  div.width-1\3a 2 {
+    width: 72.75%;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
