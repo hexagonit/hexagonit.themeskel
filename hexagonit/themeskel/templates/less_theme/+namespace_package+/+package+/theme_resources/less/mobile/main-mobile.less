@@ -17,11 +17,12 @@
 
     #portal-searchbox {
         float: none !important;
+        font-size: 12px !important;
         margin: 1em 0;
         text-align: center;
         
         input {
-            font-size: 100% !important;
+            font-size: 12px !important;
         }
     }
     
@@ -34,9 +35,9 @@
     }
     
     #content-views a {
-        font-size: 130%;
+        font-size: 100%;
         line-height: 2em !important;
-        padding: 0.5em;
+        padding: 5px 10px;
     }
     
     #content li.formTab a {
@@ -46,14 +47,31 @@
     }
     
     #edit-bar {
-        min-height: 50px;
+        padding-bottom: 10px;
+        margin-top: 70px;
     }
 
-    #contentActionMenus a {
-        width: 100%;
-        line-height: 2em !important;
-        font-size: 130%;
+    #contentActionMenus {
+        float:none;
+        right: auto;
+        margin: 30px 0 0;
+        position: absolute;
+        .rounded-corners(0.5em);
+
+        a {
+            width: 100%;
+            line-height: 2em !important;
+            font-size: 100%;
+            padding-top:5px;
+        }        
+        dl.actionMenu {
+            a, 
+            &.activated dd {
+                right: auto;
+            }
+        }
     }
+
 
     input, textarea {
         font-size: 140% !important;
@@ -92,7 +110,7 @@
         visibility: visible;
         
         font-size: 120%;
-        padding: 1em;
+        padding: 10px;
         background: #DDD;
         cursor: pointer;
     }
@@ -105,4 +123,7 @@
             display:block;
         }
     }
+    
+
+
 }
