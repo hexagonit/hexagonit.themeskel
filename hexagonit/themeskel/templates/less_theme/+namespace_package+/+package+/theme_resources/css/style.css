@@ -2648,6 +2648,10 @@ div.overlaybg div.close {
     width: 97.75%;
     margin-left: -98.875%;
   }
+  #portal-personaltools {
+    font-size: 12px !important;
+    padding: 5px;
+  }
   #portal-searchbox {
     float: none !important;
     font-size: 12px !important;
@@ -2660,8 +2664,8 @@ div.overlaybg div.close {
   #portal-logo {
     margin-bottom: 1em;
   }
-  #portal-globalnav {
-    font-size: 120%;
+  #content-views {
+    float: none;
   }
   #content-views a {
     font-size: 100%;
@@ -2669,19 +2673,20 @@ div.overlaybg div.close {
     padding: 5px 10px;
   }
   #content li.formTab a {
-    font-size: 140%;
+    font-size: 110%;
     line-height: 2em !important;
     padding: 0.25em;
   }
   #edit-bar {
+    background-color: transparent;
+    border: none;
     padding-bottom: 10px;
-    margin-top: 70px;
   }
   #contentActionMenus {
     float: none;
+    top: auto;
     right: auto;
-    margin: 30px 0 0;
-    position: absolute;
+    margin: 20px 0 0;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
@@ -2692,17 +2697,27 @@ div.overlaybg div.close {
     font-size: 100%;
     padding-top: 5px;
   }
+  #contentActionMenus dl.actionMenu {
+    float: none;
+  }
   #contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
+    background-color: transparent;
+    min-width: 80%!important;
     right: auto;
+    position: relative;
+    border: 0;
+  }
+  #contentActionMenus .actionMenuContent {
+    background-color: #eee!important;
   }
   input, textarea {
-    font-size: 140% !important;
+    font-size: 120% !important;
   }
   div.managePortletsLink, a.managePortletsFallback {
-    font-size: 130%;
+    font-size: 110%;
   }
   div.overlay {
-    font-size: 120%;
+    font-size: 110%;
   }
   .pb-ajax > div {
     width: 87%;
@@ -2720,7 +2735,8 @@ div.overlaybg div.close {
   #mobile-globalnav {
     display: block!important;
     visibility: visible;
-    font-size: 120%;
+    border-bottom: 1px solid #fff;
+    font-size: 100%;
     padding: 10px;
     background: #DDD;
     cursor: pointer;
@@ -2731,6 +2747,14 @@ div.overlaybg div.close {
   }
   #portal-globalnav li, #portal-globalnav li a {
     display: block;
+    font-size: 110%;
+    padding: 0;
+  }
+  #portal-globalnav li a {
+    padding: 10px;
+  }
+  #plone-contentmenu-display {
+    float: none;
   }
 }
 /* ==|== non-semantic helper classes ========================================
