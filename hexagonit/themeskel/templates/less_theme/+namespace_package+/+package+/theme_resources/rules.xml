@@ -62,8 +62,8 @@
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- Copy the header -->
-        <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-globalnav" />
-        <before css:content="#portal-logo" css:theme="#mobile-globalnav" />
+        <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-search" />
+        <before css:content="#portal-logo" css:theme="#mobile-search" />
         <after css:content="#portal-searchbox" css:theme="#mobile-globalnav" />
         <after css:content="#portal-globalnav" css:theme="#mobile-globalnav" />
 

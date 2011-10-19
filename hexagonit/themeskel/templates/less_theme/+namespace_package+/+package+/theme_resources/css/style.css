@@ -2652,17 +2652,78 @@ div.overlaybg div.close {
     font-size: 12px !important;
     padding: 5px;
   }
+  #portal-logo {
+    margin-bottom: 1em;
+  }
+  #portal-breadcrumbs {
+    margin-top: 10px;
+  }
+  .visible {
+    display: block!important;
+    visibility: visible!important;
+  }
+  #mobile-globalnav {
+    display: block!important;
+    visibility: visible;
+    border-bottom: 1px solid #fff;
+    font-size: 100%;
+    padding: 10px;
+    background: #DDD;
+    cursor: pointer;
+  }
+  #portal-globalnav {
+    display: none;
+    visibility: hidden;
+  }
+  #portal-globalnav li, #portal-globalnav li a {
+    display: block;
+    font-size: 110%;
+    padding: 0;
+  }
+  #portal-globalnav li a {
+    padding: 10px;
+  }
+  #plone-contentmenu-display {
+    float: none;
+  }
+  #mobile-search {
+    display: block!important;
+    visibility: visible;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    font-size: 100%;
+    padding: 10px;
+    background: #DDD;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    width: 50px;
+  }
   #portal-searchbox {
-    float: none !important;
+    display: none;
+    visibility: hidden;
+    float: none!important;
     font-size: 12px !important;
-    margin: 1em 0;
-    text-align: center;
+    margin: 1em auto;
+    width: 80%;
   }
   #portal-searchbox input {
     font-size: 12px !important;
+    margin-bottom: 7px;
   }
-  #portal-logo {
-    margin-bottom: 1em;
+  #searchGadget {
+    width: 70%;
+  }
+  #LSResult {
+    margin: 0;
+    position: relative;
+  }
+  #LSResult fieldset {
+    overflow: hidden;
+    width: 100%;
+  }
+  .LSRow, #LSNothingFound {
+    width: 100%;
   }
   #content-views {
     float: none;
@@ -2727,34 +2788,6 @@ div.overlaybg div.close {
   }
   #fieldset-openid-login label, #login-form label {
     text-align: center;
-  }
-  .visible {
-    display: block!important;
-    visibility: visible!important;
-  }
-  #mobile-globalnav {
-    display: block!important;
-    visibility: visible;
-    border-bottom: 1px solid #fff;
-    font-size: 100%;
-    padding: 10px;
-    background: #DDD;
-    cursor: pointer;
-  }
-  #portal-globalnav {
-    display: none;
-    visibility: hidden;
-  }
-  #portal-globalnav li, #portal-globalnav li a {
-    display: block;
-    font-size: 110%;
-    padding: 0;
-  }
-  #portal-globalnav li a {
-    padding: 10px;
-  }
-  #plone-contentmenu-display {
-    float: none;
   }
 }
 /* ==|== non-semantic helper classes ========================================
