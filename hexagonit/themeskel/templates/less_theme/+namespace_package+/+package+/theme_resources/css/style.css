@@ -2818,20 +2818,30 @@ div.overlaybg div.close {
    These override the primary ('mobile first') styles
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 480px) and (max-width: 770px) {
-  /* Style adjustments for viewports 490px - 770px go here */
-  #portal-column-two {
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  /* Style adjustments for viewports 480px - 800px go here */
+  .tablet-right-down #portal-column-content {
+    width: 72.75%;
+  }
+  .tablet-right-down #portal-column-two {
     float: none!important;
     clear: both;
     width: 97.75%;
     margin-left: -98.875%;
   }
-  div.width-1\3a 2 {
+  .tablet-left-down #portal-column-content {
     width: 72.75%;
+    margin-left: -98.875%;
+  }
+  .tablet-left-down #portal-column-one {
+    float: none!important;
+    clear: both;
+    width: 97.75%;
+    margin-left: -98.875%;
   }
 }
-@media only screen and (min-width: 770px) {
-  /* Style adjustments for viewports 768px and over go here */
+@media only screen and (min-width: 801px) {
+  /* Style adjustments for viewports 800px and over go here */
   #container {
     background: white;
     margin: 0 auto;

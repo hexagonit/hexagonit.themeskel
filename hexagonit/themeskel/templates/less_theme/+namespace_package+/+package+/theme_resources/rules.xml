@@ -63,12 +63,29 @@
 
         <!-- Copy the header -->
         <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-globalnav" />
-        <before css:content="#portal-searchbox" css:theme="#mobile-globalnav" />
         <before css:content="#portal-logo" css:theme="#mobile-globalnav" />
+        <after css:content="#portal-searchbox" css:theme="#mobile-globalnav" />
         <after css:content="#portal-globalnav" css:theme="#mobile-globalnav" />
 
         <!-- Copy the body of the page -->
-        <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" />
+        <!-- <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" /> -->
+        <copy css:content="#portal-column-content" css:theme="#portal-columns" />
+
+        <rules if="$tabletLeftColumnDown">
+            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
+            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">tablet-left-down</xsl:attribute>
+            </prepend>
+        </rules>
+
+        <rules if="not($tabletLeftColumnDown)">
+            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
+            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">tablet-right-down</xsl:attribute>
+            </prepend>
+        </rules>
 
         <!-- Copy the footer -->
         <copy css:content="#portal-footer" css:theme="footer" />
