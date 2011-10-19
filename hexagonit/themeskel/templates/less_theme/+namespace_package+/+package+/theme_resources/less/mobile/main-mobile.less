@@ -19,22 +19,103 @@
         font-size: 12px !important;
         padding: 5px;
     }
-
-    #portal-searchbox {
-        float: none !important;
-        font-size: 12px !important;
-        margin: 1em 0;
-        text-align: center;
-        
-        input {
-            font-size: 12px !important;
-        }
-    }
     
     #portal-logo {
         margin-bottom: 1em;
     }
     
+    #portal-breadcrumbs {
+        margin-top: 10px;
+    }
+    
+    .visible {
+        display: block!important;
+        visibility: visible!important;
+    }
+
+
+    // MENU
+    
+    // Show menu button, and hide the actual menu
+    #mobile-globalnav {
+        display: block!important;
+        visibility: visible;
+        border-bottom: 1px solid #fff;
+        font-size: 100%;
+        padding: 10px;
+        background: #DDD;
+        cursor: pointer;
+    }
+    
+    #portal-globalnav {
+        display: none;
+        visibility: hidden;
+        
+        li, li a {
+            display:block;
+            font-size: 110%;
+            padding: 0;
+        }
+        li a {
+            padding:10px;
+        }
+    }
+    
+    #plone-contentmenu-display {
+        float: none;
+    }
+
+
+    // SEARCH
+    #mobile-search {
+        display: block!important;
+        visibility: visible;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        font-size: 100%;
+        padding: 10px;
+        background: #DDD;
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        width: 50px;
+    }
+    
+    #portal-searchbox {
+        display: none;
+        visibility: hidden;
+        
+        float: none!important;
+        font-size: 12px !important;
+        margin: 1em auto;
+        width: 80%;
+        
+        input {
+            font-size: 12px !important;
+            margin-bottom: 7px;
+        }
+    }
+    
+    #searchGadget {
+        width: 70%;
+    }
+    
+    #LSResult {
+        margin: 0;
+        position: relative;
+        
+        fieldset {
+            overflow:hidden;
+            width: 100%;
+        }
+    }
+    
+    .LSRow, #LSNothingFound {
+        width: 100%;
+    }
+
+
+    // EDIT BAR
     #content-views {
         float:none;
         
@@ -86,7 +167,8 @@
         .actionMenuContent {
             background-color: #eee!important;
         }
-    }
+    } // edit bar end
+    
 
     input, textarea {
         font-size: 120% !important;
@@ -114,39 +196,5 @@
         text-align: center;
     }
     
-    .visible {
-        display: block!important;
-        visibility: visible!important;
-    }
-    
-    // Show menu button, and hide the actual menu
-    #mobile-globalnav {
-        display: block!important;
-        visibility: visible;
-        border-bottom: 1px solid #fff;
-        font-size: 100%;
-        padding: 10px;
-        background: #DDD;
-        cursor: pointer;
-    }
-    
-    #portal-globalnav {
-        display: none;
-        visibility: hidden;
-        
-        li, li a {
-            display:block;
-            font-size: 110%;
-            padding: 0;
-        }
-        li a {
-            padding:10px;
-        }
-    }
-    
-
-    #plone-contentmenu-display {
-        float: none;
-    }
 
 }
