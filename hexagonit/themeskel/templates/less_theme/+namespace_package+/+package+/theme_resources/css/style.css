@@ -2725,13 +2725,22 @@ div.overlaybg div.close {
   .LSRow, #LSNothingFound {
     width: 100%;
   }
+  input.searchPage {
+    font-size: 14px!important;
+  }
   #content-views {
     float: none;
   }
   #content-views a {
     font-size: 100%;
     line-height: 2em !important;
+    margin: 5px;
     padding: 5px 10px;
+  }
+  #content-views li.selected a {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
   }
   #content li.formTab a {
     font-size: 110%;
@@ -2772,7 +2781,7 @@ div.overlaybg div.close {
     background-color: #eee!important;
   }
   input, textarea {
-    font-size: 120% !important;
+    font-size: 15px !important;
   }
   div.managePortletsLink, a.managePortletsFallback {
     font-size: 110%;
@@ -2853,7 +2862,7 @@ div.overlaybg div.close {
    ========================================================================== */
 @media only screen and (min-width: 481px) and (max-width: 800px) {
   /* Style adjustments for viewports 480px - 800px go here */
-  .tablet-right-down #portal-column-content {
+  .tablet-right-down #portal-column-content.width-1\:2 {
     width: 72.75%;
   }
   .tablet-right-down #portal-column-two {
@@ -2862,7 +2871,7 @@ div.overlaybg div.close {
     width: 97.75%;
     margin-left: -98.875%;
   }
-  .tablet-left-down #portal-column-content {
+  .tablet-left-down #portal-column-content.width-1\:2 {
     width: 72.75%;
     margin-left: -98.875%;
   }
