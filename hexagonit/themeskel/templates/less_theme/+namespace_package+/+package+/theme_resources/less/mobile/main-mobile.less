@@ -120,6 +120,33 @@
 
 
     // EDIT BAR
+    #mobile-page-settings {
+        display: block!important;
+        visibility: visible;
+        
+        cursor: pointer;
+        color: #999;
+        font-size: 12px;
+        float:right;
+        padding: 5px;
+        margin: 10px 5px -10px 0;
+        border: 1px solid #DDD;
+        .rounded-corners(5px);
+        
+        &.selected {
+            background: #EEE;
+        }
+    }
+    
+    #edit-bar {
+        display: none;
+        visibility: hidden;
+        
+        background-color:transparent;
+        border:none;
+        padding-bottom: 10px;
+    }
+    
     #content-views {
         float:none;
         
@@ -130,7 +157,7 @@
             padding: 5px 10px;
         }
         
-        li.selected a {
+        li.selected a, li a:hover {
             .rounded-corners(5px);
         }
     }
@@ -139,13 +166,6 @@
         font-size: 110%;
         line-height: 2em !important;
         padding: 0.25em;
-    }
-    
-    #edit-bar {
-        background-color:transparent;
-        border:none;
-        padding-bottom: 10px;
-
     }
 
     #contentActionMenus {
@@ -177,7 +197,7 @@
             background-color: #eee!important;
         }
     } // edit bar end
-    
+
 
     input, textarea {
         font-size: 15px !important;
