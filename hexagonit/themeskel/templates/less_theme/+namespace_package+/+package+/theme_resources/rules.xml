@@ -71,7 +71,7 @@
         <!-- <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" /> -->
         <copy css:content="#portal-column-content" css:theme="#portal-columns" />
 
-        <rules if="$tabletLeftColumnDown">
+        <rules if="$tabletleftcolumndown">
             <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
             <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
             <prepend css:theme="#visual-portal-wrapper">
@@ -79,7 +79,7 @@
             </prepend>
         </rules>
 
-        <rules if="not($tabletLeftColumnDown)">
+        <rules if="not($tabletleftcolumndown)">
             <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
             <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
             <prepend css:theme="#visual-portal-wrapper">
