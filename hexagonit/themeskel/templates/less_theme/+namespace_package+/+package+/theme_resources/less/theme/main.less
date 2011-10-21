@@ -343,8 +343,13 @@ dl {
                    border: none;
                 }
             }
+            &.hiddenStructure {
+                padding: 0;
+            }
         }
         a {
+            text-decoration: none;
+            
             &:link {
                 color: @Portlet-link-color;
                 border-bottom: @Portlet-link-border-bottom;
@@ -384,6 +389,10 @@ div.portletAssignments {
         padding: 0.42em 1em;
         background: @Portlet-header-background;
         line-height: @Portlet-header-line-height;
+        
+        a {
+            text-decoration: none;
+        }
     }
     
     font-size: @PortletAssignments-font-size;
@@ -395,6 +404,7 @@ div.portletAssignments {
         a {
             margin: 0 0.25em;
             border: none;
+            text-decoration: none;
         }
     }
 }
@@ -1225,6 +1235,8 @@ dl {
             color: @EditBar-color;
             text-decoration:none;
             z-index: 5;
+        }
+        &.activated dd {
             border-bottom: @EditBar-dropdown-border;
             right: -3px;
             
@@ -2372,7 +2384,7 @@ div.overlaybg div.close {
         background: no-repeat transparent 0px -1724px url('../images/contenttypes-sprite.png');
     }
     /* These should only appear in the add menu */
-    .icons-on #plone-contentmenu-factories {
+    #plone-contentmenu-factories {
         .contenttype-file {
             background: no-repeat transparent 0px -428px url('../images/contenttypes-sprite.png');
         }
