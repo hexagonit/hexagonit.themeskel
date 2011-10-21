@@ -777,15 +777,21 @@ dl.portlet {
   font-size: 80%;
 }
 dl.portlet dt {
-  color: White;
+  color: Black;
   padding: 0.42em 1em;
   background: #dddddd;
   line-height: normal;
 }
 dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover {
-  color: White;
+  color: Black;
   display: block;
   border: none;
+}
+dl.portlet dt.hiddenStructure {
+  padding: 0;
+}
+dl.portlet a {
+  text-decoration: none;
 }
 dl.portlet a:link {
   color: #205c90;
@@ -820,10 +826,13 @@ div.portletAssignments {
   line-height: 2em;
 }
 div.portletAssignments div.portletHeader {
-  color: White;
+  color: Black;
   padding: 0.42em 1em;
   background: #dddddd;
   line-height: normal;
+}
+div.portletAssignments div.portletHeader a {
+  text-decoration: none;
 }
 div.portletAssignments .managedPortletActions {
   float: right;
@@ -831,6 +840,7 @@ div.portletAssignments .managedPortletActions {
 div.portletAssignments .managedPortletActions a {
   margin: 0 0.25em;
   border: none;
+  text-decoration: none;
 }
 dl.portletError dd {
   padding: 1em;
@@ -1575,13 +1585,12 @@ dl.error dd {
   color: #666666;
   text-decoration: none;
   z-index: 5;
+}
+#contentActionMenus dl.actionMenu.activated dd {
   border-bottom: 0.5em solid #dddddd;
   right: -3px;
 }
-#contentActionMenus dl.actionMenu a a:hover,
-#contentActionMenus dl.actionMenu.activated dd a:hover,
-#contentActionMenus dl.actionMenu a .actionMenuSelected,
-#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#contentActionMenus dl.actionMenu.activated dd a:hover, #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: White !important;
   color: #666666;
 }
@@ -2542,10 +2551,10 @@ div.overlaybg div.close {
 .icons-on .contenttype-topic {
   background: no-repeat transparent 0px -1724px url('../images/contenttypes-sprite.png');
 }
-.icons-on .icons-on #plone-contentmenu-factories .contenttype-file {
+.icons-on #plone-contentmenu-factories .contenttype-file {
   background: no-repeat transparent 0px -428px url('../images/contenttypes-sprite.png');
 }
-.icons-on .icons-on #plone-contentmenu-factories .contenttype-image {
+.icons-on #plone-contentmenu-factories .contenttype-image {
   background: no-repeat transparent 0px -860px url('../images/contenttypes-sprite.png');
 }
 .icons-on .contenttype-document,
