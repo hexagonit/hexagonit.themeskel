@@ -67,8 +67,12 @@
         <after css:content="#portal-searchbox" css:theme="#mobile-globalnav" />
         <after css:content="#portal-globalnav" css:theme="#mobile-globalnav" />
 
+        <drop css:theme="#mobile-page-settings"
+              if-content="not(//*[@id='edit-bar'])" />
+
         <!-- Copy the body of the page -->
-        <!-- <copy css:content="#portal-columns" css:theme="#visual-portal-wrapper" /> -->
+        <!-- Based on the tableleftcolumndown variable order the columns for the
+             tablet view -->
         <copy css:content="#portal-column-content" css:theme="#portal-columns" />
 
         <rules if="$tabletleftcolumndown">
