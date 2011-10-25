@@ -1,15 +1,16 @@
-$('document').ready(function () {
-    $('#mobile-globalnav').bind('click', function() {
-        $('#portal-globalnav').toggleClass('visible');
-        $('#portal-searchbox').removeClass('visible');
-    });
-    
-    $('#mobile-search').bind('click', function() {
-        $('#portal-searchbox').toggleClass('visible');
-        $('#portal-globalnav').removeClass('visible');
-    });
-});
+(function ($) {
+    $(function () {
+        $('#mobile-globalnav').bind('click', function() {
+            $('#portal-globalnav').toggleClass('visible');
+            $('#portal-searchbox').removeClass('visible');
+        });
 
+        $('#mobile-search').bind('click', function() {
+            $('#portal-searchbox').toggleClass('visible');
+            $('#portal-globalnav').removeClass('visible');
+        });
+    });
+}(jQuery));
 
 
 
@@ -18,9 +19,9 @@ $('document').ready(function () {
  */
 (function(document){
 
-window.MBP = window.MBP || {}; 
+window.MBP = window.MBP || {};
 
-// Fix for iPhone viewport scale bug 
+// Fix for iPhone viewport scale bug
 // http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
 
 MBP.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');
@@ -57,7 +58,7 @@ MBP.hideUrlBar = function () {
 				clearInterval( bodycheck );
 				scrollTop = "scrollTop" in doc.body ? doc.body.scrollTop : 1;
 				win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-			}	
+			}
 		}, 15 );
 
 		win.addEventListener( "load", function(){
@@ -101,7 +102,7 @@ MBP.fastButton.prototype.onTouchStart = function(event) {
 };
 
 MBP.fastButton.prototype.onTouchMove = function(event) {
-    if(Math.abs(event.touches[0].clientX - this.startX) > 10 || 
+    if(Math.abs(event.touches[0].clientX - this.startX) > 10 ||
        Math.abs(event.touches[0].clientY - this.startY) > 10    ) {
         this.reset();
     }
@@ -144,7 +145,7 @@ MBP.ghostClickHandler = function (event) {
 if (document.addEventListener) {
     document.addEventListener('click', MBP.ghostClickHandler, true);
 }
-                            
+
 MBP.coords = [];
 
 
@@ -171,7 +172,7 @@ MBP.autogrow = function (element, lh) {
     }
 
     var setLineHeight = (lh) ? lh : 12,
-        textLineHeight = element.currentStyle ? element.currentStyle.lineHeight : 
+        textLineHeight = element.currentStyle ? element.currentStyle.lineHeight :
                          getComputedStyle(element, null).lineHeight;
 
     textLineHeight = (textLineHeight.indexOf("px") == -1) ? setLineHeight :
