@@ -6,14 +6,13 @@
 
     // MOVE RIGHT COLUMN DOWN
     // Set the content column to use the width of the column that was moved down
-    .tablet-right-down #portal-column-content.width-1\:2 { 
+    .tablet-right-down #portal-column-content.width-1\3a 2,
+    .tablet-right-down #portal-column-content.width-3\3a 4 { 
         width:    72.75%; 
     }
 
     // Move the right column down and use the whole width
     .tablet-right-down #portal-column-two { 
-        float: none!important;
-        clear: both; 
         width: 97.75%; 
         margin-left: -98.875%; 
     }
@@ -21,17 +20,21 @@
 
     // MOVE LEFT COLUMN DOWN
     // Set the content column to use the width of the column that was moved down
-    .tablet-left-down #portal-column-content.width-1\:2 { 
+    .tablet-left-down #portal-column-content.width-1\3a 2 { 
         width:    72.75%;
         margin-left: -98.875%;
+    }
+    .tablet-left-down #portal-column-content.width-3\3a 4 {
+        width: 97.75%; 
+    }
+    .tablet-left-down #portal-column-content.position-1\3a 4 {
+        margin-left: -98.875%; 
     }
 
     // Move the left column down and use the whole width
     .tablet-left-down #portal-column-one { 
-        float: none!important;
-        clear: both; 
         width: 97.75%; 
         margin-left: -98.875%; 
     }
-    
+
 }
