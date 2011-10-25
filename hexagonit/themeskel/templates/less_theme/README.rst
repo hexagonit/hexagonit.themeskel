@@ -5,6 +5,11 @@ A plone.app.theming theme based on HTML5 Boilerplate and Less Css, designed to
 be the starting point for rapid theme development.
 
 
+Create a new theme with zopeskel
+================================
+also mention updating the buildout
+
+
 Package content
 ================
 
@@ -95,7 +100,7 @@ it right with less variables.
 
 All the common styles go into theme folder. This folder includes the base.less 
 and mixins.less that holds all the variables and mixins that are used in the
-other styles. Modify the values to meet your theme's needs.
+other styles. Modify these values to meet your theme's needs.
 
 The theme specific styling that cannot be set in base.less or cannot be found
 in theme/main.less, should go to theme/custom.less. If you would like to have 
@@ -109,15 +114,38 @@ are only applied to mobile devices. For this, we have the mobile folder that
 holds mobile/main-moible.less. The same goes for desktop/main-desktop.less and
 tablet/main-tablet.less.
 
-HTML5Boilerplate suggests to have all plugins in plugins.js and all user scripts
-in script.js. We have decided to go against it, and we are using Plone's 
-default javascript registry. The final result is the same, as Plone does merge
-and minimize all the registered javascripts.
-
 
 Note: Lessification of theme/main.less is not finished yet, so there still
 might be some styles that are not converted to variables and included in 
 base.less.
+
+
+Deco Grid System
+================
+We are using the Deco Grid System that comes with plone. The size of the
+columns and gutters are set in percentages: 
+column width - 4%
+margin left/right - 1.125%
+
+Here are some recommended sizes (page width / column width / left/right margin):
+Desktop: 1088px / 44px / 12px - (http://gridcalculator.dk/#/1088/16/24/12)
+Tablet:   800px / 32px /  9px - (http://gridcalculator.dk/#/800/16/18/9)
+Mobile:   480px / 20px /  5px - (http://gridcalculator.dk/#/480/16/10/5)
+
+
+Javascript
+==========
+
+HTML5Boilerplate suggests to have all Javascript plugins in plugins.js and all 
+user scripts in script.js. We have decided to go against it, and we are using 
+Plone's default javascript registry. The final result is the same, as Plone does
+merge and minimize all the registered javascripts.
+
+Javascript/script.js holds helper functions that are taken from Mobile HTML5
+Boilerplate project and also some functions for the mobile version of the theme.
+Every additional javascript should go into this file. If you need multiple files
+for javascript, just create them in the javascript folder and include them in 
+Plone's JS registry (profiles/default/jsregistry.xml).
 
 
 Plone.app.theming
@@ -131,6 +159,11 @@ should hold the footer.
 Some selectors in Plone rely on having the visual-portal-wrapper id present, so
 we have just included an additional wrapper div within the main div.
 
+The mobile version of the theme has a slightly different layout for the menu and
+search, so we have included additional elements in our main layout and updated
+the rules. The final generated html has the same structure, so there will be no
+problems with the selectors used by Plone.
+
 rules.xml is the rules file, and we have set up the copying of the css and 
 javascripts to proper location within the index.html, and it also includes rules
 that copy everything from Plone and put it into proper place. Feel free to 
@@ -138,12 +171,13 @@ modify this to suite your needs. Boilerplate encourages us to have the styles
 and javascript inclusions in specific place, so please don't modify the rules 
 that make this happen.
 
-Within public.less, there are relative paths to some images, and Diazo will
-append the set prefix on them, even though we actually don't want that. One
-of the solutions would be to split the CSS files into two groups, the one that
-need prefix applied, and ones that don't. Html 5 Boilerplate suggests to have
-all the styles in one file, so we decided not to modify the structure, but to
-include the missing images in our theme.
+Within the less files, there are relative paths to some images, and Diazo will
+append a previously set prefix on them, even though we actually don't want that.
+One of the solutions would be to split the CSS files into two groups, the one 
+that need prefix applied, and ones that don't. Html 5 Boilerplate suggests to 
+have all the styles in one file, so we decided not to modify the structure, but
+to include the missing images in our theme. This way we don't rely on other
+products and we can easily update the images to suite our needs.
 
 
 Exceptions
@@ -154,10 +188,6 @@ that will put it there, so we have put only this js in the index.html and it is
 not served from Plone’s js registry. In case if the site is loaded without the 
 Diazo theme, the modernizer.js will be provided by Plone.
 
-Mobile.css is not modified, and we are using Plone’s default files 
-because they need to have the media attribute set, and in less there is no way 
-to do the same thing as the media attribute does.
-
 
 Best practices (Do's and Don'ts)
 ================================
@@ -167,8 +197,11 @@ Don't mix grid css classes with others
 In order not to overwrite grid properties by accident, we encourage you to have
 the theme specific CSS classes in a separate element. For example instead of 
 this:
+
   <div class="cell width-full position-0 myclass">
+
 You should have this:
+
   <div class="cell width-full position-0">
     <div class="myclass">
 
@@ -179,16 +212,10 @@ To be more precise, the title should be "Centering a fixed width container". The
 main idea is to set a fixed width to the container that holds all the elements,
 and center it. This way we can have a different background for the body and for
 the container.
-In base.less set the body-width to 100% and body-margin to 0. This will ensure
-having the body background in full width. Next in template.less set the styling
-for the container:
 
-    #container {
-        margin:0 auto;
-        width:960px;
-    }
-
-Also if different backgrounds are needed, then add a background property here.
+Responsive design suggests to have a fixed width layout only when the browser
+window is wide enough, so we have included the desktop-body-max-width variable 
+in base.less where you can set the desired width of the page.
 
 
 Having multiple looks for the portlets
@@ -251,8 +278,46 @@ The font-face is defined in base.less, and the font files should go into
 themere_resources/fonts folder.
 
 
+Sidebar behavior for tablet
+---------------------------
+As there is not enough room for both of the sidebars on a tablet, we need to
+move one of them below the content. In manifest.cfg there is a theme parameter
+set that is used to determine which column should be moved below the content.
+To move the left column down set:
+
+    tabletleftcolumndown = python: True
+
+To move the right column down set:
+
+    tabletleftcolumndown = python: False
+
+This value can be updated in the control panel -> Diazo theme -> Advanced 
+settings.
+
+
+New theme roll-out checklist
+============================
+Follow these steps for each new theme:
+
+  * Create a new theme with zopeskel
+  * Update your buildout to include the new theme and run it
+  * Update manifest.cfg with tablet sidebar behavior rule
+  * Start the server and install the new theme
+  * Update index.html and rules.xml to suite your layout
+  * Change the base.less variable values to match your needs
+  * Modify common elements first, and only then move to device specific ones
+  * Add needed images and javascripts
+  * Update print styles
+
+
 Useful reads
 ============
+
+HTML5 Boilerplate
+http://html5boilerplate.com/
+
+Mobile HTML5 Boilerplate
+http://html5boilerplate.com/mobile
 
 LESS CSS Shapes Library
 https://github.com/NathanStrutz/LESS-CSS-Shapes-Library 
@@ -263,3 +328,5 @@ http://code.google.com/p/lessins/
 Awesome tutorials to master responsive web design
 http://www.catswhocode.com/blog/awesome-tutorials-to-master-responsive-web-design
 
+Grid Calculator - generate a grid for photoshop and illustrator
+http://gridcalculator.dk/#/1100/16/24/12
