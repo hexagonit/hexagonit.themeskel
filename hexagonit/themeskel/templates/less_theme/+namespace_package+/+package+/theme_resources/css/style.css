@@ -752,7 +752,7 @@ input.searchField {
   margin-right: 0.5em;
 }
 #portal-siteactions li a:hover {
-  color: #75ad0a;
+  color: Black;
 }
 /* @end */
 /* @group Listings */
@@ -802,7 +802,7 @@ dl.portlet a:visited {
   border-bottom: 0.1em solid #cccccc;
 }
 dl.portlet a:hover {
-  color: #75ad0a !important;
+  color: Black !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
 }
@@ -1022,7 +1022,7 @@ dl.portletNavigationTree dd.portletItem {
   border-bottom: 0.1em solid #cccccc;
 }
 #content a:hover {
-  color: #75ad0a !important;
+  color: Black !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
 }
@@ -2387,7 +2387,7 @@ div.overlay label {
   margin-bottom: 0.25em;
 }
 div.overlay a:hover {
-  color: #75ad0a;
+  color: Black;
 }
 div.overlay a .selected {
   color: #000000;
