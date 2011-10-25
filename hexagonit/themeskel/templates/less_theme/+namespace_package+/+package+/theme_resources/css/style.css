@@ -317,6 +317,9 @@ td {
  * 
  * If page width is fixed to 960px width:
  * Cell will be equivalent to 40px, left/right margin will be 10px.
+ *
+ * If page width is fixed to 1088px width:
+ * Cell will be equivalent to 44px, left/right margin will be 12px.
  */
 div.row {
   float: left;
@@ -2704,8 +2707,7 @@ div.overlaybg div.close {
     padding: 10px;
     background: #DDD;
     cursor: pointer;
-    position: absolute;
-    right: 0px;
+    float: right;
     width: 50px;
   }
   #portal-searchbox {
@@ -2890,20 +2892,28 @@ div.overlaybg div.close {
    ========================================================================== */
 @media only screen and (min-width: 481px) and (max-width: 800px) {
   /* Style adjustments for viewports 480px - 800px go here */
-  .tablet-right-down #portal-column-content.width-1\:2 {
+  .tablet-right-down #portal-column-content.width-1\3a 2, .tablet-right-down #portal-column-content.width-3\3a 4 {
     width: 72.75%;
   }
   .tablet-right-down #portal-column-two {
-    float: none!important;
-    clear: both;
     width: 97.75%;
     margin-left: -98.875%;
   }
-  .tablet-left-down #portal-column-content.width-1\:2 {
+  .tablet-left-down #portal-column-content.width-1\3a 2 {
     width: 72.75%;
     margin-left: -98.875%;
   }
+  .tablet-left-down #portal-column-content.width-3\3a 4 {
+    width: 97.75%;
+  }
+  .tablet-left-down #portal-column-content.position-1\3a 4 {
+    margin-left: -98.875%;
+  }
   .tablet-left-down #portal-column-one {
+    width: 97.75%;
+    margin-left: -98.875%;
+  }
+  #portal-column-two {
     float: none!important;
     clear: both;
     width: 97.75%;
