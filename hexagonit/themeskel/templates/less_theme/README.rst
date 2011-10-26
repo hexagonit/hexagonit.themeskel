@@ -295,6 +295,20 @@ This value can be updated in the control panel -> Diazo theme -> Advanced
 settings.
 
 
+iOS images sizes
+----------------
+Application icons:
+iPhone4: 114 x 114
+iPhone3:  57 x  57
+iPad:     72 x  72
+
+Splash screen:
+iPhone4: 640 x 920
+iPhone3: 320 x 460
+iPad Landscape: 1024 x  748
+iPad Portrait:   768 x 1004
+
+
 New theme roll-out checklist
 ============================
 Follow these steps for each new theme:
