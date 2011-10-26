@@ -536,6 +536,9 @@ h6 {
 h2 a, h3 a, h4 a {
   border-bottom: none !important;
 }
+a {
+  text-decoration: none;
+}
 a:link, a:visited {
   color: #205c90;
 }
@@ -2896,8 +2899,12 @@ div.overlaybg div.close {
     width: 72.75%;
   }
   .tablet-right-down #portal-column-two {
+    float: none!important;
+    clear: both;
     width: 97.75%;
     margin-left: -98.875%;
+    height: 1%;
+    zoom: 1;
   }
   .tablet-left-down #portal-column-content.width-1\3a 2 {
     width: 72.75%;
@@ -2910,14 +2917,12 @@ div.overlaybg div.close {
     margin-left: -98.875%;
   }
   .tablet-left-down #portal-column-one {
-    width: 97.75%;
-    margin-left: -98.875%;
-  }
-  #portal-column-two {
     float: none!important;
     clear: both;
     width: 97.75%;
     margin-left: -98.875%;
+    height: 1%;
+    zoom: 1;
   }
 }
 @media only screen and (min-width: 801px) {
@@ -2942,7 +2947,7 @@ div.overlaybg div.close {
   }
   /* Black prints faster: h5bp.com/s */
   a, a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
