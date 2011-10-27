@@ -295,8 +295,15 @@ This value can be updated in the control panel -> Diazo theme -> Advanced
 settings.
 
 
-iOS images sizes
-----------------
+iOS image sizes
+---------------
+iOS has the possibility of creating an application from a website, so we need
+icons and splash screens for it. These images need to be specific sizes in 
+order to be shown. If the size does not match, it will be ignored.
+From iOS 5, media queries can be used for the link tags that set the icons and
+splash. We are using these media queries only for the splash, as for the icons
+we can use sizes attribute which is backward compatible.
+
 Application icons:
 iPhone4: 114 x 114
 iPhone3:  57 x  57
@@ -344,3 +351,7 @@ http://www.catswhocode.com/blog/awesome-tutorials-to-master-responsive-web-desig
 
 Grid Calculator - generate a grid for photoshop and illustrator
 http://gridcalculator.dk/#/1100/16/24/12
+
+Everything you always wanted to know about touch icons
+http://mathiasbynens.be/notes/touch-icons
+

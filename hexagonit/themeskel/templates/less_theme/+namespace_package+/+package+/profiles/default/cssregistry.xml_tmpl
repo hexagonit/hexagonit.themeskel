@@ -24,6 +24,11 @@
 
   <stylesheet
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      id="mobile.css"
+      />
+
+  <stylesheet
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       id="portlets.css"
       />
 

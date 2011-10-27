@@ -2903,17 +2903,9 @@ div.overlaybg div.close {
     clear: both;
     width: 97.75%;
     margin-left: -98.875%;
-    height: 1%;
-    zoom: 1;
   }
-  .tablet-left-down #portal-column-content.width-1\3a 2 {
+  .tablet-left-down #portal-column-content.width-1\3a 2, .tablet-left-down #portal-column-content.width-3\3a 4 {
     width: 72.75%;
-    margin-left: -98.875%;
-  }
-  .tablet-left-down #portal-column-content.width-3\3a 4 {
-    width: 97.75%;
-  }
-  .tablet-left-down #portal-column-content.position-1\3a 4 {
     margin-left: -98.875%;
   }
   .tablet-left-down #portal-column-one {
@@ -2921,8 +2913,23 @@ div.overlaybg div.close {
     clear: both;
     width: 97.75%;
     margin-left: -98.875%;
-    height: 1%;
-    zoom: 1;
+  }
+  .ie7 #portal-column-one, .ie7 #portal-column-two, .ie7 #portal-column-content {
+    float: none!important;
+  }
+  .ie7 .tablet-left-down #portal-column-two {
+    float: none!important;
+    position: absolute;
+    top: 0px;
+    width: 22.75%;
+    margin-left: -23.875%;
+  }
+  .ie7 .tablet-right-down #portal-column-one {
+    float: none!important;
+    position: absolute;
+    top: 0px;
+    width: 22.75%;
+    margin-left: -98.875%;
   }
 }
 @media only screen and (min-width: 801px) {
