@@ -2680,10 +2680,10 @@ div.overlaybg div.close {
   #mobile-globalnav {
     display: block!important;
     visibility: visible;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
     font-size: 100%;
     padding: 10px;
-    background: #DDD;
+    background: #dddddd;
     cursor: pointer;
   }
   #portal-globalnav {
@@ -2704,11 +2704,11 @@ div.overlaybg div.close {
   #mobile-search {
     display: block!important;
     visibility: visible;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
     font-size: 100%;
     padding: 10px;
-    background: #DDD;
+    background: #dddddd;
     cursor: pointer;
     float: right;
     width: 50px;
@@ -2740,24 +2740,24 @@ div.overlaybg div.close {
     width: 100%;
   }
   input.searchPage {
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
   #mobile-page-settings {
     display: block!important;
     visibility: visible;
     cursor: pointer;
-    color: #999;
+    color: #999999;
     font-size: 12px;
     text-align: center;
     padding: 5px;
     margin: 10px 5px 0px;
-    border: 1px dotted #DDDDDD;
+    border: 1px dotted #dddddd;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
   }
   #mobile-page-settings.selected {
-    background: #EEE;
+    background: #eeeeee;
   }
   #edit-bar {
     display: none;
@@ -2805,13 +2805,13 @@ div.overlaybg div.close {
   }
   #contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
     background-color: transparent;
-    min-width: 80%!important;
+    min-width: 0 !important;
     right: auto;
     position: relative;
     border: 0;
   }
   #contentActionMenus .actionMenuContent {
-    background-color: #eee!important;
+    background-color: #eeeeee !important;
   }
   input, textarea {
     font-size: 15px !important;
