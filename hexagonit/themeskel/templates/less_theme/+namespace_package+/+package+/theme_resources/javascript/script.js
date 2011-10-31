@@ -1,28 +1,3 @@
-(function ($) {
-    $(function () {
-        $('#mobile-globalnav').bind('click', function() {
-            $('#portal-globalnav').toggleClass('visible');
-            $('#portal-searchbox').removeClass('visible');
-        });
-    
-        $('#mobile-search').bind('click', function() {
-            $('#portal-searchbox').toggleClass('visible');
-            $('#portal-globalnav').removeClass('visible');
-        });
-    
-        $('#mobile-page-settings').bind('click', function() {
-            $('#edit-bar').toggleClass('visible');
-            $(this).toggleClass('selected');
-        });
-    
-        MBP.scaleFix();
-        MBP.hideUrlBar();
-    });
-    
-}(jQuery));
-
-// iOS app mode click fix
-(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
 
 /*
  * MBP - Mobile boilerplate helper functions
@@ -183,3 +158,30 @@
                                    element.attachEvent('onkeyup', handler);
     };
 })(document);
+
+
+(function ($) {
+    $(function () {
+        $('#mobile-globalnav').bind('click', function() {
+            $('#portal-globalnav').toggleClass('visible');
+            $('#portal-searchbox').removeClass('visible');
+        });
+    
+        $('#mobile-search').bind('click', function() {
+            $('#portal-searchbox').toggleClass('visible');
+            $('#portal-globalnav').removeClass('visible');
+        });
+    
+        $('#mobile-page-settings').bind('click', function() {
+            $('#edit-bar').toggleClass('visible');
+            $(this).toggleClass('selected');
+        });
+    
+        MBP.scaleFix();
+        MBP.hideUrlBar();
+    });
+    
+}(jQuery));
+
+// iOS app mode click fix
+(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
