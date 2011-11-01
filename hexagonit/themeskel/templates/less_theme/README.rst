@@ -259,6 +259,10 @@ in your css, just apply the clearfix css class to your html element that
 contains the floated elements.
 Note: clearfix class is defined in style.less.
 
+If the content that needs to be cleared is copied with a diazo rule and we don't
+have access to its html, then apply the .clearfix() mixin to it in the 
+appropriate less file.
+
 
 Using custom fonts
 ------------------
@@ -329,6 +333,7 @@ Follow these steps for each new theme:
   * Modify common elements first, and only then move to device specific ones
   * Add needed images and javascripts
   * Update print styles
+  * Minify css with Less.app
 
 
 Useful reads

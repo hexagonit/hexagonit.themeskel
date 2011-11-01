@@ -9,15 +9,15 @@
     .tablet-right-down {
         #portal-column-content.width-1\3a 2,
         #portal-column-content.width-3\3a 4 { 
-            width:    @width-3-4; 
+            .grid-column-width(12); 
         }
 
         // Move the right column down and use the whole width
         #portal-column-two { 
             float: none!important;
             clear: both;
-            width: @width-full; 
-            margin-left: @position-0; 
+            .grid-column-width(16);
+            .grid-position(0);
         }
     }
 
@@ -27,16 +27,16 @@
     .tablet-left-down {
         #portal-column-content.width-1\3a 2,
         #portal-column-content.width-3\3a 4 { 
-            width:    @width-3-4;
-            margin-left: @position-0;
+            .grid-column-width(12);
+            .grid-position(0);
         }
         
         // Move the left column down and use the whole width
         #portal-column-one { 
             float: none!important;
             clear: both;
-            width: @width-full; 
-            margin-left: @position-0; 
+            .grid-column-width(16);
+            .grid-position(0);
         }
     }
 
@@ -54,8 +54,8 @@
                 float: none!important;
                 position: absolute;
                 top:0px;
-                width: @width-1-4;
-                margin-left: @position-3-4;
+                .grid-column-width(4);
+                .grid-position(12);
             }
         }
         
@@ -64,8 +64,8 @@
                 float: none!important;
                 position: absolute;
                 top:0px;
-                width: @width-1-4;
-                margin-left: @position-0;
+                .grid-column-width(4);
+                .grid-position(0);
             }
         }
     }
