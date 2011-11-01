@@ -1,5 +1,20 @@
 /* Commonly used mixins */
 
+// Clearfix for clearing floats like a boss h5bp.com/q
+.clearfix() {
+    zoom: 1;
+    
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
 .rounded-corners(@radius: 5px) {
     border-radius: @radius;
     -webkit-border-radius: @radius;
@@ -57,4 +72,16 @@
     -webkit-box-shadow: @horizontal @vertical @blur @spread @color;
     -moz-box-shadow: @horizontal @vertical @blur @spread @color;
     box-shadow: @horizontal @vertical @blur @spread @color;
+}
+
+
+// GRID
+.grid-column-width(@column: 1) {
+    //For a given cell width, the calculation is: width: (6.25*n - 2.25)%
+    width: (@grid-column-width + 2 * @grid-column-gutter) * @column - (2 * @grid-column-gutter);
+}
+
+.grid-position(@column: 1) {
+    // For a given position, the calculation is margin-left: -100 + (6.25*n) + 1.125
+    margin-left: -100 + (@grid-column-width + 2 * @grid-column-gutter) * @column + @grid-column-gutter;
 }

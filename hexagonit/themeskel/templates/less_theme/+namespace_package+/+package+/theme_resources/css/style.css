@@ -440,8 +440,7 @@ div.position-15 {
   margin-left: -5.125%;
 }
 /* End of the core Deco Grid System */
-/* Convenience classes â€” Â¼, Â½, Â¾ widths and Â¼, Â½, Â¾ positions. 
-   Not strictly necessary. */
+/* Convenience classes */
 div.width-1\3a 2 {
   width: 47.75%;
 }
@@ -457,19 +456,19 @@ div.width-3\3a 4 {
 div.width-full {
   width: 97.75%;
 }
-div.position-1\3a 4 {
-  margin-left: -73.875%;
-}
-/* .position-1:4 */
 div.position-1\3a 2 {
   margin-left: -48.875%;
 }
 /* .position-1:2 */
+div.position-1\3a 4 {
+  margin-left: -73.875%;
+}
+/* .position-1:4 */
 div.position-3\3a 4 {
   margin-left: -23.875%;
 }
 /* .position-3:4 */
-/* Special classes for â…“, â…” widths and â…“, â…” positions. 
+/* Special classes. 
 These do not strictly conform to the grid, but are useful for certain layouts. */
 div.width-1\3a 3 {
   width: 31.08%;
