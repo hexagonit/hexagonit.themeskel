@@ -594,7 +594,7 @@ dd {
 /* @group Navigation/search */
 #portal-logo {
   display: inline-block;
-  margin: 0;
+  margin: 1.375em 0;
 }
 #portal-header {
   position: relative;
@@ -2676,9 +2676,11 @@ div.overlaybg div.close {
     display: block!important;
     visibility: visible!important;
   }
-  #mobile-globalnav {
+  #mobile-menu {
     display: block!important;
     visibility: visible;
+  }
+  #mobile-globalnav {
     border-bottom: 1px solid #ffffff;
     font-size: 100%;
     padding: 10px;
@@ -2701,8 +2703,6 @@ div.overlaybg div.close {
     float: none;
   }
   #mobile-search {
-    display: block!important;
-    visibility: visible;
     border-bottom: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
     font-size: 100%;
