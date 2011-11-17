@@ -28,7 +28,7 @@ Package content
         * mobile - styles that are only applied to mobiles
         * tablet - styles that are only applied to tablets
         * style.less - HTML5Boilerplate css file that includes all the other 
-        less files in the appropriate places.
+          less files in the appropriate places.
     * index.html - main template used by plone.app.theming
     * rules.xml - rules file used by plone.app.theming
 
@@ -297,6 +297,26 @@ To move the right column down set:
 
 This value can be updated in the control panel -> Diazo theme -> Advanced 
 settings.
+
+
+Using theme parameters
+----------------------
+Diazo lets us set variables for a theme within the manifest.cfg that will end
+up in @@theming-controlpanel. To use these parameters, we need XSLT. 
+
+Display the value of the parameter as a content of an element:
+
+    <xsl:value-of select="$tabletleftcolumndown"/>
+
+Use the parameter for an if statement:
+
+    <rules if="$tabletleftcolumndown">
+or:
+    <xsl:if test="$tabletleftcolumndown">
+
+Add the value of the parameter to a class attribute:
+
+    <xsl:attribute name="class">$tabletleftcolumndown</xsl:attribute>
 
 
 iOS image sizes
