@@ -123,6 +123,8 @@ dd { margin: 0; }
 #portal-globalnav {
     font: @menu-font;
     background: @menu-background;
+    border-top: @menu-border-top;
+    border-bottom: @menu-border-bottom;
     margin: 0 0 1em 0;
     padding:0;
     clear: both;
@@ -164,6 +166,10 @@ dd { margin: 0; }
     margin: @Personaltools-margin;
     font-size: @Personaltools-font-size;
     .rounded-corners-bottom(0.5em);
+    
+    a {
+        color: @Personaltools-link-color;
+    }
     
     #anon-personalbar a {
         float: left;
@@ -369,7 +375,7 @@ dl {
         dd {
             &.portletItem,
             &.portletFooter {
-                padding: 1em;
+                padding: @Portlet-item-padding;
             }
         }
         ol {
