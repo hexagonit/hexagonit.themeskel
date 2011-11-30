@@ -603,6 +603,8 @@ dd {
 #portal-globalnav {
   font: 80% Arial, FreeSans, sans-serif;
   background: #dddddd;
+  border-top: none;
+  border-bottom: none;
   margin: 0 0 1em 0;
   padding: 0;
   clear: both;
@@ -647,6 +649,9 @@ dd {
   -webkit-border-bottom-left-radius: 0.5em;
   -moz-border-radius-bottomleft: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
+}
+#portal-personaltools a {
+  color: #205c90;
 }
 #portal-personaltools #anon-personalbar a {
   float: left;
@@ -710,7 +715,7 @@ input.searchField {
 #LSResult {
   position: absolute;
   right: 0;
-  background: White;
+  background: transparent;
   margin: -1.5em 0 0 -7em;
 }
 #LSResult fieldset {
@@ -724,6 +729,9 @@ input.searchField {
 #livesearchLegend {
   background-color: #cccccc;
   padding: 0.3em;
+}
+.livesearchContainer {
+  background: White;
 }
 .LSRow, #LSNothingFound {
   display: block;
@@ -2652,7 +2660,114 @@ div.overlaybg div.close {
 .ie7 .optionsBox input {
   margin: 0px;
 }
-/* @end */@media only screen and (max-width: 480px) {
+/* @end *//* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 801px) {
+  /* Style adjustments for viewports 800px and over go here */
+  #container {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  /* Style adjustments for viewports 480px - 800px go here */
+  .tablet-right-down #portal-column-content.width-1\3a 2, .tablet-right-down #portal-column-content.width-3\3a 4 {
+    width: 72.75%;
+  }
+  .tablet-right-down #portal-column-two {
+    float: none!important;
+    clear: both;
+    width: 97.75%;
+    margin-left: -98.875%;
+  }
+  .tablet-left-down #portal-column-content.width-1\3a 2, .tablet-left-down #portal-column-content.width-3\3a 4 {
+    width: 72.75%;
+    margin-left: -98.875%;
+  }
+  .tablet-left-down #portal-column-one {
+    float: none!important;
+    clear: both;
+    width: 97.75%;
+    margin-left: -98.875%;
+  }
+  .ie7 #portal-column-one, .ie7 #portal-column-two, .ie7 #portal-column-content {
+    float: none!important;
+  }
+  .ie7 .tablet-left-down #portal-column-two {
+    float: none!important;
+    position: absolute;
+    top: 0px;
+    width: 22.75%;
+    margin-left: -23.875%;
+  }
+  .ie7 .tablet-right-down #portal-column-one {
+    float: none!important;
+    position: absolute;
+    top: 0px;
+    width: 22.75%;
+    margin-left: -98.875%;
+  }
+}
+@media only screen and (max-width: 480px) {
   body, #container {
     width: 100%;
   }
@@ -2681,7 +2796,8 @@ div.overlaybg div.close {
     visibility: visible;
   }
   #mobile-globalnav {
-    border-bottom: 1px solid #ffffff;
+    color: Black;
+    border-bottom: 1px solid White;
     font-size: 100%;
     padding: 10px;
     background: #dddddd;
@@ -2703,8 +2819,9 @@ div.overlaybg div.close {
     float: none;
   }
   #mobile-search {
-    border-bottom: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
+    color: Black;
+    border-bottom: 1px solid White;
+    border-left: 1px solid White;
     font-size: 100%;
     padding: 10px;
     background: #dddddd;
@@ -2829,114 +2946,6 @@ div.overlaybg div.close {
   }
   #fieldset-openid-login label, #login-form label {
     text-align: center;
-  }
-}
-/* ==|== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
-/* For image replacement */
-.ir {
-  display: block;
-  border: 0;
-  text-indent: -999em;
-  overflow: hidden;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
-}
-.ir br {
-  display: none;
-}
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-  visibility: hidden;
-}
-/* Contain floats: h5bp.com/q */.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
-}
-/* ==|== media queries ======================================================
-   PLACEHOLDER Media Queries for Responsive Design.
-   These override the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-  /* Style adjustments for viewports 480px - 800px go here */
-  .tablet-right-down #portal-column-content.width-1\3a 2, .tablet-right-down #portal-column-content.width-3\3a 4 {
-    width: 72.75%;
-  }
-  .tablet-right-down #portal-column-two {
-    float: none!important;
-    clear: both;
-    width: 97.75%;
-    margin-left: -98.875%;
-  }
-  .tablet-left-down #portal-column-content.width-1\3a 2, .tablet-left-down #portal-column-content.width-3\3a 4 {
-    width: 72.75%;
-    margin-left: -98.875%;
-  }
-  .tablet-left-down #portal-column-one {
-    float: none!important;
-    clear: both;
-    width: 97.75%;
-    margin-left: -98.875%;
-  }
-  .ie7 #portal-column-one, .ie7 #portal-column-two, .ie7 #portal-column-content {
-    float: none!important;
-  }
-  .ie7 .tablet-left-down #portal-column-two {
-    float: none!important;
-    position: absolute;
-    top: 0px;
-    width: 22.75%;
-    margin-left: -23.875%;
-  }
-  .ie7 .tablet-right-down #portal-column-one {
-    float: none!important;
-    position: absolute;
-    top: 0px;
-    width: 22.75%;
-    margin-left: -98.875%;
-  }
-}
-@media only screen and (min-width: 801px) {
-  /* Style adjustments for viewports 800px and over go here */
-  #container {
-    background: white;
-    margin: 0 auto;
-    max-width: 960px;
   }
 }
 /* ==|== print styles =======================================================
