@@ -206,6 +206,21 @@ You should have this:
     <div class="myclass">
 
 
+Setting grid widths and positions in the stylesheets
+----------------------------------------------------
+The responsive design often forces us to have different widths and positions
+for the same element on different screen sizes, and as we can't edit the markup,
+we'll need to apply these changes in our stylesheets. Instead of giving it a 
+fixed width value, we can use the .grid-column-width() and .grid-position()
+mixins. To set an element to be 6 columns wide and on position 3, just add this
+to the appropriate css selector:
+
+    .grid-column-width(6)
+    .grid-position(3)
+
+This mixin will calculate the appropriate width and margin for our element.
+
+
 Centering a fixed width body
 ----------------------------
 To be more precise, the title should be "Centering a fixed width container". The
@@ -220,6 +235,60 @@ in base.less where you can set the desired width of the page.
 
 Having multiple looks for the portlets
 --------------------------------------
+We are using hexagonit.portletstyle plugin for this.
+
+
+Using custom logo
+-----------------
+If the logo is not coming from Plone, here is the way to put it into the theme:
+1. Insert this code in index.html, and make sure the src is pointing to correct
+file and the height and width are the actual size of the logo:
+
+    <a href="#" accesskey="1" title="Site" id="portal-logo">
+        <img width="305" height="32" title="Site" alt="Site" src="images/logo.png" />
+    </a>
+
+2. In rules.xml copy the href, title and alt attributes from Plone logo:
+
+    <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
+    <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" />
+
+Some additional modification might be required for the rules, to everything 
+fall into right place.
+
+
+Show portal-personaltools only when the user is logged in
+---------------------------------------------------------
+In rules.xml add:
+
+    <before css:content="#portal-personaltools-wrapper" 
+            css:theme="#portal-logo"
+            css:if-content=".actionMenuHeader" />
+
+
+Remove advanced search options from search box in the header
+------------------------------------------------------------
+In rules.xml add:
+
+    <drop css:content=".searchSection" />
+    <drop css:content="#portal-advanced-search" />
+
+
+Add quicklinks before search in header
+--------------------------------------
+In index.html add:
+
+    <div id="quicklinks">
+        Medialle | Opettajille | Paikkakunnallasi
+    </div>
+
+Also apply styling in custom.less:
+
+    #quicklinks {
+        clear: right;
+        float: right;
+        margin-top: 10px;
+    }
 
 
 Fix for IE7 hasLayout bug
@@ -340,6 +409,14 @@ iPad Landscape: 1024 x  748
 iPad Portrait:   768 x 1004
 
 
+Using CSS3 properties
+---------------------
+Not all browsers support CSS3 yet, so we need to keep in mind when we are
+developing a new theme. Create everything with CSS2 first, and only after 
+enhance it with CSS3 goodness. This way browsers that do not support CSS3 will
+fall back to the CSS2, and still look pretty decent.
+
+
 New theme roll-out checklist
 ============================
 Follow these steps for each new theme:
@@ -352,7 +429,9 @@ Follow these steps for each new theme:
   * Change the base.less variable values to match your needs
   * Modify common elements first, and only then move to device specific ones
   * Add needed images and javascripts
+  * Create launch icons and splash screens for mobile phones
   * Update print styles
+  * Cross browser testing
   * Minify css with Less.app
 
 

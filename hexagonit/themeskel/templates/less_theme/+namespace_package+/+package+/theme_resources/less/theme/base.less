@@ -100,11 +100,16 @@
 // body - all devices
 @body-width: 100%;
 @body-margin: 0;
-@body-background: White;
+@body-background-color: White;
+@body-background: @body-background-color;
 @body-font-color: Black;
 
+@container-background: #FFF;
+
+@EditBar-default-color: #DDD;
+
 // body - desktop only
-@desktop-body-max-width: 960px;
+@desktop-body-max-width: 1088px;
 @desktop-body-margin: 0 auto;
 
 
@@ -143,8 +148,9 @@
 @menu-item-selected-hover-background: #205c90;
 @menu-item-selected-hover-font-color: White;
 
-@mobile-Mobile-globalnav-border-bottom: 1px solid #fff;
-@mobile-Mobile-globalnav-background: #DDD;
+@mobile-Mobile-globalnav-color: Black;
+@mobile-Mobile-globalnav-border-bottom: 1px solid @body-background-color;
+@mobile-Mobile-globalnav-background: @EditBar-default-color;
 @mobile-Portal-globalnav-item-padding: 10px;
 
 
@@ -161,17 +167,19 @@
 @Languageselector-background: #e3e3e3;
 
 // Live Search
-@LiveSearch-background: White;
+@LiveSearch-background: transparent;
 @LiveSearch-border: 0.1em solid #ccc;
+@LiveSearch-container-background: White;
 @LiveSearchLegend-background: #ccc;
 @LiveSearchDescription-color: #666;
 @LiveSearchHighlight-background: #ddd;
 @Portal-searchbox-label-font-weight: normal;
 
-@mobile-Mobile-search-border-bottom: 1px solid #fff;
-@mobile-Mobile-search-border-left: 1px solid #fff;
+@mobile-Mobile-search-color: Black;
+@mobile-Mobile-search-border-bottom: 1px solid @body-background-color;
+@mobile-Mobile-search-border-left: 1px solid @body-background-color;
 @mobile-Mobile-search-padding: 10px;
-@mobile-Mobile-search-background: #DDD;
+@mobile-Mobile-search-background: @EditBar-default-color;
 @mobile-Mobile-search-width: 50px;
 @mobile-Portal-searchbox-margin: 1em auto;
 @mobile-Portal-searchbox-width: 80%;
@@ -190,7 +198,7 @@
 @ListingsLinkOverlay-border: 1px dotted #205c90;
 
 // Portlets
-@Portlet-header-background: #ddd;
+@Portlet-header-background: @EditBar-default-color;
 @Portlet-header-color: Black;
 @Portlet-header-line-height: normal;
 @Portlet-item-padding: 1em;
@@ -312,26 +320,26 @@
 @StatusMessage-error-dd-background: #fdc;
 
 // Edit bar
-@EditBar-background: #DDD;
+@EditBar-background: @EditBar-default-color;
 @EditBar-line-height: 2em;
-@EditBar-border: 0.25em solid #DDD;
+@EditBar-border: 0.25em solid @EditBar-background;
 @EditBar-color: #666;
-@EditBar-dropdown-border: 0.5em solid #DDD;
+@EditBar-dropdown-border: 0.5em solid @EditBar-background;
 @EditBar-selected-font-weight: bold;
-@EditBar-selected-background: White;
-@EditBar-selected-color: Black;
-@EditBar-hover-background: White;
-@EditBar-hover-color: Black;
+@EditBar-selected-background: @body-background-color;
+@EditBar-selected-color: @body-font-color;
+@EditBar-hover-background: @body-background-color;
+@EditBar-hover-color: @body-font-color;
 
 @FormTab-background: #ddd;
 @FormTab-border: 0.3em solid #ddd;
 @FormTab-link-line-height: 2em;
 @FormTab-link-padding: 0 0.75em;
 @FormTab-link-selected-font-weight: bold;
-@FormTab-link-selected-background: White;
-@FormTab-link-selected-color: Black;
-@FormTab-link-hover-background: White;
-@FormTab-link-hover-color: Black;
+@FormTab-link-selected-background: @body-background-color;
+@FormTab-link-selected-color: @body-font-color;
+@FormTab-link-hover-background: @body-background-color;
+@FormTab-link-hover-color: @body-font-color;
 @FormTab-link-notify-background: red;
 @FormTab-link-notify-color: White;
 
@@ -431,6 +439,8 @@
 // Footer
 @Footer-line-height: 2em;
 @Footer-background: #ddd;
+@Footer-padding: 1em;
+@Footer-margin: 1em 0;
 @Colophon-link-color: #444;
 
 // Sitemap
