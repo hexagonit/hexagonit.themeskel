@@ -235,7 +235,12 @@ in base.less where you can set the desired width of the page.
 
 Having multiple looks for the portlets
 --------------------------------------
-We are using hexagonit.portletstyle plugin for this.
+We are using hexagonit.portletstyle plugin for this, and it is already included
+as a dependency.
+To specify the portlet styles and their css idendifiers, edit 
+profiles/default/registry.xml. This way on each install these styles will be
+available. These values show up in the control panel so you can modify them on
+the fly, just remember to update the registry.xml once done experimenting.
 
 
 Using custom logo
@@ -388,6 +393,11 @@ Add the value of the parameter to a class attribute:
     <xsl:attribute name="class">$tabletleftcolumndown</xsl:attribute>
 
 
+Modifying theme or content on the fly
+-------------------------------------
+TODO: write this!
+
+
 iOS image sizes
 ---------------
 iOS has the possibility of creating an application from a website, so we need
@@ -424,6 +434,7 @@ Follow these steps for each new theme:
   * Create a new theme with zopeskel
   * Update your buildout to include the new theme and run it
   * Update manifest.cfg with tablet sidebar behavior rule
+  * Update registry.xml with proper portlet style names
   * Start the server and install the new theme
   * Update index.html and rules.xml to suite your layout
   * Change the base.less variable values to match your needs
