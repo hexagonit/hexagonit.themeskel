@@ -24,4 +24,15 @@
         id="++theme++${namespace_package}.${package}/javascript/script.js"
     />
 
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="++theme++${namespace_package}.${package}/javascript/libs/jquery.richmenu.js"
+    />
+
 </object>
