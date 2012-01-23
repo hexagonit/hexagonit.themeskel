@@ -7,13 +7,11 @@ def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 
-version = read('${namespace_package}', '${package}', 'version.txt').strip()
-
 long_description = (
     read('${namespace_package}', '${package}', 'docs', 'index.rst'))
 
 setup(name=${repr($project)},
-      version=version,
+      version=${version},
       description="${description or None}",
       long_description=long_description,
       # Get more strings from

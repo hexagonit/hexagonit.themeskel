@@ -47,7 +47,18 @@ To make browserlayer registered, you need to answer True to the Generic Setup pr
 
         vars['year'] = date.today().year
 
+        # Set version to repr to avoid IOError
+        version = vars.get('version')
+        if version:
+            vars['version'] = repr(version)
+
     def post(self, command, output_dir, vars):
+
+        # Set version to repr to avoid IOError
+        version = vars.get('version')
+        if version:
+            vars['version'] = repr(version)
+
         if vars['add_profile'] in (False, 'False'):
             # if we do not want a profile, remove profile directory and test_setup.py.
             path = os.path.join(output_dir,
