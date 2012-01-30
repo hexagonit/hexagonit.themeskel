@@ -192,10 +192,10 @@ dd { margin: 0; }
 }
 
 #portal-searchbox {
-    float: right;
+    position:absolute;
+    right: 0;
     text-align: left;
-    clear: right;
-    margin: 1.2em 0;
+    margin-top: -64px;
     font-size: @Portal-searchbox-font-size;
     
     form {
@@ -229,6 +229,13 @@ input.searchField {
     &.expanded {
         background: url('../images/arrowDown.png') center right no-repeat;
     }
+}
+
+// Dexterity content type icons margin fix
+.actionMenuContent img,
+.navTreeFolderish img,
+#listing-table img {
+    margin-right: 4px;
 }
 
 /* @end */
@@ -942,6 +949,14 @@ table {
                     
                     td {
                         background: #eee;
+                    }
+                }
+                
+                &.even {
+                    background: #fff;
+                    
+                    td {
+                        background: #fff;
                     }
                 }
                 
@@ -2426,6 +2441,11 @@ div.overlaybg div.close {
 }
 
 /* @end */
+
+// Dexterity icons fix
+.actionMenuContent img {
+    margin-right: 4px;
+}
 
 
 /* @group jQuery Tag multiple selector */

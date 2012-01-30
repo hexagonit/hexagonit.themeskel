@@ -296,6 +296,18 @@ Also apply styling in custom.less:
     }
 
 
+Move breadcrumbs outside of the content column
+----------------------------------------------
+If you need to move a subelement of an element that is copied by another rule,
+then you just can't drop it and append it to another place, but you have to drop
+it and use xsl rule to include it in the other location:
+
+    <drop css:content="#portal-breadcrumbs"/> 
+    <replace css:theme="#portal-breadcrumbs">
+        <xsl:copy-of css:select="#portal-breadcrumbs"/>
+    </replace>
+
+
 Fix for IE7 hasLayout bug
 -------------------------
 Internet Explorer has a nice habit of not applying layout to some elements and 
@@ -409,7 +421,9 @@ its ID.
 Beside this plugin, we need to have the content for the dropdowns in our Plone 
 site which will be copied with a diazo rule, or have them in the index.html 
 (which is not a recommended option).
+
 TODO: how to add this content to plone.
+
 Plone generates a unique id for each menu item, so the dropdown for a specific
 menu item needs to have an id in form: '#popup-' + menuItemID. For example menu 
 item with id="portaltab-news" would be tied to dropdown with 
