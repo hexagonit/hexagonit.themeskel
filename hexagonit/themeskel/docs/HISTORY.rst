@@ -1,10 +1,28 @@
 Changelog
 =========
 
-Mobile first branch (2011-10-06)
---------------------------------
+1.0 (2012-XX-XX)
+----------------
 
-- 
+- Less folder restructured [vsomogyi]
+
+- IE fixes [vsomogyi]
+
+- Mobile and tablet view restructured [vsomogyi]
+
+- Added mobile boilerplate [vsomogyi]
+
+- Tablet column behavior feature added [vsomogyi]
+
+- Scoped the use of the $ (jQuery) variable [dokai]
+
+- Grid system lessified [vsomogyi]
+
+- Added Rich Menu jQuery plugin [vsomogyi]
+
+- Install hexagonit.portletstyle by default [dokai]
+
+- Readme update [vsomogyi]
 
 
 1.0rc1 (2011-09-16)
