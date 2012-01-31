@@ -29,6 +29,9 @@
 
     Plugin.prototype.init = function () {
 
+        // Mark current page
+        $('#portal-globalnav .selected').addClass('current');
+
         // Menu actions
         $(this.element).find('a').bind('click', function(e) {
             
@@ -43,8 +46,6 @@
             
             if ($popup.length > 0) {
                 e.preventDefault();
-                
-                $('.selected').addClass('current');
                 
                 // if popup is already opened, close it
                 if ($popup.is(':visible')) {
@@ -65,7 +66,7 @@
                     // remove all submenues that are left behind
                     $('#portal-globalnav li #navigation-column').remove();
 
-                    $('.selected').removeClass('selected');
+                    $('#portal-globalnav .selected').removeClass('selected');
                     $this.addClass('selected');
                     $popup.find('#navigation-column')
                           .clone()
@@ -78,7 +79,7 @@
 
                     // show the clicked popup.
                     $popup.toggleClass('hidden');
-                    $('.selected').removeClass('selected');
+                    $('#portal-globalnav .selected').removeClass('selected');
                     $this.addClass('selected');
                 }
             }
@@ -97,8 +98,8 @@
     
     hidePopup = function() {
         //Hide the menus if visible
-        $('.selected').removeClass('selected');
-        $('.current').addClass('selected');
+        $('#portal-globalnav .selected').removeClass('selected');
+        $('#portal-globalnav .current').addClass('selected');
         $('.popup-menu').addClass('hidden');
         // mobile: remove all submenues that are left behind
         $('#portal-globalnav li #navigation-column').remove();
