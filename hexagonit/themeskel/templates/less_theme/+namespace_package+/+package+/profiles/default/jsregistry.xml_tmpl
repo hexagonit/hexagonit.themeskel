@@ -35,4 +35,26 @@
         id="++theme++${namespace_package}.${package}/javascript/libs/jquery.richmenu.js"
     />
 
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="++theme++${namespace_package}.${package}/javascript/libs/descriptiontooltip.js"
+    />
+
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="++theme++${namespace_package}.${package}/javascript/libs/portletoverlay.js"
+    />
+
 </object>
