@@ -24,6 +24,12 @@ Changelog
 
 - Readme update [vsomogyi]
 
+- Rich Menu bugfixes [vsomogyi]
+
+- Description tooltip and portlet overlay libs added [vsomogyi]
+
+- Readme update: description tooltip and portlet overlay [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
