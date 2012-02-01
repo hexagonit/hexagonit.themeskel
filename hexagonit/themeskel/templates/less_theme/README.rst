@@ -457,6 +457,26 @@ Styling and content of the dropdown is theme specific, so it is not part of the
 theme skeleton.
 
 
+Portlet Overlay
+---------------
+Adding and editing portlets within an overlay. The JS can be found in the 
+theme_resources/javascript/libs folder and it is registered in JS registry. 
+By default it is not enabled, so if needed, go to 
+profiles/default/jsregistry.xml and change the enabled="False" to enabled="True" 
+for the entry that has portletoverlay.js in its ID.
+
+
+Description Tooltip
+-------------------
+The form help texts can be long ones and they take up too much vertical space,
+so this library removes them, adds a help icon and on click, the help text is 
+displayed in a tooltip.
+The JS can be found in the theme_resources/javascript/libs folder and it is 
+registered in JS registry. By default it is not enabled, so if needed, go to 
+profiles/default/jsregistry.xml and change the enabled="False" to enabled="True" 
+for the entry that has descriptiontooltip.js in its ID.
+
+
 iOS image sizes
 ---------------
 iOS has the possibility of creating an application from a website, so we need
