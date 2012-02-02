@@ -238,7 +238,36 @@ input.searchField {
     margin-right: 4px;
 }
 
+// Tooltip
+.tooltip {
+    background:#f5f5f5;
+    border: 1px solid #ddd;
+    padding:10px;
+    max-width: 200px;
+    
+    .box-shadow(0px, 0px, 2px, 2px, #e3e3e3);
+}
+.tip-close {
+    color: #666666;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-right: -7px;
+    margin-top: -12px;
+    padding: 2px;
+}
+.help-icon {
+    background: transparent url('../images/help.png') no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px -4px 5px;
+}
+// End tooltip
+
 /* @end */
+
 
 /* @group LiveSearch */
 
@@ -2441,11 +2470,6 @@ div.overlaybg div.close {
 }
 
 /* @end */
-
-// Dexterity icons fix
-.actionMenuContent img {
-    margin-right: 4px;
-}
 
 
 /* @group jQuery Tag multiple selector */

@@ -30,6 +30,8 @@ Changelog
 
 - Readme update: description tooltip and portlet overlay [vsomogyi]
 
+- Tooltip styling added [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
