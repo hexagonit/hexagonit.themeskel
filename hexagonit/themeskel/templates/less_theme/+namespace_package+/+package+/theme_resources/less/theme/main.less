@@ -136,7 +136,7 @@ dd { margin: 0; }
             border-bottom: @menu-item-border-bottom;
             border-left: @menu-item-border-left;
             border-right: @menu-item-border-right;
-            color: @menu-item-color;
+            color: @menu-item-color!important;
             display: inline-block;
             padding: @menu-item-padding;
             background: @menu-item-background;
@@ -203,6 +203,16 @@ dd { margin: 0; }
     }
     label {
         font-weight: @Portal-searchbox-label-font-weight;
+    }
+}
+
+// IE7 margin fix
+.ie7 {
+    #portal-searchbox {
+        margin-top: 40px;
+    }
+    .searchButton {
+        line-height: 0;
     }
 }
 
@@ -823,6 +833,15 @@ span.selectedTag {
 /* Special case of #content - TinyMCE */
 body#content {
     margin: 1em;
+}
+
+// CKEditor fix
+body#content,
+body.cke_panel_frame {
+    background: White;
+    margin: 0;
+    padding: 0 10px;
+    width: auto;
 }
 
 .reviewHistory,
