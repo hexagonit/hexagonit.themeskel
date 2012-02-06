@@ -959,30 +959,30 @@ table {
     }
     &.plain th,
     &.plain td {
-        border: 1px solid #ddd;
+        border: @Table-border;
     }
     &.listing {
-        border-left: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        border-left: @Table-border;
+        border-bottom: @Table-border;
         
         td.listingCheckbox,
         th.listingCheckbox {
             text-align: center;
         }
         .top {
-            border-left: 1px solid #ddd;
-            border-top: 1px solid #ddd;
-            border-right: 1px solid #ddd;
+            border-left: @Table-border;
+            border-top: @Table-border;
+            border-right: @Table-border;
         }
         th {
             text-align: left;
-            color: #666;
-            border: 0.1em solid #e7e7e7;
+            color: @Table-th-color;
+            border: @Table-th-border;
             border-style: solid solid none;
-            background: #ddd;
+            background: @Table-th-background;
         }
         tr.odd th {
-            border: 0.1em solid #fff;
+            border: @Table-tr-odd-th-border;
             border-style: solid solid none none;
         }
         tbody {
@@ -992,33 +992,40 @@ table {
             tr {
                 text-align:left;
                 
-                &.odd {
-                    background: #eee;
-                    
-                    td {
-                        background: #eee;
-                    }
+                .dragging,
+                .selected {
+                    background-color: @Table-row-selected-background;
+                }
+                .error {
+                    background-color:  @Table-row-error-background;
                 }
                 
-                &.even {
-                    background: #fff;
+                &.odd {
+                    background: @Table-odd-background;
                     
                     td {
-                        background: #fff;
+                        background: @Table-odd-background;
+                    }
+                    .selected td,
+                    .dragging td {
+                        background-color: @Table-odd-background;
+                    }
+                    .error td {
+                        background-color: @Table-odd-error-background;
                     }
                 }
                 
                 td {
-                    background: transparent;
+                    background: @Table-background;
                 }
             }
         }
         td {
-            border-right: 1px solid #ddd;
+            border-right: @Table-border;
             
             &.draggable {
                 text-shadow: White 1px 1px 1px;
-                background: #ddd !important;
+                background: @Table-th-background !important;
                 border-bottom: 1px solid white;
                 padding: 0.4em 0.4em 0 0.5em;
             }
@@ -1035,13 +1042,13 @@ table {
             text-align: right;
         }
         td {
-            border-top: 0.1em solid #e7e7e7;
+            border-top: @Table-vertical-border;
             padding: 0.5em;
         }
     }
     &.grid {
         td, th {
-            border: 1px solid #e7e7e7;
+            border: @Table-vertical-border;
             padding: 0.5em;
         }
     }
@@ -2002,16 +2009,6 @@ input.inputLabelActive {
 textarea#form\.description {
     height: 6em;
     width: 99%;
-}
-
-table.listing tbody tr.odd {
-    .selected td,
-    .dragging td {
-        background-color: @Table-odd-selected-background;
-    }
-    .error td {
-        background-color: @Table-odd-error-background;
-    }
 }
 
 tr {
