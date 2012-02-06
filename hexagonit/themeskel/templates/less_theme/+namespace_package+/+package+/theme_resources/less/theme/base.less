@@ -429,17 +429,18 @@
 @Error-warning-background: transparent;
 @Input-label-active-color: #76797c;
 
-@Table-background: #fff;
-@Table-border: 1px solid #ddd;
-@Table-th-color: #666;
-@Table-th-border: 0.1em solid #e7e7e7;
-@Table-th-background: #ddd;
-@Table-tr-odd-th-border: 0.1em solid #fff;
-@Table-odd-background: #eee;
+@Table-background: @body-background-color;
+@Table-border-color: lighten(@EditBar-default-color, 20%);
+@Table-border: 1px solid @Table-border-color;
+@Table-th-color: @EditBar-color;
+@Table-th-border: 0.1em solid @Table-border-color;
+@Table-th-background: @EditBar-default-color;
+@Table-tr-odd-th-border: 0.1em solid @Table-border-color;
+@Table-odd-background: darken(@body-background-color, 3%);
 @Table-odd-error-background: #fdc;
 @Table-row-selected-background: #ffa;
 @Table-row-error-background: #fdc;
-@Table-vertical-border: 0.1em solid #e7e7e7;
+@Table-vertical-border: 0.1em solid @Table-border-color;
 
 @MultiWidgetField-border-left: 1.5em solid #DDD;
 
