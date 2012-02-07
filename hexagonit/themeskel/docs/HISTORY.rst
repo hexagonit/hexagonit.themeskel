@@ -32,6 +32,12 @@ Changelog
 
 - Tooltip styling added [vsomogyi]
 
+- Ckeditor theme fix, ie search fix, menu item link color fix [vsomogyi]
+
+- Table styling added [vsomogyi]
+
+- Upgrade to HTML5Boilerplate v3.0 [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
