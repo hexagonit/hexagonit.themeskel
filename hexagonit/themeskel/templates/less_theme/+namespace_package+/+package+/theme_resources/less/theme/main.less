@@ -1076,12 +1076,11 @@ div.listingBar {
     a {
         display: inline-block;
         padding: 0.25em 0.5em;
-        border: 0.1em solid #ccc;
+        border: @Pagination-link-border!important;
         
         &:hover {
-            color: White;
-            background-color: #329fd7;
-            border-color: #329fd7;
+            background-color: @Pagination-link-hover-background-color;
+            border-color: @Pagination-link-hover-border-color;
         }
     }
 }
