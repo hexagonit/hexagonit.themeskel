@@ -19,7 +19,7 @@
         <replace content="/html/head/title" theme="/html/head/title"/>
 
         <!-- Copy the <base> tag -->
-        <replace content="/html/head/base" theme="/html/head/base" />
+        <copy attributes="href" content="/html/head/base" theme="/html/head/base" />
 
         <replace content="/html/head/title" theme="/html/head/title" />
 

@@ -38,6 +38,8 @@ Changelog
 
 - Upgrade to HTML5Boilerplate v3.0 [vsomogyi]
 
+- Base tag added to index.html [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
