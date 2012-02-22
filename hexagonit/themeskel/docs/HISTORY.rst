@@ -46,6 +46,8 @@ Changelog
 
 - Leading and trailing semicolons added to JS [vsomogyi]
 
+- Description tooltip toggle on click [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
