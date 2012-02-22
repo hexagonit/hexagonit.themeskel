@@ -1,26 +1,27 @@
-(function ($) {
+;(function ($) {
 
     $(function() {
         // === Description tooltip ===
 
-        // Put the help text in a tooltip, show a help icon and when clicked 
+        // Put the help text in a tooltip, show a help icon and when clicked
         // show the tooltip.
         $('.formHelp').each(function() {
             var $this = $(this),
-                text;
+                text,
+                $helpIcon;
             text = $this.text();
             if (text !== '') {
                 $this.text('');
                 $helpIcon = $('<span class="help-icon"></span>');
                 $helpIcon.attr('title', text);
-                $helpIcon.tooltip({ 
-                    position: "top right", 
+                $helpIcon.tooltip({
+                    position: "top right",
                     offset: [0, -15],
                     opacity: 0.95,
                     layout: '<div><span class="tip-close">X</span></div>',
                     events: {
-                        // default action: on click show, never hide
-                        def: "click,''",
+                        // default action: do nothing, action is taken elswhere
+                        def: "'',''",
                         // tooltip does not need show or hide events
                         tooltip: "'',''"
                     }
@@ -30,10 +31,21 @@
             }
         });
 
+        // On click toggle between show and hide tooltip
+        $('.help-icon').click(function() {
+            var tip = $(this).data("tooltip");
+            if (tip.isShown(true)) {
+                tip.hide();
+            } else {
+                tip.show();
+            }
+        });
+
+
         // Close all tooltips on close button or clicking outside of the tooltip
         $('html, .tip-close').live('click', function() {
             $('.help-icon').each(function() {
-                $(this).tooltip().hide();
+                $(this).data("tooltip").hide();
             });
         });
 

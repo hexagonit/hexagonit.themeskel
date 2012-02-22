@@ -40,6 +40,12 @@ Changelog
 
 - Base tag added to index.html [vsomogyi]
 
+- Highslide css added [vsomogyi]
+
+- Colors must be convertable to HSL color-space [vsomogyi]
+
+- Leading and trailing semicolons added to JS [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
