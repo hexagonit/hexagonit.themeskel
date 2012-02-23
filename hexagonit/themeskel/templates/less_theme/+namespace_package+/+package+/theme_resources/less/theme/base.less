@@ -25,8 +25,15 @@
 @Forms-field-textarea-font-family: Arial,FreeSans,sans-serif;
 
 // Font sizes
-@body-font: 100% @font-family;
-@menu-font: 80% @font-family;
+@font-size-large: 18px;
+@font-size-normal: 16px;
+@font-size-medium: 14px;
+@font-size-small: 13px;
+@font-size-smallest: 12px;
+
+@body-font: @font-size-normal @font-family;
+@menu-font: @font-size-small @font-family;
+
 
 @h1-font-size: 2em;
 @h2-font-size: 1.75em;
@@ -35,64 +42,64 @@
 @h5-font-size: 1em;
 @h6-font-size: 0.8em;
 
-@Personaltools-font-size: 80%;
-@mobile-Personaltools-font-size: 12px;
-@Languageselector-font-size: 80%;
-@LiveSearchDescription-font-size: 85%;
-@Portal-searchbox-font-size: 80%;
-@SiteActions-font-size: 85%;
-@Breadcrumbs-font-size: 80%;
-@Portlet-font-size: 80%;
-@Portlet-managePortlets-font-size: 80%;
-@Portlet-ItemDetails-font-size: 85%;
-@PortletAssignments-font-size: 0.8em;
-@content-font-size: 80%;
-@content-pre-font-size: 90%;
-@content-documentByLine-font-size: 85%;
-@content-documentDescription-font: bold 1.25em @content-documentDescription-font-family;
-@content-discreet-font-size: 85%;
-@content-pullquote-font-size: 1.6em;
-@content-portalMessage-font-size: 130%;
-@Content-textarea-font: 100% @Content-textarea-font-family;
-@category-font-size: 75%;
-@OptionsToggle-font-size: 90%;
-@StatusMessage-portalMessage-font-size: 130%;
-@EditBar-font-size: 80%;
-@ArrowDownAlternative-font-size: 80%;
-@Collapsible-header-font-size: 90%;
-@Comments-font-size: 80%;
-@SearchResults-input-searchPage-font-size: 200%;
-@SearchResults-filter-legend-font-size: 1.1em;
-@ImageAligned-caption-font-size: 85%;
-@Dashboard-font-size: 125%;
-@Forms-field-input-font-size: 2em;
-@Forms-field-textarea-font-size: 1.25em;
-@Content-legend-font-size: 85%;
-@Login-input-font-size: 150%;
-@Footer-font-size: 75%;
-@Colophon-font-size: 70%;
-@Sitemap-font-size: 130%;
-@Sitemap-navTreeLevel2-font-size: 85%;
-@PhotoAlbum-link-font-size: 90%;
-@Overlay-font-size: 80%;
+@Personaltools-font-size: @font-size-small;
+@Languageselector-font-size: @font-size-small;
+@LiveSearchDescription-font-size: @font-size-small;
+@Portal-searchbox-font-size: @font-size-small;
+@SiteActions-font-size: @font-size-small;
+@Breadcrumbs-font-size: @font-size-small;
+@Portlet-font-size: @font-size-small;
+@Portlet-managePortlets-font-size: @font-size-small;
+@Portlet-ItemDetails-font-size: @font-size-small;
+@PortletAssignments-font-size: @font-size-small;
+@content-font-size: @font-size-small;
+@content-pre-font-size: @font-size-medium;
+@content-documentByLine-font-size: @font-size-medium;
+@content-documentDescription-font: bold @font-size-normal @content-documentDescription-font-family;
+@content-discreet-font-size: @font-size-medium;
+@content-pullquote-font-size: @font-size-medium;
+@content-portalMessage-font-size: @font-size-large;
+@Content-textarea-font: @font-size-normal @Content-textarea-font-family;
+@category-font-size: @font-size-small;
+@OptionsToggle-font-size: @font-size-medium;
+@StatusMessage-portalMessage-font-size: @font-size-large;
+@EditBar-font-size: @font-size-small;
+@ArrowDownAlternative-font-size: @font-size-small;
+@Collapsible-header-font-size: @font-size-medium;
+@Comments-font-size: @font-size-small;
+@SearchResults-input-searchPage-font-size: @font-size-large;
+@SearchResults-filter-legend-font-size: @font-size-normal;
+@ImageAligned-caption-font-size: @font-size-small;
+@Dashboard-font-size: @font-size-large;
+@Forms-field-input-font-size: @font-size-large;
+@Forms-field-textarea-font-size: @font-size-normal;
+@Content-legend-font-size: @font-size-small;
+@Login-input-font-size: @font-size-large;
+@Footer-font-size: @font-size-small;
+@Colophon-font-size: @font-size-small;
+@Sitemap-font-size: @font-size-large;
+@Sitemap-navTreeLevel2-font-size: @font-size-small;
+@PhotoAlbum-link-font-size: @font-size-medium;
+@Overlay-font-size: @font-size-small;
 
-@mobile-Mobile-globalnav-font-size: 100%;
-@mobile-Portal-globalnav-font-size: 110%;
-@mobile-Mobile-search-font-size: 100%;
-@mobile-Portal-searchbox-font-size: 12px;
-@mobile-Portal-searchbox-input-font-size: 12px;
-@mobile-Input-SearchPage-font-size: 14px;
-@mobile-EditBar-Mobile-page-settings-font-size: 12px;
-@mobile-EditBar-FormTab-font-size: 110%;
-@mobile-EditBar-ContentActionMenus-a-font-size: 100%;
-@mobile-Input-font-size: 15px;
-@mobile-managePortlets-font-size: 110%;
-@mobile-overlay-font-size: 110%;
+@mobile-Personaltools-font-size: @font-size-smallest;
+@mobile-Mobile-globalnav-font-size: @font-size-normal;
+@mobile-Portal-globalnav-font-size: @font-size-normal;
+@mobile-Mobile-search-font-size: @font-size-normal;
+@mobile-Portal-searchbox-font-size: @font-size-smallest;
+@mobile-Portal-searchbox-input-font-size: @font-size-smallest;
+@mobile-Input-SearchPage-font-size: @font-size-small;
+@mobile-EditBar-Mobile-page-settings-font-size: @font-size-smallest;
+@mobile-EditBar-FormTab-font-size: @font-size-normal;
+@mobile-EditBar-ContentActionMenus-a-font-size: @font-size-small;
+@mobile-Input-font-size: @font-size-normal;
+@mobile-managePortlets-font-size: @font-size-normal;
+@mobile-overlay-font-size: @font-size-normal;
 
 
 // Accessibility
-@Accessibility-largeText: 125%;
-@Accessibility-smallText: 85%;
+@Accessibility-largeText: @font-size-large;
+@Accessibility-smallText: @font-size-small;
 
 
 // Body styling

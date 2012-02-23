@@ -517,7 +517,7 @@ div.position-00 {
 body {
   background: #ffffff;
   color: #000000;
-  font: 100% Arial, FreeSans, sans-serif;
+  font: 16px Arial, FreeSans, sans-serif;
   width: 100%;
 }
 #container {
@@ -636,7 +636,7 @@ dd {
   z-index: 2;
 }
 #portal-globalnav {
-  font: 80% Arial, FreeSans, sans-serif;
+  font: 13px Arial, FreeSans, sans-serif;
   background: #dddddd;
   border-top: none;
   border-bottom: none;
@@ -678,7 +678,7 @@ dd {
   right: 0;
   padding: 0.25em 0.5em;
   margin: 0;
-  font-size: 80%;
+  font-size: 13px;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   -webkit-border-bottom-right-radius: 0.5em;
@@ -703,7 +703,7 @@ dd {
   /* portal-header has 2 and we need to be above to be clickable */
 
   padding: 0.25em 0.5em;
-  font-size: 80%;
+  font-size: 13px;
   max-width: 50%;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
@@ -717,7 +717,7 @@ dd {
   right: 0;
   text-align: left;
   margin-top: -64px;
-  font-size: 80%;
+  font-size: 13px;
 }
 #portal-searchbox form {
   white-space: nowrap;
@@ -796,7 +796,7 @@ input.searchField {
   border: 0.1em solid #cccccc;
 }
 #LSResult .LSDescr {
-  font-size: 85%;
+  font-size: 13px;
   color: #666666;
 }
 #livesearchLegend {
@@ -819,7 +819,7 @@ input.searchField {
 /* @end */
 /* @group Path indicator (breadcrumbs) */
 #portal-breadcrumbs {
-  font-size: 80%;
+  font-size: 13px;
   margin-bottom: 1em;
   margin-left: 0.25em;
 }
@@ -830,7 +830,7 @@ input.searchField {
 /* @end */
 /* @group Site actions */
 #portal-siteactions {
-  font-size: 85%;
+  font-size: 13px;
   padding-bottom: 2em;
   text-align: center;
   clear: left;
@@ -861,7 +861,7 @@ dl dt span.summary a {
 /* @group Portlets */
 dl.portlet {
   margin: 0 0 1em;
-  font-size: 80%;
+  font-size: 13px;
 }
 dl.portlet dt {
   color: #000000;
@@ -912,7 +912,7 @@ dl.portletError {
   background-color: #ffa500;
 }
 div.portletAssignments {
-  font-size: 0.8em;
+  font-size: 13px;
   line-height: 2em;
 }
 div.portletAssignments div.portletHeader {
@@ -950,7 +950,7 @@ div.managePortletsLink,
 a.managePortletsFallback {
   text-align: center;
   padding: 0.25em 0.5em;
-  font-size: 80%;
+  font-size: 13px;
   margin: 0 auto 1em;
   background: #dddddd;
   border-radius: 0.5em;
@@ -1052,7 +1052,7 @@ a.managePortletsFallback {
 }
 .portletItemDetails {
   display: block;
-  font-size: 85%;
+  font-size: 13px;
   line-height: 1.5em;
   margin-left: 1em;
   padding-top: 0.5em;
@@ -1102,7 +1102,7 @@ dl.portletNavigationTree dd.portletItem {
 #content {
   line-height: 1.5em;
   clear: both;
-  font-size: 80%;
+  font-size: 13px;
   margin: 1em 0.25em 2em 0.25em;
 }
 #content h1 {
@@ -1165,7 +1165,7 @@ dl.portletNavigationTree dd.portletItem {
   font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
   padding: 1em;
   overflow-x: auto;
-  font-size: 90%;
+  font-size: 14px;
   margin-bottom: 1em;
   line-height: 1.25em;
 }
@@ -1176,13 +1176,13 @@ dl.portletNavigationTree dd.portletItem {
   font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 #content div.documentByLine {
-  font-size: 85%;
+  font-size: 14px;
   display: block;
   color: #666666;
 }
 #content .discreet {
   color: #666666;
-  font-size: 85%;
+  font-size: 14px;
   font-weight: normal;
 }
 #content .visualHighlight {
@@ -1196,7 +1196,7 @@ dl.portletNavigationTree dd.portletItem {
   width: 35%;
   clear: right;
   color: #444444;
-  font-size: 1.6em;
+  font-size: 14px;
   letter-spacing: -0.08em !important;
 }
 #content .callout {
@@ -1214,7 +1214,7 @@ dl.portletNavigationTree dd.portletItem {
 #content #description {
   color: #666666;
   margin-left: 0;
-  font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+  font: bold 16px "Helvetica Neue", Arial, FreeSans, sans-serif;
 }
 #content img.tileImage {
   float: right;
@@ -1239,7 +1239,7 @@ dl.portletNavigationTree dd.portletItem {
   top: -3em;
 }
 #category {
-  font-size: 75%;
+  font-size: 13px;
   margin-bottom: 1em;
   color: #666666;
   text-align: right;
@@ -1270,7 +1270,7 @@ span.selectedTag {
 }
 #sidebar .discreet {
   color: #666666;
-  font-size: 85%;
+  font-size: 14px;
   font-weight: normal;
 }
 .eventDetails {
@@ -1307,7 +1307,7 @@ body.cke_panel_frame {
   color: Black;
   background-color: #dee7ec;
   font-weight: normal;
-  font-size: 90%;
+  font-size: 14px;
 }
 /* for greying out inherited roles */
 .noInheritedRoles {
@@ -1526,7 +1526,7 @@ div.listingBar a:hover {
 /* @group Status messages */
 dl.portalMessage {
   margin: 1em 0;
-  font-size: 130%;
+  font-size: 18px;
   border: 1px solid #999966;
   background-color: #ffffe3;
   clear: both;
@@ -1569,7 +1569,7 @@ dl.error dd {
 }
 /* Additional specificity for when status is shown inside #content */
 #content dl.portalMessage {
-  font-size: 130%;
+  font-size: 18px;
 }
 #content dl.portalMessage a {
   color: #000000;
@@ -1588,7 +1588,7 @@ dl.error dd {
 #edit-bar {
   background-color: #dddddd;
   border: 0.25em solid #dddddd;
-  font-size: 80%;
+  font-size: 13px;
   min-height: 2em;
   margin-bottom: 1em;
   margin-left: 0;
@@ -1823,7 +1823,7 @@ dl.actionMenu.activated dd div {
   margin: 0 0.25em;
 }
 span.arrowDownAlternative {
-  font-size: 80%;
+  font-size: 13px;
 }
 /* @end */
 /* @group Control panel */
@@ -1938,7 +1938,7 @@ dl.collapsible dt.collapsibleHeader {
   background: #ffffff;
   line-height: 1.2em;
   vertical-align: middle;
-  font-size: 90%;
+  font-size: 14px;
   position: relative;
   top: -0.6em;
   width: auto;
@@ -2002,7 +2002,7 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
 /* @group Comments */
 .comment {
   margin-top: 1.5em;
-  font-size: 80%;
+  font-size: 13px;
 }
 .comment h1,
 .comment h2,
@@ -2038,7 +2038,7 @@ fieldset#search-field {
   text-align: center;
 }
 input.searchPage {
-  font-size: 200% !important;
+  font-size: 18px !important;
 }
 #rss-subscription {
   float: left;
@@ -2081,7 +2081,7 @@ input.searchPage {
 }
 #content #search-filter legend {
   background: transparent;
-  font-size: 1.1em;
+  font-size: 16px;
   padding: 0.5em 0.9em;
   font-weight: bold;
 }
@@ -2160,7 +2160,7 @@ dd.image-caption {
 
   margin: 0;
   color: #666666;
-  font-size: 85%;
+  font-size: 13px;
 }
 /* @end */
 /* @group Dashboard */
@@ -2172,7 +2172,7 @@ dd.image-caption {
   list-style: none;
 }
 #dashboard {
-  font-size: 125%;
+  font-size: 18px;
   line-height: 1em;
 }
 #dashboard dd {
@@ -2216,7 +2216,7 @@ fieldset,
   color: #000000;
   letter-spacing: -0.05em;
   margin: inherit -0.05em;
-  font-size: 2em;
+  font-size: 18px;
   font-weight: bold;
 }
 /* Emulates styling from the description's view */
@@ -2224,7 +2224,7 @@ fieldset,
 #archetypes-fieldname-description textarea#description {
   font-family: Arial, FreeSans, sans-serif;
   color: #666666;
-  font-size: 1.25em;
+  font-size: 16px;
   font-weight: bold;
 }
 div.formControls {
@@ -2236,7 +2236,7 @@ textarea:focus {
   background-color: #ffffe0;
 }
 #content textarea {
-  font: 100% Monaco, "Courier New", Courier, monospace;
+  font: 16px Monaco, "Courier New", Courier, monospace;
   width: 100%;
 }
 #content select {
@@ -2248,7 +2248,7 @@ textarea:focus {
 }
 #content legend {
   padding: 0.5em;
-  font-size: 85%;
+  font-size: 13px;
 }
 #content optgroup {
   font-style: normal;
@@ -2359,11 +2359,11 @@ body.template-login_form #content,
 }
 #fieldset-openid-login input,
 #login-form input {
-  font-size: 150%;
+  font-size: 18px;
 }
 body.template-register #content input,
 body.template-new-user #content input {
-  font-size: 150%;
+  font-size: 18px;
   width: inherit;
 }
 #fieldset-openid-login label {
@@ -2412,14 +2412,14 @@ dl.toc dd ol {
 /* @end */
 /* @group Footer */
 #portal-footer {
-  font-size: 75%;
+  font-size: 13px;
   background: #dddddd;
   padding: 1em;
   margin: 1em 0;
   line-height: 2em;
 }
 #portal-colophon {
-  font-size: 70%;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -2434,7 +2434,7 @@ dl.toc dd ol {
 #portal-sitemap {
   list-style: none;
   margin-left: 0;
-  font-size: 130%;
+  font-size: 18px;
   font-weight: bold;
 }
 #portal-sitemap li {
@@ -2453,7 +2453,7 @@ dl.toc dd ol {
 }
 #portal-sitemap .navTreeLevel2,
 #portal-sitemap .navTreeLevel2 ul {
-  font-size: 85%;
+  font-size: 13px;
   font-weight: normal;
   margin-bottom: 0;
   padding: 0.25em 0;
@@ -2480,7 +2480,7 @@ dl.toc dd ol {
 .photoAlbumEntry a {
   display: block;
   text-decoration: none;
-  font-size: 90%;
+  font-size: 14px;
   height: 169px;
   width: 130px;
   margin: 16px auto 0px;
@@ -2505,10 +2505,10 @@ dl.toc dd ol {
 /* @end */
 /* @group Accessibility elements, applied by JS */
 body.largeText {
-  font-size: 125%;
+  font-size: 18px;
 }
 body.smallText {
-  font-size: 85%;
+  font-size: 13px;
 }
 /* @end */
 /* @group Overlay windows */
@@ -2522,7 +2522,7 @@ div.overlay {
   /* some padding to layout nested elements nicely  */
 
   margin: 1em;
-  font-size: 80%;
+  font-size: 13px;
 }
 div.overlay div.close {
   background-image: url('../images/pb_close.png');
@@ -2916,7 +2916,7 @@ div.overlaybg div.close {
   #mobile-globalnav {
     color: #000000;
     border-bottom: 1px solid #ffffff;
-    font-size: 100%;
+    font-size: 16px;
     padding: 10px;
     background: #dddddd;
     cursor: pointer;
@@ -2928,7 +2928,7 @@ div.overlaybg div.close {
   #portal-globalnav li,
   #portal-globalnav li a {
     display: block;
-    font-size: 110%;
+    font-size: 16px;
     padding: 0;
   }
   #portal-globalnav li a {
@@ -2941,7 +2941,7 @@ div.overlaybg div.close {
     color: #000000;
     border-bottom: 1px solid #ffffff;
     border-left: 1px solid #ffffff;
-    font-size: 100%;
+    font-size: 16px;
     padding: 10px;
     background: #dddddd;
     cursor: pointer;
@@ -2976,7 +2976,7 @@ div.overlaybg div.close {
     width: 100%;
   }
   input.searchPage {
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
   #mobile-page-settings {
     display: block!important;
@@ -3018,7 +3018,7 @@ div.overlaybg div.close {
     -moz-border-radius: 5px;
   }
   #content li.formTab a {
-    font-size: 110%;
+    font-size: 16px;
     line-height: 2em !important;
     padding: 0.25em;
   }
@@ -3034,7 +3034,7 @@ div.overlaybg div.close {
   #contentActionMenus a {
     width: 100%;
     line-height: 2em !important;
-    font-size: 100%;
+    font-size: 13px;
     padding-top: 5px;
   }
   #contentActionMenus dl.actionMenu {
@@ -3053,14 +3053,14 @@ div.overlaybg div.close {
   }
   input,
   textarea {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   div.managePortletsLink,
   a.managePortletsFallback {
-    font-size: 110%;
+    font-size: 16px;
   }
   div.overlay {
-    font-size: 110%;
+    font-size: 16px;
   }
   .pb-ajax > div {
     width: 87%;

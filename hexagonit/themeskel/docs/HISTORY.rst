@@ -56,6 +56,8 @@ Changelog
 
 - Display view style fix [vsomogyi]
 
+- Font size fixes [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
