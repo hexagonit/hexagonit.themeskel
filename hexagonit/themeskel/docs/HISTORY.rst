@@ -62,6 +62,8 @@ Changelog
 
 - Mobile search position fix [vsomogyi]
 
+- Portlet Overlay bugfix [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

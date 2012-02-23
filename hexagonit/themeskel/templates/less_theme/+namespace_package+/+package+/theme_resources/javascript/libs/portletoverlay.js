@@ -50,7 +50,7 @@
             });
         
             // Add new portlet opens in overlay
-            $('.portlets-manager select')
+            $('.portlets-manager .section form select')
                 .live('click', function(){
                     // Remove the onchange attribute from the select element so 
                     // we can prevent the already set on-change action.
