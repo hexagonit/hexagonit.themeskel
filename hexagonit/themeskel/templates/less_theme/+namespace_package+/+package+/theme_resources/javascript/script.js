@@ -2,16 +2,17 @@
  * MBP - Mobile boilerplate helper functions
  */
 ;(function(document){
-    window.MBP = window.MBP || {}; 
+    window.MBP = window.MBP || {};
 
-    // Fix for iPhone viewport scale bug 
+    var MBP = window.MBP;
+    // Fix for iPhone viewport scale bug
     // http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
 
     MBP.viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]');
     MBP.ua = navigator.userAgent;
 
     MBP.scaleFix = function () {
-      if (MBP.viewportmeta && /iPhone|iPad/.test(MBP.ua) && !/Opera Mini/.test(MBP.ua)) {
+      if (MBP.viewportmeta && (/iPhone|iPad/).test(MBP.ua) && !(/Opera Mini/).test(MBP.ua)) {
         MBP.viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
         document.addEventListener("gesturestart", MBP.gestureStart, false);
       }
@@ -41,7 +42,7 @@
                     clearInterval( bodycheck );
                     scrollTop = "scrollTop" in doc.body ? doc.body.scrollTop : 1;
                     win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-                }   
+                }
             }, 15 );
 
             win.addEventListener( "load", function(){
@@ -85,7 +86,7 @@
     };
 
     MBP.fastButton.prototype.onTouchMove = function(event) {
-        if(Math.abs(event.touches[0].clientX - this.startX) > 10 || 
+        if(Math.abs(event.touches[0].clientX - this.startX) > 10 ||
            Math.abs(event.touches[0].clientY - this.startY) > 10    ) {
             this.reset();
         }
@@ -95,7 +96,7 @@
         event.stopPropagation();
         this.reset();
         this.handler(event);
-        if(event.type == 'touchend') {
+        if(event.type === 'touchend') {
             MBP.preventGhostClick(this.startX, this.startY);
         }
         this.element.style.backgroundColor = "";
@@ -137,6 +138,9 @@
 
     MBP.autogrow = function (element, lh) {
 
+        var setLineHeight,
+            textLineHeight;
+
         function handler(e){
             var newHeight = this.scrollHeight,
                 currentHeight = this.clientHeight;
@@ -145,17 +149,20 @@
             }
         }
 
-        var setLineHeight = (lh) ? lh : 12,
-            textLineHeight = element.currentStyle ? element.currentStyle.lineHeight : 
+        setLineHeight = (lh) ? lh : 12;
+        textLineHeight = element.currentStyle ? element.currentStyle.lineHeight :
                              getComputedStyle(element, null).lineHeight;
 
-        textLineHeight = (textLineHeight.indexOf("px") == -1) ? setLineHeight :
+        textLineHeight = (textLineHeight.indexOf("px") === -1) ? setLineHeight :
                          parseInt(textLineHeight, 10);
 
         element.style.overflow = "hidden";
         element.addEventListener ? element.addEventListener('keyup', handler, false) :
                                    element.attachEvent('onkeyup', handler);
     };
+    
+    MBP.scaleFix();
+    MBP.hideUrlBar();
 })(document);
 
 
@@ -175,12 +182,9 @@
             $('#edit-bar').toggleClass('visible');
             $(this).toggleClass('selected');
         });
-    
-        MBP.scaleFix();
-        MBP.hideUrlBar();
     });
     
 }(jQuery));
 
 // iOS app mode click fix
-(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href);},!1);}})(document,window.navigator,"standalone");

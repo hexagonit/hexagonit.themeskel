@@ -64,6 +64,8 @@ Changelog
 
 - Portlet Overlay bugfix [vsomogyi]
 
+- Script.js cleanup [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
