@@ -1602,6 +1602,10 @@ dl.error dd {
   -moz-border-radius-topleft: 0.5em;
   -moz-border-radius-topright: 0.5em;
 }
+.actionSeparator #folderHeader .subMenuTitle,
+.actionSeparator #contextHeader .subMenuTitle {
+  color: #ffffff;
+}
 #content ul.formTabs {
   background-color: #dddddd;
   border: 0.3em solid #dddddd;

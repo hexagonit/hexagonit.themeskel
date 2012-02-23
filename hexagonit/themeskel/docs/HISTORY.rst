@@ -54,6 +54,8 @@ Changelog
 
 - Tooltip close button restyled [vsomogyi]
 
+- Display view style fix [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
