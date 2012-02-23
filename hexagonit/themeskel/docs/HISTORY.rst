@@ -48,6 +48,8 @@ Changelog
 
 - Description tooltip toggle on click [vsomogyi]
 
+- Manage portlet grouping [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

@@ -935,6 +935,17 @@ div.portletAssignments .managedPortletActions a {
 dl.portletError dd {
   padding: 1em;
 }
+.portlets-manager .portletAssignments {
+  border: 1px solid #dddddd;
+  padding: 0 5px;
+  margin: 10px 0;
+}
+.portlets-manager .portletAssignments h4 {
+  margin: 5px 0;
+}
+.portlets-manager .portletAssignments .formControls {
+  text-align: center;
+}
 div.managePortletsLink,
 a.managePortletsFallback {
   text-align: center;
