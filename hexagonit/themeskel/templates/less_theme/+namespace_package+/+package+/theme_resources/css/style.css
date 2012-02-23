@@ -2952,6 +2952,7 @@ div.overlaybg div.close {
   #portal-searchbox {
     display: none;
     visibility: hidden;
+    position: relative;
     float: none!important;
     font-size: 12px !important;
     margin: 1em auto;

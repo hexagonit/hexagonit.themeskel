@@ -60,6 +60,8 @@ Changelog
 
 - Tooltip z-index issue fixed [vsomogyi]
 
+- Mobile search position fix [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
