@@ -58,6 +58,8 @@ Changelog
 
 - Font size fixes [vsomogyi]
 
+- Tooltip z-index issue fixed [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
