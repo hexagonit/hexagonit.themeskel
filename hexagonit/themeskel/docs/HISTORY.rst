@@ -50,6 +50,8 @@ Changelog
 
 - Manage portlet grouping [vsomogyi]
 
+- Navigation portlet edit form styled [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

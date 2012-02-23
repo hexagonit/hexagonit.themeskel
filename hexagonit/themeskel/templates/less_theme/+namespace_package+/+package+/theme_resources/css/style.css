@@ -1088,6 +1088,15 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 dl.portletNavigationTree dd.portletItem {
   padding: 0;
 }
+#formfield-form-root .widget fieldset div div {
+  padding: 5px;
+}
+#formfield-form-root .widget fieldset div div:hover {
+  background: #f7f7f7;
+}
+#formfield-form-root .widget fieldset div div input:last-child {
+  float: right;
+}
 /* @end */
 /* @group Content Area */
 #content {
@@ -2230,7 +2239,7 @@ textarea:focus {
   vertical-align: top;
 }
 #content fieldset {
-  border: 0.1em solid #329fd7;
+  border: 0.1em solid #dddddd;
   border-style: solid none none none;
 }
 #content legend {
@@ -2597,6 +2606,9 @@ div.overlaybg div.close {
 .pb-ajax > div {
   width: 92%;
   padding: 1em;
+}
+.pb-ajax input {
+  margin-right: 5px;
 }
 .pb-ajax,
 .pb-image,

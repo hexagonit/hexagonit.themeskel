@@ -653,6 +653,18 @@ dl.portlet ul {
 dl.portletNavigationTree dd.portletItem {
     padding: 0;
 }
+#formfield-form-root {
+    .widget fieldset div div {
+        padding: 5px;
+        
+        &:hover {
+            background: @Table-odd-background;
+        }
+        input:last-child {
+            float: right;
+        }
+    } 
+}
 
 /* @end */
 
@@ -2362,6 +2374,9 @@ div.overlaybg div.close {
     > div {
         width: 92%;
         padding: 1em;
+    }
+    input {
+        margin-right: 5px;
     }
 }
 
