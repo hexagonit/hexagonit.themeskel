@@ -52,6 +52,8 @@ Changelog
 
 - Navigation portlet edit form styled [vsomogyi]
 
+- Tooltip close button restyled [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

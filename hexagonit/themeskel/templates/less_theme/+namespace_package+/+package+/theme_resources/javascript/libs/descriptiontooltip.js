@@ -18,7 +18,7 @@
                     position: "top right",
                     offset: [0, -15],
                     opacity: 0.95,
-                    layout: '<div><span class="tip-close">X</span></div>',
+                    layout: '<div><span class="tip-close"></span></div>',
                     events: {
                         // default action: do nothing, action is taken elswhere
                         def: "'',''",
