@@ -6,6 +6,7 @@ Contents:
 
 .. toctree::
     :maxdepth: 2
+
     HISTORY.rst
     LICENSE.rst
 
