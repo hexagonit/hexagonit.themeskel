@@ -66,6 +66,8 @@ Changelog
 
 - Script.js cleanup [vsomogyi]
 
+- Content type icons removed only from navigation [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

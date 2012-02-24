@@ -629,15 +629,18 @@ a.managePortletsFallback {
 dl.portlet ul {
     &.navTree {
         li a {
+            background: none;
             border: none;
             display: block;
+            padding-left: 0!important;
             zoom: 1;
+            
+            img {
+                display: none;
+            }
         }
         .navTreeCurrentItem {
             background-color: @Portlet-Navigation-background;
-            border-left: @Portlet-Navigation-border-left;
-            margin-left: -1em;
-            margin-right: -1em;
         }
     }
     &.navTreeLevel0 > .navTreeItem {

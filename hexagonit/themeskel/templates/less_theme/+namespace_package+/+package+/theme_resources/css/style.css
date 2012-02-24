@@ -1067,15 +1067,17 @@ a.managePortletsFallback {
 /* @end */
 /* @group Navigation portlet */
 dl.portlet ul.navTree li a {
+  background: none;
   border: none;
   display: block;
+  padding-left: 0!important;
   zoom: 1;
+}
+dl.portlet ul.navTree li a img {
+  display: none;
 }
 dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
-  border-left: 1em solid #dddddd;
-  margin-left: -1em;
-  margin-right: -1em;
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
   padding: 0.25em 1em;
@@ -1177,7 +1179,7 @@ dl.portletNavigationTree dd.portletItem {
   font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 #content div.documentByLine {
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   color: #666666;
 }
