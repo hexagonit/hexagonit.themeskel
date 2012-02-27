@@ -68,6 +68,8 @@ Changelog
 
 - Content type icons removed only from navigation [vsomogyi]
 
+- Modernizr upgrade [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
