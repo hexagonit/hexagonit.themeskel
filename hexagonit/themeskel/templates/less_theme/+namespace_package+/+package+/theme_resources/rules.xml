@@ -71,7 +71,7 @@
               if-content="not(//*[@id='edit-bar'])" />
 
         <!-- Users and Groups control panel - inherited rules are marked with checkmark -->
-        <replace css:content=".template-usergroup-userprefs img[src$='site_icon.gif']">
+        <replace css:content=".template-usergroup-userprefs img[src$='site_icon.gif'], .template-usergroup-groupprefs img[src$='site_icon.gif']">
             <span>&#10003;</span>
         </replace>
 

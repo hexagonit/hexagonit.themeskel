@@ -72,6 +72,8 @@ Changelog
 
 - Users and Groups - Inherited rules marked with checkmark [vsomogyi]
 
+- Groups inherit icon update [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
