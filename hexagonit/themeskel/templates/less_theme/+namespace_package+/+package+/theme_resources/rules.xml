@@ -70,6 +70,11 @@
         <drop css:theme="#mobile-page-settings"
               if-content="not(//*[@id='edit-bar'])" />
 
+        <!-- Users and Groups control panel - inherited rules are marked with checkmark -->
+        <replace css:content=".template-usergroup-userprefs img[src$='site_icon.gif']">
+            <span>&#10003;</span>
+        </replace>
+
         <!-- Copy the body of the page -->
         <!-- Based on the tableleftcolumndown variable order the columns for the
              tablet view -->

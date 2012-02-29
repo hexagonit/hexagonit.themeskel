@@ -70,6 +70,8 @@ Changelog
 
 - Modernizr upgrade [vsomogyi]
 
+- Users and Groups - Inherited rules marked with checkmark [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
