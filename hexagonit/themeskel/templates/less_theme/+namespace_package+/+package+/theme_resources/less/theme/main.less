@@ -53,9 +53,11 @@ p {
 a {
     text-decoration: none;
 }
-
 a:link, a:visited {
     color: @link-color!important;
+}
+a:hover {
+    color: @link-hover-color!important;
 }
 dt {
     font-weight: @dt-font-weight;
@@ -142,17 +144,24 @@ dd { margin: 0; }
             background: @menu-item-background;
             min-width: @menu-item-min-width;
             text-decoration:none;
+            
+            &:hover {
+                background: @menu-item-hover-background;
+                color: @menu-item-hover-font-color!important;
+                text-decoration:none;
+            }
         }
     }
-    .selected a, a:hover {
+    .selected a {
         background: @menu-item-selected-background;
-        color: @menu-item-selected-font-color;
+        color: @menu-item-selected-font-color!important;
         text-decoration:none;
-    }
-    .selected a:hover {
-        background: @menu-item-selected-hover-background;
-        color: @menu-item-selected-hover-font-color;
-        text-decoration:none;
+        
+        &:hover {
+            background: @menu-item-selected-hover-background;
+            color: @menu-item-selected-hover-font-color!important;
+            text-decoration:none;
+        }
     }
 }
 
@@ -250,10 +259,11 @@ input.searchField {
 
 // Tooltip
 .tooltip {
-    background:#f5f5f5;
-    border: 1px solid #ddd;
-    padding:12px;
-    max-width: 200px;
+    background: @Tooltip-background;
+    border: @Tooltip-border;
+    color: @Tooltip-color;
+    padding: @Tooltip-padding;
+    max-width: @Tooltip-max-width;
     z-index: 100;
     
     .box-shadow(0px, 0px, 2px, 2px, #e3e3e3);
@@ -1149,14 +1159,15 @@ div.listingBar {
 
 dl {
     &.portalMessage {
-        margin: 1em 0;
+        color: @StatusMessage-portalMessage-color;
+        margin: @StatusMessage-portalMessage-margin;
         font-size: @StatusMessage-portalMessage-font-size;
         border: @StatusMessage-portalMessage-border;
         background-color: @StatusMessage-portalMessage-background;
         clear:both;
         
         a {
-            color: @StatusMessage-portalMessage-link-color;
+            color: @StatusMessage-portalMessage-link-color!important;
             border-bottom: @StatusMessage-portalMessage-link-border-bottom;
         }
         dt {

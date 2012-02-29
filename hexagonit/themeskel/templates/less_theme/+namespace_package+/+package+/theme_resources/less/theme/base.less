@@ -130,6 +130,7 @@
 @subheading-font-color: #444;
 
 @link-color: #205c90;
+@link-hover-color: @link-color;
 
 @dt-font-weight: bold;
 
@@ -150,6 +151,8 @@
 @menu-item-color: #000;
 @menu-item-min-width: auto;
 @menu-item-padding: 1em;
+@menu-item-hover-background: #000;
+@menu-item-hover-font-color: #FFF;
 @menu-item-selected-background: #205c90;
 @menu-item-selected-font-color: #FFF;
 @menu-item-selected-hover-background: #205c90;
@@ -165,9 +168,9 @@
 @Personaltools-background: @EditBar-default-color;
 @Personaltools-margin: 0;
 @Personaltools-line-height: 2em;
-@Personaltools-hover-background: #205c90;
-@Personaltools-hover-color: #FFF;
-@Personaltools-link-color: #205C90;
+@Personaltools-hover-background: lighten(@EditBar-default-color, 30%);
+@Personaltools-hover-color: @link-hover-color;
+@Personaltools-link-color: @link-color;
 
 
 // Language Selector
@@ -244,11 +247,11 @@
 // Content
 @content-line-height: 1.5em;
 @content-margin: 1em 0.25em 2em 0.25em;
-@content-link-color: #205c90;
+@content-link-color: @link-color;
 @content-link-boerder-bottom: 0.1em solid #ccc;
-@content-link-visited-color: #427597;
+@content-link-visited-color: @link-color;
 @content-link-visited-border-bottom: 0.1em solid #ccc;
-@content-link-hover-color: #000;
+@content-link-hover-color: @link-hover-color;
 @content-link-target-background: #ffb;
 @content-pre-background: #222;
 @content-pre-color: #FFF;
@@ -306,6 +309,8 @@
 @workflow-syndicated: #008000;
 
 // Status messages
+@StatusMessage-portalMessage-color: @body-font-color;
+@StatusMessage-portalMessage-margin: 1em 0;
 @StatusMessage-portalMessage-border: 1px solid #996;
 @StatusMessage-portalMessage-background: #ffffe3;
 @StatusMessage-portalMessage-link-color: #000;
@@ -347,8 +352,8 @@
 @FormTab-link-notify-color: #FFF;
 
 @ContentActionMenus-line-height: 2em;
-@ContentActionMenus-selected-background: #FFF;
-@ContentActionMenus-selected-color: #666;
+@ContentActionMenus-selected-background: lighten(@EditBar-default-color, 30%);
+@ContentActionMenus-selected-color: @link-color;
 
 @mobile-EditBar-Mobile-page-settings-color: #999;
 @mobile-EditBar-Mobile-page-settings-padding: 5px;
@@ -372,6 +377,12 @@
 @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width: 80%;
 @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width: 0;
 @mobile-EditBar-ContentActionMenus-actionMenuContent-background: #eee!important;
+
+@Tooltip-background: #f5f5f5;
+@Tooltip-border: 1px solid #ddd;
+@Tooltip-color: @body-font-color;
+@Tooltip-padding: 12px;
+@Tooltip-max-width: 200px;
 
 
 // Control panel

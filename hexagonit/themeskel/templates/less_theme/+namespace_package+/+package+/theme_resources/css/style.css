@@ -573,6 +573,9 @@ a:link,
 a:visited {
   color: #205c90 !important;
 }
+a:hover {
+  color: #205c90 !important;
+}
 dt {
   font-weight: bold;
 }
@@ -656,15 +659,19 @@ dd {
   min-width: auto;
   text-decoration: none;
 }
-#portal-globalnav .selected a,
-#portal-globalnav a:hover {
+#portal-globalnav li a:hover {
+  background: #000000;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+#portal-globalnav .selected a {
   background: #205c90;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
 }
 #portal-globalnav .selected a:hover {
   background: #205c90;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
 }
 #portal-personaltools {
@@ -759,7 +766,8 @@ input.searchField {
 }
 .tooltip {
   background: #f5f5f5;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
+  color: #000000;
   padding: 12px;
   max-width: 200px;
   z-index: 100;
@@ -888,11 +896,11 @@ dl.portlet a:link {
   border-bottom: 0.1em solid #cccccc;
 }
 dl.portlet a:visited {
-  color: #427597;
+  color: #205c90;
   border-bottom: 0.1em solid #cccccc;
 }
 dl.portlet a:hover {
-  color: #000000 !important;
+  color: #205c90 !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
 }
@@ -1134,11 +1142,11 @@ dl.portletNavigationTree dd.portletItem {
   border-bottom: 0.1em solid #cccccc;
 }
 #content a:visited {
-  color: #427597;
+  color: #205c90;
   border-bottom: 0.1em solid #cccccc;
 }
 #content a:hover {
-  color: #000000 !important;
+  color: #205c90 !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
 }
@@ -1528,6 +1536,7 @@ div.listingBar a:hover {
 /* @end */
 /* @group Status messages */
 dl.portalMessage {
+  color: #000000;
   margin: 1em 0;
   font-size: 18px;
   border: 1px solid #999966;
@@ -1535,7 +1544,7 @@ dl.portalMessage {
   clear: both;
 }
 dl.portalMessage a {
-  color: #000000;
+  color: #000000 !important;
   border-bottom: 1px solid #888888;
 }
 dl.portalMessage dt {
@@ -1737,8 +1746,8 @@ dl.error dd {
   padding: 0 0.75em;
 }
 #portal-personaltools dd a:hover {
-  background: #205c90;
-  color: #ffffff;
+  background: #ffffff;
+  color: #205c90;
 }
 /* @end */
 /* @group Content pulldowns */
@@ -1761,7 +1770,7 @@ dl.error dd {
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: #ffffff !important;
-  color: #666666;
+  color: #205c90;
 }
 #folderHeader,
 #contextHeader {

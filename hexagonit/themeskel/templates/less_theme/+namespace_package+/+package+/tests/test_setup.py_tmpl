@@ -52,7 +52,10 @@ class TestCase(IntegrationTestCase):
             getToolByName(self.portal, 'portal_javascripts').getResourceIds())
 
         self.failUnless(
-            '++theme++${namespace_package}.${package}/javascript/libs/modernizr-2.0.6.min.js'
+            '++theme++${namespace_package}.${package}/javascript/libs/modernizr-2.5.3.js'
+            in js_resources)
+        self.failUnless(
+            '++theme++${namespace_package}.${package}/javascript/libs/respond.min.js'
             in js_resources)
 
     def test_doctype_configured(self):

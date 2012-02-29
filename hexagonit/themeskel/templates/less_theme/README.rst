@@ -514,6 +514,7 @@ Follow these steps for each new theme:
   * Create a new git repository for the new theme
   * Update your buildout to include the new theme and run it (development.cfg and local.cfg)
   * Update manifest.cfg with tablet sidebar behavior rule
+  * Turn on description tooltip and portlet overlay if needed
   * Update registry.xml with proper portlet style names
   * Update tests with the new portlet style names
   * Start the server and install the new theme
