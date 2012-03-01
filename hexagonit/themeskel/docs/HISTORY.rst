@@ -74,6 +74,8 @@ Changelog
 
 - Groups inherit icon update [vsomogyi]
 
+- Tablet - use empty space when no portlets [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

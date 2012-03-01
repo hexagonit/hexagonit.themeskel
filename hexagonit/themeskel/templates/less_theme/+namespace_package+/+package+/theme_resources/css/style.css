@@ -2863,6 +2863,9 @@ div.overlaybg div.close {
     width: 97.75%;
     margin-left: -98.875%;
   }
+  .tablet-right-down .tablet-full-content #portal-column-content {
+    width: 97.75%;
+  }
   .tablet-left-down #portal-column-content.width-1\3a 2,
   .tablet-left-down #portal-column-content.width-3\3a 4 {
     width: 72.75%;
@@ -2873,6 +2876,9 @@ div.overlaybg div.close {
     clear: both;
     width: 97.75%;
     margin-left: -98.875%;
+  }
+  .tablet-left-down .tablet-full-content #portal-column-content {
+    width: 97.75%;
   }
   .ie7 #portal-column-one,
   .ie7 #portal-column-two,

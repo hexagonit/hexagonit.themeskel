@@ -86,6 +86,10 @@
             <prepend css:theme="#visual-portal-wrapper">
                 <xsl:attribute name="class">tablet-left-down</xsl:attribute>
             </prepend>
+            <prepend css:theme="#portal-columns"
+                     if-content="not(//div[@id='portal-column-two'])">
+                <xsl:attribute name="class">row tablet-full-content</xsl:attribute>
+            </prepend>
         </rules>
 
         <rules if="not($tabletleftcolumndown)">
@@ -93,6 +97,10 @@
             <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
             <prepend css:theme="#visual-portal-wrapper">
                 <xsl:attribute name="class">tablet-right-down</xsl:attribute>
+            </prepend>
+            <prepend css:theme="#portal-columns"
+                     if-content="not(//div[@id='portal-column-one'])">
+                <xsl:attribute name="class">row tablet-full-content</xsl:attribute>
             </prepend>
         </rules>
 
