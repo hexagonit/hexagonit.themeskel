@@ -6,25 +6,26 @@
         // Only on manage portlets page
         if ($('.template-manage-portlets').length > 0) {
         
-            function initEditor() {
+            var initEditor = function() {
                 // If CKEditor
+                var CKE = window.CKEDITOR;
                 if($('.ckeditor_plone').length > 0 && $('#cke_form\\.text').length === 0) {
-                    if(CKEDITOR.instances) {
-                        var inst = CKEDITOR.instances[$('.ckeditor_plone').attr('id')];
-                        CKEDITOR.remove(inst);
+                    if(CKE.instances) {
+                        var inst = CKE.instances[$('.ckeditor_plone').attr('id')];
+                        CKE.remove(inst);
                     }
-                    launchCKInstances();
+                    window.launchCKInstances();
                 }
                 // If TinyMCE
                 if($('.mce_editable').length > 0) {
-                    var initfunc = kukit && kukit.actionsGlobalRegistry.get("init-tinymce");
+                    var initfunc = window.kukit && window.kukit.actionsGlobalRegistry.get("init-tinymce");
 
                     if (initfunc && $('#form\\.text .mce_editable')) {
                         initfunc({node:{id:'form.text'}});
                     }
                 }
-            }
-        
+            };
+
             // Configure the overlay
             var conf = {
                 subtype: 'ajax',
@@ -33,12 +34,12 @@
                 formselector: 'form',
                 noform: 'reload'
             };
-        
+
             // On every ajax request reinitialize the wysiwyg editor
             $('.template-manage-portlets').ajaxComplete(function() {
                 initEditor();
             });
-        
+
             // Initialize the overlay only when clicked. If already initialized, the
             // the exinsting instance will be used.
             $('.portletHeader > a').live('click', function(e) {
@@ -48,14 +49,15 @@
                     $this.prepOverlay(conf).click();
                 }
             });
-        
+
+            // remove Plone's default onchange action
+            var arr = $('.portlets-manager .section form select').get();
+            for(var i=0; i < arr.length; i++) {
+                arr[i].onchange = null;
+            }
+
             // Add new portlet opens in overlay
             $('.portlets-manager .section form select')
-                .live('click', function(){
-                    // Remove the onchange attribute from the select element so 
-                    // we can prevent the already set on-change action.
-                    $(this).removeAttr('onchange');
-                })
                 .live('change', function(e) {
                     // On change show the overlay
                     e.preventDefault();
@@ -73,7 +75,7 @@
                     }
             });
         }
-        
+
         // === End Portlet Overlay ===
     });
 }(jQuery));
