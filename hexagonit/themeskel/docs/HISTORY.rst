@@ -80,6 +80,8 @@ Changelog
 
 - Common JS moved to hexagonit.primacontrol [vsomogyi]
 
+- Accordion style edit added [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

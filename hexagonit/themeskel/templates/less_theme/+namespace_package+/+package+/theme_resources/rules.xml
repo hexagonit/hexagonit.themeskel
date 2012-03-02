@@ -75,6 +75,9 @@
             <span>&#10003;</span>
         </replace>
 
+        <drop attributes="style" css:content=".template-prefs_install_products_form form" />
+        <drop attributes="style" css:content=".template-prefs_install_products_form fieldset" />
+
         <!-- Copy the body of the page -->
         <!-- Based on the tableleftcolumndown variable order the columns for the
              tablet view -->

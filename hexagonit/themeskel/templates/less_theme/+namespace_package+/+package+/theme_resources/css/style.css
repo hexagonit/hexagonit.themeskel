@@ -2257,6 +2257,42 @@ textarea:focus {
 #content fieldset {
   border: 0.1em solid #dddddd;
   border-style: solid none none none;
+  margin: 10px 0;
+  padding: 0 1em 1em;
+}
+#content fieldset .field {
+  margin-left: 5px;
+}
+#content fieldset.accordion-item {
+  border: none;
+}
+#content fieldset.accordion-item legend {
+  background: #dddddd;
+  cursor: pointer;
+  padding-right: 0em;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+#content fieldset.accordion-item legend.opened {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+}
+#content fieldset .accordion-indicator {
+  background: transparent url('../images/bullet_toggle_minus.png') no-repeat;
+  margin-top: -33px;
+  float: right;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+#content fieldset .accordion-indicator.closed {
+  background: transparent url('../images/bullet_toggle_plus.png') no-repeat;
 }
 #content legend {
   padding: 0.5em;

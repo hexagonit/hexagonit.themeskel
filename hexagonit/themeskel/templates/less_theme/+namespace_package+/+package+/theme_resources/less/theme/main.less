@@ -1972,6 +1972,45 @@ textarea:focus {
     fieldset {
         border: @Content-fieldset-border;
         border-style: solid none none none;
+        margin: 10px 0;
+        padding: 0 1em 1em;
+        
+        .field {
+            margin-left: 5px;
+        }
+        &.accordion-item {
+            border: none;
+            
+            legend {
+                background: @Content-legend-background;
+                cursor: pointer;
+                padding-right: 0em;
+                width: 100%;
+                
+                .rounded-corners(5px);
+
+                &.opened {
+                    border-bottom-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    -webkit-border-bottom-right-radius: 0px;
+                    -webkit-border-bottom-left-radius: 0px;
+                    -moz-border-radius-bottomleft: 0px;
+                    -moz-border-radius-bottomright: 0px;
+                }
+            }
+        }
+        .accordion-indicator {
+            background: transparent url('../images/bullet_toggle_minus.png') no-repeat;
+            margin-top: -33px;
+            float: right;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            
+            &.closed {
+                background: transparent url('../images/bullet_toggle_plus.png') no-repeat;
+            }
+        }
     }
     legend {
         padding: 0.5em;
