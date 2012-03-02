@@ -147,6 +147,27 @@ Every additional javascript should go into this file. If you need multiple files
 for javascript, just create them in the javascript folder and include them in 
 Plone's JS registry (profiles/default/jsregistry.xml).
 
+Javascript that is common to all themes is located in the hexagonit.primacontrol
+package, and to include it in the theme it needs to be set in the JS registry
+of the theme (profiles/default/jsregistry.xml):
+
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="True"
+        expression=""
+        inline="False"
+        id="++resource++hexagonit.primacontrol.js/form_accordion.js"
+    />
+
+Available JS libraries:
+  * descriptiontooltip.js
+  * form_accordion.js
+  * jquery.richmenu.js
+  * portletoverlay.js
+
 
 Plone.app.theming
 =================
