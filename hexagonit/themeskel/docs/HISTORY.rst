@@ -78,6 +78,8 @@ Changelog
 
 - Portlet overlay chrome issue fixed [vsomogyi]
 
+- Common JS moved to hexagonit.primacontrol [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
