@@ -90,5 +90,16 @@
         inline="False"
         id="++resource++hexagonit.primacontrol.js/portletoverlay.js"
     />
+    
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="True"
+        expression=""
+        inline="False"
+        id="++resource++hexagonit.primacontrol.js/content_type.js"
+    />
 
 </object>

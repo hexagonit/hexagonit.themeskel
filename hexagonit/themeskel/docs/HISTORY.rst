@@ -82,6 +82,8 @@ Changelog
 
 - Accordion style edit added [vsomogyi]
 
+- Content type JS added [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------
