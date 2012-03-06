@@ -163,6 +163,7 @@ of the theme (profiles/default/jsregistry.xml):
     />
 
 Available JS libraries:
+  * content_type.js
   * descriptiontooltip.js
   * form_accordion.js
   * jquery.richmenu.js

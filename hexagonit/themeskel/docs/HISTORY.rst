@@ -84,6 +84,8 @@ Changelog
 
 - Content type JS added [vsomogyi]
 
+- Modernizr custom build [vsomogyi]
+
 
 1.0rc1 (2011-09-16)
 -------------------

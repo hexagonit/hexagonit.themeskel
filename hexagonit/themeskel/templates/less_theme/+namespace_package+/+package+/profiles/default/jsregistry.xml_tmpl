@@ -10,7 +10,7 @@
         enabled="True"
         expression="not:request/HTTP_X_THEME_ENABLED | nothing"
         inline="False"
-        id="++theme++${namespace_package}.${package}/javascript/libs/modernizr-2.5.3.js"
+        id="++theme++${namespace_package}.${package}/javascript/libs/modernizr.custom.js"
     />
     
     <javascript
