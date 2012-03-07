@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0 (2012-XX-XX)
-----------------
+1.0b1 (2012-03-07)
+------------------
 
 - Less folder restructured [vsomogyi]
 
