@@ -2877,7 +2877,79 @@ div.overlaybg div.close {
 .ie7 .optionsBox input {
   margin: 0px;
 }
-/* @end *//* ==|== media queries ======================================================
+/* @end */#content div.documentByLine {
+  clear: both;
+  margin-top: 15px;
+  text-align: center;
+  border-top: 1px solid #dddddd;
+}
+#content .keywords {
+  color: #999999;
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
+#content figure.figure-container {
+  margin-top: 4px;
+}
+#content figure.image-left {
+  margin-right: 10px;
+  margin-left: 0;
+}
+#content figure.image-right {
+  margin-left: 10px;
+  margin-right: 0;
+}
+#content figure figcaption {
+  text-align: center;
+}
+#content figure figcaption .image-caption {
+  font-size: 80%;
+}
+#content figure .highslide img {
+  border: 0 solid none !important;
+}
+#content figure .image-box {
+  background-color: #CCCCCC;
+}
+#content .figure-items {
+  margin-bottom: 5px;
+}
+#content .figure-items .figure-item {
+  margin-right: 5px;
+}
+#content .lead-figures figure.figure-container {
+  margin-top: 0px;
+}
+#content .lead-figures-left {
+  float: left;
+  margin-right: 10px;
+}
+#content .lead-figures-left .lead-figure-left {
+  float: left;
+  margin-top: 3px;
+}
+#content .lead-figures-right {
+  float: right;
+  margin-left: 10px;
+}
+#content .lead-figures-right .lead-figure-right {
+  float: right;
+}
+#content ul.content-items,
+#content ul.file-items,
+#content ul.related-items,
+#content ul.link-items {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+#content ul.content-items li a:before,
+#content ul.file-items li a:before,
+#content ul.related-items li a:before,
+#content ul.link-items li a:before {
+  content: "» ";
+}
+/* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
    These override the primary theme styles
    Modify as content requires.

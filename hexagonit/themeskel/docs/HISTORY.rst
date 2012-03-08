@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0b2 (2012-03-XX)
+------------------
+
+- Page model styling added [vsomogyi]
+
 1.0b1 (2012-03-07)
 ------------------
 
