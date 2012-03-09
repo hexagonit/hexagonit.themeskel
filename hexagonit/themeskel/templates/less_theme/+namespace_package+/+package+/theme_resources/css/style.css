@@ -1187,7 +1187,7 @@ dl.portletNavigationTree dd.portletItem {
   font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 #content div.documentByLine {
-  font-size: 13px;
+  font-size: 12px;
   display: block;
   color: #666666;
 }
@@ -2888,9 +2888,6 @@ div.overlaybg div.close {
   margin-bottom: -20px;
   margin-top: 20px;
 }
-#content figure.figure-container {
-  margin-top: 4px;
-}
 #content figure.image-left {
   margin-right: 10px;
   margin-left: 0;
@@ -2911,10 +2908,8 @@ div.overlaybg div.close {
 #content figure .image-box {
   background-color: #CCCCCC;
 }
-#content .figure-items {
-  margin-bottom: 5px;
-}
 #content .figure-items .figure-item {
+  margin-bottom: 5px;
   margin-right: 5px;
 }
 #content .lead-figures figure.figure-container {
@@ -2935,6 +2930,13 @@ div.overlaybg div.close {
 #content .lead-figures-right .lead-figure-right {
   float: right;
 }
+#content .items-heading {
+  font-size: 1.75em;
+  margin: 20px 0 10px;
+}
+#content .items-heading a {
+  border-bottom: none;
+}
 #content ul.content-items,
 #content ul.file-items,
 #content ul.related-items,
@@ -2943,11 +2945,24 @@ div.overlaybg div.close {
   padding: 0px;
   margin: 0px;
 }
-#content ul.content-items li a:before,
-#content ul.file-items li a:before,
-#content ul.related-items li a:before,
-#content ul.link-items li a:before {
+#content ul.content-items li:before,
+#content ul.file-items li:before,
+#content ul.related-items li:before,
+#content ul.link-items li:before {
   content: "» ";
+}
+#content .file-item-title .discreet {
+  margin-left: 5px;
+  font-size: 12px;
+}
+#content .file-item-title .discreet:before {
+  content: "(";
+}
+#content .file-item-title .discreet:after {
+  content: ")";
+}
+#content .item-listing .figure-container {
+  margin-top: 4px;
 }
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.

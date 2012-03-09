@@ -13,9 +13,6 @@
     }
 
     figure {
-        &.figure-container {
-            margin-top: 4px;
-        }
         &.image-left {
             margin-right: 10px;
             margin-left: 0;
@@ -40,9 +37,8 @@
     }
 
     .figure-items {
-        margin-bottom: 5px;
-        
         .figure-item {
+            margin-bottom: 5px;
             margin-right: 5px;
         }
     }
@@ -70,6 +66,14 @@
         }
     }
 
+    .items-heading {
+        font-size: @h2-font-size;
+        margin: @content-items-heading-margin;
+        a {
+            border-bottom: none;
+        }
+    }
+
     ul.content-items,
     ul.file-items,
     ul.related-items,
@@ -78,8 +82,24 @@
         padding: 0px;
         margin: 0px;
         
-        li a:before {
+        li:before {
             content: "» ";
         }
+    }
+    
+    .file-item-title .discreet {
+        margin-left: 5px;
+        font-size: @font-size-smallest;
+        
+        &:before {
+            content: "(";
+        }
+        &:after {
+            content: ")";
+        }
+    }
+    
+    .item-listing .figure-container {
+        margin-top: 4px;
     }
 }
