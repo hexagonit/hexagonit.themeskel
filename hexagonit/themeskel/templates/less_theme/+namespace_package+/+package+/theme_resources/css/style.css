@@ -869,6 +869,7 @@ dl dt span.summary a {
 /* @end */
 /* @group Portlets */
 dl.portlet {
+  background: #ffffff;
   margin: 0 0 1em;
   font-size: 13px;
 }
@@ -913,7 +914,6 @@ dl.portlet ol {
   margin-left: 2em;
 }
 dl.portlet li {
-  margin-bottom: 0.25em;
   line-height: 1.5em;
   display: list-item;
 }
@@ -1078,7 +1078,7 @@ dl.portlet ul.navTree li a {
   background: none;
   border: none;
   display: block;
-  padding-left: 0!important;
+  padding: 0.25em 1em !important;
   zoom: 1;
 }
 dl.portlet ul.navTree li a img {
@@ -1086,15 +1086,18 @@ dl.portlet ul.navTree li a img {
 }
 dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
+  color: #ffffff !important;
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-  padding: 0.25em 1em;
   border-bottom: 0.1em dotted #dddddd;
   line-height: 2em;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-  padding-left: 0.5em;
+  padding-left: 0.5em !important;
   line-height: 2em;
+}
+dl.portlet ul.navTreeLevel1 .navTreeItem a:before {
+  content: "- ";
 }
 dl.portletNavigationTree dd.portletItem {
   padding: 0;

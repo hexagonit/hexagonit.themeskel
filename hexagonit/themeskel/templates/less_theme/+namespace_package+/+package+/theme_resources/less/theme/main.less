@@ -398,6 +398,7 @@ dl dt {
 
 dl {
     &.portlet {
+        background: @Portlet-background;
         margin: 0 0 1em;
         font-size: @Portlet-font-size;
         
@@ -445,7 +446,6 @@ dl {
             margin-left: 2em;
         }
         li {
-            margin-bottom: 0.25em;
             line-height: @Portlet-li-line-height;
             display: list-item;
         }
@@ -642,7 +642,7 @@ dl.portlet ul {
             background: none;
             border: none;
             display: block;
-            padding-left: 0!important;
+            padding: @Portlet-Navigation-Level0-padding!important;
             zoom: 1;
             
             img {
@@ -650,19 +650,22 @@ dl.portlet ul {
             }
         }
         .navTreeCurrentItem {
-            background-color: @Portlet-Navigation-background;
+            background-color: @Portlet-Navigation-currentItem-background;
+            color: @Portlet-Navigation-currentItem-color!important;
         }
     }
     &.navTreeLevel0 > .navTreeItem {
-        padding: @Portlet-Navigation-Level0-padding;
         border-bottom: @Portlet-Navigation-Level0-border-bottom;
         line-height: @Portlet-Navigation-Level0-line-height;
     }
     &.navTreeLevel1 .navTreeItem {
-        padding-left: @Portlet-Navigation-Level1-padding-left;
+        padding-left: @Portlet-Navigation-Level1-padding-left!important;
         line-height: @Portlet-Navigation-Level1-line-height;
+        
+        a:before {
+            content: @Portlet-Navigation-Level1-before-content;
+        }
     }
-    
 }
 dl.portletNavigationTree dd.portletItem {
     padding: 0;

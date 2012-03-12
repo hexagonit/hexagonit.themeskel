@@ -4,6 +4,7 @@ Changelog
 1.0b2 (2012-03-XX)
 ------------------
 
+- Navigation portlet style update [vsomogyi]
 - Page model styling added [vsomogyi]
 
 1.0b1 (2012-03-07)
