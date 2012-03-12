@@ -67,6 +67,10 @@
         <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
         <after css:content="#portal-globalnav" css:theme="#mobile-menu" />
 
+        <!-- Language chooser and quick links -->
+        <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
+        <replace css:theme-children="#languages" css:content-children="#language-actions"/>
+
         <drop css:theme="#mobile-page-settings"
               if-content="not(//*[@id='edit-bar'])" />
 
@@ -108,9 +112,7 @@
         </rules>
 
         <!-- Copy the footer -->
-        <copy css:content="#portal-footer" css:theme="footer" />
-        <after css:content="#portal-colophon" css:theme="footer" />
-        <after css:content="#portal-siteactions" css:theme="footer" />
+        <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
 
     </rules>
 
