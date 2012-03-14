@@ -4,6 +4,7 @@ Changelog
 1.0b2 (2012-03-XX)
 ------------------
 
+- IE7 stack overflow bug resolved [vsomogyi]
 - Quicklinks, language chooser and footer rules.xml update [vsomogyi]
 - Navigation portlet style update [vsomogyi]
 - Page model styling added [vsomogyi]

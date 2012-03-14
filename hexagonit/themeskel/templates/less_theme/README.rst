@@ -468,7 +468,7 @@ The dropdown for this menu item would need the following markup:
 To have a close button on the dropdown, include this within the content of the 
 dropdown:
 
-    <div id="popup-close-row">Close</div>
+    <div class="popup-close-row">Close</div>
 
 Now that we have all the content on the page, we can set up the richmenu jQuery
 plugin. In theme_resources/javascript/script.js add:
