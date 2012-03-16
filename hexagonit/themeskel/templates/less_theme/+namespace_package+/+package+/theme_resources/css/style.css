@@ -1078,7 +1078,7 @@ dl.portlet ul.navTree li a {
   background: none;
   border: none;
   display: block;
-  padding: 0.25em 1em !important;
+  padding: 0 0 0 5px !important;
   zoom: 1;
 }
 dl.portlet ul.navTree li a img {
@@ -1110,6 +1110,12 @@ dl.portletNavigationTree dd.portletItem {
 }
 #formfield-form-root .widget fieldset div div input:last-child {
   float: right;
+}
+.advanced-portlet-settings {
+  cursor: pointer;
+}
+.advanced-portlet-settings:before {
+  content: "» ";
 }
 /* @end */
 /* @group Content Area */
