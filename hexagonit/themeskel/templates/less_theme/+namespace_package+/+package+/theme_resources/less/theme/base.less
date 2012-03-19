@@ -208,7 +208,7 @@
 @ListingsLinkOverlay-border: 1px dotted #205c90;
 
 // Portlets
-@Portlet-background: @body-background-color;
+@Portlet-background: @container-background;
 @Portlet-header-background: @EditBar-default-color;
 @Portlet-header-color: #000;
 @Portlet-header-line-height: normal;
@@ -343,9 +343,9 @@
 @EditBar-color: #666;
 @EditBar-dropdown-border: 0.5em solid @EditBar-background;
 @EditBar-selected-font-weight: bold;
-@EditBar-selected-background: @body-background-color;
+@EditBar-selected-background: @container-background;
 @EditBar-selected-color: @body-font-color;
-@EditBar-hover-background: @body-background-color;
+@EditBar-hover-background: @container-background;
 @EditBar-hover-color: @body-font-color;
 @EditBar-subMenuTitle-color: @ContentActionMenus-selected-background;
 
@@ -454,14 +454,14 @@
 @Input-label-active-color: #76797c;
 
 // Data tables
-@Table-background: @body-background-color;
+@Table-background: @container-background;
 @Table-border-color: lighten(@EditBar-default-color, 20%);
 @Table-border: 1px solid @Table-border-color;
 @Table-th-color: @EditBar-color;
 @Table-th-border: 0.1em solid @Table-border-color;
 @Table-th-background: @EditBar-default-color;
 @Table-tr-odd-th-border: 0.1em solid @Table-border-color;
-@Table-odd-background: darken(@body-background-color, 3%);
+@Table-odd-background: darken(@Table-background, 3%);
 @Table-odd-error-background: #fdc;
 @Table-row-selected-background: #ffa;
 @Table-row-error-background: #fdc;
