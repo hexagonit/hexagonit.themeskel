@@ -4,6 +4,7 @@ Changelog
 1.0b2 (2012-03-XX)
 ------------------
 
+- Optimize JS loading order [vsomogyi]
 - Disable TinyMCE JS and CSS [vsomogyi]
 - IE7 stack overflow bug resolved [vsomogyi]
 - Quicklinks, language chooser and footer rules.xml update [vsomogyi]

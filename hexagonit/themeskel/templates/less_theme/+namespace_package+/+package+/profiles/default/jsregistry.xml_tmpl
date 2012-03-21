@@ -70,6 +70,7 @@
     />
     <!-- Form accordion -->
     <javascript
+        authenticated="True"
         cacheable="True"
         compression="safe"
         conditionalcomment=""
@@ -78,6 +79,7 @@
         expression=""
         inline="False"
         id="++resource++hexagonit.primacontrol.js/form_accordion.js"
+        insert-before="++resource++plone.app.jquerytools.js"
     />
 
     <javascript
@@ -92,6 +94,7 @@
     />
 
     <javascript
+        authenticated="True"
         cacheable="True"
         compression="safe"
         conditionalcomment=""
@@ -100,9 +103,11 @@
         expression=""
         inline="False"
         id="++resource++hexagonit.primacontrol.js/descriptiontooltip.js"
+        insert-before="++resource++plone.app.jquerytools.js"
     />
 
     <javascript
+        authenticated="True"
         cacheable="True"
         compression="safe"
         conditionalcomment=""
@@ -114,6 +119,7 @@
     />
 
     <javascript
+        authenticated="True"
         cacheable="True"
         compression="safe"
         conditionalcomment=""
@@ -122,6 +128,7 @@
         expression=""
         inline="False"
         id="++resource++hexagonit.primacontrol.js/content_type.js"
+        insert-before="++resource++plone.app.jquerytools.js"
     />
 
 </object>
