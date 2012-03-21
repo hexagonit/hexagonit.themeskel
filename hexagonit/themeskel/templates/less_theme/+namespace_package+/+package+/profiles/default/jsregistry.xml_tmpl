@@ -12,7 +12,7 @@
         inline="False"
         id="++theme++${namespace_package}.${package}/javascript/libs/modernizr.custom.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
@@ -23,7 +23,7 @@
         inline="False"
         id="++theme++${namespace_package}.${package}/javascript/libs/respond.min.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
@@ -33,6 +33,28 @@
         expression=""
         inline="False"
         id="++theme++${namespace_package}.${package}/javascript/script.js"
+    />
+
+    <!-- Disable TinyMCE -->
+    <javascript
+        cacheable="True"
+        compression="none"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="tiny_mce.js"
+    />
+    <javascript
+        cacheable="True"
+        compression="none"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="tiny_mce_init.js"
     />
 
     <!-- Disable Form tabbing -->
@@ -57,7 +79,7 @@
         inline="False"
         id="++resource++hexagonit.primacontrol.js/form_accordion.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
@@ -68,7 +90,7 @@
         inline="False"
         id="++resource++hexagonit.primacontrol.js/jquery.richmenu.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
@@ -79,7 +101,7 @@
         inline="False"
         id="++resource++hexagonit.primacontrol.js/descriptiontooltip.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
@@ -90,7 +112,7 @@
         inline="False"
         id="++resource++hexagonit.primacontrol.js/portletoverlay.js"
     />
-    
+
     <javascript
         cacheable="True"
         compression="safe"
