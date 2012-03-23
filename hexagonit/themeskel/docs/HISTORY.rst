@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b2 (2012-03-XX)
+1.0b2 (2012-03-23)
 ------------------
 
 - Optimize JS loading order [vsomogyi]

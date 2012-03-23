@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='hexagonit.themeskel',
-    version='1.0b1',
+    version='1.0b2',
     description="Paster template for plone.app.theming theme development",
     long_description=long_description,
     # Get more strings from
