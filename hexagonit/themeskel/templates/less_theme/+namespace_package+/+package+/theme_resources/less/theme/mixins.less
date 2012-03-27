@@ -72,6 +72,8 @@
     -webkit-box-shadow: @horizontal @vertical @blur @spread @color;
     -moz-box-shadow: @horizontal @vertical @blur @spread @color;
     box-shadow: @horizontal @vertical @blur @spread @color;
+    -ms-filter: e(%("progid:DXImageTransform.Microsoft.Shadow(Strength='%d', Direction=180, Color='%d')", @spread, @color));
+    filter: e(%("progid:DXImageTransform.Microsoft.Shadow(Strength='%d', Direction=180, Color='%d')", @spread, @color));
 }
 
 
