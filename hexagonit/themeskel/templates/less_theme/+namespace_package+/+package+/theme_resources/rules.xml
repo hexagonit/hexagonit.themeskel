@@ -112,6 +112,11 @@
         </rules>
 
         <!-- Copy the footer -->
+        
+        <!-- Content footer is for siteelement doormat, so update this rule if
+             doormat is needed for the theme -->
+        <drop css:theme="#content-footer" />
+        
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
 
     </rules>
