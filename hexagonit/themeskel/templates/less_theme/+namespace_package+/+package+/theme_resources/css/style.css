@@ -82,8 +82,11 @@ a:focus {
   outline: thin dotted;
 }
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a,
+a:visited,
 a:hover,
-a:active {
+a:active,
+a:focus {
   outline: 0;
 }
 /* =============================================================================

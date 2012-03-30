@@ -4,6 +4,7 @@ Changelog
 1.0b3 (2012-03-XX)
 ------------------
 
+- Remove dotted border from links [vsomogyi]
 - Footer is using site elements now [vsomogyi]
 
 1.0b2 (2012-03-23)
