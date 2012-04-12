@@ -1271,6 +1271,138 @@ dl.portletNavigationTree dd.portletItem {
   width: 190px;
   top: -3em;
 }
+.documentActions {
+  float: right;
+  list-style: none outside none;
+  margin-top: 13px;
+  text-align: right;
+}
+.documentActions li {
+  display: inline!important;
+}
+#document-action-print a {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -129px;
+}
+#document-action-sendto a {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -105px;
+}
+#document-action-text-larger {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -32px;
+}
+#document-action-text-smaller {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -56px;
+}
+#document-action-print {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -129px;
+}
+#document-action-sendto {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -105px;
+}
+#document-action-share {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -152px;
+  width: 19px;
+}
+#document-action-jaa {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -173px;
+  width: 35px;
+}
+#document-action-personal {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -200px;
+}
+#document-action-info {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -226px;
+}
+#document-action-rate {
+  background: transparent url('../images/icon_sprite.png') no-repeat;
+  height: 20px;
+  width: 17px;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -19999px;
+  white-space: nowrap;
+  background-position: -6px -251px;
+}
 #category {
   font-size: 13px;
   margin-bottom: 1em;
