@@ -1,9 +1,12 @@
 Changelog
 =========
 
-1.0b3 (2012-03-XX)
+1.0b3 (2012-04-XX)
 ------------------
 
+- RSS portlet date styling [vsomogyi]
+- Hide icons in search results [vsomogyi]
+- Print only the content column [vsomogyi]
 - Remove dotted border from links [vsomogyi]
 - Footer is using site elements now [vsomogyi]
 

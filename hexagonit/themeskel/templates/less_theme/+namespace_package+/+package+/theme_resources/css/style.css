@@ -813,6 +813,9 @@ input.searchField {
   font-size: 13px;
   color: #666666;
 }
+#LSResult img {
+  display: none;
+}
 #livesearchLegend {
   background-color: #cccccc;
   padding: 0.3em;
@@ -921,6 +924,11 @@ dl.portlet ol {
 dl.portlet li {
   line-height: 1.5em;
   display: list-item;
+}
+dl.portlet.portletRss .portletItemDetails {
+  display: inline;
+  color: #888888 !important;
+  font-size: 12px;
 }
 dl.portletError {
   background-color: #ffa500;
@@ -2150,6 +2158,9 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 .searchResults {
   margin-top: 0;
 }
+.searchResults img {
+  display: none;
+}
 #ajax-search-res {
   display: none;
 }
@@ -2500,6 +2511,9 @@ dl.toc dd ol {
   margin-left: 0;
   font-size: 18px;
   font-weight: bold;
+}
+#portal-sitemap img {
+  display: none;
 }
 #portal-sitemap li {
   list-style: none;
@@ -3345,5 +3359,15 @@ div.overlaybg div.close {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  header,
+  #portal-column-one,
+  #portal-column-two,
+  #edit-bar,
+  footer {
+    display: none!important;
+  }
+  #portal-column-content {
+    width: 100%;
   }
 }

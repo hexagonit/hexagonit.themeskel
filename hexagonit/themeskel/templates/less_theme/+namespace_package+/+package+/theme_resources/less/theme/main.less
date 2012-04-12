@@ -306,6 +306,9 @@ input.searchField {
         font-size: @LiveSearchDescription-font-size;
         color: @LiveSearchDescription-color;
     }
+    img {
+        display: none;
+    }
 }
 
 #livesearchLegend {
@@ -448,6 +451,13 @@ dl {
         li {
             line-height: @Portlet-li-line-height;
             display: list-item;
+        }
+        &.portletRss {
+            .portletItemDetails {
+                display:inline;
+                color: @Portlet-rss-date-color!important;
+                font-size: @Portlet-rss-date-font-size;
+            }
         }
     }
     &.portletError {
@@ -1829,6 +1839,9 @@ form.searchPage h1.documentFirstHeading {
 
 .searchResults {
     margin-top: 0;
+    img {
+        display: none;
+    }
 }
 
 #ajax-search-res {
@@ -2261,6 +2274,9 @@ dl.toc {
     font-size: @Sitemap-font-size;
     font-weight: @Sitemap-font-weight;
     
+    img {
+        display: none;
+    }
     li {
         list-style: none;
         margin-left: 0;

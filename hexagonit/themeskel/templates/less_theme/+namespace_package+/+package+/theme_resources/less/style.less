@@ -275,4 +275,7 @@ td { vertical-align: top; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+  // show only page content for print
+  header, #portal-column-one, #portal-column-two, #edit-bar, footer { display: none!important; }
+  #portal-column-content { width: 100%; }
 }
