@@ -931,6 +931,10 @@ dl.portlet.portletNews .portletItemDetails {
   color: #888888 !important;
   font-size: 12px;
 }
+dl.portlet.portletRss .portletFooter,
+dl.portlet.portletNews .portletFooter {
+  text-align: right;
+}
 dl.portletError {
   background-color: #ffa500;
 }
