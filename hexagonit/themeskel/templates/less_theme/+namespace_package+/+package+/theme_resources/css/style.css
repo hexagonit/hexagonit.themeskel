@@ -925,7 +925,8 @@ dl.portlet li {
   line-height: 1.5em;
   display: list-item;
 }
-dl.portlet.portletRss .portletItemDetails {
+dl.portlet.portletRss .portletItemDetails,
+dl.portlet.portletNews .portletItemDetails {
   display: inline;
   color: #888888 !important;
   font-size: 12px;

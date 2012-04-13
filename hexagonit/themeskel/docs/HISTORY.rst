@@ -4,6 +4,7 @@ Changelog
 1.0b3 (2012-04-XX)
 ------------------
 
+- News portlet styling [vsomogyi]
 - Document action icons styling [vsomogyi]
 - RSS portlet date styling [vsomogyi]
 - Hide icons in search results [vsomogyi]
