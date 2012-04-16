@@ -864,6 +864,12 @@ dl.portletNavigationTree dd.portletItem {
         display:inline!important;
     }
 }
+// webkit only hack
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .documentActions {
+        margin-top: 0;
+    }
+}
 .documentActionIcons() {
     background:transparent url('../images/icon_sprite.png') no-repeat;
     height:20px;
@@ -871,7 +877,6 @@ dl.portletNavigationTree dd.portletItem {
     display: inline-block;
     font-size: 0;
     overflow: hidden;
-    text-indent: -19999px;
     white-space: nowrap;
 }
 #document-action-print a {
