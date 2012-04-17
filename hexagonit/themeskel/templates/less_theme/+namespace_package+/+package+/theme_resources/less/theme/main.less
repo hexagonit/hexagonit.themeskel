@@ -2698,6 +2698,24 @@ div.overlaybg div.close {
 
 /* @end */
 
+// 404 page should not have icons
+.template-default_error_message #content-core {
+    .contenttype-document,
+    .contenttype-event,
+    .contenttype-folder,
+    .contenttype-link,
+    .contenttype-news-item,
+    .contenttype-plone-site,
+    .contenttype-collection,
+    .contenttype-topic {
+        background: none;
+        padding-left: 0px !important;
+    }
+    dt > img {
+        display: none;
+    }
+}
+
 
 /* @group jQuery Tag multiple selector */
 

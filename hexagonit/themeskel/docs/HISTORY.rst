@@ -4,6 +4,7 @@ Changelog
 1.0b3 (2012-04-XX)
 ------------------
 
+- 404 page icons removed [vsomogyi]
 - Mobile actions localized [vsomogyi]
 - reCaptcha JS location fix [vsomogyi]
 - News portlet styling [vsomogyi]

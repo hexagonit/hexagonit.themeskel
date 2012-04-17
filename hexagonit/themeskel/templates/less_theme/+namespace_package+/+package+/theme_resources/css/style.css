@@ -2962,6 +2962,20 @@ div.overlaybg div.close {
   padding-left: 20px !important;
 }
 /* @end */
+.template-default_error_message #content-core .contenttype-document,
+.template-default_error_message #content-core .contenttype-event,
+.template-default_error_message #content-core .contenttype-folder,
+.template-default_error_message #content-core .contenttype-link,
+.template-default_error_message #content-core .contenttype-news-item,
+.template-default_error_message #content-core .contenttype-plone-site,
+.template-default_error_message #content-core .contenttype-collection,
+.template-default_error_message #content-core .contenttype-topic {
+  background: none;
+  padding-left: 0px !important;
+}
+.template-default_error_message #content-core dt > img {
+  display: none;
+}
 /* @group jQuery Tag multiple selector */
 .optionsBox {
   overflow-y: auto;
