@@ -76,9 +76,6 @@
         <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
         <replace css:theme-children="#languages" css:content-children="#language-actions"/>
 
-        <drop css:theme="#mobile-page-settings"
-              if-content="not(//*[@id='edit-bar'])" />
-
         <!-- Users and Groups control panel - inherited rules are marked with checkmark -->
         <replace css:content=".template-usergroup-userprefs img[src$='site_icon.gif'], .template-usergroup-groupprefs img[src$='site_icon.gif']">
             <span>&#10003;</span>
@@ -86,6 +83,13 @@
 
         <drop attributes="style" css:content=".template-prefs_install_products_form form" />
         <drop attributes="style" css:content=".template-prefs_install_products_form fieldset" />
+
+        <!-- Copy mobile elements -->
+        <drop css:theme="#mobile-page-settings"
+              if-content="not(//*[@id='edit-bar'])" />
+        <replace css:content="#mobile-menu" css:theme="#mobile-menu" />
+        <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" />
+
 
         <!-- Copy the body of the page -->
         <!-- Based on the tableleftcolumndown variable order the columns for the
