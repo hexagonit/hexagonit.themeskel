@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b3 (2012-04-XX)
+1.0   (2012-04-18)
 ------------------
 
 - 404 page icons removed [vsomogyi]
