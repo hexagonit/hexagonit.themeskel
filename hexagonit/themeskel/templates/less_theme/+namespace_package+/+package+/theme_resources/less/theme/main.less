@@ -1252,6 +1252,25 @@ div.listingBar {
 /* @end */
 
 
+/* @group FrontRow carousel */
+
+.frontrow {
+    display: block;
+    position: relative;
+    height: @carousel-height;
+    img {
+        display: none;
+        position: absolute;
+        max-width: 100%;
+        &:first-child {
+            display: block;
+        }
+    }
+}
+
+/* @end */
+
+
 /* @group Status messages */
 
 dl {

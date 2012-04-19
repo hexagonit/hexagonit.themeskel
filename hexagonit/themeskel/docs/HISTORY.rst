@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.0   (2012-04-18)
+1.0   (2012-04-19)
 ------------------
 
+- Carousel styling added [vsomogyi]
 - 404 page icons removed [vsomogyi]
 - Mobile actions localized [vsomogyi]
 - reCaptcha JS location fix [vsomogyi]

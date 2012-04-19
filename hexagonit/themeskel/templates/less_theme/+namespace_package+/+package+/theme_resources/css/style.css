@@ -1687,6 +1687,21 @@ div.listingBar a:hover {
   background-image: url(++resource++hexagonit.highslidejs.default/graphics/loader.white.gif);
 }
 /* @end */
+/* @group FrontRow carousel */
+.frontrow {
+  display: block;
+  position: relative;
+  height: 205px;
+}
+.frontrow img {
+  display: none;
+  position: absolute;
+  max-width: 100%;
+}
+.frontrow img:first-child {
+  display: block;
+}
+/* @end */
 /* @group Status messages */
 dl.portalMessage {
   color: #000000;
