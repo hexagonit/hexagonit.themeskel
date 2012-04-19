@@ -4,6 +4,7 @@ Changelog
 1.0   (2012-04-19)
 ------------------
 
+- Commenting field width fixed [vsomogyi]
 - Carousel styling added [vsomogyi]
 - 404 page icons removed [vsomogyi]
 - Mobile actions localized [vsomogyi]

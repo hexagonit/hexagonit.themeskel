@@ -2213,6 +2213,9 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
   -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
 }
+#commenting textarea {
+  width: 90%!important;
+}
 /* @end */
 /* @group Search results page */
 fieldset#search-field {
