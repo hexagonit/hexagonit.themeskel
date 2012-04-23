@@ -682,8 +682,11 @@ dl.portlet ul {
         padding-left: @Portlet-Navigation-Level1-padding-left!important;
         line-height: @Portlet-Navigation-Level1-line-height;
         
-        a:before {
-            content: @Portlet-Navigation-Level1-before-content;
+        a {
+            background: transparent url('../images/minus.gif') no-repeat 0 8px;
+            margin-left:5px;
+            border-left:none;
+            padding-left: @Portlet-Navigation-Level1-padding-left !important;
         }
     }
 }
