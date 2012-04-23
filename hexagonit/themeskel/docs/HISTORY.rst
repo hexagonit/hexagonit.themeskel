@@ -4,6 +4,7 @@ Changelog
 1.0.1 (2012-04-XX)
 ------------------
 
+- Event listing styling update [vsomogyi]
 - Recent items icons removed [vsomogyi]
 - Commenting field width fixed [vsomogyi]
 - Carousel styling added [vsomogyi]

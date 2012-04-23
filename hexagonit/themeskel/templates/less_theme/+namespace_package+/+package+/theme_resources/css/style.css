@@ -3084,9 +3084,11 @@ div.overlaybg div.close {
   border-top: 1px solid #dddddd;
 }
 #content .keywords {
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 5px;
   color: #999999;
-  margin-bottom: -20px;
-  margin-top: 20px;
+  margin-bottom: -30px;
+  margin-top: 30px;
 }
 #content figure.image-left {
   margin-right: 10px;
@@ -3132,7 +3134,7 @@ div.overlaybg div.close {
 }
 #content .items-heading {
   font-size: 1.75em;
-  margin: 20px 0 10px;
+  margin: 30px 0 0px;
 }
 #content .items-heading a {
   border-bottom: none;
