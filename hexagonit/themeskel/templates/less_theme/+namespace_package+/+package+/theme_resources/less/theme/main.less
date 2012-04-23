@@ -453,7 +453,8 @@ dl {
             display: list-item;
         }
         &.portletRss,
-        &.portletNews {
+        &.portletNews,
+        &.portletRecent {
             .portletItemDetails {
                 display:inline;
                 color: @Portlet-rss-date-color!important;
@@ -461,6 +462,11 @@ dl {
             }
             .portletFooter {
                 text-align: right;
+            }
+        }
+        &.portletRecent {
+            img {
+                display: none;
             }
         }
     }
@@ -634,7 +640,7 @@ a.managePortletsFallback {
     display: block;
     font-size: @Portlet-ItemDetails-font-size;
     line-height: @Portlet-ItemDetails-line-height;
-    margin-left: 1em;
+    margin-left: 5px;
     padding-top: 0.5em;
 }
 

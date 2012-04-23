@@ -926,14 +926,19 @@ dl.portlet li {
   display: list-item;
 }
 dl.portlet.portletRss .portletItemDetails,
-dl.portlet.portletNews .portletItemDetails {
+dl.portlet.portletNews .portletItemDetails,
+dl.portlet.portletRecent .portletItemDetails {
   display: inline;
   color: #888888 !important;
   font-size: 12px;
 }
 dl.portlet.portletRss .portletFooter,
-dl.portlet.portletNews .portletFooter {
+dl.portlet.portletNews .portletFooter,
+dl.portlet.portletRecent .portletFooter {
   text-align: right;
+}
+dl.portlet.portletRecent img {
+  display: none;
 }
 dl.portletError {
   background-color: #ffa500;
@@ -1081,7 +1086,7 @@ a.managePortletsFallback {
   display: block;
   font-size: 13px;
   line-height: 1.5em;
-  margin-left: 1em;
+  margin-left: 5px;
   padding-top: 0.5em;
 }
 #dashboard-portlets1,
