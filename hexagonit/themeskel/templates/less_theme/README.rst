@@ -475,6 +475,12 @@ plugin. In theme_resources/javascript/script.js add:
 
     $('#portal-globalnav').richmenu();
 
+The rich menu is turned on by default for mobile version of the site, and if 
+needed, it can be turned off by setting mobileRichMenu to false. In this case 
+the script.js would look like this:
+
+    $('#portal-globalnav').richmenu({mobileRichMenu: 0});
+
 Styling and content of the dropdown is theme specific, so it is not part of the
 theme skeleton.
 
