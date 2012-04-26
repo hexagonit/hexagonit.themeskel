@@ -4,6 +4,7 @@ Changelog
 1.0.1 (2012-04-XX)
 ------------------
 
+- Navigation portlet update [vsomogyi]
 - Gallery page model styled [vsomogyi]
 - Navigation portlet level1 indicator changed [vsomogyi]
 - Event listing styling update [vsomogyi]
