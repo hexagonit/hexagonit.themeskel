@@ -3091,9 +3091,6 @@ div.overlaybg div.close {
   margin-bottom: -30px;
   margin-top: 30px;
 }
-#content figure {
-  border: 1px solid #dddddd;
-}
 #content figure.image-left {
   margin-right: 10px;
   margin-left: 0;
@@ -3102,20 +3099,20 @@ div.overlaybg div.close {
   margin-left: 10px;
   margin-right: 0;
 }
-#content figure figcaption {
+#content figure figcaption .image-caption-container {
   text-align: center;
   height: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#content figure figcaption .image-caption {
+#content figure figcaption .image-caption-container .image-caption {
   font-size: 12px;
   line-height: 1.3;
   word-wrap: break-word;
   padding: 5px;
   width: 90px;
 }
-#content figure figcaption .image-caption:hover {
+#content figure figcaption .image-caption-container .image-caption:hover {
   background: #fff;
   position: absolute;
   height: auto;
@@ -3184,6 +3181,9 @@ div.overlaybg div.close {
 }
 #content .item-listing .figure-container {
   margin-top: 4px;
+}
+#content .figures-under-text figure {
+  border: 1px solid #dddddd;
 }
 .ie7 #content figure figcaption:hover {
   position: relative;

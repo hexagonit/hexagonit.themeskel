@@ -13,8 +13,6 @@
     }
 
     figure {
-        border: @content-figure-cation-border;
-        
         &.image-left {
             margin-right: 10px;
             margin-left: 0;
@@ -23,7 +21,7 @@
             margin-left: 10px;
             margin-right: 0;
         }
-        figcaption {
+        figcaption .image-caption-container {
             text-align: center;
             height: @font-size-smallest+10px;
             overflow: hidden;
@@ -123,6 +121,11 @@
     
     .item-listing .figure-container {
         margin-top: 4px;
+    }
+    
+    // Gallery styling
+    .figures-under-text figure {
+        border: @content-figure-cation-border;
     }
 }
 
