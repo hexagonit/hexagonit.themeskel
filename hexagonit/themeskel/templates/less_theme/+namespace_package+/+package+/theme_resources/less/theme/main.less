@@ -1277,6 +1277,33 @@ div.listingBar {
     }
 }
 
+#carousel-pagination {
+    display: @carousel-pagination-display;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999;
+    zoom: 1;
+    .opacity(@carousel-pagination-opacity);
+}
+.carousel-page {
+    color: @carousel-page-color;
+    cursor: pointer;
+    background: @carousel-page-background;
+    border: @carousel-page-border;
+    padding: @carousel-page-padding;
+    margin-right: @carousel-page-margin-right;
+}
+
+.carousel-current {
+    display: block!important;
+}
+
+.carousel-current-page {
+    zoom: 1;
+    .opacity(@carousel-current-page-opacity);
+}
+
 /* @end */
 
 

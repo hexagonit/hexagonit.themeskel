@@ -1709,6 +1709,40 @@ div.listingBar a:hover {
 .frontrow img:first-child {
   display: block;
 }
+#carousel-pagination {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.carousel-page {
+  color: #990033;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  padding: 3px 7px;
+  margin-right: 5px;
+}
+.carousel-current {
+  display: block!important;
+}
+.carousel-current-page {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
 /* @end */
 /* @group Status messages */
 dl.portalMessage {
