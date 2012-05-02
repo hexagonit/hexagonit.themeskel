@@ -76,6 +76,16 @@
     filter: e(%("progid:DXImageTransform.Microsoft.Shadow(Strength='%d', Direction=180, Color='%d')", @spread, @color));
 }
 
+.opacity(@opacity:1) {
+    @freaking-ie: @opacity * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{freaking-ie})";
+    filter: alpha(opacity=@freaking-ie);
+    -webkit-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+}
+
 
 // GRID
 .grid-column-width(@column: 1) {

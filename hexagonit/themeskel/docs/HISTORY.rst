@@ -4,6 +4,7 @@ Changelog
 1.0.1 (2012-04-XX)
 ------------------
 
+- Opacity mixin added [vsomogyi]
 - Overlay border for old browsers [vsomogyi]
 - Lead image margin fix [vsomogyi]
 - Navigation portlet update [vsomogyi]

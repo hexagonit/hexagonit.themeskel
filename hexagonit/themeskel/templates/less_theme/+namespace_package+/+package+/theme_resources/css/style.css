@@ -2861,6 +2861,9 @@ div.overlaybg div.close {
   -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
 }
+.no-boxshadow .riform {
+  border: 1px solid #999;
+}
 /* @end */
 /* @group Content History */
 #content-history div.historyRecord {
