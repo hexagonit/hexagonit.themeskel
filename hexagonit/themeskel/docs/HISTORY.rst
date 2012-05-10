@@ -4,6 +4,7 @@ Changelog
 1.0.1 (2012-04-XX)
 ------------------
 
+- IE flickering issue fix [vsomogyi]
 - IE border fix [vsomogyi]
 - Carousel pagination styling added [vsomogyi]
 - Opacity mixin added [vsomogyi]
