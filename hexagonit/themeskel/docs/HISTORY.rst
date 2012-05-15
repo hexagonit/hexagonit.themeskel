@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.2 (2012-05-XX)
+------------------
+
+- User search styling, z-index fixes, main.less sync [vsomogyi]
+
 1.0.1 (2012-05-14)
 ------------------
 

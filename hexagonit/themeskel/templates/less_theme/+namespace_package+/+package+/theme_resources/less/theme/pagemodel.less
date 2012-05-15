@@ -127,6 +127,59 @@
     .figures-under-text figure {
         border: @content-figure-cation-border;
     }
+    
+    // User search
+    .user-search-result {
+        border-top: 1px solid #DDDDDD;
+        clear: both;
+        padding-top: 20px;
+
+        th {
+            text-align: right;
+            padding-right: 10px;
+            vertical-align: top;
+        }
+
+        .user-search-result-data {
+            float: left;
+            margin-right: -125px;
+            width: 100%;
+            word-wrap: break-word;
+
+            > div {
+                margin-right: 125px;
+            }
+            table {
+                margin-bottom: 20px!important;
+                width: 100%;
+                table-layout: fixed;
+            }
+        }
+        .user-search-result-show-more {
+            cursor: pointer;
+        }
+        .user-search-result-show-description {
+            margin-right: -125px;
+        }
+    }
+
+    #usersearchform {
+        background: @user-search-background;
+        margin-top: 20px;
+        padding: 15px;
+
+        input.searchField {
+            margin-bottom: 0px;
+            width: 50%;
+        }
+        select {
+            margin: 4px 10px;
+            width: 20%;
+        }
+        input.searchButton {
+            box-sizing: content-box;
+        }
+    }
 }
 
 .ie7 {

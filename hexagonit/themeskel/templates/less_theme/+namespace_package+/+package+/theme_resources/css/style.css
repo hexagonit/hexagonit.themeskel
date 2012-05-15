@@ -773,7 +773,7 @@ input.searchField {
   color: #000000;
   padding: 12px;
   max-width: 200px;
-  z-index: 100;
+  z-index: 1500;
   -webkit-box-shadow: 0px 0px 2px 2px #e3e3e3;
   -moz-box-shadow: 0px 0px 2px 2px #e3e3e3;
   box-shadow: 0px 0px 2px 2px #e3e3e3;
@@ -804,6 +804,7 @@ input.searchField {
   right: 0;
   background: transparent;
   margin: -1.5em 0 0 -7em;
+  z-index: 1990;
 }
 #LSResult fieldset {
   padding: 1em 0 0;
@@ -927,17 +928,22 @@ dl.portlet li {
 }
 dl.portlet.portletRss .portletItemDetails,
 dl.portlet.portletNews .portletItemDetails,
-dl.portlet.portletRecent .portletItemDetails {
+dl.portlet.portletRecent .portletItemDetails,
+dl.portlet.portletCollection .portletItemDetails,
+dl.portlet.portletPloneboardRecent .portletItemDetails {
   display: inline;
   color: #888888 !important;
   font-size: 12px;
 }
 dl.portlet.portletRss .portletFooter,
 dl.portlet.portletNews .portletFooter,
-dl.portlet.portletRecent .portletFooter {
+dl.portlet.portletRecent .portletFooter,
+dl.portlet.portletCollection .portletFooter,
+dl.portlet.portletPloneboardRecent .portletFooter {
   text-align: right;
 }
-dl.portlet.portletRecent img {
+dl.portlet.portletRecent img,
+dl.portlet.portletCollection img {
   display: none;
 }
 dl.portletError {
@@ -1142,6 +1148,29 @@ dl.portletNavigationTree dd.portletItem {
 }
 .advanced-portlet-settings:before {
   content: "» ";
+}
+/* @end */
+/* @group Tag Cloud*/
+.cloud1 {
+  font-size: 1em;
+}
+.cloud2 {
+  font-size: 1.2em;
+}
+.cloud3 {
+  font-size: 1.4em;
+}
+.cloud4 {
+  font-size: 1.6em;
+}
+.cloud5 {
+  font-size: 1.8em;
+}
+.cloud6 {
+  font-size: 1.9em;
+}
+.cloud7 {
+  font-size: 2.0em;
 }
 /* @end */
 /* @group Content Area */
@@ -2653,6 +2682,9 @@ body.template-new-user #content input {
   margin-left: 0.25em;
 }
 /* @end */
+#form-widgets-place {
+  width: 70%;
+}
 /* @end */
 /* @group Table of Contents */
 /* Table of Contents styling - essentially a portlet with smaller fonts and 
@@ -2726,6 +2758,11 @@ dl.toc dd ol {
   font-weight: normal;
   margin-bottom: 0;
   padding: 0.25em 0;
+}
+/* @end */
+/* @group Collection */
+.portaltype-topic .summary img {
+  display: none;
 }
 /* @end */
 /* @group Album view classes */
@@ -2849,14 +2886,14 @@ div.overlay-iframe {
   height: 60%;
   width: 60%;
   min-height: 100px;
-  z-index: 99;
+  z-index: 2500;
   /* overlays should be above everything */
 
 }
 div.overlay-ajax {
   width: 60%;
   min-height: 100px;
-  z-index: 99;
+  z-index: 2500;
   /* overlays should be above everything */
 
 }
@@ -3221,6 +3258,52 @@ div.overlaybg div.close {
 }
 #content .figures-under-text figure {
   border: 1px solid #dddddd;
+}
+#content .user-search-result {
+  border-top: 1px solid #DDDDDD;
+  clear: both;
+  padding-top: 20px;
+}
+#content .user-search-result th {
+  text-align: right;
+  padding-right: 10px;
+  vertical-align: top;
+}
+#content .user-search-result .user-search-result-data {
+  float: left;
+  margin-right: -125px;
+  width: 100%;
+  word-wrap: break-word;
+}
+#content .user-search-result .user-search-result-data > div {
+  margin-right: 125px;
+}
+#content .user-search-result .user-search-result-data table {
+  margin-bottom: 20px!important;
+  width: 100%;
+  table-layout: fixed;
+}
+#content .user-search-result .user-search-result-show-more {
+  cursor: pointer;
+}
+#content .user-search-result .user-search-result-show-description {
+  margin-right: -125px;
+}
+#content #usersearchform {
+  background: #f5f5f5;
+  margin-top: 20px;
+  padding: 15px;
+}
+#content #usersearchform input.searchField {
+  margin-bottom: 0px;
+  width: 50%;
+}
+#content #usersearchform select {
+  margin: 4px 10px;
+  width: 20%;
+}
+#content #usersearchform input.searchButton {
+  box-sizing: content-box;
 }
 .ie7 #content figure figcaption:hover {
   position: relative;

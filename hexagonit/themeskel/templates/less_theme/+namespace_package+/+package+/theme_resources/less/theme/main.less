@@ -264,7 +264,7 @@ input.searchField {
     color: @Tooltip-color;
     padding: @Tooltip-padding;
     max-width: @Tooltip-max-width;
-    z-index: 100;
+    z-index: 1500;
     
     .box-shadow(0px, 0px, 2px, 2px, #e3e3e3);
 }
@@ -297,6 +297,7 @@ input.searchField {
     right: 0;
     background: @LiveSearch-background;
     margin: -1.5em 0 0 -7em;
+    z-index: 1990;
     
     fieldset {
         padding: 1em 0 0;
@@ -454,7 +455,9 @@ dl {
         }
         &.portletRss,
         &.portletNews,
-        &.portletRecent {
+        &.portletRecent,
+        &.portletCollection,
+        &.portletPloneboardRecent {
             .portletItemDetails {
                 display:inline;
                 color: @Portlet-rss-date-color!important;
@@ -464,7 +467,8 @@ dl {
                 text-align: right;
             }
         }
-        &.portletRecent {
+        &.portletRecent,
+        &.portletCollection {
             img {
                 display: none;
             }
@@ -712,6 +716,33 @@ dl.portletNavigationTree dd.portletItem {
     &:before {
         content: "» ";
     }
+}
+
+/* @end */
+
+
+/* @group Tag Cloud*/
+
+.cloud1 {
+    font-size: 1em;
+}
+.cloud2 {
+    font-size: 1.2em;
+}
+.cloud3 {
+    font-size: 1.4em;
+}
+.cloud4 {
+    font-size: 1.6em;
+}
+.cloud5 {
+    font-size: 1.8em;
+}
+.cloud6 {
+    font-size: 1.9em;
+}
+.cloud7 {
+    font-size: 2.0em;
 }
 
 /* @end */
@@ -2344,6 +2375,10 @@ textarea#form\.description {
 
     /* @end */
 
+#form-widgets-place {
+    width: 70%;
+}
+
 /* @end */
 
 
@@ -2432,6 +2467,17 @@ dl.toc {
         font-weight: @Sitemap-navTreeLevel2-font-weight;
         margin-bottom: 0;
         padding: 0.25em 0;
+    }
+}
+
+/* @end */
+
+
+/* @group Collection */
+
+.portaltype-topic {
+    .summary img {
+        display: none;
     }
 }
 
@@ -2569,14 +2615,14 @@ div.overlay-iframe {
     height: 60%;
     width: 60%;
     min-height: 100px;
-    z-index: 99; /* overlays should be above everything */
+    z-index: 2500; /* overlays should be above everything */
 }
 
 
 div.overlay-ajax {
     width: 60%;
     min-height: 100px;
-    z-index: 99; /* overlays should be above everything */
+    z-index: 2500; /* overlays should be above everything */
 }
 
 /* default close button positioned on upper-left corner */
