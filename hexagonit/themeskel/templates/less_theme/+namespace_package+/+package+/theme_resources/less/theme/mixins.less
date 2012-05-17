@@ -87,6 +87,24 @@
 }
 
 
+// Modify the style if one of the sidebars are missing
+.no-right-sidebar() {
+    #portal-column-main {
+        margin-right: 0;
+    }
+    #portal-column-wrapper {
+        margin-right: 0;
+    }
+    #portal-column-one {
+        padding-left: 0;
+    }
+}
+.no-left-sidebar() {
+    #portal-column-wrapper {
+        margin-left: 0;
+    }
+}
+
 // GRID
 .grid-column-width(@column: 1) {
     //For a given cell width, the calculation is: width: (6.25*n - 2.25)%

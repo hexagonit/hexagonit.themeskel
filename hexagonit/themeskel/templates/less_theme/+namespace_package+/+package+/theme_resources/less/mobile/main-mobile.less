@@ -2,18 +2,37 @@
 
 @media only screen and (max-width: 480px) {
     
+    // Layout modifications
     body, #container {
         width:100%;
     }
-    
-    #portal-column-one, 
-    #portal-column-two,
-    #portal-column-content { 
+
+    #portal-column-main,
+    #portal-column-one,
+    #portal-column-two {
+        display: block;
         float: none!important;
-        clear: both; 
-        .grid-column-width(16); 
-        .grid-position(0); 
+        position: relative;
+        width: 100%;
     }
+
+    #portal-column-main {
+        margin-right: 0;
+    }
+    #portal-column-wrapper {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #portal-column-one {
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+    #portal-column-two {
+        margin-left: 0!important;
+    }
+
+
+    // Element stylings
     
     #portal-personaltools {
         font-size: @mobile-Personaltools-font-size !important;

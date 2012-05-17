@@ -6,51 +6,29 @@
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 800px) {
-  .tablet-right-down #portal-column-content.width-1\3a 2,
-  .tablet-right-down #portal-column-content.width-3\3a 4 {
-    width: 72.75%;
+  .tablet-right-down #portal-column-main {
+    margin-right: 0;
+  }
+  .tablet-right-down #portal-column-wrapper {
+    margin-right: 0;
+  }
+  .tablet-right-down #portal-column-one {
+    padding-left: 0;
   }
   .tablet-right-down #portal-column-two {
     float: none!important;
     clear: both;
-    width: 97.75%;
-    margin-left: -98.875%;
+    margin-left: 0;
+    width: 100%;
   }
-  .tablet-right-down .tablet-full-content #portal-column-content {
-    width: 97.75%;
-  }
-  .tablet-left-down #portal-column-content.width-1\3a 2,
-  .tablet-left-down #portal-column-content.width-3\3a 4 {
-    width: 72.75%;
-    margin-left: -98.875%;
+  .tablet-left-down #portal-column-wrapper {
+    margin-left: 0;
   }
   .tablet-left-down #portal-column-one {
     float: none!important;
     clear: both;
-    width: 97.75%;
-    margin-left: -98.875%;
-  }
-  .tablet-left-down .tablet-full-content #portal-column-content {
-    width: 97.75%;
-  }
-  .ie7 #portal-column-one,
-  .ie7 #portal-column-two,
-  .ie7 #portal-column-content {
-    float: none!important;
-  }
-  .ie7 .tablet-left-down #portal-column-two {
-    float: none!important;
-    position: absolute;
-    top: 0px;
-    width: 22.75%;
-    margin-left: -23.875%;
-  }
-  .ie7 .tablet-right-down #portal-column-one {
-    float: none!important;
-    position: absolute;
-    top: 0px;
-    width: 22.75%;
-    margin-left: -98.875%;
+    margin-left: 0;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -58,13 +36,27 @@
   #container {
     width: 100%;
   }
+  #portal-column-main,
   #portal-column-one,
-  #portal-column-two,
-  #portal-column-content {
+  #portal-column-two {
+    display: block;
     float: none!important;
-    clear: both;
-    width: 97.75%;
-    margin-left: -98.875%;
+    position: relative;
+    width: 100%;
+  }
+  #portal-column-main {
+    margin-right: 0;
+  }
+  #portal-column-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #portal-column-one {
+    margin-left: 0!important;
+    padding-left: 0!important;
+  }
+  #portal-column-two {
+    margin-left: 0!important;
   }
   #portal-personaltools {
     font-size: 12px !important;

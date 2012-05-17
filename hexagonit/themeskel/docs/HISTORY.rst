@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.0 (2012-05-XX)
+----------------
+
+- Fixed width sidebar option added [vsomogyi]
+
 1.0.2 (2012-05-XX)
 ------------------
 

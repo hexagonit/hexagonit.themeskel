@@ -66,7 +66,10 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
-        <!-- Copy the header -->
+
+
+        <!-- HEADER -->
+
         <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-menu" />
         <before css:content="#portal-logo" css:theme="#mobile-menu" />
         <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
@@ -75,6 +78,67 @@
         <!-- Language chooser and quick links -->
         <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
         <replace css:theme-children="#languages" css:content-children="#language-actions"/>
+
+
+
+        <!-- BODY -->
+        
+        <replace css:content-children="#portal-column-content" css:theme-children="#portal-column-content" />
+
+        <!-- Drop class attribute from portal-column-one/two -->
+        <drop attributes="class" css:content="#portal-column-one" />
+        <drop attributes="class" css:content="#portal-column-two" />
+        
+        <!-- No right column marker -->
+        <rules if-content="not(//div[@id='portal-column-two'])">
+            <prepend css:theme="#portal-columns">
+                <xsl:attribute name="class">row no-right-column</xsl:attribute>
+            </prepend>
+        </rules>
+
+        <!-- No left column marker -->
+        <rules if-content="not(//div[@id='portal-column-one'])">
+            <prepend css:theme="#portal-columns">
+                <xsl:attribute name="class">row no-left-column</xsl:attribute>
+            </prepend>
+            <drop css:theme="#portal-column-one" />
+        </rules>
+
+        <!-- No left and right column marker -->
+        <rules if-content="not(//div[@id='portal-column-one']) and not(//div[@id='portal-column-two'])">
+            <prepend css:theme="#portal-columns">
+                <xsl:attribute name="class">row no-right-column no-left-column</xsl:attribute>
+            </prepend>
+            <drop css:theme="#portal-column-one" />
+        </rules>
+
+
+
+        <!-- Left column down in tablet -->
+        <rules if="$tabletleftcolumndown">
+            <!-- Copy the sidebars over -->
+            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
+            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
+
+            <!-- Mark the wrapper which column goes down in tablet -->
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">tablet-left-down</xsl:attribute>
+            </prepend>
+        </rules>
+
+        <!-- Right column down in tablet -->
+        <rules if="not($tabletleftcolumndown)">
+            <!-- Copy the sidebars over -->
+            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
+            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
+
+            <!-- Mark the wrapper which column goes down in tablet -->
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">tablet-right-down</xsl:attribute>
+            </prepend>
+        </rules>
+
+
 
         <!-- Users and Groups control panel - inherited rules are marked with checkmark -->
         <replace css:content=".template-usergroup-userprefs img[src$='site_icon.gif'], .template-usergroup-groupprefs img[src$='site_icon.gif']">
@@ -91,36 +155,8 @@
         <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" />
 
 
-        <!-- Copy the body of the page -->
-        <!-- Based on the tableleftcolumndown variable order the columns for the
-             tablet view -->
-        <copy css:content="#portal-column-content" css:theme="#portal-columns" />
 
-        <rules if="$tabletleftcolumndown">
-            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
-            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-left-down</xsl:attribute>
-            </prepend>
-            <prepend css:theme="#portal-columns"
-                     if-content="not(//div[@id='portal-column-two'])">
-                <xsl:attribute name="class">row tablet-full-content</xsl:attribute>
-            </prepend>
-        </rules>
-
-        <rules if="not($tabletleftcolumndown)">
-            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
-            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-right-down</xsl:attribute>
-            </prepend>
-            <prepend css:theme="#portal-columns"
-                     if-content="not(//div[@id='portal-column-one'])">
-                <xsl:attribute name="class">row tablet-full-content</xsl:attribute>
-            </prepend>
-        </rules>
-
-        <!-- Copy the footer -->
+        <!-- FOOTER -->
         
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
