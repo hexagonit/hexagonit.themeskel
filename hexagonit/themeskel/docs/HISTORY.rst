@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Tablet mode - display moved column in columns [vsomogyi]
 - Update documentation [vsomogyi]
 - Disable unused CSS [vsomogyi]
 - Tag cloud word break [vsomogyi]
