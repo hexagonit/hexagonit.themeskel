@@ -4,6 +4,8 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Update documentation [vsomogyi]
+- Disable unused CSS [vsomogyi]
 - Tag cloud word break [vsomogyi]
 - Document actions removed from print styles [vsomogyi]
 - Document icons sprite removed [vsomogyi]

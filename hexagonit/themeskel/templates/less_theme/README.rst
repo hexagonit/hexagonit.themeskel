@@ -5,9 +5,25 @@ A plone.app.theming theme based on HTML5 Boilerplate and Less Css, designed to
 be the starting point for rapid theme development.
 
 
-Create a new theme with zopeskel
+Create a new theme with ZopeSkel
 ================================
-also mention updating the buildout
+To create a new theme with this ZopeSkel template, run:
+
+    ./bin/zopeskel less_theme my.theme
+
+Where my.theme is the name of your package. Answer a few questions, or just hit
+enter to get the default values. Move the new package to the src folder and edit
+your buildout to include the newly created package. In the buildout section add:
+
+    develop =
+        src/my.theme
+
+And in the instance section add:
+
+    eggs =
+        my.theme
+
+Don't forget to run the buildout after these changes.
 
 
 Package content
@@ -29,6 +45,7 @@ Package content
         * tablet - styles that are only applied to tablets
         * style.less - HTML5Boilerplate css file that includes all the other 
           less files in the appropriate places.
+        * responsive.less - styles that are for responsive design
     * index.html - main template used by plone.app.theming
     * rules.xml - rules file used by plone.app.theming
 
@@ -47,32 +64,24 @@ Less Css
 
 We are using lesscss.org for producing the final css that is used by Plone.
 This means that less is only used in the development process, and the less files
-are compiled before they are used by Plone. We are using Less.app for the
+are compiled before they are used by Plone. We are using CodeKit for the
 compiling and it needs to be set up so the output of style.less is to our css
-folder. 
+folder.
 
-Setting up less.app
--------------------
+Setting up CodeKit
+------------------
 
-Add the less folder from theme_resources to Less.app. Select /style.less and 
-set it's CSS Output Path to point to theme_resources/css. The rest of the files
-will be included in style.less, so we don't need the compiled versions of them.
-Without setting anything Less.app will put the compiled file to the same place
-where the source is, so if you don't want it to end up in the same folder, just 
-create a new folder and set it to be the output location for rest of the files.
-These files are not used anywhere, so you can freely delete them.
+Add the less folder from theme_resources to CodeKit. Select less/style.less and 
+less/response.less and set it's CSS Output Path to point to theme_resources/css. 
+Usually the output folder is set like this, so you just need to make sure this 
+is the case.
 
-After each update to the files, Less.app will recompile the edited file, but
-it won't recompile all files. In order to update the style.css which Plone is
-using, Compile All button must be clicked after editing any file.
-
-Note: Less.app will report some variable undefined errors, but that is normal,
-as it can't find the variables that are defined in other files. In the end, all
-variables and code are included in style.less, and it is crucial that this file
-successfully compile.
+After each update to the files, CodeKit will recompile style.less and
+responsive.less automatically, so just reload your page, if the server is in 
+debug mode.
 
 Important: If less files are changed in the themeskel itself, compile them, so
-in css/style.css we always have the newest code.
+in css/style.css and css/responsive.css we always have the newest code.
 
 
 Structure of less folder
@@ -82,8 +91,8 @@ The less folder holds all the css needed by Plone, so there is no need for
 additional css. We have disabled all the css that we don't need in
 profiles/default/cssregistry.xml
 
-The theme is built with responsive design principle in mind and mobile first 
-approach, so the less folder is structured in this fashion.
+The theme is built with responsive design principle in mind, so the less folder 
+is structured in this fashion.
 
 We have three major devices that we are theming for: mobile, tablet and desktop.
 All of them have a separate folder that holds all the styles that are applied
@@ -98,20 +107,19 @@ files so they use variables that are set in one location. This is something that
 we have seen before in form of base_properties.props, but this time we are doing 
 it right with less variables.
 
-All the common styles go into theme folder. This folder includes the base.less 
-and mixins.less that holds all the variables and mixins that are used in the
-other styles. Modify these values to meet your theme's needs.
+All the common styles for desktop, tablet and mobile go into theme folder. This 
+folder includes the base.less and mixins.less that holds all the variables and 
+mixins that are used in the other styles. Modify these values to meet your 
+theme's needs.
 
-The theme specific styling that cannot be set in base.less or cannot be found
-in theme/main.less, should go to theme/custom.less. If you would like to have 
-multiple files for your theme, just create a new .less file and include it to 
-init.less. All the less files are imported to the init.less files in their 
-folders, which then get imported to style.less.
+The theme specific styling that cannot be set in base.less, should go to 
+theme/custom.less. If you would like to have multiple files for your theme, just
+create a new .less file and include it to init.less. All the less files are 
+imported to the init.less files in their folders, which then get imported to 
+style.less and/or responsive.less.
 
-The mobile first approach means that we first style for mobile devices and only
-after it for other devices. This does not mean that we cannot have styles that
-are only applied to mobile devices. For this, we have the mobile folder that
-holds mobile/main-moible.less. The same goes for desktop/main-desktop.less and
+For styles that should be applied to mobile version only, we add them to 
+mobile/main-moible.less. The same goes for desktop/main-desktop.less and
 tablet/main-tablet.less.
 
 
@@ -205,10 +213,11 @@ products and we can easily update the images to suite our needs.
 Exceptions
 ----------
 
-Modernizer.js should be the only JS in the header, so it’s hard to have a rule 
-that will put it there, so we have put only this js in the index.html and it is 
-not served from Plone’s js registry. In case if the site is loaded without the 
-Diazo theme, the modernizer.js will be provided by Plone.
+Modernizer.js and Respond.js should be the only JS in the header, so it’s hard 
+to have a rule that will put it there, so we have put only these two js in the 
+index.html and it is not served from Plone’s js registry. In case if the site is
+loaded without the Diazo theme, the modernizer.js and respond.js will be 
+provided by Plone.
 
 
 Best practices (Do's and Don'ts)
@@ -241,6 +250,19 @@ to the appropriate css selector:
     .grid-position(3)
 
 This mixin will calculate the appropriate width and margin for our element.
+
+
+Fluid layouts with fixed sidebars
+---------------------------------
+Setting the width of the portal columns using the Deco grid will produce a fluid
+width of the left and right columns. In some cases we need fixed with sidebars,
+so v2 has been modified to support this feature. In base.less the width can be
+set either to fixed number of pixels, or percentages:
+
+    @sidebar-right-width: 300px; // or 25%
+    @sidebar-left-width: 200px; // or 25%
+    @sidebar-right-margin-left: 12px; // or 1.125%
+    @sidebar-left-margin-left: 12px; // or 1.125%
 
 
 Centering a fixed width body
@@ -427,13 +449,9 @@ Add the value of the parameter to a class attribute:
     <xsl:attribute name="class">$tabletleftcolumndown</xsl:attribute>
 
 
-Modifying theme or content on the fly
--------------------------------------
-TODO: write this!
-
-
 Rich drop-down-style menu
 -------------------------
+(Note: this plugin has been moved to hexagonit.primacontrol!)
 For themes that require a drop-down-style menu, we have created a jQuery plugin
 (jquery.richmenu.js) that holds all the JavaScript that is needed for the
 functionality of the menu. By default this JS file is not enabled in the 
@@ -481,12 +499,22 @@ the script.js would look like this:
 
     $('#portal-globalnav').richmenu({mobileRichMenu: 0});
 
+The triggering of the rich menu can be set by passing it as a parameter (click,
+mouseenter, ...):
+
+    $('#portal-globalnav').richmenu({triger: 'click'});
+
+Also the open and close delay amount can be set:
+
+    $('#portal-globalnav').richmenu({openDelay: 0, closeDelay: 500});
+
 Styling and content of the dropdown is theme specific, so it is not part of the
 theme skeleton.
 
 
 Portlet Overlay
 ---------------
+(Note: this plugin has been moved to hexagonit.primacontrol!)
 Adding and editing portlets within an overlay. The JS can be found in the 
 theme_resources/javascript/libs folder and it is registered in JS registry. 
 By default it is not enabled, so if needed, go to 
@@ -496,6 +524,7 @@ for the entry that has portletoverlay.js in its ID.
 
 Description Tooltip
 -------------------
+(Note: this plugin has been moved to hexagonit.primacontrol!)
 The form help texts can be long ones and they take up too much vertical space,
 so this library removes them, adds a help icon and on click, the help text is 
 displayed in a tooltip.
