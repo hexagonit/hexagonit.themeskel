@@ -1179,6 +1179,9 @@ dl.portletNavigationTree dd.portletItem {
 .cloud7 {
   font-size: 2.0em;
 }
+.portletTagCloudPortlet {
+  word-wrap: break-word;
+}
 /* @end */
 /* @group Content Area */
 #content {
@@ -1333,118 +1336,6 @@ dl.portletNavigationTree dd.portletItem {
   .documentActions {
     margin-top: 0;
   }
-}
-#document-action-print a {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -129px;
-}
-#document-action-sendto a {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -105px;
-}
-#document-action-text-larger {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -32px;
-}
-#document-action-text-smaller {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -56px;
-}
-#document-action-print {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -129px;
-}
-#document-action-sendto {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -105px;
-}
-#document-action-share {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -152px;
-  width: 19px;
-}
-#document-action-jaa {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -173px;
-  width: 35px;
-}
-#document-action-personal {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -200px;
-}
-#document-action-info {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -226px;
-}
-#document-action-rate {
-  background: transparent url('../images/icon_sprite.png') no-repeat;
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  background-position: -6px -251px;
 }
 #category {
   font-size: 13px;
@@ -3441,5 +3332,8 @@ div.overlaybg div.close {
   }
   #portal-column-content {
     width: 100%;
+  }
+  .documentActions {
+    display: none;
   }
 }

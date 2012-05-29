@@ -4,11 +4,10 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Tag cloud word break [vsomogyi]
+- Document actions removed from print styles [vsomogyi]
+- Document icons sprite removed [vsomogyi]
 - Fixed width sidebar option added [vsomogyi]
-
-1.0.2 (2012-05-XX)
-------------------
-
 - User search styling, z-index fixes, main.less sync [vsomogyi]
 
 1.0.1 (2012-05-14)
