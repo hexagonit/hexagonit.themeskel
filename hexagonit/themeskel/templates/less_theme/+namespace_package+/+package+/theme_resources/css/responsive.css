@@ -62,6 +62,38 @@
   .tablet-left-down #portal-column-one .managePortletsLink {
     clear: both;
   }
+  .sidebars-right .tablet-right-down #portal-column-wrapper {
+    margin-left: 0;
+    margin-right: 212px;
+  }
+  .sidebars-right .tablet-right-down #portal-column-main {
+    margin-right: -212px;
+  }
+  .sidebars-right .tablet-left-down #portal-column-wrapper {
+    margin-left: 0;
+    margin-right: 312px;
+  }
+  .sidebars-right .tablet-left-down #portal-column-main {
+    margin-right: -312px;
+  }
+  .sidebars-right .tablet-left-down #portal-column-two {
+    margin-left: 12px;
+  }
+  .sidebars-right .no-right-column .tablet-left-down #portal-column-wrapper {
+    margin-right: 0;
+  }
+  .sidebars-right .no-right-column .tablet-left-down #portal-column-main {
+    margin-right: 0;
+  }
+  .sidebars-right .no-right-column .tablet-left-down #portal-column-one {
+    margin-left: 0;
+  }
+  .sidebars-right .no-left-column .tablet-right-down #portal-column-wrapper {
+    margin-right: 0;
+  }
+  .sidebars-right .no-left-column .tablet-right-down #portal-column-main {
+    margin-right: 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   body,
@@ -77,11 +109,11 @@
     width: 100%;
   }
   #portal-column-main {
-    margin-right: 0;
+    margin-right: 0!important;
   }
   #portal-column-wrapper {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 0!important;
+    margin-left: 0!important;
   }
   #portal-column-one {
     margin-left: 0!important;

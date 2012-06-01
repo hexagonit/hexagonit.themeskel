@@ -88,28 +88,37 @@
         <!-- Drop class attribute from portal-column-one/two -->
         <drop attributes="class" css:content="#portal-column-one" />
         <drop attributes="class" css:content="#portal-column-two" />
-        
+
+        <!-- Both of the sidebars on the right marker -->
+        <rules if="$sidebarsright">
+            <prepend css:theme="#main">
+                <xsl:attribute name="class">clearfix sidebars-right</xsl:attribute>
+            </prepend>
+        </rules>
+
         <!-- No right column marker -->
         <rules if-content="not(//div[@id='portal-column-two'])">
-            <prepend css:theme="#portal-columns">
-                <xsl:attribute name="class">row no-right-column</xsl:attribute>
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">no-right-column</xsl:attribute>
             </prepend>
+            <drop css:theme="#portal-column-two" />
         </rules>
 
         <!-- No left column marker -->
         <rules if-content="not(//div[@id='portal-column-one'])">
-            <prepend css:theme="#portal-columns">
-                <xsl:attribute name="class">row no-left-column</xsl:attribute>
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">no-left-column</xsl:attribute>
             </prepend>
             <drop css:theme="#portal-column-one" />
         </rules>
 
         <!-- No left and right column marker -->
         <rules if-content="not(//div[@id='portal-column-one']) and not(//div[@id='portal-column-two'])">
-            <prepend css:theme="#portal-columns">
-                <xsl:attribute name="class">row no-right-column no-left-column</xsl:attribute>
+            <prepend css:theme="#visual-portal-wrapper">
+                <xsl:attribute name="class">no-right-column no-left-column</xsl:attribute>
             </prepend>
             <drop css:theme="#portal-column-one" />
+            <drop css:theme="#portal-column-two" />
         </rules>
 
 
@@ -121,8 +130,8 @@
             <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
 
             <!-- Mark the wrapper which column goes down in tablet -->
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-left-down</xsl:attribute>
+            <prepend css:theme="#portal-columns">
+                <xsl:attribute name="class">row tablet-left-down</xsl:attribute>
             </prepend>
         </rules>
 
@@ -133,8 +142,8 @@
             <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
 
             <!-- Mark the wrapper which column goes down in tablet -->
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-right-down</xsl:attribute>
+            <prepend css:theme="#portal-columns">
+                <xsl:attribute name="class">row tablet-right-down</xsl:attribute>
             </prepend>
         </rules>
 

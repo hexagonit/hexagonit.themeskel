@@ -47,6 +47,66 @@
     .no-left-sidebar();
 }
 
+// Page layout: CCCCC | SS | SS,  C - content, S - sidebar
+.sidebars-right {
+    #portal-column-wrapper {
+        margin-left: 0;
+        margin-right: @sidebar-right-width + @sidebar-left-width + @sidebar-right-margin-left + @sidebar-left-margin-left;
+    }
+    #portal-column-main {
+        margin-right: -(@sidebar-right-width + @sidebar-left-width + @sidebar-right-margin-left + @sidebar-left-margin-left);
+    }
+    #portal-column-one {
+        margin-left: @sidebar-left-margin-left;
+        padding-left: 0;
+    }
+    
+    // Switch the position of the sidebars when left sidebar is moved down
+    .tablet-left-down {
+        #portal-column-one {
+            margin-left: -(@sidebar-right-width + @sidebar-left-width + @sidebar-right-margin-left);
+        }
+        #portal-column-two {
+            margin-left: @sidebar-left-width + @sidebar-left-margin-left + @sidebar-right-margin-left;
+        }
+    }
+    
+    // No right column
+    .no-right-column {
+        #portal-column-wrapper {
+            margin-right: @sidebar-left-width + @sidebar-left-margin-left;
+        }
+        #portal-column-main {
+            margin-right: -(@sidebar-left-width + @sidebar-left-margin-left);
+        }
+        #portal-column-one {
+            margin-left: @sidebar-left-margin-left;
+        }
+    }
+    
+    // No left column
+    .no-left-column {
+        #portal-column-wrapper {
+            margin-right: @sidebar-right-width + @sidebar-right-margin-left;
+        }
+        #portal-column-main {
+            margin-right: -(@sidebar-right-width + @sidebar-right-margin-left);
+        }
+        #portal-column-two {
+            margin-left: @sidebar-right-margin-left;
+        }
+    }
+    
+    .no-right-column.no-left-column {
+        #portal-column-wrapper {
+            margin-right: 0;
+        }
+        #portal-column-main {
+            margin-right: 0;
+        }
+    }
+}
+
 // The 16-column Deco Grid System. 
 // For the 12-column variant, see decogrids-12.css.
 // 

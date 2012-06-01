@@ -377,6 +377,47 @@ td {
 .no-left-column #portal-column-wrapper {
   margin-left: 0;
 }
+.sidebars-right #portal-column-wrapper {
+  margin-left: 0;
+  margin-right: 524px;
+}
+.sidebars-right #portal-column-main {
+  margin-right: -524px;
+}
+.sidebars-right #portal-column-one {
+  margin-left: 12px;
+  padding-left: 0;
+}
+.sidebars-right .tablet-left-down #portal-column-one {
+  margin-left: -512px;
+}
+.sidebars-right .tablet-left-down #portal-column-two {
+  margin-left: 224px;
+}
+.sidebars-right .no-right-column #portal-column-wrapper {
+  margin-right: 212px;
+}
+.sidebars-right .no-right-column #portal-column-main {
+  margin-right: -212px;
+}
+.sidebars-right .no-right-column #portal-column-one {
+  margin-left: 12px;
+}
+.sidebars-right .no-left-column #portal-column-wrapper {
+  margin-right: 312px;
+}
+.sidebars-right .no-left-column #portal-column-main {
+  margin-right: -312px;
+}
+.sidebars-right .no-left-column #portal-column-two {
+  margin-left: 12px;
+}
+.sidebars-right .no-right-column.no-left-column #portal-column-wrapper {
+  margin-right: 0;
+}
+.sidebars-right .no-right-column.no-left-column #portal-column-main {
+  margin-right: 0;
+}
 div.row {
   float: left;
   width: 100%;

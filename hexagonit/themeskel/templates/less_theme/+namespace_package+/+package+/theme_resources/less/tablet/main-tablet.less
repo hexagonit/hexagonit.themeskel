@@ -17,7 +17,6 @@
             
             .portlets-in-columns(@tablet-sidebar-column-count, @tablet-sidebar-column-gap);
         }
-        
     }
 
 
@@ -36,6 +35,58 @@
             
             .portlets-in-columns(@tablet-sidebar-column-count, @tablet-sidebar-column-gap);
         }
+    }
+
+
+    // Both of the sidebars are on the right
+    .sidebars-right {
+        .tablet-right-down {
+            #portal-column-wrapper {
+                margin-left: 0;
+                margin-right: @sidebar-left-width + @sidebar-left-margin-left;
+            }
+            #portal-column-main {
+                margin-right: -(@sidebar-left-width + @sidebar-left-margin-left);
+            }
+        }
+        .tablet-left-down {
+            #portal-column-wrapper {
+                margin-left: 0;
+                margin-right: @sidebar-right-width + @sidebar-right-margin-left;
+            }
+            #portal-column-main {
+                margin-right: -(@sidebar-right-width + @sidebar-right-margin-left);
+            }
+            #portal-column-two {
+                margin-left: @sidebar-right-margin-left;
+            }
+        }
         
+        // No right column
+        .no-right-column {
+            .tablet-left-down {
+                #portal-column-wrapper {
+                    margin-right: 0;
+                }
+                #portal-column-main {
+                    margin-right: 0;
+                }
+                #portal-column-one {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        // No left column
+        .no-left-column {
+            .tablet-right-down {
+                #portal-column-wrapper {
+                    margin-right: 0;
+                }
+                #portal-column-main {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

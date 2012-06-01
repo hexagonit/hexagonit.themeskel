@@ -5,3 +5,4 @@ doctype = <!doctype html>
 
 [theme:parameters]
 tabletleftcolumndown = python: True
+sidebarsright = python: False
