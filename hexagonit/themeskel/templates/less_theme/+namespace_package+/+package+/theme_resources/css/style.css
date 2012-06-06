@@ -2425,6 +2425,13 @@ fieldset,
   font-size: 16px;
   font-weight: bold;
 }
+.ArchetypesMultiSelectionValue label,
+.ArchetypesSelectionWidget label {
+  margin-left: 4px;
+}
+.radio-widget {
+  margin-right: 4px;
+}
 div.formControls {
   margin: 1em;
 }

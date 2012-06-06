@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Padding between the radio button/checkbox and the label added [vsomogyi]
 - Tablet mode - display moved column in columns [vsomogyi]
 - Update documentation [vsomogyi]
 - Disable unused CSS [vsomogyi]
