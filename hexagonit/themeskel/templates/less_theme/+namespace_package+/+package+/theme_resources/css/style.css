@@ -892,6 +892,7 @@ input.searchField {
 #portal-breadcrumbs a {
   border-bottom: none;
   display: inline-block;
+  margin-right: 1px;
 }
 /* @end */
 /* @group Site actions */
@@ -978,6 +979,7 @@ dl.portlet.portletRss .portletItemDetails,
 dl.portlet.portletNews .portletItemDetails,
 dl.portlet.portletRecent .portletItemDetails,
 dl.portlet.portletCollection .portletItemDetails,
+dl.portlet.portletEventList .portletItemDetails,
 dl.portlet.portletPloneboardRecent .portletItemDetails {
   display: inline;
   color: #888888 !important;
@@ -987,6 +989,7 @@ dl.portlet.portletRss .portletFooter,
 dl.portlet.portletNews .portletFooter,
 dl.portlet.portletRecent .portletFooter,
 dl.portlet.portletCollection .portletFooter,
+dl.portlet.portletEventList .portletFooter,
 dl.portlet.portletPloneboardRecent .portletFooter {
   text-align: right;
 }
