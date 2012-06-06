@@ -122,23 +122,18 @@ For styles that should be applied to mobile version only, we add them to
 mobile/main-moible.less. The same goes for desktop/main-desktop.less and
 tablet/main-tablet.less.
 
+The media queries have been moved out from style.less to responsive.less to have
+clear separation of the styles. Also this was done because of a bug that was
+present in Internet Explorer 9. When the rich text editor is initialized, it
+picks up all the css from portal css and puts it in the iframe that contains
+the editor. This way the media queries were picked up too, and their presence in
+multiple places on one page caused IE9 to flicker between mobile-tablet-desktop
+mode. To prevent this, the css that holds the media queries have been moved
+outside of portal css and it's included directly in index.html.
 
 Note: Lessification of theme/main.less is not finished yet, so there still
 might be some styles that are not converted to variables and included in 
 base.less.
-
-
-Deco Grid System
-================
-We are using the Deco Grid System that comes with plone. The size of the
-columns and gutters are set in percentages: 
-column width - 4%
-margin left/right - 1.125%
-
-Here are some recommended sizes (page width / column width / left/right margin):
-Desktop: 1088px / 44px / 12px - (http://gridcalculator.dk/#/1088/16/24/12)
-Tablet:   800px / 32px /  9px - (http://gridcalculator.dk/#/800/16/18/9)
-Mobile:   480px / 20px /  5px - (http://gridcalculator.dk/#/480/16/10/5)
 
 
 Javascript
@@ -220,6 +215,37 @@ loaded without the Diazo theme, the modernizer.js and respond.js will be
 provided by Plone.
 
 
+Layout
+======
+
+The layout is constructed with responsive design in mind, and it can have from 1
+to 3 columns.
+Setting the width of the portal columns using the Deco grid will produce a fluid
+width of the left and right columns. In some cases we need fixed with sidebars,
+so v2 has been modified to support this feature. In base.less the width can be
+set either to fixed number of pixels, or percentages:
+
+    @sidebar-right-width: 300px; // or 25%
+    @sidebar-left-width: 200px; // or 25%
+    @sidebar-right-margin-left: 12px; // or 1.125%
+    @sidebar-left-margin-left: 12px; // or 1.125%
+
+
+Deco Grid System
+================
+
+We are using the Deco Grid System that comes with Plone for the content column.
+The size of the columns and gutters are set in percentages: 
+column width - 4%
+margin left/right - 1.125%
+
+Here are some recommended sizes (page width / column width / left/right margin):
+Desktop: 1088px / 44px / 12px - (http://gridcalculator.dk/#/1088/16/24/12)
+Tablet:   800px / 32px /  9px - (http://gridcalculator.dk/#/800/16/18/9)
+Mobile:   480px / 20px /  5px - (http://gridcalculator.dk/#/480/16/10/5)
+
+
+
 Best practices (Do's and Don'ts)
 ================================
 
@@ -250,19 +276,6 @@ to the appropriate css selector:
     .grid-position(3)
 
 This mixin will calculate the appropriate width and margin for our element.
-
-
-Fluid layouts with fixed sidebars
----------------------------------
-Setting the width of the portal columns using the Deco grid will produce a fluid
-width of the left and right columns. In some cases we need fixed with sidebars,
-so v2 has been modified to support this feature. In base.less the width can be
-set either to fixed number of pixels, or percentages:
-
-    @sidebar-right-width: 300px; // or 25%
-    @sidebar-left-width: 200px; // or 25%
-    @sidebar-right-margin-left: 12px; // or 1.125%
-    @sidebar-left-margin-left: 12px; // or 1.125%
 
 
 Centering a fixed width body
