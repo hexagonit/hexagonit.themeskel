@@ -2432,7 +2432,9 @@ fieldset,
 .ArchetypesSelectionWidget label {
   margin-left: 4px;
 }
-.radio-widget {
+.radio-widget,
+.baseLayersDiv input,
+.dataLayersDiv input {
   margin-right: 4px;
 }
 div.formControls {
