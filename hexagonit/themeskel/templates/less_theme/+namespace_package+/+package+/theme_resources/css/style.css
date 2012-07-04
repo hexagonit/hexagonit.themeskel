@@ -985,6 +985,22 @@ dl.portlet.portletPloneboardRecent .portletItemDetails {
   color: #888888 !important;
   font-size: 12px;
 }
+dl.portlet.portletRss .portletHeader,
+dl.portlet.portletNews .portletHeader,
+dl.portlet.portletRecent .portletHeader,
+dl.portlet.portletCollection .portletHeader,
+dl.portlet.portletEventList .portletHeader,
+dl.portlet.portletPloneboardRecent .portletHeader {
+  margin-bottom: 13px;
+}
+dl.portlet.portletRss .portletItem,
+dl.portlet.portletNews .portletItem,
+dl.portlet.portletRecent .portletItem,
+dl.portlet.portletCollection .portletItem,
+dl.portlet.portletEventList .portletItem,
+dl.portlet.portletPloneboardRecent .portletItem {
+  padding: 5px 13px;
+}
 dl.portlet.portletRss .portletFooter,
 dl.portlet.portletNews .portletFooter,
 dl.portlet.portletRecent .portletFooter,
