@@ -134,3 +134,32 @@
     // For a given position, the calculation is margin-left: -100 + (6.25*n) + 1.125
     margin-left: -100 + (@grid-column-width + 2 * @grid-column-gutter) * @column + @grid-column-gutter;
 }
+
+
+// Portlet styles
+.portlet-style(@header-color, @header-bg, @bg, @color, @link-color) {
+    &.portlet {
+        background: @bg;
+    }
+    
+    .portletHeader {
+        background: @header-bg;
+        color: @header-color;
+        position: relative;
+        
+        a, a:hover, a:link, a:active, a:visited {
+            color: @header-color!important;
+        }
+    }
+    
+    .portletItem {
+        p {
+            color: @color;
+            margin: 0;
+        }
+    }
+
+    a, a:hover, a:link, a:active, a:visited {
+        color: @link-color!important;
+    }
+}

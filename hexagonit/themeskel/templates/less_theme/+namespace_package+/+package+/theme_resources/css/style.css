@@ -576,6 +576,11 @@ body {
   margin: 0;
   width: 100%;
 }
+#portal-header,
+#visual-portal-wrapper,
+#footer-colophon {
+  margin: 0 13px;
+}
 h1,
 h2,
 h3,
@@ -705,6 +710,7 @@ dd {
   border-right: 0;
   color: #000000 !important;
   display: inline-block;
+  font-weight: bold;
   padding: 1em;
   background: #dddddd;
   min-width: auto;
@@ -744,8 +750,12 @@ dd {
   -moz-border-radius-bottomleft: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
 }
-#portal-personaltools a {
-  color: #205c90;
+#portal-personaltools a,
+#portal-personaltools a:link,
+#portal-personaltools a:hover,
+#portal-personaltools a:active,
+#portal-personaltools a:visited {
+  color: #205c90 !important;
 }
 #portal-personaltools #anon-personalbar a {
   float: left;
@@ -891,8 +901,18 @@ input.searchField {
 }
 #portal-breadcrumbs a {
   border-bottom: none;
+  color: #999999 !important;
   display: inline-block;
   margin-right: 1px;
+}
+#portal-breadcrumbs a:hover {
+  color: #000000 !important;
+}
+#portal-breadcrumbs .breadcrumbSeparator {
+  color: #999999;
+}
+#portal-breadcrumbs #breadcrumbs-current {
+  color: #bc231b;
 }
 /* @end */
 /* @group Site actions */
@@ -936,11 +956,12 @@ dl.portlet dt {
   padding: 0.42em 1em;
   background: #dddddd;
   line-height: normal;
+  text-transform: uppercase;
 }
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-  color: #000000;
+  color: #000000 !important;
   display: block;
   border: none;
 }
@@ -1021,12 +1042,17 @@ div.portletAssignments {
   line-height: 2em;
 }
 div.portletAssignments div.portletHeader {
-  color: #000000;
+  color: #205c90;
   padding: 0.42em 1em;
   background: #dddddd;
   line-height: normal;
 }
-div.portletAssignments div.portletHeader a {
+div.portletAssignments div.portletHeader a,
+div.portletAssignments div.portletHeader a:hover,
+div.portletAssignments div.portletHeader a:active,
+div.portletAssignments div.portletHeader a:link,
+div.portletAssignments div.portletHeader a:visited {
+  color: #205c90 !important;
   text-decoration: none;
 }
 div.portletAssignments .managedPortletActions {
@@ -1061,6 +1087,25 @@ a.managePortletsFallback {
   border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
+}
+div.managePortletsLink a,
+a.managePortletsFallback a,
+div.managePortletsLink a:active,
+a.managePortletsFallback a:active,
+div.managePortletsLink a:hover,
+a.managePortletsFallback a:hover,
+div.managePortletsLink a:visited,
+a.managePortletsFallback a:visited,
+div.managePortletsLink a:link,
+a.managePortletsFallback a:link {
+  color: #205c90 !important;
+}
+a.managePortletsFallback,
+a:active.managePortletsFallback,
+a:hover.managePortletsFallback,
+a:visited.managePortletsFallback,
+a:link.managePortletsFallback {
+  color: #205c90 !important;
 }
 a.managePortletsFallback {
   display: inline-block;
@@ -1171,6 +1216,7 @@ a.managePortletsFallback {
 /* @end */
 /* @group Navigation portlet */
 dl.portlet ul.navTree li a {
+  color: #205c90 !important;
   background: none;
   border: none;
   display: block;
@@ -1186,11 +1232,11 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
   border-bottom: 0.1em dotted #dddddd;
-  line-height: 2;
+  line-height: 1.5;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem {
   padding-left: 12px !important;
-  line-height: 2;
+  line-height: 1.5;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem a {
   background: transparent url('../images/minus.gif') no-repeat 0 13px;
@@ -1391,6 +1437,9 @@ dl.portletNavigationTree dd.portletItem {
 }
 .documentActions li {
   display: inline!important;
+}
+.documentActions li a {
+  border-bottom: 0!important;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .documentActions {

@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- New variables added for easier styling [vsomogyi]
 - Listing portlet padding fix [vsomogyi]
 - Openmaps radio/checkbox padding [vsomogyi]
 - Event portlet date style [vsomogyi]

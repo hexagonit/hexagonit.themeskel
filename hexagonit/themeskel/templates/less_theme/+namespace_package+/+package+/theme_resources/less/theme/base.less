@@ -50,6 +50,7 @@
 @SiteActions-font-size: @font-size-small;
 @Breadcrumbs-font-size: @font-size-small;
 @Portlet-font-size: @font-size-small;
+@Portlet-header-font-size: @font-size-medium;
 @Portlet-managePortlets-font-size: @font-size-small;
 @Portlet-ItemDetails-font-size: @font-size-small;
 @PortletAssignments-font-size: @font-size-small;
@@ -113,8 +114,10 @@
 @body-font-color: #000;
 
 @container-background: #FFF;
+@container-margin: 0 13px;
 
 @EditBar-default-color: #DDD;
+@EditBar-link-color: @link-color;
 
 // body - desktop only
 @desktop-body-max-width: 1088px;
@@ -160,6 +163,7 @@
 @menu-item-border-left: 0;
 @menu-item-border-right: 0;
 @menu-item-color: #000;
+@menu-item-font-weight: bold;
 @menu-item-min-width: auto;
 @menu-item-padding: 1em;
 @menu-item-hover-background: #000;
@@ -180,8 +184,8 @@
 @Personaltools-margin: 0;
 @Personaltools-line-height: 2em;
 @Personaltools-hover-background: lighten(@EditBar-default-color, 30%);
-@Personaltools-hover-color: @link-hover-color;
-@Personaltools-link-color: @link-color;
+@Personaltools-hover-color: @EditBar-link-color;
+@Personaltools-link-color: @EditBar-link-color;
 
 
 // Language Selector
@@ -225,6 +229,7 @@
 @Portlet-header-background: @EditBar-default-color;
 @Portlet-header-color: #000;
 @Portlet-header-line-height: normal;
+@Portlet-header-text-transform: uppercase;
 @Portlet-item-padding: 1em;
 @Portlet-link-color: @content-link-color;
 @Portlet-link-border-bottom: @content-link-boerder-bottom;
@@ -235,6 +240,7 @@
 @Portlet-error-background: #FFA500;
 @Portlet-prefs-link-line-height: 2em;
 @Portlet-managePortlets-background: @EditBar-default-color;
+@Portlet-managePortlets-color: @EditBar-link-color;
 @Portlet-blockedPortlet-background: none repeat scroll 0 0 transparent;
 @Portlet-blockedPortlet-border: 1px dashed #DDDDDD;
 @Portlet-blockedPortlet-color: #666666;
@@ -252,14 +258,25 @@
 @Portlet-Calendar-line-height: 1.6em;
 @Portlet-Calendar-font-weight: bold;
 @Portlet-ItemDetails-line-height: 1.5em;
+@Portlet-Navigation-color: @link-color;
+@Portlet-Navigation-font-weight: normal;
+@Portlet-Navigation-item-padding: 5px 0;
 @Portlet-Navigation-currentItem-background: #ddd;
 @Portlet-Navigation-currentItem-color: #fff;
+@Portlet-Navigation-currentItem-font-weight: bold;
 @Portlet-Navigation-Level0-padding: 0 0 0 5px;
 @Portlet-Navigation-Level0-border-bottom: 0.1em dotted #ddd;
-@Portlet-Navigation-Level0-line-height: 2;
+@Portlet-Navigation-Level0-line-height: 1.5;
 @Portlet-Navigation-Level1-padding-left: 12px;
-@Portlet-Navigation-Level1-line-height: 2;
+@Portlet-Navigation-Level1-line-height: 1.5;
 @PortletAssignments-line-height: 2em;
+
+
+// Breadcrumbs
+@breadcrumbs-link-color: #999999;
+@breadcrumbs-link-hover-color: #000;
+@breadcrumbs-separator-color: #999;
+@breadcrumbs-current-color: #BC231B;
 
 
 // Content

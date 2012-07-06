@@ -16,6 +16,12 @@ body {
     width: @body-width;
 }
 
+#portal-header,
+#visual-portal-wrapper,
+#footer-colophon {
+    margin: @container-margin;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: @heading-font-family;
     font-weight: @heading-font-weight;
@@ -140,6 +146,7 @@ dd { margin: 0; }
             border-right: @menu-item-border-right;
             color: @menu-item-color!important;
             display: inline-block;
+            font-weight: @menu-item-font-weight;
             padding: @menu-item-padding;
             background: @menu-item-background;
             min-width: @menu-item-min-width;
@@ -177,8 +184,8 @@ dd { margin: 0; }
     font-size: @Personaltools-font-size;
     .rounded-corners-bottom(0.5em);
     
-    a {
-        color: @Personaltools-link-color;
+    a, a:link, a:hover, a:active, a:visited {
+        color: @Personaltools-link-color!important;
     }
     
     #anon-personalbar a {
@@ -345,8 +352,19 @@ input.searchField {
     
     a {
         border-bottom: none;
+        color: @breadcrumbs-link-color!important;
         display: inline-block;
         margin-right: 1px;
+        
+        &:hover {
+            color: @breadcrumbs-link-hover-color!important;
+        }
+    }
+    .breadcrumbSeparator {
+        color: @breadcrumbs-separator-color;
+    }
+    #breadcrumbs-current {
+        color: @breadcrumbs-current-color;
     }
 }
 
@@ -412,11 +430,13 @@ dl {
             padding: 0.42em 1em;
             background: @Portlet-header-background;
             line-height: @Portlet-header-line-height;
+            text-transform: @Portlet-header-text-transform;
+
             a {
                 &:link,
                 &:visited,
                 &:hover {
-                   color: @Portlet-header-color;
+                   color: @Portlet-header-color!important;
                    display: block;
                    border: none;
                 }
@@ -489,12 +509,13 @@ dl {
 
 div.portletAssignments {
     div.portletHeader {
-        color: @Portlet-header-color;
+        color: @EditBar-link-color;
         padding: 0.42em 1em;
-        background: @Portlet-header-background;
+        background: @EditBar-default-color;
         line-height: @Portlet-header-line-height;
         
-        a {
+        a, a:hover, a:active, a:link, a:visited {
+            color: @EditBar-link-color!important;
             text-decoration: none;
         }
     }
@@ -540,6 +561,16 @@ a.managePortletsFallback {
     margin: 0 auto 1em;
     background: @Portlet-managePortlets-background;
     .rounded-corners(0.5em);
+    
+    a, a:active, a:hover, a:visited, a:link {
+        color: @Portlet-managePortlets-color!important;
+    }
+}
+
+a, a:active, a:hover, a:visited, a:link {
+    &.managePortletsFallback {
+        color: @Portlet-managePortlets-color!important;
+    }
 }
 
 a.managePortletsFallback {
@@ -671,6 +702,7 @@ a.managePortletsFallback {
 dl.portlet ul {
     &.navTree {
         li a {
+            color: @Portlet-Navigation-color!important;
             background: none;
             border: none;
             display: block;
@@ -914,6 +946,10 @@ dl.portletNavigationTree dd.portletItem {
 
     li {
         display:inline!important;
+        
+        a {
+            border-bottom: 0!important;
+        }
     }
 }
 // webkit only hack
