@@ -718,19 +718,27 @@ dl.portlet ul {
             color: @Portlet-Navigation-currentItem-color!important;
         }
     }
+    .navTreeItem {
+        padding: @Portlet-Navigation-item-padding;
+    }
     &.navTreeLevel0 > .navTreeItem {
         border-bottom: @Portlet-Navigation-Level0-border-bottom;
         line-height: @Portlet-Navigation-Level0-line-height;
+        font-size: @Portlet-Navigation-Level0-font-size;
+        text-transform: @Portlet-Navigation-Level0-text-transform;
     }
     &.navTreeLevel1 .navTreeItem {
-        padding-left: @Portlet-Navigation-Level1-padding-left!important;
+        padding: @Portlet-Navigation-Level1-padding!important;
         line-height: @Portlet-Navigation-Level1-line-height;
+        font-size: @Portlet-Navigation-Level1-font-size;
+        text-transform: @Portlet-Navigation-Level1-text-transform;
+        font-size: @Portlet-Navigation-Level1-font-size;
         
         a {
-            background: transparent url('../images/minus.gif') no-repeat 0 13px;
+            background: transparent url('../images/minus.gif') no-repeat 0 8px;
             margin-left:5px;
             border-left:none;
-            padding-left: @Portlet-Navigation-Level1-padding-left !important;
+            padding-left: 12px !important;
         }
     }
 }
@@ -2979,3 +2987,28 @@ div.overlaybg div.close {
 }
 
 /* @end */
+
+
+// Style fixes for CHOSEN
+.chzn-container-multi {
+    .chzn-choices {
+        margin-left: 0!important;
+        
+        .search-choice,
+        .search-field {
+            line-height: 1!important;
+            margin-bottom: 0!important;
+        }
+    }
+    .chzn-choices,
+    .chzn-results {
+        margin: -1px 0 0 !important;
+    }
+    .chzn-drop .result-selected {
+        display: none !important;
+    }
+    .chzn-results li {
+        line-height: 1!important;
+        margin-bottom: 0!important;
+    }
+}

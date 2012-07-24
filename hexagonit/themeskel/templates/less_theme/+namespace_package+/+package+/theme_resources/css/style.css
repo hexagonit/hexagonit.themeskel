@@ -1230,16 +1230,24 @@ dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
   color: #ffffff !important;
 }
+dl.portlet ul .navTreeItem {
+  padding: 5px 0;
+}
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
   border-bottom: 0.1em dotted #dddddd;
   line-height: 1.5;
+  font-size: 13px;
+  text-transform: none;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-  padding-left: 12px !important;
+  padding: 3px 0 3px 12px !important;
   line-height: 1.5;
+  font-size: 12px;
+  text-transform: none;
+  font-size: 12px;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem a {
-  background: transparent url('../images/minus.gif') no-repeat 0 13px;
+  background: transparent url('../images/minus.gif') no-repeat 0 8px;
   margin-left: 5px;
   border-left: none;
   padding-left: 12px !important;
@@ -3170,7 +3178,27 @@ div.overlaybg div.close {
 .ie7 .optionsBox input {
   margin: 0px;
 }
-/* @end */#content div.documentByLine {
+/* @end */
+.chzn-container-multi .chzn-choices {
+  margin-left: 0!important;
+}
+.chzn-container-multi .chzn-choices .search-choice,
+.chzn-container-multi .chzn-choices .search-field {
+  line-height: 1!important;
+  margin-bottom: 0!important;
+}
+.chzn-container-multi .chzn-choices,
+.chzn-container-multi .chzn-results {
+  margin: -1px 0 0 !important;
+}
+.chzn-container-multi .chzn-drop .result-selected {
+  display: none !important;
+}
+.chzn-container-multi .chzn-results li {
+  line-height: 1!important;
+  margin-bottom: 0!important;
+}
+#content div.documentByLine {
   clear: both;
   margin-top: 15px;
   text-align: center;

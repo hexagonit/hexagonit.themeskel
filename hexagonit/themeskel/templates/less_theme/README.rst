@@ -357,12 +357,10 @@ Move breadcrumbs outside of the content column
 ----------------------------------------------
 If you need to move a subelement of an element that is copied by another rule,
 then you just can't drop it and append it to another place, but you have to drop
-it and use xsl rule to include it in the other location:
+it and use method="raw" to include it in the other location:
 
     <drop css:content="#portal-breadcrumbs"/> 
-    <replace css:theme="#portal-breadcrumbs">
-        <xsl:copy-of css:select="#portal-breadcrumbs"/>
-    </replace>
+    <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
 
 
 Fix for IE7 hasLayout bug
