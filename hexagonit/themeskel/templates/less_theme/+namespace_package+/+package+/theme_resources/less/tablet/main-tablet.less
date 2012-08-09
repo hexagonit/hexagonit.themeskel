@@ -5,16 +5,16 @@
     // MOVE RIGHT COLUMN DOWN
     // Set the content column to use the width of the column that was moved down
     .tablet-right-down {
-        
+
         .no-right-sidebar();
-        
+
         // Move the right column down and use the whole width
-        #portal-column-two { 
+        #portal-column-two {
             float: none!important;
             clear: both;
             margin-left: 0;
             width: 100%;
-            
+
             .portlets-in-columns(@tablet-sidebar-column-count, @tablet-sidebar-column-gap);
         }
     }
@@ -23,16 +23,16 @@
     // MOVE LEFT COLUMN DOWN
     // Set the content column to use the width of the column that was moved down
     .tablet-left-down {
-        
+
         .no-left-sidebar();
-        
+
         // Move the left column down and use the whole width
-        #portal-column-one { 
+        #portal-column-one {
             float: none!important;
             clear: both;
             margin-left: 0;
             width: 100%;
-            
+
             .portlets-in-columns(@tablet-sidebar-column-count, @tablet-sidebar-column-gap);
         }
     }
@@ -61,7 +61,7 @@
                 margin-left: @sidebar-right-margin-left;
             }
         }
-        
+
         // No right column
         .no-right-column {
             .tablet-left-down {
