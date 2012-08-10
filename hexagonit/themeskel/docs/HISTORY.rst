@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Dropdown menu positioning fixes [vsomogyi]
 - Navigation portlet styling variables added [vsomogyi]
 - New variables added for easier styling [vsomogyi]
 - Listing portlet padding fix [vsomogyi]
