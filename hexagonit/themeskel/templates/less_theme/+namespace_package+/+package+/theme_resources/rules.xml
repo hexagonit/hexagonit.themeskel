@@ -41,22 +41,28 @@
         <!-- Copy script tags in the order they appear in the content but place
              them at the bottom of the theme. -->
         <before
-            css:content="head > script"
+            content="//head//script[not(contains(@src, 'recaptcha'))]"
             css:theme="#javascript_at_bottom"
+            />
+
+        <!-- reCaptcha js needs to stay in the head in order to work properly -->
+        <append
+            content="//head//script[contains(@src, 'recaptcha')]"
+            css:theme="head"
             />
 
         <!-- Copy inline javascripts from within the body -->
         <!-- reCaptcha needs to stay within the body because they generate html
              in place where the JS is. -->
         <replace
-            content="//body//script[not(contains(@src, 'www.google.com/recaptcha/api/challenge'))]"
+            content="//body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions'))]"
             css:theme="#javascript_inline"
             method="raw"
             />
 
         <!-- Drop the scripts within the body because we have copied them to the
              end of the page -->
-        <drop content="//div[@id='visual-portal-wrapper']//script[not(contains(@src, 'www.google.com/recaptcha/api/challenge'))]"/>
+        <drop content="//div[@id='visual-portal-wrapper']//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions'))]"/>
 
         <!-- Drop the javascript target from the theme -->
         <drop css:theme="#javascript_at_bottom"/>

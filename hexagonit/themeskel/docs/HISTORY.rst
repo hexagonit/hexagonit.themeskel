@@ -4,6 +4,8 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- reCaptcha fix [vsomogyi]
+- Print view styling fix [vsomogyi]
 - Dropdown menu positioning fixes [vsomogyi]
 - Navigation portlet styling variables added [vsomogyi]
 - New variables added for easier styling [vsomogyi]

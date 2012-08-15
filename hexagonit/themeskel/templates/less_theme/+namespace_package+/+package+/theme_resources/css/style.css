@@ -3479,8 +3479,8 @@ div.overlaybg div.close {
   footer {
     display: none!important;
   }
-  #portal-column-content {
-    width: 100%;
+  #portal-column-wrapper {
+    margin: 0;
   }
   .documentActions {
     display: none;
