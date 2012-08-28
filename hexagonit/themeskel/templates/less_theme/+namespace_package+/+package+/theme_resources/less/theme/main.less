@@ -1100,6 +1100,8 @@ body.cke_panel_frame {
     background-color: @OptionsToggle-background;
     font-weight: @OptionsToggle-font-weight;
     font-size: @OptionsToggle-font-size;
+    margin: @OptionsToggle-margin;
+    padding: @OptionsToggle-padding;
 }
 
 /* for greying out inherited roles */
@@ -1531,11 +1533,10 @@ dl {
                 background-color: @FormTab-link-notify-background;
                 color: @FormTab-link-notify-color;
             }
-            &.required span {
-                background-image: url('../images/required.png');
-                background-position: center right;
-                background-repeat: no-repeat;
-                padding-right: 1em;
+            &.required span:after {
+                content: "■";
+                color: Red;
+                padding-left: 0.2em;
             }
         }
     }
@@ -1969,6 +1970,10 @@ fieldset#search-field {
     text-align: center;
 }
 
+#search-term {
+    margin: @SearchResults-SearchTerm-margin;
+}
+
 input.searchPage {
     font-size: @SearchResults-input-searchPage-font-size !important;
 }
@@ -1989,6 +1994,7 @@ input.searchPage {
     
     dl.actionMenu {
         margin-bottom: 0;
+        margin-top: 0;
     }
     dd.actionMenuContent {
         margin-left: 0;
@@ -2030,10 +2036,16 @@ input.searchPage {
     margin: 0;
     padding: 0;
     
+    fieldset.accordion-item legend {
+        cursor: default;
+    }
+    .accordion-indicator {
+        display: none !important;
+    }
     .field {
         background: @SearchResults-filter-field-background;
         padding: 1em 1.5em;
-        margin: 0;
+        margin: 0 !important;
         
         label {
             font-weight: @SearchResults-filter-field-label-font-weight;
@@ -2048,14 +2060,19 @@ input.searchPage {
     margin-top: 1em;
 }
 
-form.searchPage h1.documentFirstHeading {
-    font-weight:normal; 
-    letter-spacing:0;
-    float: left;
-    margin-right: 0.8em;
-    
-    .highlightedSearchTerm {
-        background: transparent !important;
+form.searchPage {
+    h1.documentFirstHeading {
+        font-weight:normal; 
+        letter-spacing:0;
+        float: left;
+        margin-right: 0.8em;
+
+        .highlightedSearchTerm {
+            background: transparent !important;
+        }
+    }
+    #rss-subscription {
+        margin-top: 2px;
     }
 }
 
@@ -2668,6 +2685,10 @@ div.overlay {
     a {
         &:hover {
             color: @Overlay-link-hover-color;
+            
+            label{
+                cursor: pointer;
+            }
         }
         .selected {
             color: @Overlay-link-selected-color;
@@ -2745,63 +2766,61 @@ div.overlaybg div.close {
 
 /* @group Content History */
 
-#content-history {
-    div {
-        &.historyRecord {
-            margin-bottom: 1em;
-        }
-        &.historyTools {
-            ul {
-                float: right;
-                margin: 0.5em 1em;
+div {
+    &.historyRecord {
+        margin-bottom: 1em;
+    }
+    &.historyTools {
+        ul {
+            float: right;
+            margin: 2px 1em;
+        
+            li {
+                display: inline;
+                padding: 0 0.015em;
             
-                li {
-                    display: inline;
-                    padding: 0 0.015em;
-                
-                    a {
-                        border-bottom: none;
-                    }
+                a {
+                    border-bottom: none;
                 }
             }
-            form {
-                display: inline;
-            }
         }
-        &.historyLinks {
-            float: right;
-            clear: right;
-            margin: 0.5em 1em 0 0;
-        }
-        &.historyComment {
-            padding: 0.5em 1em;
-            border: @ContentHistory-comment-border;
-            
-            p {
-                margin: 0;
-                padding-top: 1px;
-            }
+        form {
+            display: inline;
         }
     }
-    .historyByLine {
-        background: @ContentHistory-byLine-background;
-        padding: 0.5em;
-        .rounded-corners-top(0.5em);
+    &.historyLinks {
+        float: right;
+        clear: right;
+        margin: 0.5em 1em 0 0;
     }
-    a.historyComparePrevious {
-        border-top: @ContentHistory-compare-border-top;
-        display: block;
-        margin-top: 3em;
-        text-align: center;
+    &.historyComment {
+        padding: 0.5em 1em;
+        border: @ContentHistory-comment-border;
         
-        span {
-            background-color: @ContentHistory-compare-span-background;
-            position: relative;
-            top: -0.75em;
-            padding: 0 0.5em;
+        p {
+            margin: 0;
+            padding-top: 1px;
         }
     }
+}
+.historyByLine {
+    background: @ContentHistory-byLine-background;
+    padding: 0.5em;
+    .rounded-corners-top(0.5em);
+}
+a.historyComparePrevious {
+    border-top: @ContentHistory-compare-border-top;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: -0.5em;
+    text-align: center;
     
+    span {
+        background-color: @ContentHistory-compare-span-background;
+        position: relative;
+        top: -0.75em;
+        padding: 0 0.5em;
+    }
 }
 
 /* @end */

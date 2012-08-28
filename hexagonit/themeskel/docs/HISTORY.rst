@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- style updates for Plone 4.2.1 [vsomogyi]
 - reCaptcha fix [vsomogyi]
 - Print view styling fix [vsomogyi]
 - Dropdown menu positioning fixes [vsomogyi]

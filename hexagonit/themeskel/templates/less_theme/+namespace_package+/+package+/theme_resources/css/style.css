@@ -1518,11 +1518,13 @@ body.cke_panel_frame {
   padding-right: 0.5em;
 }
 .optionsToggle {
-  border: 0.1em solid #8cacbb;
+  border: 0;
   color: Black;
   background-color: #dee7ec;
   font-weight: normal;
   font-size: 14px;
+  margin: -1em -1.4em;
+  padding: 5px 10px;
 }
 /* for greying out inherited roles */
 .noInheritedRoles {
@@ -1923,11 +1925,10 @@ dl.error dd {
   background-color: #ff0000;
   color: #ffffff;
 }
-#content li.formTab a.required span {
-  background-image: url('../images/required.png');
-  background-position: center right;
-  background-repeat: no-repeat;
-  padding-right: 1em;
+#content li.formTab a.required span:after {
+  content: "■";
+  color: Red;
+  padding-left: 0.2em;
 }
 #content fieldset.formPanel {
   border: none;
@@ -2310,6 +2311,9 @@ fieldset#search-field {
   border: none !important;
   text-align: center;
 }
+#search-term {
+  margin: 0 0 0 10px;
+}
 input.searchPage {
   font-size: 18px !important;
 }
@@ -2328,6 +2332,7 @@ input.searchPage {
 }
 #search-results-bar dl.actionMenu {
   margin-bottom: 0;
+  margin-top: 0;
 }
 #search-results-bar dd.actionMenuContent {
   margin-left: 0;
@@ -2363,10 +2368,16 @@ input.searchPage {
   margin: 0;
   padding: 0;
 }
+#search-filter fieldset.accordion-item legend {
+  cursor: default;
+}
+#search-filter .accordion-indicator {
+  display: none !important;
+}
 #search-filter .field {
   background: #eeeeee;
   padding: 1em 1.5em;
-  margin: 0;
+  margin: 0 !important;
 }
 #search-filter .field label {
   font-weight: normal;
@@ -2385,6 +2396,9 @@ form.searchPage h1.documentFirstHeading {
 }
 form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
   background: transparent !important;
+}
+form.searchPage #rss-subscription {
+  margin-top: 2px;
 }
 #searchResultsSort {
   float: right;
@@ -2894,6 +2908,9 @@ div.overlay label {
 div.overlay a:hover {
   color: #000000;
 }
+div.overlay a:hover label {
+  cursor: pointer;
+}
 div.overlay a .selected {
   color: #000000;
 }
@@ -2963,37 +2980,37 @@ div.overlaybg div.close {
 }
 /* @end */
 /* @group Content History */
-#content-history div.historyRecord {
+div.historyRecord {
   margin-bottom: 1em;
 }
-#content-history div.historyTools ul {
+div.historyTools ul {
   float: right;
-  margin: 0.5em 1em;
+  margin: 2px 1em;
 }
-#content-history div.historyTools ul li {
+div.historyTools ul li {
   display: inline;
   padding: 0 0.015em;
 }
-#content-history div.historyTools ul li a {
+div.historyTools ul li a {
   border-bottom: none;
 }
-#content-history div.historyTools form {
+div.historyTools form {
   display: inline;
 }
-#content-history div.historyLinks {
+div.historyLinks {
   float: right;
   clear: right;
   margin: 0.5em 1em 0 0;
 }
-#content-history div.historyComment {
+div.historyComment {
   padding: 0.5em 1em;
   border: 1px solid #dddddd;
 }
-#content-history div.historyComment p {
+div.historyComment p {
   margin: 0;
   padding-top: 1px;
 }
-#content-history .historyByLine {
+.historyByLine {
   background: #dddddd;
   padding: 0.5em;
   border-top-right-radius: 0.5em;
@@ -3003,13 +3020,14 @@ div.overlaybg div.close {
   -moz-border-radius-topleft: 0.5em;
   -moz-border-radius-topright: 0.5em;
 }
-#content-history a.historyComparePrevious {
+a.historyComparePrevious {
   border-top: 1px dotted #cccccc;
   display: block;
-  margin-top: 3em;
+  margin-top: 1.5em;
+  margin-bottom: -0.5em;
   text-align: center;
 }
-#content-history a.historyComparePrevious span {
+a.historyComparePrevious span {
   background-color: #ffffff;
   position: relative;
   top: -0.75em;
