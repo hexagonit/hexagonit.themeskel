@@ -4,6 +4,8 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Rules performance fix [vsomogyi]
+- CKEditor text size fix [vsomogyi]
 - style updates for Plone 4.2.1 [vsomogyi]
 - reCaptcha fix [vsomogyi]
 - Print view styling fix [vsomogyi]
