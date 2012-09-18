@@ -16,6 +16,14 @@ body {
     width: @body-width;
 }
 
+// IE7 and IE8 do not support media queries, so display only desktop version
+.ie7, .ie8 {
+    #container {
+        margin:@desktop-body-margin;
+        width:@desktop-body-max-width;
+    }
+}
+
 #portal-header,
 #visual-portal-wrapper,
 #footer-colophon {

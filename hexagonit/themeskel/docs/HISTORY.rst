@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Media query polifill removed. IE7&8 serve only desktop version [vsomogyi]
 - Rules performance fix [vsomogyi]
 - CKEditor text size fix [vsomogyi]
 - style updates for Plone 4.2.1 [vsomogyi]

@@ -576,6 +576,11 @@ body {
   margin: 0;
   width: 100%;
 }
+.ie7 #container,
+.ie8 #container {
+  margin: 0 auto;
+  width: 1088px;
+}
 #portal-header,
 #visual-portal-wrapper,
 #footer-colophon {
