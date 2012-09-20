@@ -42,7 +42,9 @@
                     border-top: 0;
                     margin-left: -1px;
                     z-index: 1000;
-                    
+                }
+                input[type="checkbox"] {
+                    margin-right: 5px;
                 }
             }
         }
@@ -128,6 +130,20 @@
         border: @content-figure-cation-border;
     }
     
+    .imagebank-download-buttons {
+        margin-top: 15px;
+        
+        .select-all {
+            margin-right: 5px;
+        }
+        .deselect-all {
+            margin-left: 5px;
+        }
+        .download-selected {
+            margin-left: 15px;
+        }
+    }
+    
     // User search
     .user-search-result {
         border-top: 1px solid #DDDDDD;
@@ -147,7 +163,7 @@
             word-wrap: break-word;
 
             > div {
-                margin-right: 125px;
+                margin-right: 105px;
             }
             table {
                 margin-bottom: 20px!important;
@@ -159,7 +175,7 @@
             cursor: pointer;
         }
         .user-search-result-show-description {
-            margin-right: -125px;
+            //margin-right: -125px;
         }
     }
 

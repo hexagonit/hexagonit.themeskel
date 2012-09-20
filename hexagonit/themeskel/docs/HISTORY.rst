@@ -4,6 +4,7 @@ Changelog
 2.0 (2012-05-XX)
 ----------------
 
+- Update page model styling [vsomgoyi]
 - Media query polifill removed. IE7&8 serve only desktop version [vsomogyi]
 - Rules performance fix [vsomogyi]
 - CKEditor text size fix [vsomogyi]

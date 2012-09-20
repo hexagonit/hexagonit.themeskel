@@ -3267,6 +3267,9 @@ a.historyComparePrevious span {
   margin-left: -1px;
   z-index: 1000;
 }
+#content figure figcaption .image-caption-container .image-caption input[type="checkbox"] {
+  margin-right: 5px;
+}
 #content figure .highslide img {
   border: 0 !important;
 }
@@ -3331,6 +3334,18 @@ a.historyComparePrevious span {
 #content .figures-under-text figure {
   border: 1px solid #dddddd;
 }
+#content .imagebank-download-buttons {
+  margin-top: 15px;
+}
+#content .imagebank-download-buttons .select-all {
+  margin-right: 5px;
+}
+#content .imagebank-download-buttons .deselect-all {
+  margin-left: 5px;
+}
+#content .imagebank-download-buttons .download-selected {
+  margin-left: 15px;
+}
 #content .user-search-result {
   border-top: 1px solid #DDDDDD;
   clear: both;
@@ -3348,7 +3363,7 @@ a.historyComparePrevious span {
   word-wrap: break-word;
 }
 #content .user-search-result .user-search-result-data > div {
-  margin-right: 125px;
+  margin-right: 105px;
 }
 #content .user-search-result .user-search-result-data table {
   margin-bottom: 20px!important;
@@ -3357,9 +3372,6 @@ a.historyComparePrevious span {
 }
 #content .user-search-result .user-search-result-show-more {
   cursor: pointer;
-}
-#content .user-search-result .user-search-result-show-description {
-  margin-right: -125px;
 }
 #content #usersearchform {
   background: #f5f5f5;
