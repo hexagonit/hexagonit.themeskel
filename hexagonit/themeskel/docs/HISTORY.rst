@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.0 (2012-05-XX)
-----------------
+1.0.2 (2012-09-21)
+------------------
 
 - Update page model styling [vsomgoyi]
 - Media query polifill removed. IE7&8 serve only desktop version [vsomogyi]
