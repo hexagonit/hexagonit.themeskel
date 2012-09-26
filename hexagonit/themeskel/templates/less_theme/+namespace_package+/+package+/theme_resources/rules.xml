@@ -178,7 +178,7 @@
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />
         
-        <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
+        <copy css:content-children=".siteelement-footertext .footertext" css:theme="#footer-colophon" />
 
     </rules>
 

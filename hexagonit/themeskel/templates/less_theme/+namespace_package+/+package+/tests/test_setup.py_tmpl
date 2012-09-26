@@ -54,9 +54,6 @@ class TestCase(IntegrationTestCase):
         self.failUnless(
             '++theme++${namespace_package}.${package}/javascript/libs/modernizr.custom.js'
             in js_resources)
-        self.failUnless(
-            '++theme++${namespace_package}.${package}/javascript/libs/respond.min.js'
-            in js_resources)
 
     def test_doctype_configured(self):
         from plone.app.theming.interfaces import IThemeSettings

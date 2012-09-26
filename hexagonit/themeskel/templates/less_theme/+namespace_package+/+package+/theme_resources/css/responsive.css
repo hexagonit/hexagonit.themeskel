@@ -76,6 +76,9 @@
   .sidebars-right .tablet-left-down #portal-column-main {
     margin-right: -312px;
   }
+  .sidebars-right .tablet-left-down #portal-column-one {
+    margin-left: 0;
+  }
   .sidebars-right .tablet-left-down #portal-column-two {
     margin-left: 12px;
   }
