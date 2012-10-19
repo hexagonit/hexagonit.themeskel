@@ -4,6 +4,7 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Custom JS positioning logic added [vsomogyi]
 - Bugfix in tests [vsomogyi]
 
 1.0.2 (2012-09-21) - should be v2.0

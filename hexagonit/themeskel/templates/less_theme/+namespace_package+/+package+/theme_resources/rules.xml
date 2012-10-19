@@ -41,31 +41,40 @@
         <!-- Copy script tags in the order they appear in the content but place
              them at the bottom of the theme. -->
         <before
-            content="//head//script[not(contains(@src, 'recaptcha'))]"
+            content="/html/head//script[not(contains(@src, 'recaptcha'))]"
             css:theme="#javascript_at_bottom"
             />
 
         <!-- reCaptcha js needs to stay in the head in order to work properly -->
         <append
-            content="//head//script[contains(@src, 'recaptcha')]"
+            content="/html/head//script[contains(@src, 'recaptcha')]"
             css:theme="head"
             />
 
         <!-- Copy inline javascripts from within the body -->
         <!-- reCaptcha needs to stay within the body because they generate html
              in place where the JS is. -->
-        <replace
-            content="//body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions'))]"
+        <after
+            content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@class, 'js-dont-move')) and not(contains(@class, 'js-move-to-head')) and not(contains(@class, 'js-move-to-beginning-of-body'))]"
             css:theme="#javascript_inline"
             method="raw"
             />
 
         <!-- Drop the scripts within the body because we have copied them to the
              end of the page -->
-        <drop content="//div[@id='visual-portal-wrapper']//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions'))]"/>
+        <drop content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@class, 'js-dont-move')) and not(contains(@class, 'js-move-to-head')) and not(contains(@class, 'js-move-to-beginning-of-body'))]"/>
+
+        <!-- Move JS to header that has specific class -->
+        <append content="/html/body//script[contains(@class, 'js-move-to-head')]" css:theme="head" />
+
+        <!-- Move JS to beginning of body that has specific class -->
+        <before content="/html/body//script[contains(@class, 'js-move-to-beginning-of-body')]" css:theme="#container" />
+
+        <!-- Drop the class attribute from script tags -->
+        <drop attributes="class" css:content="script" />
 
         <!-- Drop the javascript target from the theme -->
-        <drop css:theme="#javascript_at_bottom"/>
+        <drop css:theme="#javascript_at_bottom, #javascript_inline"/>
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -88,7 +97,7 @@
 
 
         <!-- BODY -->
-        
+
         <replace css:content-children="#portal-column-content" css:theme-children="#portal-column-content" />
 
         <!-- Drop class attribute from portal-column-one/two -->
@@ -173,11 +182,11 @@
 
 
         <!-- FOOTER -->
-        
+
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />
-        
+
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#footer-colophon" />
 
     </rules>
