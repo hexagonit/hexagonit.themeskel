@@ -21,8 +21,6 @@
         <!-- Copy the <base> tag -->
         <copy attributes="href" content="/html/head/base" theme="/html/head/base" />
 
-        <replace content="/html/head/title" theme="/html/head/title" />
-
         <!-- Drop the favicon, we use our own -->
         <!-- <drop content="/html/head/link[@rel='shortcut icon']" /> -->
 

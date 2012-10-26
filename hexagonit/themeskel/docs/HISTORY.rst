@@ -4,6 +4,8 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Update documentation [vsomogyi]
+- Remove double diazo rule [vsomogyi]
 - Custom JS positioning logic added [vsomogyi]
 - Bugfix in tests [vsomogyi]
 

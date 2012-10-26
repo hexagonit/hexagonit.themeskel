@@ -43,7 +43,7 @@ Package content
         * desktop - styles that are only applied to desktops
         * mobile - styles that are only applied to mobiles
         * tablet - styles that are only applied to tablets
-        * style.less - HTML5Boilerplate css file that includes all the other 
+        * style.less - HTML5Boilerplate css file that includes all the other
           less files in the appropriate places.
         * responsive.less - styles that are for responsive design
     * index.html - main template used by plone.app.theming
@@ -53,7 +53,7 @@ Package content
 HTML 5 Boilerplate
 ==================
 
-The main template that we are using is based on the index.html file from 
+The main template that we are using is based on the index.html file from
 HTML 5 Boilerplate.
 
 The same goes for our finally generated css file.
@@ -71,13 +71,13 @@ folder.
 Setting up CodeKit
 ------------------
 
-Add the less folder from theme_resources to CodeKit. Select less/style.less and 
-less/response.less and set it's CSS Output Path to point to theme_resources/css. 
-Usually the output folder is set like this, so you just need to make sure this 
+Add the less folder from theme_resources to CodeKit. Select less/style.less and
+less/response.less and set it's CSS Output Path to point to theme_resources/css.
+Usually the output folder is set like this, so you just need to make sure this
 is the case.
 
 After each update to the files, CodeKit will recompile style.less and
-responsive.less automatically, so just reload your page, if the server is in 
+responsive.less automatically, so just reload your page, if the server is in
 debug mode.
 
 Important: If less files are changed in the themeskel itself, compile them, so
@@ -91,34 +91,34 @@ The less folder holds all the css needed by Plone, so there is no need for
 additional css. We have disabled all the css that we don't need in
 profiles/default/cssregistry.xml
 
-The theme is built with responsive design principle in mind, so the less folder 
+The theme is built with responsive design principle in mind, so the less folder
 is structured in this fashion.
 
 We have three major devices that we are theming for: mobile, tablet and desktop.
 All of them have a separate folder that holds all the styles that are applied
-only for the specific device. The styles that are in common to all are located 
-in the theme folder. 
+only for the specific device. The styles that are in common to all are located
+in the theme folder.
 
-The basic idea is to take the Plone's default css files and "lessify" them. 
-The result of this can be found in theme/main.less. 
-For fast development, we need a quick way to change the default colors and 
-stylings to reflect the design we are implementing, so we have modified the 
-files so they use variables that are set in one location. This is something that 
-we have seen before in form of base_properties.props, but this time we are doing 
+The basic idea is to take the Plone's default css files and "lessify" them.
+The result of this can be found in theme/main.less.
+For fast development, we need a quick way to change the default colors and
+stylings to reflect the design we are implementing, so we have modified the
+files so they use variables that are set in one location. This is something that
+we have seen before in form of base_properties.props, but this time we are doing
 it right with less variables.
 
-All the common styles for desktop, tablet and mobile go into theme folder. This 
-folder includes the base.less and mixins.less that holds all the variables and 
-mixins that are used in the other styles. Modify these values to meet your 
+All the common styles for desktop, tablet and mobile go into theme folder. This
+folder includes the base.less and mixins.less that holds all the variables and
+mixins that are used in the other styles. Modify these values to meet your
 theme's needs.
 
-The theme specific styling that cannot be set in base.less, should go to 
+The theme specific styling that cannot be set in base.less, should go to
 theme/custom.less. If you would like to have multiple files for your theme, just
-create a new .less file and include it to init.less. All the less files are 
-imported to the init.less files in their folders, which then get imported to 
+create a new .less file and include it to init.less. All the less files are
+imported to the init.less files in their folders, which then get imported to
 style.less and/or responsive.less.
 
-For styles that should be applied to mobile version only, we add them to 
+For styles that should be applied to mobile version only, we add them to
 mobile/main-moible.less. The same goes for desktop/main-desktop.less and
 tablet/main-tablet.less.
 
@@ -132,22 +132,23 @@ mode. To prevent this, the css that holds the media queries have been moved
 outside of portal css and it's included directly in index.html.
 
 Note: Lessification of theme/main.less is not finished yet, so there still
-might be some styles that are not converted to variables and included in 
+might be some styles that are not converted to variables and included in
 base.less.
 
 
 Javascript
 ==========
 
-HTML5Boilerplate suggests to have all Javascript plugins in plugins.js and all 
-user scripts in script.js. We have decided to go against it, and we are using 
+HTML5Boilerplate suggests to have all Javascript plugins in plugins.js and all
+user scripts in script.js. We have decided to go against it, and we are using
 Plone's default javascript registry. The final result is the same, as Plone does
 merge and minimize all the registered javascripts.
 
 Javascript/script.js holds helper functions that are taken from Mobile HTML5
 Boilerplate project and also some functions for the mobile version of the theme.
+(temporarily removed)
 Every additional javascript should go into this file. If you need multiple files
-for javascript, just create them in the javascript folder and include them in 
+for javascript, just create them in the javascript folder and include them in
 Plone's JS registry (profiles/default/jsregistry.xml).
 
 Javascript that is common to all themes is located in the hexagonit.primacontrol
@@ -173,11 +174,34 @@ Available JS libraries:
   * portletoverlay.js
 
 
+Javascript position within the page
+-----------------------------------
+The default behavior for 'script' tags are to be moved to the bottom of the
+page. Some external widgets however require to have the 'script' tag in
+specific location within the page. For this purpose we have created special
+diazo rules that will take care of the positioning.
+To leave the tag in place, add 'js-dont-move' class to it:
+
+    <script src="foo.js" class="js-dont-move"></script>
+
+To move the tag to the head, add 'js-move-to-head' class to it:
+
+    <script src="foo.js" class="js-move-to-head"></script>
+
+To move the tag to the beginning of the body, add 'js-move-to-beginning-of-body'
+class to it:
+
+    <script src="foo.js" class="js-move-to-beginning-of-body"></script>
+
+As the class attribute has no semantical value on the script tag, it will be
+stripped from the generated html.
+
+
 Plone.app.theming
 =================
 
 index.html is the main template that we use, so to have a custom layout, you'll
-need to modify this file. The header tag holds the header of the site, the div 
+need to modify this file. The header tag holds the header of the site, the div
 with id="visual-portal-wrapper" should hold the body region, and the footer tag
 should hold the footer.
 
@@ -189,17 +213,17 @@ search, so we have included additional elements in our main layout and updated
 the rules. The final generated html has the same structure, so there will be no
 problems with the selectors used by Plone.
 
-rules.xml is the rules file, and we have set up the copying of the css and 
+rules.xml is the rules file, and we have set up the copying of the css and
 javascripts to proper location within the index.html, and it also includes rules
-that copy everything from Plone and put it into proper place. Feel free to 
-modify this to suite your needs. Boilerplate encourages us to have the styles 
-and javascript inclusions in specific place, so please don't modify the rules 
+that copy everything from Plone and put it into proper place. Feel free to
+modify this to suite your needs. Boilerplate encourages us to have the styles
+and javascript inclusions in specific place, so please don't modify the rules
 that make this happen.
 
 Within the less files, there are relative paths to some images, and Diazo will
 append a previously set prefix on them, even though we actually don't want that.
-One of the solutions would be to split the CSS files into two groups, the one 
-that need prefix applied, and ones that don't. Html 5 Boilerplate suggests to 
+One of the solutions would be to split the CSS files into two groups, the one
+that need prefix applied, and ones that don't. Html 5 Boilerplate suggests to
 have all the styles in one file, so we decided not to modify the structure, but
 to include the missing images in our theme. This way we don't rely on other
 products and we can easily update the images to suite our needs.
@@ -208,11 +232,13 @@ products and we can easily update the images to suite our needs.
 Exceptions
 ----------
 
-Modernizer.js and Respond.js should be the only JS in the header, so it’s hard 
-to have a rule that will put it there, so we have put only these two js in the 
+Modernizer.js and Respond.js should be the only JS in the header, so it’s hard
+to have a rule that will put it there, so we have put only these two js in the
 index.html and it is not served from Plone’s js registry. In case if the site is
-loaded without the Diazo theme, the modernizer.js and respond.js will be 
+loaded without the Diazo theme, the modernizer.js and respond.js will be
 provided by Plone.
+Update: respond.js has been removed, as we decided to drop responsive design
+support to browsers that do not support media queries.
 
 
 Layout
@@ -231,11 +257,44 @@ set either to fixed number of pixels, or percentages:
     @sidebar-left-margin-left: 12px; // or 1.125%
 
 
+Sidebar position
+----------------
+Some layouts require both of the sidebars to be on the right hand side.
+In manifest.cfg there is a theme parameter set that is used to determine if the
+sidebars should be on the right, without the need to actually modify the
+templates and setting it on the fly:
+
+    sidebarsright = python: False
+
+True value is for moving the sidebars to the right, False for having one on the
+left and one on the right.
+
+This value can be updated in the control panel -> Diazo theme -> Advanced
+settings.
+
+
+Sidebar behavior for tablet
+---------------------------
+As there is not enough room for both of the sidebars on a tablet, we need to
+move one of them below the content. In manifest.cfg there is a theme parameter
+set that is used to determine which column should be moved below the content.
+To move the left column down set:
+
+    tabletleftcolumndown = python: True
+
+To move the right column down set:
+
+    tabletleftcolumndown = python: False
+
+This value can be updated in the control panel -> Diazo theme -> Advanced
+settings.
+
+
 Deco Grid System
 ================
 
 We are using the Deco Grid System that comes with Plone for the content column.
-The size of the columns and gutters are set in percentages: 
+The size of the columns and gutters are set in percentages:
 column width - 4%
 margin left/right - 1.125%
 
@@ -252,7 +311,7 @@ Best practices (Do's and Don'ts)
 Don't mix grid css classes with others
 --------------------------------------
 In order not to overwrite grid properties by accident, we encourage you to have
-the theme specific CSS classes in a separate element. For example instead of 
+the theme specific CSS classes in a separate element. For example instead of
 this:
 
   <div class="cell width-full position-0 myclass">
@@ -267,7 +326,7 @@ Setting grid widths and positions in the stylesheets
 ----------------------------------------------------
 The responsive design often forces us to have different widths and positions
 for the same element on different screen sizes, and as we can't edit the markup,
-we'll need to apply these changes in our stylesheets. Instead of giving it a 
+we'll need to apply these changes in our stylesheets. Instead of giving it a
 fixed width value, we can use the .grid-column-width() and .grid-position()
 mixins. To set an element to be 6 columns wide and on position 3, just add this
 to the appropriate css selector:
@@ -286,7 +345,7 @@ and center it. This way we can have a different background for the body and for
 the container.
 
 Responsive design suggests to have a fixed width layout only when the browser
-window is wide enough, so we have included the desktop-body-max-width variable 
+window is wide enough, so we have included the desktop-body-max-width variable
 in base.less where you can set the desired width of the page.
 
 
@@ -294,7 +353,7 @@ Having multiple looks for the portlets
 --------------------------------------
 We are using hexagonit.portletstyle plugin for this, and it is already included
 as a dependency.
-To specify the portlet styles and their css idendifiers, edit 
+To specify the portlet styles and their css idendifiers, edit
 profiles/default/registry.xml. This way on each install these styles will be
 available. These values show up in the control panel so you can modify them on
 the fly, just remember to update the registry.xml once done experimenting.
@@ -315,7 +374,7 @@ file and the height and width are the actual size of the logo:
     <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
     <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" />
 
-Some additional modification might be required for the rules, to everything 
+Some additional modification might be required for the rules, to everything
 fall into right place.
 
 
@@ -323,7 +382,7 @@ Show portal-personaltools only when the user is logged in
 ---------------------------------------------------------
 In rules.xml add:
 
-    <before css:content="#portal-personaltools-wrapper" 
+    <before css:content="#portal-personaltools-wrapper"
             css:theme="#portal-logo"
             css:if-content=".actionMenuHeader" />
 
@@ -359,15 +418,15 @@ If you need to move a subelement of an element that is copied by another rule,
 then you just can't drop it and append it to another place, but you have to drop
 it and use method="raw" to include it in the other location:
 
-    <drop css:content="#portal-breadcrumbs"/> 
+    <drop css:content="#portal-breadcrumbs"/>
     <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
 
 
 Fix for IE7 hasLayout bug
 -------------------------
-Internet Explorer has a nice habit of not applying layout to some elements and 
+Internet Explorer has a nice habit of not applying layout to some elements and
 that manifests in an overall messed up look of the site. Usually adding some
-css properties that are default values in browsers resolve this bug, so first 
+css properties that are default values in browsers resolve this bug, so first
 try setting them in global level, and if that messes up the look in other
 browsers, only then apply it with the .ie7 parent class.
 Read more about this bug and possible fixes on:
@@ -396,12 +455,12 @@ Hide visually and from screenreaders, but maintain layout: .invisible
 Contain floats
 --------------
 Instead of having an additional element after the floats and applying clear:both
-in your css, just apply the clearfix css class to your html element that 
+in your css, just apply the clearfix css class to your html element that
 contains the floated elements.
 Note: clearfix class is defined in style.less.
 
 If the content that needs to be cleared is copied with a diazo rule and we don't
-have access to its html, then apply the .clearfix() mixin to it in the 
+have access to its html, then apply the .clearfix() mixin to it in the
 appropriate less file.
 
 
@@ -411,11 +470,11 @@ Using custom fonts
 font files on your server and use that, and the other way would be to use
 Google Font API or FontSquirrel. Both are free and have big font collection that
 are licensed for web.
-With google, only a stylesheet is added to the page, which points to their 
-server and they will provide all the font files that are needed. 
+With google, only a stylesheet is added to the page, which points to their
+server and they will provide all the font files that are needed.
 With FontSquirrel you download everything and serve it from your server.
-In case if you do not find the proper font, and have a web license for that 
-font, FontSquirrel @Type-face Generator can be used to generate all the formats 
+In case if you do not find the proper font, and have a web license for that
+font, FontSquirrel @Type-face Generator can be used to generate all the formats
 needed by browsers, and it will provide some basic html and css codes as well.
 Important: The font used must be licensed for web usage.
 
@@ -423,27 +482,10 @@ The font-face is defined in base.less, and the font files should go into
 themere_resources/fonts folder.
 
 
-Sidebar behavior for tablet
----------------------------
-As there is not enough room for both of the sidebars on a tablet, we need to
-move one of them below the content. In manifest.cfg there is a theme parameter
-set that is used to determine which column should be moved below the content.
-To move the left column down set:
-
-    tabletleftcolumndown = python: True
-
-To move the right column down set:
-
-    tabletleftcolumndown = python: False
-
-This value can be updated in the control panel -> Diazo theme -> Advanced 
-settings.
-
-
 Using theme parameters
 ----------------------
 Diazo lets us set variables for a theme within the manifest.cfg that will end
-up in @@theming-controlpanel. To use these parameters, we need XSLT. 
+up in @@theming-controlpanel. To use these parameters, we need XSLT.
 
 Display the value of the parameter as a content of an element:
 
@@ -465,19 +507,19 @@ Rich drop-down-style menu
 (Note: this plugin has been moved to hexagonit.primacontrol!)
 For themes that require a drop-down-style menu, we have created a jQuery plugin
 (jquery.richmenu.js) that holds all the JavaScript that is needed for the
-functionality of the menu. By default this JS file is not enabled in the 
-JSRegistry, so go to profiles/default/jsregistry.xml and change the 
-enabled="False" to enabled="True" for the entry that has jquery.richmenu.js in 
+functionality of the menu. By default this JS file is not enabled in the
+JSRegistry, so go to profiles/default/jsregistry.xml and change the
+enabled="False" to enabled="True" for the entry that has jquery.richmenu.js in
 its ID.
-Beside this plugin, we need to have the content for the dropdowns in our Plone 
-site which will be copied with a diazo rule, or have them in the index.html 
+Beside this plugin, we need to have the content for the dropdowns in our Plone
+site which will be copied with a diazo rule, or have them in the index.html
 (which is not a recommended option).
 
 TODO: how to add this content to plone.
 
 Plone generates a unique id for each menu item, so the dropdown for a specific
-menu item needs to have an id in form: '#popup-' + menuItemID. For example menu 
-item with id="portaltab-news" would be tied to dropdown with 
+menu item needs to have an id in form: '#popup-' + menuItemID. For example menu
+item with id="portaltab-news" would be tied to dropdown with
 id="popup-portaltab-news".
 Html of a menu generated by Plone:
 
@@ -494,7 +536,7 @@ The dropdown for this menu item would need the following markup:
         <!-- The content of the dropdown -->
     </div>
 
-To have a close button on the dropdown, include this within the content of the 
+To have a close button on the dropdown, include this within the content of the
 dropdown:
 
     <div class="popup-close-row">Close</div>
@@ -504,8 +546,8 @@ plugin. In theme_resources/javascript/script.js add:
 
     $('#portal-globalnav').richmenu();
 
-The rich menu is turned on by default for mobile version of the site, and if 
-needed, it can be turned off by setting mobileRichMenu to false. In this case 
+The rich menu is turned on by default for mobile version of the site, and if
+needed, it can be turned off by setting mobileRichMenu to false. In this case
 the script.js would look like this:
 
     $('#portal-globalnav').richmenu({mobileRichMenu: 0});
@@ -526,10 +568,10 @@ theme skeleton.
 Portlet Overlay
 ---------------
 (Note: this plugin has been moved to hexagonit.primacontrol!)
-Adding and editing portlets within an overlay. The JS can be found in the 
-theme_resources/javascript/libs folder and it is registered in JS registry. 
-By default it is not enabled, so if needed, go to 
-profiles/default/jsregistry.xml and change the enabled="False" to enabled="True" 
+Adding and editing portlets within an overlay. The JS can be found in the
+theme_resources/javascript/libs folder and it is registered in JS registry.
+By default it is not enabled, so if needed, go to
+profiles/default/jsregistry.xml and change the enabled="False" to enabled="True"
 for the entry that has portletoverlay.js in its ID.
 
 
@@ -537,18 +579,18 @@ Description Tooltip
 -------------------
 (Note: this plugin has been moved to hexagonit.primacontrol!)
 The form help texts can be long ones and they take up too much vertical space,
-so this library removes them, adds a help icon and on click, the help text is 
+so this library removes them, adds a help icon and on click, the help text is
 displayed in a tooltip.
-The JS can be found in the theme_resources/javascript/libs folder and it is 
-registered in JS registry. By default it is not enabled, so if needed, go to 
-profiles/default/jsregistry.xml and change the enabled="False" to enabled="True" 
+The JS can be found in the theme_resources/javascript/libs folder and it is
+registered in JS registry. By default it is not enabled, so if needed, go to
+profiles/default/jsregistry.xml and change the enabled="False" to enabled="True"
 for the entry that has descriptiontooltip.js in its ID.
 
 
 iOS image sizes
 ---------------
 iOS has the possibility of creating an application from a website, so we need
-icons and splash screens for it. These images need to be specific sizes in 
+icons and splash screens for it. These images need to be specific sizes in
 order to be shown. If the size does not match, it will be ignored.
 From iOS 5, media queries can be used for the link tags that set the icons and
 splash. We are using these media queries only for the splash, as for the icons
@@ -569,7 +611,7 @@ iPad Portrait:   768 x 1004
 Using CSS3 properties
 ---------------------
 Not all browsers support CSS3 yet, so we need to keep in mind when we are
-developing a new theme. Create everything with CSS2 first, and only after 
+developing a new theme. Create everything with CSS2 first, and only after
 enhance it with CSS3 goodness. This way browsers that do not support CSS3 will
 fall back to the CSS2, and still look pretty decent.
 
@@ -606,7 +648,7 @@ Mobile HTML5 Boilerplate
 http://html5boilerplate.com/mobile
 
 LESS CSS Shapes Library
-https://github.com/NathanStrutz/LESS-CSS-Shapes-Library 
+https://github.com/NathanStrutz/LESS-CSS-Shapes-Library
 
 Lessins - collection of useful mixins
 http://code.google.com/p/lessins/
