@@ -180,21 +180,19 @@ The default behavior for 'script' tags are to be moved to the bottom of the
 page. Some external widgets however require to have the 'script' tag in
 specific location within the page. For this purpose we have created special
 diazo rules that will take care of the positioning.
-To leave the tag in place, add 'js-dont-move' class to it:
+To leave the tag in place, set the data-js-move attribute to 'js-dont-move':
 
-    <script src="foo.js" class="js-dont-move"></script>
+    <script src="foo.js" data-js-move="js-dont-move"></script>
 
-To move the tag to the head, add 'js-move-to-head' class to it:
+To move the tag to the head, set the data-js-move attribute to
+'js-move-to-head':
 
-    <script src="foo.js" class="js-move-to-head"></script>
+    <script src="foo.js" data-js-move="js-move-to-head"></script>
 
-To move the tag to the beginning of the body, add 'js-move-to-beginning-of-body'
-class to it:
+To move the tag to the beginning of the body, set the data-js-move attribute
+to 'js-move-to-beginning-of-body':
 
-    <script src="foo.js" class="js-move-to-beginning-of-body"></script>
-
-As the class attribute has no semantical value on the script tag, it will be
-stripped from the generated html.
+    <script src="foo.js" data-js-move="js-move-to-beginning-of-body"></script>
 
 
 Plone.app.theming

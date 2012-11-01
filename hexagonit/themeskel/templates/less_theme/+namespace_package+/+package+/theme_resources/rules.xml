@@ -53,23 +53,24 @@
         <!-- reCaptcha needs to stay within the body because they generate html
              in place where the JS is. -->
         <after
-            content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@class, 'js-dont-move')) and not(contains(@class, 'js-move-to-head')) and not(contains(@class, 'js-move-to-beginning-of-body'))]"
+            content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@data-js-move, 'js-dont-move')) and not(contains(@data-js-move, 'js-move-to-head')) and not(contains(@data-js-move, 'js-move-to-beginning-of-body'))]"
             css:theme="#javascript_inline"
             method="raw"
-            />
+        />
 
         <!-- Drop the scripts within the body because we have copied them to the
-             end of the page -->
-        <drop content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@class, 'js-dont-move')) and not(contains(@class, 'js-move-to-head')) and not(contains(@class, 'js-move-to-beginning-of-body'))]"/>
+          end of the page -->
+        <drop content="/html/body//script[not(contains(@src, 'recaptcha')) and not(contains(text(), 'RecaptchaOptions')) and not(contains(@data-js-move, 'js-dont-move'))]"/>
 
         <!-- Move JS to header that has specific class -->
-        <append content="/html/body//script[contains(@class, 'js-move-to-head')]" css:theme="head" />
+        <append content="/html/body//script[contains(@data-js-move, 'js-move-to-head')]"
+             css:theme="head"
+             method="raw" />
 
         <!-- Move JS to beginning of body that has specific class -->
-        <before content="/html/body//script[contains(@class, 'js-move-to-beginning-of-body')]" css:theme="#container" />
-
-        <!-- Drop the class attribute from script tags -->
-        <drop attributes="class" css:content="script" />
+        <before content="/html/body//script[contains(@data-js-move, 'js-move-to-beginning-of-body')]"
+             css:theme="#container"
+             method="raw" />
 
         <!-- Drop the javascript target from the theme -->
         <drop css:theme="#javascript_at_bottom, #javascript_inline"/>
