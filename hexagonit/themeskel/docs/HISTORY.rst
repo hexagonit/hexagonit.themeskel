@@ -4,6 +4,7 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- CKEditor veritcal spaceholder added [vsomogyi]
 - JS positioning fix [vsomogyi]
 - Update documentation [vsomogyi]
 - Remove double diazo rule [vsomogyi]

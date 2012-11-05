@@ -145,7 +145,7 @@ dd { margin: 0; }
     margin: 0 0 1em 0;
     padding:0;
     clear: both;
-    
+
     li {
         a {
             border-top: @menu-item-border-top;
@@ -159,7 +159,7 @@ dd { margin: 0; }
             background: @menu-item-background;
             min-width: @menu-item-min-width;
             text-decoration:none;
-            
+
             &:hover {
                 background: @menu-item-hover-background;
                 color: @menu-item-hover-font-color!important;
@@ -171,7 +171,7 @@ dd { margin: 0; }
         background: @menu-item-selected-background;
         color: @menu-item-selected-font-color!important;
         text-decoration:none;
-        
+
         &:hover {
             background: @menu-item-selected-hover-background;
             color: @menu-item-selected-hover-font-color!important;
@@ -191,11 +191,11 @@ dd { margin: 0; }
     margin: @Personaltools-margin;
     font-size: @Personaltools-font-size;
     .rounded-corners-bottom(0.5em);
-    
+
     a, a:link, a:hover, a:active, a:visited {
         color: @Personaltools-link-color!important;
     }
-    
+
     #anon-personalbar a {
         float: left;
         margin-right: 0.5em;
@@ -221,7 +221,7 @@ dd { margin: 0; }
     text-align: left;
     margin-top: -64px;
     font-size: @Portal-searchbox-font-size;
-    
+
     form {
         white-space: nowrap;
     }
@@ -280,7 +280,7 @@ input.searchField {
     padding: @Tooltip-padding;
     max-width: @Tooltip-max-width;
     z-index: 1500;
-    
+
     .box-shadow(0px, 0px, 2px, 2px, #e3e3e3);
 }
 .tip-close {
@@ -313,7 +313,7 @@ input.searchField {
     background: @LiveSearch-background;
     margin: -1.5em 0 0 -7em;
     z-index: 1990;
-    
+
     fieldset {
         padding: 1em 0 0;
         border: @LiveSearch-border;
@@ -357,13 +357,13 @@ input.searchField {
     font-size: @Breadcrumbs-font-size;
     margin-bottom: 1em;
     margin-left: 0.25em;
-    
+
     a {
         border-bottom: none;
         color: @breadcrumbs-link-color!important;
         display: inline-block;
         margin-right: 1px;
-        
+
         &:hover {
             color: @breadcrumbs-link-hover-color!important;
         }
@@ -386,10 +386,10 @@ input.searchField {
     padding-bottom: 2em;
     text-align: center;
     clear: left;
-    
+
     li {
         margin-right: 0.5em;
-        
+
         a:hover {
             color: @SiteActions-color;
         }
@@ -432,7 +432,7 @@ dl {
         background: @Portlet-background;
         margin: 0 0 1em;
         font-size: @Portlet-font-size;
-        
+
         dt {
             color: @Portlet-header-color;
             padding: 0.42em 1em;
@@ -455,7 +455,7 @@ dl {
         }
         a {
             text-decoration: none;
-            
+
             &:link {
                 color: @Portlet-link-color;
                 border-bottom: @Portlet-link-border-bottom;
@@ -521,19 +521,19 @@ div.portletAssignments {
         padding: 0.42em 1em;
         background: @EditBar-default-color;
         line-height: @Portlet-header-line-height;
-        
+
         a, a:hover, a:active, a:link, a:visited {
             color: @EditBar-link-color!important;
             text-decoration: none;
         }
     }
-    
+
     font-size: @PortletAssignments-font-size;
     line-height: @PortletAssignments-line-height;
-    
+
     .managedPortletActions {
         float: right;
-        
+
         a {
             margin: 0 0.25em;
             border: none;
@@ -551,7 +551,7 @@ dl.portletError dd {
         border: 1px solid @EditBar-default-color;
         padding: 0 5px;
         margin: 10px 0;
-        
+
         h4 {
             margin: 5px 0;
         }
@@ -569,7 +569,7 @@ a.managePortletsFallback {
     margin: 0 auto 1em;
     background: @Portlet-managePortlets-background;
     .rounded-corners(0.5em);
-    
+
     a, a:active, a:hover, a:visited, a:link {
         color: @Portlet-managePortlets-color!important;
     }
@@ -608,7 +608,7 @@ a.managePortletsFallback {
         background: @Portlet-blockedPortlet-background !important;
         border: @Portlet-blockedPortlet-border;
         margin: -1px;
-        
+
         a {
             color: @Portlet-blockedPortlet-color;
         }
@@ -622,14 +622,14 @@ a.managePortletsFallback {
 .portletCalendar {
     margin: 1px 0 1em;
     width: 100%;
-    
+
     dt {
         background: @Portlet-Calendar-background;
         border-bottom: medium none;
         font-weight: @Portlet-Calendar-font-weight;
         line-height: @Portlet-Calendar-line-height;
         text-align: center;
-        
+
         a {
             &#calendar-previous {
                 float: left;
@@ -650,13 +650,13 @@ a.managePortletsFallback {
     a, a:focus, a:hover {
         text-decoration: none;
     }
-    
+
 }
-    
+
 .ploneCalendar {
     border-spacing: 0;
     width: 100%;
-    
+
     a {
         border-bottom: medium none !important;
         text-decoration: none;
@@ -716,7 +716,7 @@ dl.portlet ul {
             display: block;
             padding: @Portlet-Navigation-Level0-padding!important;
             zoom: 1;
-            
+
             img {
                 display: none;
             }
@@ -741,7 +741,7 @@ dl.portlet ul {
         font-size: @Portlet-Navigation-Level1-font-size;
         text-transform: @Portlet-Navigation-Level1-text-transform;
         font-size: @Portlet-Navigation-Level1-font-size;
-        
+
         a {
             background: transparent url('../images/minus.gif') no-repeat 0 8px;
             margin-left:5px;
@@ -756,19 +756,22 @@ dl.portletNavigationTree dd.portletItem {
 #formfield-form-root {
     .widget fieldset div div {
         padding: 5px;
-        
+
         &:hover {
             background: @Table-odd-background;
         }
         input:last-child {
             float: right;
         }
-    } 
+    }
+}
+#formfield-form-widgets-text {
+    min-height: 759px;
 }
 
 .advanced-portlet-settings {
     cursor: pointer;
-    
+
     &:before {
         content: "» ";
     }
@@ -815,10 +818,10 @@ dl.portletNavigationTree dd.portletItem {
     clear: both;
     font-size: @content-font-size;
     margin: @content-margin;
-    
+
     h1 {
         margin-top: 0.5em;
-        
+
         &.documentFirstHeading {
             margin-top: 0;
         }
@@ -936,7 +939,7 @@ dl.portletNavigationTree dd.portletItem {
     div.newsImageContainer {
         float: right;
         margin: 0 1em 0.5em 1em;
-        
+
         a {
             border-bottom: none;
         }
@@ -962,7 +965,7 @@ dl.portletNavigationTree dd.portletItem {
 
     li {
         display:inline!important;
-        
+
         a {
             border-bottom: 0!important;
         }
@@ -1035,13 +1038,13 @@ dl.portletNavigationTree dd.portletItem {
     margin-bottom: 1em;
     color: @category-color;
     text-align: right;
-    
+
     a.link-category {
         color: @category-link-color;
         padding: 0.25em 0.5em;
         background: @category-link-background;
         .rounded-corners(0.5em);
-        
+
         &:hover {
             background: @category-link-hover-background;
             color: @category-link-hover-color;
@@ -1211,7 +1214,7 @@ table {
     &.listing {
         border-left: @Table-border;
         border-bottom: @Table-border;
-        
+
         td.listingCheckbox,
         th.listingCheckbox {
             text-align: center;
@@ -1238,7 +1241,7 @@ table {
             }
             tr {
                 text-align:left;
-                
+
                 .dragging,
                 .selected {
                     background-color: @Table-row-selected-background;
@@ -1246,10 +1249,10 @@ table {
                 .error {
                     background-color:  @Table-row-error-background;
                 }
-                
+
                 &.odd {
                     background: @Table-odd-background;
-                    
+
                     td {
                         background: @Table-odd-background;
                     }
@@ -1261,7 +1264,7 @@ table {
                         background-color: @Table-odd-error-background;
                     }
                 }
-                
+
                 td {
                     background: @Table-background;
                 }
@@ -1269,7 +1272,7 @@ table {
         }
         td {
             border-right: @Table-border;
-            
+
             &.draggable {
                 text-shadow: White 1px 1px 1px;
                 background: @Table-th-background !important;
@@ -1282,7 +1285,7 @@ table {
             display: inline-block;
             border-bottom: none !important;
         }
-        
+
     }
     &.vertical {
         th {
@@ -1312,7 +1315,7 @@ table {
 div.listingBar {
     font-size: 80%;
     margin: 1em 0;
-    
+
     .next {
         display: inline-block;
         float: right;
@@ -1324,7 +1327,7 @@ div.listingBar {
         display: inline-block;
         padding: 0.25em 0.5em;
         border: @Pagination-link-border!important;
-        
+
         &:hover {
             background-color: @Pagination-link-hover-background-color;
             border-color: @Pagination-link-hover-border-color;
@@ -1344,7 +1347,7 @@ div.listingBar {
     &:hover img {
         border-color: @Highslide-hover-img-border-color;
     }
-} 
+}
 .highslide-wrapper, .highslide-outline {
        background: @Highslide-Wrapper-background;
 }
@@ -1417,7 +1420,7 @@ dl {
         border: @StatusMessage-portalMessage-border;
         background-color: @StatusMessage-portalMessage-background;
         clear:both;
-        
+
         a {
             color: @StatusMessage-portalMessage-link-color!important;
             border-bottom: @StatusMessage-portalMessage-link-border-bottom;
@@ -1439,7 +1442,7 @@ dl {
     }
     &.warning {
         border-color: @StatusMessage-warning-border-color;
-        
+
         dt {
             background-color: @StatusMessage-warning-dt-background;
         }
@@ -1449,7 +1452,7 @@ dl {
     }
     &.error {
         border-color: @StatusMessage-error-border-color;
-        
+
         dt {
             background-color: @StatusMessage-error-dt-background;
         }
@@ -1463,7 +1466,7 @@ dl {
 
 #content dl.portalMessage {
     font-size: @content-portalMessage-font-size;
-    
+
     a {
         color: @content-portalMessage-link-color;
         border-bottom: @content-portalMessage-link-border-bottom;
@@ -1519,7 +1522,7 @@ dl {
     li.formTab {
         display: inline;
         margin-right:0.25em;
-        
+
         a {
             /* this isn't supported by all browsers, so we keep it in a separate rule */
             display: inline-block;
@@ -1528,7 +1531,7 @@ dl {
             text-decoration: none;
             border: none;
             margin: 0 ;
-            
+
             &.selected {
                 font-weight: @FormTab-link-selected-font-weight;
                 background: @FormTab-link-selected-background;
@@ -1553,7 +1556,7 @@ dl {
     }
     fieldset.formPanel {
         border: none;
-        
+
         &.hidden {
             display: none;
         }
@@ -1566,7 +1569,7 @@ dl {
 #content-views {
     float: left;
     background-color: @EditBar-background;
-    
+
     a {
         /* this isn't supported by all browsers, so we keep it in a separate rule */
         display: inline-block;
@@ -1607,7 +1610,7 @@ dl {
     }
     dt {
         font-weight: normal;
-        
+
         &.actionMenuHeader a:after {
             content: " ▼";
         }
@@ -1617,11 +1620,11 @@ dl {
         padding-top: 0.5em;
         background: @Personaltools-background;
         padding-bottom: 0.5em;
-        
+
         a {
             line-height: @Personaltools-line-height;
             padding: 0 0.75em;
-            
+
             &:hover {
                 background: @Personaltools-hover-background;
                 color: @Personaltools-hover-color;
@@ -1651,7 +1654,7 @@ dl {
         &.activated dd {
             border-bottom: @EditBar-dropdown-border;
             right: -3px;
-            
+
             a:hover, .actionMenuSelected {
                 background-color: @ContentActionMenus-selected-background !important;
                 color: @ContentActionMenus-selected-color;
@@ -1698,7 +1701,7 @@ dl.actionMenu {
     white-space: nowrap;
     position: relative;
     margin-left: 0.5em;
-    
+
     a, div {
         display: block !important;
         text-decoration:none;
@@ -1724,7 +1727,7 @@ dl.actionMenu {
         dd a,
         dd div {
             margin: 0 0.25em;
-        }        
+        }
     }
 }
 
@@ -1746,16 +1749,16 @@ span.arrowDownAlternative {
         margin: 1em 0;
         list-style-image: none;
         list-style: none;
-        
+
         li {
             margin-bottom: 1em;
             list-style: none;
             display: block;
-            
+
             a {
                 text-decoration: none;
                 border: none;
-                
+
                 &:visited {
                     color: #436976;
                     background-color: transparent;
@@ -1774,11 +1777,11 @@ span.arrowDownAlternative {
         margin: 0em 1em 1em 4em;
         list-style-image: none;
         list-style: none;
-        
+
         li {
             margin-bottom: 1em;
             display: inline;
-            
+
             a {
                 text-decoration: none;
             }
@@ -1800,13 +1803,13 @@ span.arrowDownAlternative {
 
 table.controlpanel-listing {
     width:100%;
-    
+
     td, th {
         font-size:120%;
     }
     dl {
         margin-top:0;
-        
+
         dt a .trigger{
             font-weight:normal;
         }
@@ -1816,7 +1819,7 @@ table.controlpanel-listing {
     }
     td {
         vertical-align:top;
-        
+
         &.checker{
             text-align:center;
         }
@@ -1836,7 +1839,7 @@ table.controlpanel-listing {
     margin:0.5em 0pt 0.5em;
     padding:0.3em 1em 0.3em 1em;
     width:auto;
-    
+
     dl dd {
         margin-left:1em;
     }
@@ -1844,7 +1847,7 @@ table.controlpanel-listing {
         float:right;
         padding-top:0.8em;
     }
-    
+
 }
 
 .rule-operations {
@@ -1861,7 +1864,7 @@ dl.collapsible {
     border: @Collapsible-border;
     margin: 1em 0;
     padding: 0;
-    
+
     dt.collapsibleHeader {
         display: block;
         float: left;
@@ -1890,7 +1893,7 @@ dl.collapsedBlockCollapsible {
     border: none;
     height: 1em;
     width: auto;
-    
+
     dt.collapsibleHeader {
         padding: 0 0.5em 0 2em;
         background: White url('../images/treeExpanded.png') no-repeat 0.5em 50%;
@@ -1944,7 +1947,7 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
 .comment {
     margin-top: 1.5em;
     font-size: @Comments-font-size;
-    
+
     h1, h2, h3, h4, h5, h6 {
         font-weight: @Comments-headings-font-weight;
     }
@@ -2002,7 +2005,7 @@ input.searchPage {
     border-top: @SearchResults-border-top;
     border-bottom: @SearchResults-border-bottom;
     padding: 1em 0;
-    
+
     dl.actionMenu {
         margin-bottom: 0;
         margin-top: 0;
@@ -2040,13 +2043,13 @@ input.searchPage {
         padding: 0.5em 0.9em;
         font-weight: @SearchResults-filter-legend-font-weight;
     }
-} 
+}
 
 #search-filter {
     background: @SearchResults-filter-background;
     margin: 0;
     padding: 0;
-    
+
     fieldset.accordion-item legend {
         cursor: default;
     }
@@ -2057,7 +2060,7 @@ input.searchPage {
         background: @SearchResults-filter-field-background;
         padding: 1em 1.5em;
         margin: 0 !important;
-        
+
         label {
             font-weight: @SearchResults-filter-field-label-font-weight;
         }
@@ -2065,7 +2068,7 @@ input.searchPage {
     .formControls {
         text-align:center
     }
-} 
+}
 
 #search-results-wrapper {
     margin-top: 1em;
@@ -2073,7 +2076,7 @@ input.searchPage {
 
 form.searchPage {
     h1.documentFirstHeading {
-        font-weight:normal; 
+        font-weight:normal;
         letter-spacing:0;
         float: left;
         margin-right: 0.8em;
@@ -2087,7 +2090,7 @@ form.searchPage {
     }
 }
 
-#searchResultsSort{ 
+#searchResultsSort{
     float:right;
 }
 
@@ -2169,7 +2172,7 @@ dd.image-caption {
 #dashboard {
     font-size: @Dashboard-font-size;
     line-height: @Dashboard-line-height;
-    
+
     dd {
         margin: 0;
     }
@@ -2269,19 +2272,19 @@ textarea:focus {
         border-style: solid none none none;
         margin: 10px 0;
         padding: 0 1em 1em;
-        
+
         .field {
             margin-left: 5px;
         }
         &.accordion-item {
             border: none;
-            
+
             legend {
                 background: @Content-legend-background;
                 cursor: pointer;
                 padding-right: 0em;
                 width: 100%;
-                
+
                 .rounded-corners(5px);
 
                 &.opened {
@@ -2301,7 +2304,7 @@ textarea:focus {
             height: 32px;
             width: 32px;
             cursor: pointer;
-            
+
             &.closed {
                 background: transparent url('../images/bullet_toggle_plus.png') no-repeat;
             }
@@ -2336,7 +2339,7 @@ dl.enableFormTabbing dd {
 .searchSection {
     color: @SearchSection-color;
     margin-top: 0.25em;
-    
+
     label:hover {
         color: Black;
     }
@@ -2345,7 +2348,7 @@ dl.enableFormTabbing dd {
 .field {
     clear: both;
     margin-bottom: 1em;
-    
+
     input[type="text"] {
        width: 20em;
     }
@@ -2366,7 +2369,7 @@ input#title {
 
 .error input#title {
     width: 99%;
-    
+
     .fieldRequired {
         color: @Error-input-required-color;
     }
@@ -2406,7 +2409,7 @@ div.error.warning {
     border: none;
     margin-top: 0;
     padding: 0;
-    
+
     input {
         border: 2px solid red;
     }
@@ -2489,7 +2492,7 @@ textarea#form\.description {
 
 /* @group Table of Contents */
 
- /* Table of Contents styling - essentially a portlet with smaller fonts and 
+ /* Table of Contents styling - essentially a portlet with smaller fonts and
     aligned right + limited in width */
 
 dl.toc {
@@ -2497,7 +2500,7 @@ dl.toc {
     width: 35%;
     font-size: 100%;
     margin: 1em 0 0.5em 1.5em;
-    
+
     dt {
         margin-left: 1em;
         font-weight: normal;
@@ -2506,7 +2509,7 @@ dl.toc {
     dd {
         margin-bottom: 0;
         padding-left: 2em;
-        
+
         ol {
             margin-left: 1.5em;
         }
@@ -2529,7 +2532,7 @@ dl.toc {
     font-size: @Colophon-font-size;
     text-align: center;
     margin-bottom: 1em;
-    
+
     li {
         padding:0 0.75em;
     }
@@ -2548,7 +2551,7 @@ dl.toc {
     margin-left: 0;
     font-size: @Sitemap-font-size;
     font-weight: @Sitemap-font-weight;
-    
+
     img {
         display: none;
     }
@@ -2602,7 +2605,7 @@ dl.toc {
     text-align: center;
     background-image: url('../images/polaroid-single.png');
     background-repeat: no-repeat;
-    
+
     img {
         border: @PhotoAlbum-img-border;
         display: block;
@@ -2660,7 +2663,7 @@ div.overlay {
     /* some padding to layout nested elements nicely  */
     margin: 1em;
     font-size: @Overlay-font-size;
-    
+
     div.close {
         background-image: url('../images/pb_close.png');
         position: absolute;
@@ -2669,7 +2672,7 @@ div.overlay {
         cursor: pointer;
         height: 30px;
         width: 30px;
-        
+
         span {
             display: block;
             height: 1px;
@@ -2686,7 +2689,7 @@ div.overlay {
     #createGroup {
         legend { display: none; }
         fieldset { border: none; }
-    } 
+    }
     p {
         margin-bottom: 1em;
     }
@@ -2696,7 +2699,7 @@ div.overlay {
     a {
         &:hover {
             color: @Overlay-link-hover-color;
-            
+
             label{
                 cursor: pointer;
             }
@@ -2708,7 +2711,7 @@ div.overlay {
     .formTab {
         margin-right:1em;
         font-weight: @Overlay-formTab-font-weight;
-        
+
         &.lastFormTab {
             margin-right:0em;
         }
@@ -2747,7 +2750,7 @@ div.overlaybg div.close {
 
 .pb-ajax {
     overflow-y: auto;
-    
+
     .documentActions {
         display:none
     }
@@ -2785,11 +2788,11 @@ div {
         ul {
             float: right;
             margin: 2px 1em;
-        
+
             li {
                 display: inline;
                 padding: 0 0.015em;
-            
+
                 a {
                     border-bottom: none;
                 }
@@ -2807,7 +2810,7 @@ div {
     &.historyComment {
         padding: 0.5em 1em;
         border: @ContentHistory-comment-border;
-        
+
         p {
             margin: 0;
             padding-top: 1px;
@@ -2825,7 +2828,7 @@ a.historyComparePrevious {
     margin-top: 1.5em;
     margin-bottom: -0.5em;
     text-align: center;
-    
+
     span {
         background-color: @ContentHistory-compare-span-background;
         position: relative;
@@ -2895,7 +2898,7 @@ a.historyComparePrevious {
             background: no-repeat transparent 0px -860px url('../images/contenttypes-sprite.png');
         }
     }
-    
+
     .contenttype-document,
     .contenttype-event,
     .contenttype-folder,
@@ -2942,13 +2945,13 @@ a.historyComparePrevious {
     background: @OptionsBox-background;
     height: 14em;
     width: 100%;
-    
+
     LABEL {
         padding: 2px 0 0 0;
         display: block;
         line-height: @OptionsBox-label-line-height;
         font-weight: @OptionsBox-label-font-weight;
-        
+
         &.checked {
             background-color: @OptionsBox-label-checked-background;
         }
@@ -2994,7 +2997,7 @@ a.historyComparePrevious {
     p.selectedTag {
         margin-bottom: .4em;
     }
-} 
+}
 
 #newTagsSection {
     width: 48%;
@@ -3031,7 +3034,7 @@ a.historyComparePrevious {
 .chzn-container-multi {
     .chzn-choices {
         margin-left: 0!important;
-        
+
         .search-choice,
         .search-field {
             line-height: 1!important;
