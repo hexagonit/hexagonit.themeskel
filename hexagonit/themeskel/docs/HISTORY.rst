@@ -4,6 +4,8 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Radio button and checkbox label padding fix [vsomogyi]
+- Search filter styling fix [vsomogyi]
 - Login failed page fix [vsomogyi]
 - Z-index issue fix [vsomogyi]
 - CKEditor veritcal spaceholder added [vsomogyi]

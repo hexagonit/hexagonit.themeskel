@@ -279,6 +279,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
+  margin-right: 5px;
   *width: 13px;
   *height: 13px;
 }
@@ -2384,6 +2385,9 @@ input.searchPage {
 }
 #search-filter .accordion-indicator {
   display: none !important;
+}
+#search-filter .optionsToggle {
+  display: block;
 }
 #search-filter .field {
   background: #eeeeee;
