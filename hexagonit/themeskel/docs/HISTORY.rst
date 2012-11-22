@@ -4,6 +4,8 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Login failed page fix [vsomogyi]
+- Z-index issue fix [vsomogyi]
 - CKEditor veritcal spaceholder added [vsomogyi]
 - JS positioning fix [vsomogyi]
 - Update documentation [vsomogyi]

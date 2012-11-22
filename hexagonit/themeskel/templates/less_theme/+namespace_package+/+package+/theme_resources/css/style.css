@@ -2026,7 +2026,7 @@ dl.error dd {
   background-color: #dddddd;
   color: #666666;
   text-decoration: none;
-  z-index: 5;
+  z-index: 100;
 }
 #contentActionMenus dl.actionMenu.activated dd {
   border-bottom: 0.5em solid #dddddd;
@@ -2700,6 +2700,7 @@ textarea#form\.description {
 /* @group Login form */
 body.template-logged_out #content,
 body.template-login_form #content,
+body.template-login_failed #login-form,
 .pb-ajax #login-form {
   text-align: center;
 }

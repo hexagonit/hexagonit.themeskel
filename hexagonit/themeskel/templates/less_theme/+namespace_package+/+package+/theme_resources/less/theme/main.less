@@ -1649,7 +1649,7 @@ dl {
             background-color: @EditBar-background;
             color: @EditBar-color;
             text-decoration:none;
-            z-index: 5;
+            z-index: 100;
         }
         &.activated dd {
             border-bottom: @EditBar-dropdown-border;
@@ -2440,6 +2440,7 @@ textarea#form\.description {
 
     body.template-logged_out #content,
     body.template-login_form #content,
+    body.template-login_failed #login-form,
     .pb-ajax #login-form {
         text-align: center;
     }
