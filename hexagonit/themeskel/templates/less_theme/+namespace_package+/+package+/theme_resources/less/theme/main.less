@@ -765,7 +765,7 @@ dl.portletNavigationTree dd.portletItem {
         }
     }
 }
-#formfield-form-widgets-text {
+#formfield-form-widgets-text .richTextWidget {
     min-height: 759px;
 }
 
@@ -1102,6 +1102,12 @@ body.cke_panel_frame {
     margin: 1em;
 }
 
+.named-file-widget label {
+    font-weight: bold;
+    display: inline;
+    padding-left: 0.5em;
+}
+
 .label {
     font-weight: @Label-font-weight;
     display: inline;
@@ -1315,6 +1321,7 @@ table {
 div.listingBar {
     font-size: 80%;
     margin: 1em 0;
+    text-align: center;
 
     .next {
         display: inline-block;
@@ -1322,6 +1329,7 @@ div.listingBar {
     }
     .previous {
         display: inline-block;
+        float: left;
     }
     a {
         display: inline-block;
@@ -1970,8 +1978,15 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
     .box-shadow(0 0 1em 0 #888);
 }
 
-#commenting textarea {
-    width: 90%!important;
+#commenting {
+    input[type="text"],
+    textarea,
+    #formfield-form-widgets-captcha {
+        width: 90%!important;
+    }
+    fieldset {
+        border-color: @Table-border-color!important;
+    }
 }
 
 /* @end */

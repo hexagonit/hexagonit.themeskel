@@ -26,14 +26,14 @@
             height: @font-size-smallest+10px;
             overflow: hidden;
             text-overflow: ellipsis;
-            
+
             .image-caption {
                 font-size: @font-size-smallest;
                 line-height: 1.3;
                 word-wrap: break-word;
                 padding: 5px;
                 width: 90px;
-                
+
                 &:hover {
                     background: #fff;
                     position: absolute;
@@ -52,7 +52,7 @@
             border: 0 !important;
         }
         .image-box {
-            
+
         }
     }
 
@@ -60,8 +60,20 @@
         .figure-item {
             margin-bottom: 5px;
             margin-right: 5px;
+
+            // float: right;
+            // height: 100px;
+            // width: 100px;
+            // overflow: hidden;
+
+            // img {
+            //     width: 100%;
+            //     max-width: 100%;
+            // }
         }
     }
+
+    // LEAD FIGURES
 
     .lead-figures {
         figure.figure-container {
@@ -71,7 +83,7 @@
     .lead-figures-left {
         float: left;
         margin-right: 10px;
-        
+
         .lead-figure-left {
             float: left;
             margin-top: 3px;
@@ -80,10 +92,30 @@
     .lead-figures-right {
         float: right;
         margin-left: 10px;
-        
+
         .lead-figure-right {
             float: right;
         }
+    }
+    .lead-figures-wide {
+        max-width: 100%;
+        overflow: hidden;
+
+        .lead-figure-left {
+            float: left;
+        }
+        .lead-figure-right {
+            float: right;
+        }
+    }
+    .figure-wide,
+    .lead-figure-wide {
+        img {
+            max-width: 100%;
+        }
+    }
+    .gallery-view {
+        text-align: center;
     }
 
     .items-heading {
@@ -103,16 +135,16 @@
         list-style-type: none;
         padding: 0px;
         margin: 0px;
-        
+
         li:before {
             content: "» ";
         }
     }
-    
+
     .file-item-title .discreet {
         margin-left: 5px;
         font-size: @font-size-smallest;
-        
+
         &:before {
             content: "(";
         }
@@ -120,19 +152,19 @@
             content: ")";
         }
     }
-    
+
     .item-listing .figure-container {
         margin-top: 4px;
     }
-    
+
     // Gallery styling
     .figures-under-text figure {
         border: @content-figure-cation-border;
     }
-    
+
     .imagebank-download-buttons {
         margin-top: 15px;
-        
+
         .select-all {
             margin-right: 5px;
         }
@@ -143,7 +175,7 @@
             margin-left: 15px;
         }
     }
-    
+
     // User search
     .user-search-result {
         border-top: 1px solid #DDDDDD;

@@ -4,6 +4,11 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Plone 4.2 update [vsomogyi]
+- Page model update - wide image [vsomogyi]
+- Action menu navigation fix [vsomogyi]
+- Commenting stylefix [vsomogyi]
+- Made the file widget look nicer [vsomogyi]
 - Radio button and checkbox label padding fix [vsomogyi]
 - Search filter styling fix [vsomogyi]
 - Login failed page fix [vsomogyi]

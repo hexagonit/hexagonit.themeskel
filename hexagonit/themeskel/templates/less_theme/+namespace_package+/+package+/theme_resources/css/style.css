@@ -1269,7 +1269,7 @@ dl.portletNavigationTree dd.portletItem {
 #formfield-form-root .widget fieldset div div input:last-child {
   float: right;
 }
-#formfield-form-widgets-text {
+#formfield-form-widgets-text .richTextWidget {
   min-height: 759px;
 }
 .advanced-portlet-settings {
@@ -1524,6 +1524,11 @@ body.cke_panel_frame {
 .spacer {
   margin: 1em;
 }
+.named-file-widget label {
+  font-weight: bold;
+  display: inline;
+  padding-left: 0.5em;
+}
 .label {
   font-weight: bold;
   display: inline;
@@ -1713,6 +1718,7 @@ table.grid th {
 div.listingBar {
   font-size: 80%;
   margin: 1em 0;
+  text-align: center;
 }
 div.listingBar .next {
   display: inline-block;
@@ -1720,6 +1726,7 @@ div.listingBar .next {
 }
 div.listingBar .previous {
   display: inline-block;
+  float: left;
 }
 div.listingBar a {
   display: inline-block;
@@ -2314,8 +2321,13 @@ dl.collapsedBlockCollapsible dd.collapsibleContent {
   -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength='1px', Direction=180, Color='#000000');
 }
-#commenting textarea {
+#commenting input[type="text"],
+#commenting textarea,
+#commenting #formfield-form-widgets-captcha {
   width: 90%!important;
+}
+#commenting fieldset {
+  border-color: #ffffff !important;
 }
 /* @end */
 /* @group Search results page */
@@ -3303,6 +3315,23 @@ a.historyComparePrevious span {
 #content .lead-figures-right .lead-figure-right {
   float: right;
 }
+#content .lead-figures-wide {
+  max-width: 100%;
+  overflow: hidden;
+}
+#content .lead-figures-wide .lead-figure-left {
+  float: left;
+}
+#content .lead-figures-wide .lead-figure-right {
+  float: right;
+}
+#content .figure-wide img,
+#content .lead-figure-wide img {
+  max-width: 100%;
+}
+#content .gallery-view {
+  text-align: center;
+}
 #content .items-heading {
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 5px;
@@ -3526,7 +3555,7 @@ a.historyComparePrevious span {
     display: none!important;
   }
   #portal-column-wrapper {
-    margin: 0;
+    margin: 0 !important;
   }
   .documentActions {
     display: none;
