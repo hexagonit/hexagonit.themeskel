@@ -39,7 +39,6 @@ setup(name=${repr($project)},
           'plone.browserlayer',
 #end if
           'setuptools',
-          'unittest2',
 #if str($use_i18n) == 'True'
           'zope.i18nmessageid',
 #end if
