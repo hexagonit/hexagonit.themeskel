@@ -3,7 +3,7 @@
 // Clearfix for clearing floats like a boss h5bp.com/q
 .clearfix() {
     zoom: 1;
-    
+
     &:before,
     &:after {
         display: table;
@@ -42,13 +42,13 @@
 .background-gradient(@fallback, @from, @to) {
 
     // for non-css3 browsers
-    background-color: @fallback; 
+    background-color: @fallback;
 
     // Safari 4+, Chrome 1-9
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@from), to(@to));
 
     // Safari 5.1+, Mobile Safari, Chrome 10+
-    background-image: -webkit-linear-gradient(top, @from, @to); 
+    background-image: -webkit-linear-gradient(top, @from, @to);
 
     // Firefox 3.6+
     background-image: -moz-linear-gradient(top, @from, @to);
@@ -72,8 +72,6 @@
     -webkit-box-shadow: @horizontal @vertical @blur @spread @color;
     -moz-box-shadow: @horizontal @vertical @blur @spread @color;
     box-shadow: @horizontal @vertical @blur @spread @color;
-    -ms-filter: e(%("progid:DXImageTransform.Microsoft.Shadow(Strength='%d', Direction=180, Color='%d')", @spread, @color));
-    filter: e(%("progid:DXImageTransform.Microsoft.Shadow(Strength='%d', Direction=180, Color='%d')", @spread, @color));
 }
 
 .opacity(@opacity:1) {
@@ -141,17 +139,17 @@
     &.portlet {
         background: @bg;
     }
-    
+
     .portletHeader {
         background: @header-bg;
         color: @header-color;
         position: relative;
-        
+
         a, a:hover, a:link, a:active, a:visited {
             color: @header-color!important;
         }
     }
-    
+
     .portletItem {
         p {
             color: @color;

@@ -4,6 +4,7 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- IE shadow issue on comments fixed [vsomogyi]
 - Plone 4.2 update [vsomogyi]
 - Page model update - wide image [vsomogyi]
 - Action menu navigation fix [vsomogyi]
