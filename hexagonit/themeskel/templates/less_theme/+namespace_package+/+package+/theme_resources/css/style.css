@@ -3321,6 +3321,8 @@ a.historyComparePrevious span {
 }
 #content .figure-wide img,
 #content .lead-figure-wide img {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
 }
 #content .gallery-view {
