@@ -382,7 +382,7 @@ In rules.xml add:
 
     <before css:content="#portal-personaltools-wrapper"
             css:theme="#portal-logo"
-            css:if-content=".actionMenuHeader" />
+            css:if-content="#portal-header .actionMenuHeader" />
 
 
 Remove advanced search options from search box in the header
