@@ -4,6 +4,7 @@ Changelog
 2.0.1 (2012-09-XX)
 ------------------
 
+- Cleanup, Social button styling [vsomogyi]
 - Docs update [vsomogyi]
 - Form help styling fix [vsomogyi]
 - Wide page model image positioning fix [vsomogyi]

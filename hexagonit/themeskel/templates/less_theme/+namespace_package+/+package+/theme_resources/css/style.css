@@ -3424,6 +3424,13 @@ a.historyComparePrevious span {
 #content #usersearchform input.searchButton {
   box-sizing: content-box;
 }
+#content .social-buttons {
+  overflow: hidden;
+}
+#content .social-buttons ul {
+  list-style-type: none;
+  margin-left: 0;
+}
 .ie7 #content figure figcaption:hover {
   position: relative;
   overflow: visible;
