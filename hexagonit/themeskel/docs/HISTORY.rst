@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1 (2012-09-XX)
+2.0.1 (2013-01-29)
 ------------------
 
 - Cleanup, Social button styling [vsomogyi]
