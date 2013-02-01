@@ -263,8 +263,8 @@
 @Portlet-Navigation-color: @link-color;
 @Portlet-Navigation-font-weight: normal;
 @Portlet-Navigation-item-padding: 5px 0;
-@Portlet-Navigation-currentItem-background: #ddd;
-@Portlet-Navigation-currentItem-color: #fff;
+@Portlet-Navigation-currentItem-background: @menu-item-selected-background;
+@Portlet-Navigation-currentItem-color: @menu-item-selected-font-color;
 @Portlet-Navigation-currentItem-font-weight: bold;
 @Portlet-Navigation-Level0-padding: 0 0 0 5px;
 @Portlet-Navigation-Level0-border-bottom: 0.1em dotted #ddd;
@@ -600,8 +600,9 @@
 
 // FOOTER
 
+@Footer-color: #DDD;
 @Footer-line-height: 2em;
-@Footer-background: #ddd;
+@Footer-background: @container-background;
 @Footer-padding: 1em;
 @Footer-margin: 1em 0;
 @Colophon-link-color: #444;

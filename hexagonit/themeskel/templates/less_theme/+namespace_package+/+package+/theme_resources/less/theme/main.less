@@ -67,7 +67,7 @@ p {
 a {
     text-decoration: none;
 }
-a:link, a:visited {
+a:link {
     color: @link-color!important;
 }
 a:hover {
@@ -843,11 +843,11 @@ dl.portletNavigationTree dd.portletItem {
     }
     a {
         &:link {
-            color: @content-link-color;
+            color: @content-link-color !important;
             border-bottom: @content-link-boerder-bottom;
         }
         &:visited {
-            color: @content-link-visited-color;
+            color: @content-link-visited-color !important;
             border-bottom: @content-link-visited-border-bottom;
         }
         &:hover {
@@ -2541,7 +2541,8 @@ dl.toc {
 
 /* @group Footer */
 
-#portal-footer {
+footer {
+    color: @Footer-color;
     font-size: @Footer-font-size;
     background: @Footer-background;
     padding: @Footer-padding;

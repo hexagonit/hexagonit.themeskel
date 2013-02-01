@@ -631,8 +631,7 @@ h4 a {
 a {
   text-decoration: none;
 }
-a:link,
-a:visited {
+a:link {
   color: #205c90 !important;
 }
 a:hover {
@@ -1231,7 +1230,7 @@ dl.portlet ul.navTree li a img {
   display: none;
 }
 dl.portlet ul.navTree .navTreeCurrentItem {
-  background-color: #dddddd;
+  background-color: #205c90;
   color: #ffffff !important;
 }
 dl.portlet ul .navTreeItem {
@@ -1332,11 +1331,11 @@ dl.portletNavigationTree dd.portletItem {
   margin: 0 0 1em 2em;
 }
 #content a:link {
-  color: #205c90;
+  color: #205c90 !important;
   border-bottom: 0.1em solid #cccccc;
 }
 #content a:visited {
-  color: #205c90;
+  color: #205c90 !important;
   border-bottom: 0.1em solid #cccccc;
 }
 #content a:hover {
@@ -2775,9 +2774,10 @@ dl.toc dd ol {
 }
 /* @end */
 /* @group Footer */
-#portal-footer {
+footer {
+  color: #dddddd;
   font-size: 13px;
-  background: #dddddd;
+  background: #ffffff;
   padding: 1em;
   margin: 1em 0;
   line-height: 2em;
