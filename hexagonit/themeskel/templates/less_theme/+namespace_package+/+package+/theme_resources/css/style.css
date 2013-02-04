@@ -2247,7 +2247,6 @@ dl.collapsedBlockCollapsible {
   width: auto;
 }
 dl.collapsedBlockCollapsible dt.collapsibleHeader {
-  background: White url('../images/treeExpanded.png') no-repeat 0.5em 50%;
   float: none;
   position: relative;
   margin: 0 0 0 1em;
