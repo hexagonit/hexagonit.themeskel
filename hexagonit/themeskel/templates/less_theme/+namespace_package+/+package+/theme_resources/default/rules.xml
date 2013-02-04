@@ -1,0 +1,23 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- HEADER -->
+
+    <replace css:content=".skin-portal-logo" css:theme="#portal-logo" 
+        css:if-content=".skin-portal-logo" />
+    
+    <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
+    <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" />
+
+    <!-- Language chooser and quick links -->
+    <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
+    <replace css:content-children="#language-actions" css:theme-children="#languages"/>
+
+
+    <!-- FOOTER -->
+
+    <copy css:content-children=".siteelement-footertext .footertext" css:theme="#footer-colophon" />
+
+</rules>

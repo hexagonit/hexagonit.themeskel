@@ -1,9 +1,11 @@
 Changelog
 =========
 
-2.0.2 (2013-02-XX)
+2.1 (2013-02-XX)
 ------------------
 
+- Retina image support added [vsomogyi]
+- Multi-theme support added [vsomogyi]
 - Duplicate css properties removed [vsomogyi]
 
 2.0.1 (2013-01-29)

@@ -19,9 +19,9 @@
         conditionalcomment=""
         cookable="True"
         enabled="True"
-        expression=""
+        expression="python:context.restrictedTraverse('@@active-subtheme')() == 'default'"
         inline="False"
-        id="++theme++${namespace_package}.${package}/javascript/script.js"
+        id="++theme++${namespace_package}.${package}/default/javascript/script.js"
     />
 
     <!-- Disable TinyMCE -->
