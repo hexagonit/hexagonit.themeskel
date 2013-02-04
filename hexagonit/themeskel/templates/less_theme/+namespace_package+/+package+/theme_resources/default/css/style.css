@@ -915,7 +915,7 @@ input.searchField {
   color: #999999;
 }
 #portal-breadcrumbs #breadcrumbs-current {
-  color: #bc231b;
+  color: #000000;
 }
 /* @end */
 /* @group Site actions */
@@ -1230,7 +1230,7 @@ dl.portlet ul.navTree li a img {
   display: none;
 }
 dl.portlet ul.navTree .navTreeCurrentItem {
-  background-color: #205c90;
+  background-color: #205c90 !important;
   color: #ffffff !important;
 }
 dl.portlet ul .navTreeItem {
