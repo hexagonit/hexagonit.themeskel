@@ -163,7 +163,7 @@
 
 
     <!-- Users and Groups control panel - inherited rules are marked with checkmark -->
-    <replace content="//img[contains(@src, 'site_icon.gif')]"
+    <replace content="//img[contains(@src, 'site_icon.png')]"
              css:if-content=".template-usergroup-userprefs, .template-usergroup-groupprefs">
         <span>&#10003;</span>
     </replace>

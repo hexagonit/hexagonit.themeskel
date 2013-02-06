@@ -2781,16 +2781,20 @@ footer {
   margin: 1em 0;
   line-height: 2em;
 }
-#portal-colophon {
+#footer-colophon {
   font-size: 13px;
   text-align: center;
   margin-bottom: 1em;
 }
-#portal-colophon li {
+#footer-colophon li {
   padding: 0 0.75em;
 }
-#portal-colophon a {
-  color: #444444;
+#footer-colophon a,
+#footer-colophon a:active,
+#footer-colophon a:hover,
+#footer-colophon a:visited,
+#footer-colophon a:link {
+  color: #444444 !important;
 }
 /* @end */
 /* @group Sitemap */
