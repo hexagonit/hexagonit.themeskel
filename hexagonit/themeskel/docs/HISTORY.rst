@@ -4,6 +4,7 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Language chooser and quicklinks added [vsomogyi]
 - Retina image support added [vsomogyi]
 - Multi-theme support added [vsomogyi]
 - Duplicate css properties removed [vsomogyi]

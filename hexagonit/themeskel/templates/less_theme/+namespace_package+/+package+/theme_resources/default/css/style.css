@@ -699,6 +699,16 @@ dd {
   position: relative;
   z-index: 2;
 }
+#quicklinks,
+#languages {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  margin-top: -35px;
+}
+#languages {
+  margin-top: -85px;
+}
 #portal-globalnav {
   font: 13px Arial, FreeSans, sans-serif;
   background: #dddddd;
