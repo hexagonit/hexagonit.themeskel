@@ -128,9 +128,25 @@
   #portal-personaltools {
     font-size: 12px !important;
     padding: 5px;
+    right: 0;
   }
   #portal-logo {
-    margin-bottom: 1em;
+    margin-bottom: 25px;
+  }
+  #languages {
+    margin-top: -20px;
+  }
+  #languages a {
+    padding: 10px;
+  }
+  #quicklinks {
+    position: relative;
+    margin-top: 0;
+    padding: 5px 0;
+    text-align: right;
+  }
+  #quicklinks a {
+    padding: 10px;
   }
   #portal-breadcrumbs {
     margin-top: 10px;

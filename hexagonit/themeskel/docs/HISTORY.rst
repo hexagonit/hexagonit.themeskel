@@ -4,6 +4,7 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Mobile styling fixes [vsomogyi]
 - Language chooser and quicklinks added [vsomogyi]
 - Retina image support added [vsomogyi]
 - Multi-theme support added [vsomogyi]
