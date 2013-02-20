@@ -576,6 +576,7 @@ body {
   background: #ffffff;
   margin: 0;
   width: 100%;
+  word-wrap: break-word;
 }
 .ie7 #container,
 .ie8 #container {
