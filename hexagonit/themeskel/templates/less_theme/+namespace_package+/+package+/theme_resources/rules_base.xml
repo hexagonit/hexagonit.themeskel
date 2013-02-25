@@ -93,13 +93,13 @@
     <drop css:content=".searchSection" />
     <drop css:content="#portal-advanced-search" />
 
-    <after css:content="#portal-globalnav" css:theme="#quicklinks" />
+    <after css:content="#portal-globalnav" css:theme="#search-and-links" />
 
     <!-- Language chooser and quick links -->
     <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
     <replace css:content-children="#language-actions" css:theme-children="#languages"/>
 
-    
+
 
     <!-- BODY -->
 

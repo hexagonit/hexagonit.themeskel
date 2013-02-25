@@ -704,15 +704,64 @@ dd {
   position: relative;
   z-index: 2;
 }
-#quicklinks,
-#languages {
+#portal-personaltools {
+  background: #dddddd;
   position: absolute;
+  z-index: 3;
+  /* personaltools should be above #portal-header (with z-index: 2) */
+
+  top: 0;
   right: 0;
-  font-size: 12px;
-  margin-top: -35px;
+  padding: 0.25em 0.5em;
+  margin: 0;
+  font-size: 13px;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
 }
-#languages {
-  margin-top: -85px;
+#portal-personaltools a,
+#portal-personaltools a:link,
+#portal-personaltools a:hover,
+#portal-personaltools a:active,
+#portal-personaltools a:visited {
+  color: #205c90 !important;
+}
+#portal-personaltools #anon-personalbar a {
+  float: left;
+  margin-right: 0.5em;
+}
+#search-and-links {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+#search-and-links #quicklinks,
+#search-and-links #languages {
+  font-size: 12px;
+  margin: 5px 0;
+}
+#search-and-links #quicklinks li,
+#search-and-links #languages li {
+  white-space: nowrap;
+}
+#search-and-links #languages li {
+  margin-right: 5px;
+}
+#search-and-links #languages li:last-child {
+  margin-right: 0;
+}
+#search-and-links #portal-searchbox {
+  text-align: left;
+  font-size: 13px;
+}
+#search-and-links #portal-searchbox form {
+  white-space: nowrap;
+}
+#search-and-links #portal-searchbox label {
+  font-weight: normal;
 }
 #portal-globalnav {
   font: 13px Arial, FreeSans, sans-serif;
@@ -751,36 +800,6 @@ dd {
   color: #ffffff !important;
   text-decoration: none;
 }
-#portal-personaltools {
-  float: right;
-  background: #dddddd;
-  position: relative;
-  z-index: 3;
-  /* personaltools should be above #portal-header (with z-index: 2) */
-
-  top: 0;
-  right: 0;
-  padding: 0.25em 0.5em;
-  margin: 0;
-  font-size: 13px;
-  border-bottom-right-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
-  -webkit-border-bottom-right-radius: 0.5em;
-  -webkit-border-bottom-left-radius: 0.5em;
-  -moz-border-radius-bottomleft: 0.5em;
-  -moz-border-radius-bottomright: 0.5em;
-}
-#portal-personaltools a,
-#portal-personaltools a:link,
-#portal-personaltools a:hover,
-#portal-personaltools a:active,
-#portal-personaltools a:visited {
-  color: #205c90 !important;
-}
-#portal-personaltools #anon-personalbar a {
-  float: left;
-  margin-right: 0.5em;
-}
 #portal-languageselector {
   float: right;
   background: #e3e3e3;
@@ -800,35 +819,14 @@ dd {
   -moz-border-radius-bottomleft: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
 }
-#portal-searchbox {
-  position: absolute;
-  right: 0;
-  text-align: left;
-  margin-top: -64px;
-  font-size: 13px;
-}
-#portal-searchbox form {
-  white-space: nowrap;
-}
-#portal-searchbox label {
-  font-weight: normal;
-}
-.ie7 #portal-searchbox {
-  margin-top: 40px;
-}
-.ie7 .searchButton {
-  line-height: 0;
+.ie7 #portal-logo img {
+  width: auto;
 }
 #searchGadget {
   width: 13em;
 }
 #content input.searchField {
   margin-bottom: 1em;
-}
-input.searchField {
-  /*  -webkit-appearance: searchfield;*/
-
-  -moz-appearance: searchfield;
 }
 /* Collapsible elements in search_form */
 .collapsible .collapser {

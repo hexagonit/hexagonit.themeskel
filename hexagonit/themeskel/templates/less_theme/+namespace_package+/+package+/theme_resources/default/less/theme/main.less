@@ -143,15 +143,59 @@ dd { margin: 0; }
     z-index: 2;
 }
 
-#quicklinks, #languages {
+#portal-personaltools {
+    background: @Personaltools-background;
     position: absolute;
+    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
+    top: 0;
     right: 0;
-    font-size: @font-size-smallest;
-    margin-top: -35px;
+    padding: 0.25em 0.5em;
+    margin: @Personaltools-margin;
+    font-size: @Personaltools-font-size;
+    .rounded-corners-bottom(0.5em);
+
+    a, a:link, a:hover, a:active, a:visited {
+        color: @Personaltools-link-color!important;
+    }
+
+    #anon-personalbar a {
+        float: left;
+        margin-right: 0.5em;
+    }
 }
 
-#languages {
-    margin-top: -85px;
+#search-and-links {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    #quicklinks, #languages {
+        font-size: @font-size-smallest;
+        margin: 5px 0;
+
+        li {
+            white-space: nowrap;
+        }
+    }
+    #languages li {
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    #portal-searchbox {
+        text-align: left;
+        font-size: @Portal-searchbox-font-size;
+
+        form {
+            white-space: nowrap;
+        }
+        label {
+            font-weight: @Portal-searchbox-label-font-weight;
+        }
+    }
 }
 
 #portal-globalnav {
@@ -197,28 +241,6 @@ dd { margin: 0; }
     }
 }
 
-#portal-personaltools {
-    float: right;
-    background: @Personaltools-background;
-    position: relative;
-    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
-    top: 0;
-    right: 0;
-    padding: 0.25em 0.5em;
-    margin: @Personaltools-margin;
-    font-size: @Personaltools-font-size;
-    .rounded-corners-bottom(0.5em);
-
-    a, a:link, a:hover, a:active, a:visited {
-        color: @Personaltools-link-color!important;
-    }
-
-    #anon-personalbar a {
-        float: left;
-        margin-right: 0.5em;
-    }
-}
-
 #portal-languageselector {
     float: right;
     background: @Languageselector-background;
@@ -232,28 +254,10 @@ dd { margin: 0; }
     .rounded-corners-bottom(0.5em);
 }
 
-#portal-searchbox {
-    position:absolute;
-    right: 0;
-    text-align: left;
-    margin-top: -64px;
-    font-size: @Portal-searchbox-font-size;
-
-    form {
-        white-space: nowrap;
-    }
-    label {
-        font-weight: @Portal-searchbox-label-font-weight;
-    }
-}
-
-// IE7 margin fix
+// IE7 fix
 .ie7 {
-    #portal-searchbox {
-        margin-top: 40px;
-    }
-    .searchButton {
-        line-height: 0;
+    #portal-logo img {
+        width: auto;
     }
 }
 
@@ -263,11 +267,6 @@ dd { margin: 0; }
 
 #content input.searchField {
     margin-bottom: 1em;
-}
-
-input.searchField {
-/*  -webkit-appearance: searchfield;*/
-    -moz-appearance: searchfield;
 }
 
 /* Collapsible elements in search_form */

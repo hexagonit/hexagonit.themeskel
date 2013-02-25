@@ -131,10 +131,16 @@
     right: 0;
   }
   #portal-logo {
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+  }
+  #search-and-links {
+    position: relative;
+    right: 0;
+    top: 0;
   }
   #languages {
-    margin-top: -20px;
+    text-align: right;
+    margin-bottom: 10px !important;
   }
   #languages a {
     padding: 10px;
