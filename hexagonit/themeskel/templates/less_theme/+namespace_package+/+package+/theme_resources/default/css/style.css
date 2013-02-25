@@ -696,6 +696,10 @@ dd {
   display: inline-block;
   margin: 1.375em 0;
 }
+#portal-logo img {
+  height: auto;
+  width: 100%;
+}
 #portal-header {
   position: relative;
   z-index: 2;

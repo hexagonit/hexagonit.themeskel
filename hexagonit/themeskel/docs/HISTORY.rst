@@ -4,6 +4,7 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Responsive logo [vsomogyi]
 - Word-wrap applied to the whole site [vsomogyi]
 - Mobile styling fixes [vsomogyi]
 - Language chooser and quicklinks added [vsomogyi]
