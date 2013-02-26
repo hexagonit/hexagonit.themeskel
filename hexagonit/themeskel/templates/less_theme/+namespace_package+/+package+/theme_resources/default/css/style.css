@@ -694,7 +694,7 @@ dd {
 /* @group Navigation/search */
 #portal-logo {
   display: inline-block;
-  margin: 1.375em 0;
+  margin: 20px 0 0;
 }
 #portal-logo img {
   height: auto;
@@ -735,7 +735,7 @@ dd {
 }
 #search-and-links {
   position: absolute;
-  top: 25px;
+  top: 50px;
   right: 30px;
 }
 #search-and-links #quicklinks,
@@ -780,7 +780,7 @@ dd {
   color: #000000 !important;
   display: inline-block;
   font-weight: bold;
-  padding: 1em;
+  padding: 5px 15px;
   background: #dddddd;
   min-width: auto;
   text-decoration: none;

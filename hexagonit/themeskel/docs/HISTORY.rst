@@ -4,6 +4,9 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Menu padding modified [vsomogyi]
+- Search position fix [vsomogyi]
+- Logo margin modified [vsomogyi]
 - Edit bar border issue fix for skin [vsomogyi]
 - Header search and link section modified [vsomogyi]
 - Responsive logo [vsomogyi]
