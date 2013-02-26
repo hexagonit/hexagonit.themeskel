@@ -1890,7 +1890,7 @@ dl.error dd {
   margin-left: 0;
   padding-top: 0.05em;
   display: block;
-  border-style: solid solid none solid;
+  border-style: solid solid none solid !important;
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em;
   -webkit-border-top-right-radius: 0.5em;

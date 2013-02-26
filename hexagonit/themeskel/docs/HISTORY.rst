@@ -4,6 +4,7 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Edit bar border issue fix for skin [vsomogyi]
 - Header search and link section modified [vsomogyi]
 - Responsive logo [vsomogyi]
 - Word-wrap applied to the whole site [vsomogyi]
