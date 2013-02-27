@@ -2649,9 +2649,6 @@ dl.enableFormTabbing dd {
   clear: both;
   margin-bottom: 1em;
 }
-.field input[type="text"] {
-  width: 20em;
-}
 .field input[type="text"][size] {
   width: auto;
 }

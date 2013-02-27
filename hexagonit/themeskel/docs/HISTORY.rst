@@ -4,6 +4,7 @@ Changelog
 2.1 (2013-02-XX)
 ------------------
 
+- Field size removed for text fields [vsomogyi]
 - Menu padding modified [vsomogyi]
 - Search position fix [vsomogyi]
 - Logo margin modified [vsomogyi]
