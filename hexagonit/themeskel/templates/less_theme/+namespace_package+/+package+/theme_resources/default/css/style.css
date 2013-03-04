@@ -1004,6 +1004,10 @@ dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter {
   padding: 1em;
 }
+dl.portlet dd.portletItem p:first-child,
+dl.portlet dd.portletFooter p:first-child {
+  margin-top: 0;
+}
 dl.portlet ol {
   list-style-type: decimal;
   margin-left: 2em;
