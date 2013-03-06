@@ -1,9 +1,8 @@
 Changelog
 =========
 
-2.1 (2013-02-XX)
+2.0.2 (2013-03-06)
 ------------------
-
 - Page model 221 styling [vsomogyi]
 - Portlet padding fix [vsomogyi]
 - Field size removed for text fields [vsomogyi]
