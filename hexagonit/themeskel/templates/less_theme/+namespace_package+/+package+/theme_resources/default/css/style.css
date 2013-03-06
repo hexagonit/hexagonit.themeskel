@@ -3456,6 +3456,10 @@ a.historyComparePrevious span {
 .ie7 #content figure figcaption .image-caption:hover {
   left: 0px;
 }
+.template-model0221-image-wide-rich-listing-date .lead-figures,
+.template-model0222-image-wide-rich-listing .lead-figures {
+  margin-bottom: 20px;
+}
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
