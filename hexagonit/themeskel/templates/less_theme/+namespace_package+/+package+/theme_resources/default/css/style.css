@@ -930,6 +930,9 @@ dd {
 #portal-breadcrumbs #breadcrumbs-current {
   color: #000000;
 }
+#portal-breadcrumbs #breadcrumbs-you-are-here {
+  display: none;
+}
 /* @end */
 /* @group Site actions */
 #portal-siteactions {
@@ -3269,6 +3272,13 @@ a.historyComparePrevious span {
   color: #999999;
   margin-bottom: -30px;
   margin-top: 30px;
+}
+#content .folder-entry:first-child .keywords {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#content .folder-entry:first-child .listing-item-title {
+  margin-top: 0;
 }
 #content figure.image-left {
   margin-right: 10px;

@@ -1,8 +1,15 @@
 Changelog
 =========
 
-2.0.2 (2013-03-06)
+2.1.1 (2013-XX-XX)
 ------------------
+
+- Breadcrumbs: remove you are here [vsomogyi]
+- Reduce margin for the first listing item [vsomogyi]
+
+2.0.2 (2013-03-06) - should be v2.1
+------------------
+
 - Page model 221 styling [vsomogyi]
 - Portlet padding fix [vsomogyi]
 - Field size removed for text fields [vsomogyi]
