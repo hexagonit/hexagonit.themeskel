@@ -4,6 +4,7 @@ Changelog
 2.1.1 (2013-XX-XX)
 ------------------
 
+- Feed portlet styling [vsomogyi]
 - Breadcrumbs: remove you are here [vsomogyi]
 - Reduce margin for the first listing item [vsomogyi]
 

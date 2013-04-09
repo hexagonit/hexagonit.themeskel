@@ -1020,6 +1020,7 @@ dl.portlet li {
   display: list-item;
 }
 dl.portlet.portletRss .portletItemDetails,
+dl.portlet.portletFeed .portletItemDetails,
 dl.portlet.portletNews .portletItemDetails,
 dl.portlet.portletRecent .portletItemDetails,
 dl.portlet.portletCollection .portletItemDetails,
@@ -1030,6 +1031,7 @@ dl.portlet.portletPloneboardRecent .portletItemDetails {
   font-size: 12px;
 }
 dl.portlet.portletRss .portletHeader,
+dl.portlet.portletFeed .portletHeader,
 dl.portlet.portletNews .portletHeader,
 dl.portlet.portletRecent .portletHeader,
 dl.portlet.portletCollection .portletHeader,
@@ -1038,6 +1040,7 @@ dl.portlet.portletPloneboardRecent .portletHeader {
   margin-bottom: 13px;
 }
 dl.portlet.portletRss .portletItem,
+dl.portlet.portletFeed .portletItem,
 dl.portlet.portletNews .portletItem,
 dl.portlet.portletRecent .portletItem,
 dl.portlet.portletCollection .portletItem,
@@ -1046,6 +1049,7 @@ dl.portlet.portletPloneboardRecent .portletItem {
   padding: 5px 13px;
 }
 dl.portlet.portletRss .portletFooter,
+dl.portlet.portletFeed .portletFooter,
 dl.portlet.portletNews .portletFooter,
 dl.portlet.portletRecent .portletFooter,
 dl.portlet.portletCollection .portletFooter,
