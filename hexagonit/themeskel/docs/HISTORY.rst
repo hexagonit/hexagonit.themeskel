@@ -1,9 +1,9 @@
 Changelog
 =========
 
-2.1.1 (2013-XX-XX)
-------------------
-
+2.1 (2013-05-30)
+----------------
+- Hexagon IT to Daagon [rnd]
 - Feed portlet styling [vsomogyi]
 - Breadcrumbs: remove you are here [vsomogyi]
 - Reduce margin for the first listing item [vsomogyi]
