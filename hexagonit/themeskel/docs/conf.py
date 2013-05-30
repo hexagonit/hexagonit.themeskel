@@ -35,7 +35,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'hexagonit.themeskel'
-copyright = u'2011, Hexagon IT'
+copyright = u'2013, Daagon Oy'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -172,7 +172,7 @@ latex_paper_size = 'a4'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'hexagonit.themeskel.tex', u'hexagonit.themeskel Documentation',
-   u'Hexagon IT', 'manual'),
+   u'Daagon Oy', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -208,5 +208,5 @@ man_pages = [
         'index',
         'todo',
         u'hexagonit.themeskel Documentation',
-        [u'Hexagon IT'],
+        [u'Daagon Oy'],
         1)]

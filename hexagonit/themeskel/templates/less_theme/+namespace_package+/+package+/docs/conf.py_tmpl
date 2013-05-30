@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'${namespace_package}.${package}'
-copyright = u'${year}, Hexagon IT'
+copyright = u'${year}, Daagon Oy'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -177,7 +177,7 @@ latex_paper_size = 'a4'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', '${namespace_package}.${package}.tex', u'${namespace_package}.${package} Documentation',
-   u'Hexagon IT', 'manual'),
+   u'Daagon Oy', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -213,5 +213,5 @@ man_pages = [
         'index',
         'todo',
         u'${namespace_package}.${package} Documentation',
-        [u'Hexagon IT'],
+        [u'Daagon Oy'],
         1)]
