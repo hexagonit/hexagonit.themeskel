@@ -22,7 +22,7 @@ class TestCase(IntegrationTestCase):
     def test_portlet_styles(self):
         from plone.registry.interfaces import IRegistry
         from zope.component import getUtility
-        self.assertEquals(getUtility(IRegistry).get('hexagonit.portletstyle.interfaces.IPortletStyles.portlet_styles'), [
+        self.assertEquals(getUtility(IRegistry).get('hexagonit.portletstyle.interfaces.IPortletStyles.portlet_styles')[:3], [
             'noheader|No header',
             'nofooter|No footer',
             'noheader nofooter|No header and no footer'])
@@ -45,7 +45,7 @@ class TestCase(IntegrationTestCase):
             getToolByName(self.portal, 'portal_css').getResourceIds())
 
         self.failUnless(
-            '++theme++${namespace_package}.${package}/css/style.css' in css_resources)
+            '++theme++${namespace_package}.${package}/default/css/style.css' in css_resources)
 
     def test_js_registry_configured(self):
         js_resources = set(
