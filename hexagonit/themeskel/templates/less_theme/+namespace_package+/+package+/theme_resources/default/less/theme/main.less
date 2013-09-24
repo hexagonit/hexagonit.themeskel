@@ -446,6 +446,40 @@ dl dt {
 
 /* @group Portlets */
 
+div.portletStaticText {
+    background: @Portlet-background;
+    margin: 0 0 1em;
+    font-size: @Portlet-font-size;
+
+    a {
+        text-decoration: none;
+
+        &:link {
+            color: @Portlet-link-color;
+            border-bottom: @Portlet-link-border-bottom;
+        }
+        &:visited {
+            color: @Portlet-link-visited-color;
+            border-bottom: @Portlet-link-visited-border-bottom;
+        }
+        &:hover {
+            color: @Portlet-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+        }
+    }
+    ol {
+        list-style-type: decimal;
+        margin-left: 2em;
+    }
+    li {
+        line-height: @Portlet-li-line-height;
+        display: list-item;
+    }
+    &.portletError {
+        background-color: @Portlet-error-background;
+    }
+}
+
+
 dl {
     &.portlet {
         background: @Portlet-background;

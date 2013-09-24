@@ -965,6 +965,38 @@ dl dt span.summary a {
 }
 /* @end */
 /* @group Portlets */
+div.portletStaticText {
+  background: #ffffff;
+  margin: 0 0 1em;
+  font-size: 13px;
+}
+div.portletStaticText a {
+  text-decoration: none;
+}
+div.portletStaticText a:link {
+  color: #205c90;
+  border-bottom: 0.1em solid #cccccc;
+}
+div.portletStaticText a:visited {
+  color: #205c90;
+  border-bottom: 0.1em solid #cccccc;
+}
+div.portletStaticText a:hover {
+  color: #205c90 !important;
+  /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+
+}
+div.portletStaticText ol {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+div.portletStaticText li {
+  line-height: 1.5em;
+  display: list-item;
+}
+div.portletStaticText.portletError {
+  background-color: #ffa500;
+}
 dl.portlet {
   background: #ffffff;
   margin: 0 0 1em;
@@ -1269,6 +1301,7 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 dl.portlet ul.navTreeLevel1 .navTreeItem {
   padding: 3px 0 3px 12px !important;
   line-height: 1.5;
+  font-size: 12px;
   text-transform: none;
   font-size: 12px;
 }
