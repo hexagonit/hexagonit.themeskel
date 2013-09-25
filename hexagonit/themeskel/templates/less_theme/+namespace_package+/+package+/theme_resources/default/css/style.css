@@ -3489,7 +3489,8 @@ a.historyComparePrevious span {
   box-sizing: content-box;
 }
 #content .social-buttons {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 #content .social-buttons ul {
   list-style-type: none;
