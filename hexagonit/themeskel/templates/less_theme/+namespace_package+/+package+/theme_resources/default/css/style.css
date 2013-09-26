@@ -3488,10 +3488,6 @@ a.historyComparePrevious span {
 #content #usersearchform input.searchButton {
   box-sizing: content-box;
 }
-#content .social-buttons {
-  overflow-x: hidden;
-  overflow-y: visible;
-}
 #content .social-buttons ul {
   list-style-type: none;
   margin-left: 0;
