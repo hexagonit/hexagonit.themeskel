@@ -30,10 +30,6 @@
     <!-- Drop the css target from the theme -->
     <drop css:theme="#css" />
 
-    <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
-         it and we can save a few bytes there. -->
-    <drop css:content="script" attributes="type"/>
-
     <!-- Copy script tags in the order they appear in the content but place
          them at the bottom of the theme. -->
     <before
